@@ -1,4 +1,4 @@
-import fitz  # pymupdf
+import pymupdf as fitz  # pymupdf
 from docx import Document
 from docx.oxml.ns import qn
 from docx.table import Table
