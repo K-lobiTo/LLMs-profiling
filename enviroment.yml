@@ -1,0 +1,16 @@
+name: rag-bench
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - transformers
+      - accelerate
+      - torch
+      - sentencepiece
+      - pymupdf        # PDF text extraction
+      - python-docx     # DOCX text extraction
+      - langchain-text-splitters  # chunking
