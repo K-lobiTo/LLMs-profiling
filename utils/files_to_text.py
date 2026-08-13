@@ -1,4 +1,4 @@
-import pymupdf as fitz  # pymupdf
+import pymupdf as fitz 
 from docx import Document
 from docx.oxml.ns import qn
 from docx.table import Table
@@ -12,26 +12,59 @@ def pdf_to_text(path):
     doc.close()
     return text
 
+def get_list_level(paragraph):
+    """Returns the indent level (int) if paragraph is a list item, else None."""
+    pPr = paragraph._p.pPr
+    if pPr is None:
+        return None
+    numPr = pPr.find(qn('w:numPr'))
+    if numPr is None:
+        return None
+    ilvl = numPr.find(qn('w:ilvl'))
+    return int(ilvl.get(qn('w:val'))) if ilvl is not None else 0
+
+def paragraph_to_text(paragraph):
+    text = paragraph.text.strip()
+    if not text:
+        return None
+    level = get_list_level(paragraph)
+    if level is not None:
+        return ("  " * level) + "- " + text
+    return text
+
+def iter_block_items(parent):
+    parent_elm = parent.element.body if hasattr(parent, "element") else parent._tc
+    for child in parent_elm.iterchildren():
+        if child.tag == qn('w:p'):
+            yield Paragraph(child, parent)
+        elif child.tag == qn('w:tbl'):
+            yield Table(child, parent)
+
 def docx_to_text(path):
     doc = Document(path)
     text_parts = []
 
-    def iter_block_items(parent):
-        parent_elm = parent.element.body
-        for child in parent_elm.iterchildren():
-            if child.tag == qn('w:p'):
-                yield Paragraph(child, parent)
-            elif child.tag == qn('w:tbl'):
-                yield Table(child, parent)
-
     for block in iter_block_items(doc):
         if isinstance(block, Paragraph):
-            if block.text.strip():
-                text_parts.append(block.text)
+            line = paragraph_to_text(block)
+            if line:
+                text_parts.append(line)
         elif isinstance(block, Table):
             for row in block.rows:
-                row_text = " | ".join(cell.text.strip() for cell in row.cells)
-                text_parts.append(row_text)
+                for cell in row.cells:
+                    for cell_block in iter_block_items(cell):
+                        if isinstance(cell_block, Paragraph):
+                            line = paragraph_to_text(cell_block)
+                            if line:
+                                text_parts.append(line)
+                        elif isinstance(cell_block, Table):
+                            # nested table, rare but handle just in case
+                            for nrow in cell_block.rows:
+                                for ncell in nrow.cells:
+                                    for p in ncell.paragraphs:
+                                        line = paragraph_to_text(p)
+                                        if line:
+                                            text_parts.append(line)
 
     return "\n".join(text_parts)
 
