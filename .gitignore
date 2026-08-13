@@ -1,0 +1,31 @@
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Environments
+.env
+.venv
+env/
+venv/
+*.conda
+/usr/local/miniconda/
+
+# Jupyter/Colab
+.ipynb_checkpoints/
+
+# Data files
+files/
+*.pdf
+*.docx
+*.txt
+
+# Model weights / cache
+*.bin
+*.safetensors
+.cache/
+models/
+
+# OS junk
+.DS_Store
+Thumbs.db
