@@ -1,4 +1,4 @@
-name: rag-bench
+name: llm-profiling
 channels:
   - conda-forge
   - pytorch
@@ -14,3 +14,4 @@ dependencies:
       - pymupdf        # PDF text extraction
       - python-docx     # DOCX text extraction
       - langchain-text-splitters  # chunking
+      - pandas
