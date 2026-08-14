@@ -1,0 +1,91 @@
+category,Maestría,Curso,Código,Pregunta,Respuesta
+binary,Maestría en Ciberseguridad,Análisis de Datos en Ciberseguridad,MC1001,¿Es la asistencia obligatoria?,Sí
+binary,Maestría en Ciberseguridad,Análisis de Datos en Ciberseguridad,MC1001,¿Tiene el curso requisitos previos?,No
+binary,Maestría en Ciberseguridad,Análisis de Datos en Ciberseguridad,MC1001,¿Es un curso electivo?,No
+binary,Maestría en Ciberseguridad,Análisis de Datos en Ciberseguridad,MC1001,¿Existe la posibilidad de ganar el curso por suficiencia?,Sí
+binary,Maestría en Ciberseguridad,Análisis de Datos en Ciberseguridad,MC1001,¿Es posible el reconocimiento del curso?,Sí
+binary,Maestría en Ciberseguridad,Análisis de Datos en Ciberseguridad,MC1001,¿Los laboratorios representan el 75% de la nota final?,Sí
+binary,Maestría en Ciberseguridad,Seguridad y Criptografía,MC1003,¿Es la asistencia obligatoria?,Sí
+binary,Maestría en Ciberseguridad,Seguridad y Criptografía,MC1003,¿Es este un curso electivo?,No
+binary,Maestría en Ciberseguridad,Seguridad y Criptografía,MC1003,¿Tiene correquisitos establecidos?,No
+binary,Maestría en Ciberseguridad,Seguridad y Criptografía,MC1003,"¿Es este curso requisito para ""Blockchain y Ledger Distribuidos""?",Sí
+binary,Maestría en Ciberseguridad,Seguridad y Criptografía,MC1003,¿Se permite el reconocimiento del curso?,Sí
+binary,Maestría en Ciberseguridad,Seguridad y Criptografía,MC1003,¿El examen final tiene un valor del 30%?,Sí
+binary,Maestría en Ciberseguridad,Políticas y Gobernanza en Ciberseguridad,MC1006,¿Es el curso de tipo electivo?,No
+binary,Maestría en Ciberseguridad,Políticas y Gobernanza en Ciberseguridad,MC1006,¿Es la asistencia obligatoria?,Sí
+binary,Maestría en Ciberseguridad,Políticas y Gobernanza en Ciberseguridad,MC1006,¿Se permite el reconocimiento de este curso?,No
+binary,Maestría en Ciberseguridad,Políticas y Gobernanza en Ciberseguridad,MC1006,¿Existe la posibilidad de suficiencia?,Sí
+binary,Maestría en Ciberseguridad,Políticas y Gobernanza en Ciberseguridad,MC1006,¿Se ubica el curso en el primer trimestre del plan de estudios?,Sí
+binary,Maestría en Ciberseguridad,Políticas y Gobernanza en Ciberseguridad,MC1006,¿El estudio de casos vale un 40% de la calificación?,Sí
+binary,Maestría en Ciberseguridad,Seguridad de Software Avanzado,MC3001,¿Es un curso electivo?,No
+binary,Maestría en Ciberseguridad,Seguridad de Software Avanzado,MC3001,¿Es obligatoria la asistencia?,Sí
+binary,Maestría en Ciberseguridad,Seguridad de Software Avanzado,MC3001,¿Tiene requisitos previos?,No
+binary,Maestría en Ciberseguridad,Seguridad de Software Avanzado,MC3001,¿Es requisito para el curso de Seguridad en la Nube?,Sí
+binary,Maestría en Ciberseguridad,Seguridad de Software Avanzado,MC3001,¿Se permite la suficiencia?,No
+binary,Maestría en Ciberseguridad,Seguridad de Software Avanzado,MC3001,¿El examen final vale el 30% de la nota?,Sí
+binary,Maestría en Ciberseguridad,Cibercrimen,MC3010,¿Es el curso de tipo electivo?,Sí
+binary,Maestría en Ciberseguridad,Cibercrimen,MC3010,¿Es obligatoria la asistencia?,Sí
+binary,Maestría en Ciberseguridad,Cibercrimen,MC3010,¿Tiene requisitos o correquisitos?,No
+binary,Maestría en Ciberseguridad,Cibercrimen,MC3010,¿Se permite la suficiencia para este curso?,No
+binary,Maestría en Ciberseguridad,Cibercrimen,MC3010,¿Existe la posibilidad de reconocimiento?,No
+binary,Maestría en Ciberseguridad,Cibercrimen,MC3010,¿La investigación social aplicada tiene un peso del 40%?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Sistemas Estratégicos Empresariales,MC1101,¿Es un curso obligatorio?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Sistemas Estratégicos Empresariales,MC1101,¿Tiene requisitos o correquisitos previos?,No
+binary,Maestría en Gerencia de Tecnologías de la Información,Sistemas Estratégicos Empresariales,MC1101,¿Es la asistencia obligatoria?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Sistemas Estratégicos Empresariales,MC1101,¿Existe la posibilidad de suficiencia?,No
+binary,Maestría en Gerencia de Tecnologías de la Información,Sistemas Estratégicos Empresariales,MC1101,¿Es posible el reconocimiento del curso?,No
+binary,Maestría en Gerencia de Tecnologías de la Información,Sistemas Estratégicos Empresariales,MC1101,¿La investigación en sistema empresarial vale un 40%?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Gerencia de Tecnología de Información,MC1103,¿Es la asistencia obligatoria?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Gerencia de Tecnología de Información,MC1103,¿Tiene el curso requisitos previos?,No
+binary,Maestría en Gerencia de Tecnologías de la Información,Gerencia de Tecnología de Información,MC1103,¿Se permite la suficiencia?,No
+binary,Maestría en Gerencia de Tecnologías de la Información,Gerencia de Tecnología de Información,MC1103,¿Es posible el reconocimiento del curso?,No
+binary,Maestría en Gerencia de Tecnologías de la Información,Gerencia de Tecnología de Información,MC1103,¿El estudio de casos vale un 40% de la nota?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Gerencia de Tecnología de Información,MC1103,¿Requiere el curso la elaboración de una investigación bibliográfica?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Administración Financiera de TI,MC1201,¿Es este un curso obligatorio?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Administración Financiera de TI,MC1201,¿Se permite el reconocimiento del curso?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Administración Financiera de TI,MC1201,¿Existe la posibilidad de suficiencia?,No
+binary,Maestría en Gerencia de Tecnologías de la Información,Administración Financiera de TI,MC1201,¿Es la asistencia obligatoria?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Administración Financiera de TI,MC1201,¿Se ubica en el segundo semestre del programa?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Administración Financiera de TI,MC1201,¿Los dos exámenes parciales valen un 50% en total?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Administración y Estrategia de Proyectos I,MC1203,¿Es un curso obligatorio?,No
+binary,Maestría en Gerencia de Tecnologías de la Información,Administración y Estrategia de Proyectos I,MC1203,¿Es la asistencia obligatoria?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Administración y Estrategia de Proyectos I,MC1203,¿Es requisito para el curso de Administración y Estrategia de Proyectos II?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Administración y Estrategia de Proyectos I,MC1203,¿Permite el curso la suficiencia?,No
+binary,Maestría en Gerencia de Tecnologías de la Información,Administración y Estrategia de Proyectos I,MC1203,¿Existe la posibilidad de reconocimiento?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Administración y Estrategia de Proyectos I,MC1203,¿La resolución de casos prácticos vale un 25%?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Planificación Estratégica de TI,MC2301,¿Es un curso obligatorio?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Planificación Estratégica de TI,MC2301,¿Es la asistencia obligatoria?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Planificación Estratégica de TI,MC2301,¿Se reprueba el curso con 4 faltas de asistencia injustificadas?,Sí
+binary,Maestría en Gerencia de Tecnologías de la Información,Planificación Estratégica de TI,MC2301,¿Existe la posibilidad de suficiencia?,No
+binary,Maestría en Gerencia de Tecnologías de la Información,Planificación Estratégica de TI,MC2301,¿Se permite el reconocimiento del curso?,No
+binary,Maestría en Gerencia de Tecnologías de la Información,Planificación Estratégica de TI,MC2301,¿La resolución de casos vale un 40% de la nota?,Sí
+binary,Maestría en Computación,Teoría de Autómatas,MC6003,¿Es un curso electivo?,No
+binary,Maestría en Computación,Teoría de Autómatas,MC6003,¿Es la asistencia obligatoria?,Sí
+binary,Maestría en Computación,Teoría de Autómatas,MC6003,¿Se permite la suficiencia?,Sí
+binary,Maestría en Computación,Teoría de Autómatas,MC6003,¿Es posible el reconocimiento del curso?,Sí
+binary,Maestría en Computación,Teoría de Autómatas,MC6003,¿Tiene requisitos previos?,No
+binary,Maestría en Computación,Teoría de Autómatas,MC6003,¿El examen final vale el 30%?,Sí
+binary,Maestría en Computación,Sistemas Operativos Avanzados,MC6004,¿Es un curso electivo?,No
+binary,Maestría en Computación,Sistemas Operativos Avanzados,MC6004,¿Es la asistencia obligatoria?,Sí
+binary,Maestría en Computación,Sistemas Operativos Avanzados,MC6004,"¿Es requisito para ""Redes de Computadores Avanzadas""?",Sí
+binary,Maestría en Computación,Sistemas Operativos Avanzados,MC6004,¿Permite el curso la suficiencia?,Sí
+binary,Maestría en Computación,Sistemas Operativos Avanzados,MC6004,¿Se permite el reconocimiento?,Sí
+binary,Maestría en Computación,Sistemas Operativos Avanzados,MC6004,¿Los proyectos programados valen un 30%?,Sí
+binary,Maestría en Computación,Análisis de Algoritmos,MC6102,¿Es un curso electivo?,No
+binary,Maestría en Computación,Análisis de Algoritmos,MC6102,¿Es la asistencia obligatoria?,Sí
+binary,Maestría en Computación,Análisis de Algoritmos,MC6102,¿Existe la posibilidad de suficiencia?,Sí
+binary,Maestría en Computación,Análisis de Algoritmos,MC6102,¿Se permite el reconocimiento del curso?,Sí
+binary,Maestría en Computación,Análisis de Algoritmos,MC6102,¿Las tareas e investigaciones valen el 50% de la nota?,Sí
+binary,Maestría en Computación,Análisis de Algoritmos,MC6102,¿Se imparte el curso los martes por la noche?,Sí
+binary,Maestría en Computación,Diseño de Experimentos,MC6104,¿Es este un curso electivo?,Sí
+binary,Maestría en Computación,Diseño de Experimentos,MC6104,¿Es la asistencia obligatoria?,Sí
+binary,Maestría en Computación,Diseño de Experimentos,MC6104,¿Se permite la suficiencia?,No
+binary,Maestría en Computación,Diseño de Experimentos,MC6104,¿Es posible el reconocimiento del curso?,No
+binary,Maestría en Computación,Diseño de Experimentos,MC6104,¿Requiere conocimientos previos de Probabilidades?,Sí
+binary,Maestría en Computación,Diseño de Experimentos,MC6104,¿La presentación oral tiene un valor del 5%?,Sí
+binary,Maestría en Computación,Introducción a la Investigación,MC7201,¿Es un curso electivo?,No
+binary,Maestría en Computación,Introducción a la Investigación,MC7201,¿Es la asistencia obligatoria?,Sí
+binary,Maestría en Computación,Introducción a la Investigación,MC7201,¿Permite el curso la suficiencia?,Sí
+binary,Maestría en Computación,Introducción a la Investigación,MC7201,¿Es posible el reconocimiento?,Sí
+binary,Maestría en Computación,Introducción a la Investigación,MC7201,"¿Es ""Tema Selecto de Investigación"" un correquisito?",Sí
+binary,Maestría en Computación,Introducción a la Investigación,MC7201,¿La presentación tiene un valor del 25%?,Sí
