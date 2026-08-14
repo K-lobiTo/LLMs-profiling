@@ -1,33 +1,27 @@
-from utils.files_to_text import corpus, Document, qn
+from utils.load_qa_dataset import load_qa_dataset, sample_qa
 
 # print(len(corpus))
 
-docIdx = 3
-print(corpus[list(corpus.keys())[docIdx]])
+# docIdx = 5
+# print(corpus[list(corpus.keys())[docIdx]])
 
-path = "files/" + list(corpus.keys())[docIdx]
-doc = Document(path)
-# for p in doc.paragraphs:
-#     if p.text.strip():
-#         print(repr(p.text))
-#         print("style:", p.style.name if p.style else None)
-#         pPr = p._p.pPr
-#         print("direct numPr:", pPr.find(qn('w:numPr')) if pPr is not None else None)
-#         print("---")
 
-# print("Total doc.paragraphs:", len(doc.paragraphs))
-# print("Total doc.tables:", len(doc.tables))
+qa = load_qa_dataset()
+# for category, df in qa.items():
+#     print(f"{category}: {len(df)} questions")
 
-# for t_idx, table in enumerate(doc.tables):
-#     for r_idx, row in enumerate(table.rows):
-#         for c_idx, cell in enumerate(row.cells):
-#             for p in cell.paragraphs:
-#                 if p.text.strip():
-#                     print(f"[table {t_idx} row {r_idx} cell {c_idx}]", repr(p.text))
-#                     print("  style:", p.style.name if p.style else None)
-#                     pPr = p._p.pPr
-#                     from docx.oxml.ns import qn
-#                     print("  direct numPr:", pPr.find(qn('w:numPr')) if pPr is not None else None)
+# for _, row in qa["binary"].head(2).iterrows():
+#     print(row["Pregunta"], "->", row["Respuesta"])
 
-# print("Paragraphs:", len(doc.paragraphs))
-# print("Tables:", len(doc.tables))
+sample = sample_qa(qa, n=20)              # 20 random rows per category, no fixed seed (different each run)
+# sample = sample_qa(qa, n=20, seed=42)     # reproducible sample, same 20 rows every time
+
+sample["binary"]        # 20 random yes/no questions
+sample["short_answer"]  # 20 random short-answer questions
+sample["open_ended"]    # 20 random open-ended questions
+
+
+for category, df in sample.items():
+    print(f"{category} sample: {len(df)} rows")
+    for _, row in df.head().iterrows():
+        print (f'En el curso {row["Curso"]} de la {row["Maestría"]}, {row["Pregunta"]} -> {row["Respuesta"]}\n')

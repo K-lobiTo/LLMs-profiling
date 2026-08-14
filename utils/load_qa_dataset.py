@@ -32,11 +32,36 @@ def load_qa_combined(qa_dir=QA_DIR):
     return pd.concat(dataset.values(), ignore_index=True)
 
 
+def sample_qa(dataset, n=20, seed=None):
+    """
+    Takes a random sample of n rows from each category.
+
+    Args:
+        dataset: dict of {category: DataFrame}, e.g. output of load_qa_dataset()
+        n: number of rows to sample per category (default 20)
+        seed: optional int for reproducible sampling
+
+    Returns:
+        dict of {category: sampled DataFrame}, each with n rows
+        (or fewer, if a category has less than n rows available)
+    """
+    sampled = {}
+    for category, df in dataset.items():
+        k = min(n, len(df))
+        sampled[category] = df.sample(n=k, random_state=seed).reset_index(drop=True)
+    return sampled
+
+
 if __name__ == "__main__":
     qa = load_qa_dataset()
     for category, df in qa.items():
         print(f"{category}: {len(df)} questions")
 
-    # Example: iterate over a single category
-    for _, row in qa["binary"].head(2).iterrows():
+    # Example: sample 20 random rows from each category
+    sample = sample_qa(qa, n=20, seed=42)
+    for category, df in sample.items():
+        print(f"{category} sample: {len(df)} rows")
+
+    # Example: iterate over a single sampled category
+    for _, row in sample["binary"].head(2).iterrows():
         print(row["Pregunta"], "->", row["Respuesta"])
