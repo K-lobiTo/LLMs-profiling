@@ -1,7 +1,7 @@
 import pandas as pd
 from pathlib import Path
 
-QA_DIR = Path("qa_dataset")
+QA_DIR = Path("data/qa_dataset")
 
 QA_FILES = {
     "binary": QA_DIR / "yes_no.csv",
