@@ -15,3 +15,5 @@ dependencies:
       - python-docx     # DOCX text extraction
       - langchain-text-splitters  # chunking
       - pandas
+      - bitsandbytes
+      - accelerate

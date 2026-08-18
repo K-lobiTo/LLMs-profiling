@@ -1,4 +1,4 @@
-from utils.load_qa_dataset import load_qa_dataset, sample_qa
+from src.load_qa_dataset import load_qa_dataset, sample_qa
 
 # print(len(corpus))
 
@@ -16,9 +16,6 @@ qa = load_qa_dataset()
 sample = sample_qa(qa, n=20)              # 20 random rows per category, no fixed seed (different each run)
 # sample = sample_qa(qa, n=20, seed=42)     # reproducible sample, same 20 rows every time
 
-sample["binary"]        # 20 random yes/no questions
-sample["short_answer"]  # 20 random short-answer questions
-sample["open_ended"]    # 20 random open-ended questions
 
 
 for category, df in sample.items():
