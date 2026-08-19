@@ -23,6 +23,7 @@ from model_config import MODELS
 TEST_QUESTIONS = [
     "¿Cuál es la capital de Costa Rica?",
     "Responde únicamente con 'Sí' o 'No': ¿Es el cielo azul?",
+    "Responde únicamente con 'Sí' o 'No': ¿2 + 2 = 4?",
 ]
 
 
