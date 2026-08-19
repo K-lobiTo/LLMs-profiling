@@ -38,5 +38,5 @@ mkdir -p "$HF_HOME" "$XDG_CACHE_HOME" "$TORCH_HOME"
 echo "Running on: $(hostname)"
 nvidia-smi
 
-cd "$PROJECT_DIR/src"
+cd "$PROJECT_DIR/src/scripts"
 "$PYTHON" smoke_test_model.py llama3.1-8b-4bit
