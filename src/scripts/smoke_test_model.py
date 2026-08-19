@@ -1,7 +1,7 @@
 """
 Standalone smoke test for a single model.
 
-Catches
+Run this BEFORE wiring a model into the full RAG benchmark loop. Catches
 gated-repo auth errors, broken chat templates, and OOM issues cheaply,
 without burning queue time on a full 90-question run.
 
@@ -34,6 +34,11 @@ def smoke_test(model_key):
 
     print(f"=== Smoke test: {model_key} ({MODELS[model_key]['repo']}) ===\n")
 
+    # Reasoning models (DeepSeek-R1) need far more headroom to reach
+    # </think> before producing a real answer — 100 tokens isn't enough
+    # even for a trivial question.
+    max_new_tokens = 1024 if MODELS[model_key]["is_reasoning_model"] else 100
+
     # --- 1. Check token is present for gated repos ---
     if "HF_TOKEN" not in os.environ:
         print("WARNING: HF_TOKEN not set in environment. Gated repos "
@@ -41,7 +46,7 @@ def smoke_test(model_key):
 
     # --- 2. Load model ---
     try:
-        generate_fn, meta = get_generate_fn(model_key, max_new_tokens=100)
+        generate_fn, meta = get_generate_fn(model_key, max_new_tokens=max_new_tokens)
     except Exception as e:
         print(f"LOAD FAILED: {type(e).__name__}")
         traceback.print_exc()
