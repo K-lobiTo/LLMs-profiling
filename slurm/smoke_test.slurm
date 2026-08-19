@@ -26,10 +26,12 @@ export TORCH_HOME=/data/calfaro/app_data/cache/torch
 export HF_HUB_DISABLE_XET=1
 mkdir -p "$HF_HOME" "$XDG_CACHE_HOME" "$TORCH_HOME"
 
-source /data/calfaro/.env
+source /data/calfaro/.env   # provides HF_TOKEN
 
 echo "Running on: $(hostname)"
 nvidia-smi
 
-cd "$PROJECT_DIR/src/scripts"
-"$PYTHON" smoke_test_model.py llama3.1-8b-4bit
+MODEL_KEY="${1:?Usage: sbatch smoke_test.slurm <model_key>}"
+
+cd "$PROJECT_DIR/src"
+"$PYTHON" smoke_test_model.py "$MODEL_KEY"
