@@ -12,7 +12,7 @@ import time
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
-from src.model_config import MODELS
+from model_config import MODELS
 
 
 # ---------------------------------------------------------------------
