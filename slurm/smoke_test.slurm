@@ -33,5 +33,5 @@ nvidia-smi
 
 MODEL_KEY="${1:?Usage: sbatch smoke_test.slurm <model_key>}"
 
-cd "$PROJECT_DIR/src"
+cd "$PROJECT_DIR/src/scripts"
 "$PYTHON" smoke_test_model.py "$MODEL_KEY"
