@@ -1,20 +1,20 @@
 name: llm-profiling
 channels:
   - conda-forge
-  - pytorch
-  - nvidia
 dependencies:
   - python=3.11
   - pip
   - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.11.0+cu128
       - transformers
       - accelerate
-      - torch
-      - sentencepiece
-      - pymupdf        # PDF text extraction
-      - python-docx     # DOCX text extraction
-      - langchain-text-splitters  # chunking
-      - pandas
       - bitsandbytes
-      - accelerate
       - kernels
+      - sentencepiece
+      - pymupdf                    # PDF text extraction
+      - python-docx                # DOCX text extraction
+      - langchain-text-splitters   # chunking
+      - sentence-transformers      # embeddings for RAG retrieval
+      - faiss-cpu                  # vector index for RAG retrieval
+      - pandas
