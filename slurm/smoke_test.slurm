@@ -34,6 +34,7 @@ export TORCH_HOME=/data/calfaro/app_data/cache/torch
 export HF_HUB_DISABLE_XET=1
 mkdir -p "$HF_HOME" "$XDG_CACHE_HOME" "$TORCH_HOME"
 
+source /data/calfaro/.env
 
 echo "Running on: $(hostname)"
 nvidia-smi
