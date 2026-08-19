@@ -1,7 +1,7 @@
 """
 Standalone smoke test for a single model.
 
-Run this BEFORE wiring a model into the full RAG benchmark loop. Catches
+Catches
 gated-repo auth errors, broken chat templates, and OOM issues cheaply,
 without burning queue time on a full 90-question run.
 
@@ -12,10 +12,11 @@ Usage:
 import os
 import sys
 import time
+import traceback
 
 import torch
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))  # if run from src/scripts
 from model_loading import get_generate_fn
 from model_config import MODELS
 
@@ -41,7 +42,8 @@ def smoke_test(model_key):
     try:
         generate_fn, meta = get_generate_fn(model_key, max_new_tokens=100)
     except Exception as e:
-        print(f"LOAD FAILED: {type(e).__name__}: {e}")
+        print(f"LOAD FAILED: {type(e).__name__}")
+        traceback.print_exc()
         return
 
     print(f"Load time: {meta['load_time_s']:.1f}s")
@@ -63,7 +65,8 @@ def smoke_test(model_key):
             print(f"\nQ: {q}\n  OOM during generation. Consider a lower quant level.")
             return
         except Exception as e:
-            print(f"\nQ: {q}\n  GENERATION FAILED: {type(e).__name__}: {e}")
+            print(f"\nQ: {q}\n  GENERATION FAILED: {type(e).__name__}")
+            traceback.print_exc()
             return
 
     print(f"\n=== {model_key}: smoke test passed ===")

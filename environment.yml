@@ -17,3 +17,4 @@ dependencies:
       - pandas
       - bitsandbytes
       - accelerate
+      - kernels
