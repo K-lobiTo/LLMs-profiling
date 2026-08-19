@@ -1,0 +1,275 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\DeclareUnicodeCharacter{2212}{−}
+\usepgfplotslibrary{groupplots,dateplot}
+\usetikzlibrary{patterns,shapes.arrows}
+\pgfplotsset{compat=newest}
+\usepackage{listings}
+\usepackage{lipsum}
+\usepackage{todonotes}
+\usepackage{float} 
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{booktabs}
+%\usepackage{url}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{soul}
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}
+\usepackage{todonotes}
+% Unidades del SI
+\usepackage{siunitx} 
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\usepackage[acronym]{glossaries}
+\makeglossaries
+
+\newacronym{CNN}{CNN}{Convolutional Neural Network}
+\newacronym{LSTM}{LSTM}{Long Short Term Memory}
+\newacronym{NB}{NB}{Naive Bayes}
+\newacronym{LLM}{LLM}{Large Language Models}
+\newacronym{ECE}{ECE}{Expected Calibration Error}
+\newacronym{TS}{TS}{Temperature Scaling}
+\newacronym{FEINA}{FEINA}{Financial Education Corpus IN SpAnish}
+\newacronym{AI}{AI}{Artificial Intelligence}
+\newacronym{BERT}{BERT}{Bidirectional Encoder Representations from Transformers}
+
+\newacronym{DNN}{DNN}{Deep Neural Network}
+
+\newacronym{UQ}{UQ}{Uncertainty Quantification}
+
+\newacronym{FD}{FD}{Feature Densities}
+\newacronym{BETO}{BETO}{Spanish BERT}
+
+\newacronym{NLP}{NLP}{Natural Language Processing}
+\newacronym{JSD}{JSD}{Jensen-Shannon Distance}
+\newacronym{UCCA}{UCCA}{Universal Cognitive Conceptual
+Annotation}
+\newacronym{CEM}{CEM}{Confidence Estimation Module}
+\newacronym{WER}{WER}{Word Error Rate}
+\newacronym{EASSE}{EASSE}{Easier Automatic Sentence Simplification Evaluation}
+
+\newacronym{ASR}{ASR}{Automatic Speech Recognition}
+
+\newacronym{SAMSA}{SAMSA}{Simplification Automatic evaluation Measure through Semantic Annotation}
+
+\newacronym{MCD}{MCD}{Monte Carlo Dropout}
+\newacronym{UE}{UE}{Uncertainty Estimation}
+\newacronym{SARI}{SARI}{System output Against References
+and against the Input sentence}
+\newacronym{DEB}{DEB}{Deep Ensemble Based}
+\newacronym{BNN}{BNN}{Bayesian Neural Networks}
+
+\newacronym{BLEU}{BLEU}{Bilingual Evaluation Understudy Score}
+
+\newacronym{GPT}{GPT}{Generative Pre-trained Transformer}
+
+\newacronym{RAG}{RAG}{Retrieval-Augmented Generation}
+\newacronym{QA}{QA}{Question Answering}
+
+
+\ifCLASSOPTIONcompsoc
+\usepackage[nocompress]{cite}
+\else
+\usepackage{cite}
+\fi
+\ifCLASSINFOpdf
+\else
+\fi
+\hyphenation{op-tical net-works semi-conduc-tor}
+\makeatletter
+\newcommand{\linebreakand}{
+  \end{@IEEEauthorhalign}
+  \hfill\mbox{}\par
+  \mbox{}\hfill\begin{@IEEEauthorhalign}
+}
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords---}} #1
+}
+\makeatother
+
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\begin{document}
+
+% I need to upgrade this title
+\title{A Benchmark of Large Language Models for Question and Answering with RAG applied using Syllabus Documents in Spanish}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+
+\author{
+
+\IEEEauthorblockN{Caleb Alfaro-Moreira}
+\IEEEauthorblockA{\textit{Instituto Tecnológico de Costa Rica }\\
+Alajuela, Costa Rica\\
+calalfaro@estudiantec.cr}
+
+\and
+
+\IEEEauthorblockN{ Saúl Calderón-Ramírez}
+\IEEEauthorblockA{\textit{Instituto Tecnológico de Costa Rica }\\
+Cartago, Costa Rica\\
+sacalderon@itcr.ac.cr}
+
+\and
+
+\IEEEauthorblockN{Martín Solís}
+\IEEEauthorblockA{\textit{Instituto Tecnológico de Costa Rica }\\
+Cartago, Costa Rica\\
+marsolis@itcr.ac.cr}
+
+\linebreakand
+
+\IEEEauthorblockN{Mauricio Araya}
+\IEEEauthorblockA{\textit{Instituto Tecnológico de Costa Rica }\\
+Cartago, Costa Rica\\
+marroyo@itcr.ac.cr}
+
+\and
+
+\IEEEauthorblockN{Mónica Hernández}
+\IEEEauthorblockA{\textit{Instituto Tecnológico de Costa Rica (??)}\\
+Cartago, Costa Rica\\
+mohernandez@itcr.ac.cr}
+
+\and
+
+\IEEEauthorblockN{José Aguilar}
+\IEEEauthorblockA{\textit{Instituto Tecnológico de Costa Rica (??)}\\
+Cartago, Costa Rica\\
+???}
+
+}
+
+
+\maketitle
+
+\begin{abstract}
+
+%TODO: write last, once results are in. Should cover: motivation
+%(on-premise LLMs for university digital transformation), method (RAG +
+%QA benchmark over course-program documents), models compared, and the
+%headline result (which model/size offers the best accuracy-efficiency
+%tradeoff).
+    
+\end{abstract}
+
+\keywords{ \footnote{\textbf{}} }
+
+\section{Introduction}
+
+%TODO: expand into full introduction. Suggested flow:
+%  1. Universities are adopting AI tools as part of digital transformation
+%     strategies (admissions, student support, academic advising, etc.)
+%  2. Most capable LLMs are proprietary and cloud-hosted, which raises
+%     cost, data privacy, and infrastructural dependency concerns for
+%     institutions with limited resources.
+%  3. Smaller open-source LLMs are increasingly viable for self-hosted
+%     deployment, but their reliability on domain-specific QA tasks
+%     grounded in institutional documents is not well characterized.
+%  4. This paper benchmarks three such models over a QA dataset derived
+%     from university postgraduate course programs, using a RAG pipeline,
+%     to assess whether they are accurate and efficient enough for
+%     practical institutional deployment.
+%  5. Brief roadmap of the paper's sections.
+
+\section{Problem Definition}
+
+Universities are increasingly incorporating \gls{AI} tools into administrative and academic processes as part of broader digital transformation strategies. However, the most capable \glspl{LLM} are typically proprietary and cloud-hosted, which raises concerns around recurring costs, data privacy, and dependency on external infrastructure --- concerns that are particularly relevant for institutions with limited computational resources. This creates a need to evaluate whether smaller, open-source \glspl{LLM}, deployable on modest institutional hardware, can perform reliably on domain-specific \gls{QA} tasks grounded in an institution's own documents, such as course syllabi and program descriptions.
+
+This study benchmarks eight open-source \gls{LLM} configurations, spanning three model families (Qwen2.5, Llama 3.1, and DeepSeek-R1-Distill) at multiple parameter scales and quantization levels, using a \gls{RAG} pipeline over a curated set of university postgraduate course documents. Model performance is assessed across three question types (binary, short-answer, and open-ended), with the goal of identifying the configurations that offer the best practical balance between answer accuracy and computational efficiency for self-hosted deployment at the university.
+
+%TODO: once results are available, close this section with explicit
+%research questions, e.g.:
+%  RQ1: How does QA accuracy vary across model and question type?
+%  RQ2: What is the accuracy-vs-inference-cost tradeoff across models?
+%  RQ3: Is any of the benchmarked models viable for deployment on the
+%       university's available hardware?
+
+\section{Experimental Design}
+
+\subsection{Dataset}
+
+We define the following benchmarking structure
+
+%I will do batches of 20 questions out of the 90 options each category has
+%The process will be repreated several times in order to get statistical info such as standart deviation, population mean, etc
+\begin{itemize}
+    \item 20 yes or no questions -> Metrics: F1 score
+    \item 20 short answer questions -> Metrics: F1 score
+    \item 20 open ended questions -> BERT Score, ROUGE, METEOR
+
+\end{itemize}
+
+%TODO: describe the source documents (15 university postgraduate course
+%program files, PDF/DOCX, in Spanish) and the text-extraction/RAG
+%pipeline used to build the retrieval context, plus how the QA dataset
+%(90 questions per category) was constructed/validated.
+
+\subsection{LLMs to benchmark}
+
+Models are grouped into three tiers, reflecting the accuracy-vs-efficiency tradeoff central to this study's motivation. All models are loaded from their native (safetensors) Hugging Face repositories and quantized on-the-fly via \texttt{bitsandbytes}, rather than relying on pre-quantized GGUF files, so that a single loading and generation codepath is shared across every configuration.
+
+\begin{itemize}
+  \item \textbf{Efficient tier} (target deployment candidates):
+  \begin{itemize}
+    \item Qwen2.5-3B-Instruct (full precision)
+    \item Llama-3.1-8B-Instruct (4-bit)
+  \end{itemize}
+  \item \textbf{Mid tier}:
+  \begin{itemize}
+    \item Llama-3.1-8B-Instruct (full precision)
+    \item DeepSeek-R1-Distill-Qwen-14B (4-bit)
+    \item DeepSeek-R1-Distill-Qwen-14B (8-bit)
+    \item Qwen2.5-32B-Instruct (4-bit)
+  \end{itemize}
+  \item \textbf{Upper-bound reference tier} (to quantify what is given up by deploying smaller models):
+  \begin{itemize}
+    \item DeepSeek-R1-Distill-Qwen-14B (full precision)
+    \item Qwen2.5-32B-Instruct (8-bit)
+  \end{itemize}
+\end{itemize}
+
+%TODO: A Llama-3.3-70B-Instruct configuration was initially considered as
+%an additional upper-bound reference, but was excluded: on Kabre's
+%single-GPU-per-node allocation (NVIDIA L40S, 46GB VRAM), a 4-bit
+%quantization of a 70B model leaves too little headroom for the KV cache
+%at the context lengths used here, and true multi-node distributed
+%inference was judged out of scope given the project timeline.
+
+For each configuration, model size (parameters), GPU memory footprint, inference latency, and approximate GPU cost in the current market are reported and compared.
+
+\subsection{Infrastructure}
+
+Experiments are run on Kabr\'e, the national HPC cluster operated by Costa Rica's Centro Nacional de Alta Tecnolog\'ia (CeNAT), accessible to CONARE-affiliated universities including the Instituto Tecnol\'ogico de Costa Rica. Jobs are scheduled via Slurm on the \texttt{nukwa} partition family, which provides single-GPU compute nodes: 4 nodes with an NVIDIA Tesla V100 (32GB), and 7 nodes with an NVIDIA Ada L40S (46GB usable VRAM).
+
+%TODO: V100 (Volta, compute capability 7.0) nodes are excluded from this
+%study: the PyTorch build required for the other models' CUDA/driver
+%stack (cu128) is compiled for compute capability >=7.5 and does not
+%include kernels for Volta, causing a
+%"no kernel image is available for execution on the device" error at
+%runtime. All reported results therefore use L40S nodes exclusively.
+
+This setup is itself part of the paper's motivation: rather than benchmarking on ad hoc consumer hardware, all models are evaluated on infrastructure a Costa Rican university can realistically access today through CeNAT, without relying on paid commercial cloud APIs.
+
+\section{Conclusions}
+
+%TODO: write after results/discussion sections exist.
+
+% Referencias
+\bibliographystyle{ieeetr}
+\bibliography{bibli}
+
+\end{document}
