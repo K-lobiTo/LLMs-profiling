@@ -21,7 +21,7 @@ set -euo pipefail
 # allocated; add --gres=gpu:1 above if not.
 
 PROJECT_DIR=/data/calfaro/LLMs-profiling
-PYTHON=/data/calfaro/miniconda/envs/rag-bench/bin/python   # TODO: adjust to actual conda env path
+PYTHON=/data/calfaro/miniconda/envs/llm-profiling/bin/python
 
 cd "$PROJECT_DIR"
 mkdir -p results/logs
