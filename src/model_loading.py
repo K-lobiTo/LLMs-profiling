@@ -6,7 +6,6 @@ only thing that varies across runs is the model itself (repo + quant),
 keeping the RAG pipeline and prompting identical everywhere.
 """
 
-import re
 import time
 
 import torch
@@ -61,20 +60,21 @@ def load_model(model_key):
 # 2. Post-processing (strip DeepSeek-R1's <think> reasoning block)
 # ---------------------------------------------------------------------
 
-THINK_BLOCK_RE = re.compile(r"<think>.*?</think>", re.DOTALL)
-
-
 def strip_reasoning(raw_output):
     """
-    Removes <think>...</think> reasoning blocks from reasoning-model
-    output, leaving only the final answer for scoring. Also handles the
-    case where the closing tag is missing (generation cut off mid-think).
+    Returns only the text after </think>.
+
+    Reasoning models' chat templates often inject the opening <think> tag
+    as part of the prompt itself (not generated text), so we can't rely
+    on seeing <think> in the output — only check for the closing tag.
+
+    If no closing tag is found, generation was cut off mid-reasoning
+    (max_new_tokens too low) — flagged explicitly rather than silently
+    scoring a half-finished reasoning trace as if it were the answer.
     """
-    cleaned = THINK_BLOCK_RE.sub("", raw_output)
-    # If an unclosed <think> remains (truncated generation), drop everything
-    # from <think> onward rather than scoring partial reasoning as the answer.
-    cleaned = re.sub(r"<think>.*", "", cleaned, flags=re.DOTALL)
-    return cleaned.strip()
+    if "</think>" in raw_output:
+        return raw_output.split("</think>", 1)[-1].strip()
+    return "[INCOMPLETE_REASONING: generation cut off before </think>; increase max_new_tokens]"
 
 
 # ---------------------------------------------------------------------
