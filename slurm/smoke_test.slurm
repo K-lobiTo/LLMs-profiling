@@ -34,7 +34,6 @@ export TORCH_HOME=/data/calfaro/app_data/cache/torch
 export HF_HUB_DISABLE_XET=1
 mkdir -p "$HF_HOME" "$XDG_CACHE_HOME" "$TORCH_HOME"
 
-export HF_TOKEN=hf_your_token_here   # better: store in a separate untracked file and source it here instead
 
 echo "Running on: $(hostname)"
 nvidia-smi
