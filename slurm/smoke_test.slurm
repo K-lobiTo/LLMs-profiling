@@ -7,18 +7,10 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=00:30:00
-# nukwa-00..03 tienen V100 (sm_70) — verificar si la build de torch aun
-# soporta Volta antes de quitar este exclude. Si torch SI soporta
-# sm_70, se puede quitar esta linea y usar V100 tambien.
 #SBATCH --exclude=nukwa-00.cnca,nukwa-01.cnca,nukwa-02.cnca,nukwa-03.cnca
 #SBATCH --propagate=NONE
 
 set -euo pipefail
-
-# NOTE: verify whether --gres=gpu:1 is needed explicitly on Kabré, or if
-# GPU allocation is handled purely via --partition selection. Submit once
-# and check `nvidia-smi` in the output log to confirm a GPU was actually
-# allocated; add --gres=gpu:1 above if not.
 
 PROJECT_DIR=/data/calfaro/LLMs-profiling
 PYTHON=/data/calfaro/miniconda/envs/llm-profiling/bin/python
