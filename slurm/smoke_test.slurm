@@ -31,7 +31,7 @@ source /data/calfaro/.env   # provides HF_TOKEN
 echo "Running on: $(hostname)"
 nvidia-smi
 
-MODEL_KEY="${1:?Usage: sbatch smoke_test.slurm <model_key>}"
-
+MODEL_KEY="${1:?Usage: sbatch smoke_test.slurm <model_key> [--skip-reasoning]}"
+shift
 cd "$PROJECT_DIR/src/scripts"
-"$PYTHON" smoke_test_model.py "$MODEL_KEY"
+"$PYTHON" smoke_test_model.py "$MODEL_KEY" "$@"
