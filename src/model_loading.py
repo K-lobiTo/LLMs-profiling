@@ -81,13 +81,23 @@ def strip_reasoning(raw_output):
 # 3. Generation
 # ---------------------------------------------------------------------
 
-def build_generate_fn(model, tokenizer, model_key, max_new_tokens=512):
+def build_generate_fn(model, tokenizer, model_key, max_new_tokens=512, skip_reasoning=False):
     """
     Returns a generate_fn(prompt: str) -> str, compatible with
     rag_pipeline.generate_answer(generate_fn=...).
 
     Applies the model's chat template, generates, decodes only the new
     tokens, and strips reasoning blocks for reasoning models.
+
+    skip_reasoning: if True (only meaningful for reasoning models), injects
+        an already-closed empty <think></think> block right after the
+        prompt, before generation starts. Reasoning models like
+        DeepSeek-R1-Distill are conditioned to expect this structural
+        pattern, so an empty closed block causes them to skip the actual
+        reasoning step and jump straight to the final answer — much
+        faster, but likely at some accuracy cost on harder questions.
+        Consider benchmarking both settings rather than picking one
+        permanently.
     """
     is_reasoning_model = MODELS[model_key]["is_reasoning_model"]
 
@@ -99,6 +109,19 @@ def build_generate_fn(model, tokenizer, model_key, max_new_tokens=512):
             return_tensors="pt",
             return_dict=True,
         )
+
+        if is_reasoning_model and skip_reasoning:
+            # The chat template already opens <think> as part of the
+            # prompt (confirmed empirically: generated text never shows
+            # a literal <think>), so we only need to close it — adding
+            # another opening tag here would duplicate it.
+            forced_close = "\n\n</think>\n\n"
+            close_ids = tokenizer(forced_close, add_special_tokens=False, return_tensors="pt")
+            encoded["input_ids"] = torch.cat([encoded["input_ids"], close_ids["input_ids"]], dim=1)
+            encoded["attention_mask"] = torch.cat(
+                [encoded["attention_mask"], torch.ones_like(close_ids["input_ids"])], dim=1
+            )
+
         encoded = {k: v.to(model.device) for k, v in encoded.items()}
         input_len = encoded["input_ids"].shape[1]
 
@@ -113,7 +136,7 @@ def build_generate_fn(model, tokenizer, model_key, max_new_tokens=512):
         new_tokens = output_ids[0][input_len:]
         raw_text = tokenizer.decode(new_tokens, skip_special_tokens=True)
 
-        if is_reasoning_model:
+        if is_reasoning_model and not skip_reasoning:
             return strip_reasoning(raw_text)
         return raw_text.strip()
 
@@ -124,11 +147,14 @@ def build_generate_fn(model, tokenizer, model_key, max_new_tokens=512):
 # 4. Convenience: load + build generate_fn + basic timing, in one call
 # ---------------------------------------------------------------------
 
-def get_generate_fn(model_key, max_new_tokens=512, verbose=True):
+def get_generate_fn(model_key, max_new_tokens=512, skip_reasoning=False, verbose=True):
     """
     Loads a model by key and returns a ready-to-use generate_fn, along
     with load time (useful to log for the efficiency comparison in the
     paper).
+
+    skip_reasoning: see build_generate_fn docstring. No effect on
+        non-reasoning models.
     """
     start = time.time()
     model, tokenizer = load_model(model_key)
@@ -138,7 +164,9 @@ def get_generate_fn(model_key, max_new_tokens=512, verbose=True):
         n_params = sum(p.numel() for p in model.parameters())
         print(f"[{model_key}] loaded in {load_time:.1f}s | {n_params/1e9:.2f}B params")
 
-    generate_fn = build_generate_fn(model, tokenizer, model_key, max_new_tokens=max_new_tokens)
+    generate_fn = build_generate_fn(
+        model, tokenizer, model_key, max_new_tokens=max_new_tokens, skip_reasoning=skip_reasoning
+    )
     return generate_fn, {"load_time_s": load_time}
 
 
