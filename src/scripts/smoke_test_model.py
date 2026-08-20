@@ -1,6 +1,10 @@
 """
 Standalone smoke test for a single model.
 
+Run this BEFORE wiring a model into the full RAG benchmark loop. Catches
+gated-repo auth errors, broken chat templates, and OOM issues cheaply,
+without burning queue time on a full 90-question run.
+
 Usage:
     python smoke_test_model.py llama3.1-8b-4bit
 """
@@ -22,10 +26,13 @@ TEST_QUESTIONS = [
 ]
 
 
-def smoke_test(model_key, skip_reasoning=False):
+def smoke_test(model_key, skip_reasoning=None):
     if model_key not in MODELS:
         print(f"Unknown model key '{model_key}'. Options: {list(MODELS)}")
         return
+
+    if skip_reasoning is None:
+        skip_reasoning = MODELS[model_key].get("skip_reasoning", False)
 
     print(f"=== Smoke test: {model_key} ({MODELS[model_key]['repo']}) "
           f"{'[skip_reasoning]' if skip_reasoning else ''} ===\n")
@@ -79,10 +86,15 @@ def smoke_test(model_key, skip_reasoning=False):
 
 if __name__ == "__main__":
     print(f"DEBUG: sys.argv = {sys.argv}")
+
     if len(sys.argv) < 2:
         print("Usage: python smoke_test_model.py <model_key> [--skip-reasoning]")
         print(f"Available: {list(MODELS)}")
         sys.exit(1)
 
-    skip_reasoning = "--skip-reasoning" in sys.argv
+    skip_reasoning = None
+    if "--skip-reasoning" in sys.argv:
+        skip_reasoning = True
+    elif "--with-reasoning" in sys.argv:
+        skip_reasoning = False  # explicit override, for a one-off ablation run
     smoke_test(sys.argv[1], skip_reasoning=skip_reasoning)

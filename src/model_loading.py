@@ -147,15 +147,21 @@ def build_generate_fn(model, tokenizer, model_key, max_new_tokens=512, skip_reas
 # 4. Convenience: load + build generate_fn + basic timing, in one call
 # ---------------------------------------------------------------------
 
-def get_generate_fn(model_key, max_new_tokens=512, skip_reasoning=False, verbose=True):
+def get_generate_fn(model_key, max_new_tokens=512, skip_reasoning=None, verbose=True):
     """
     Loads a model by key and returns a ready-to-use generate_fn, along
     with load time (useful to log for the efficiency comparison in the
     paper).
 
     skip_reasoning: see build_generate_fn docstring. No effect on
-        non-reasoning models.
+        non-reasoning models. Defaults to None, which falls back to
+        MODELS[model_key]["skip_reasoning"] — so the config's default
+        applies automatically unless explicitly overridden (e.g. from a
+        CLI flag, for a one-off ablation run).
     """
+    if skip_reasoning is None:
+        skip_reasoning = MODELS[model_key].get("skip_reasoning", False)
+
     start = time.time()
     model, tokenizer = load_model(model_key)
     load_time = time.time() - start
