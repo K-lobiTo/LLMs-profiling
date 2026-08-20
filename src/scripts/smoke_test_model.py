@@ -78,6 +78,7 @@ def smoke_test(model_key, skip_reasoning=False):
 
 
 if __name__ == "__main__":
+    print(f"DEBUG: sys.argv = {sys.argv}")
     if len(sys.argv) < 2:
         print("Usage: python smoke_test_model.py <model_key> [--skip-reasoning]")
         print(f"Available: {list(MODELS)}")
