@@ -1,0 +1,186 @@
+Programa del curso MC1103
+GERENCIA DE TECNOLOGÍA DE INFORMACIÓN
+Escuela de Ingeniería en Computación
+Programa de Maestría de Gerencia de Tecnologías de la Información
+1 Datos generales
+1 Datos generales
+Nombre del curso:
+Gerencia de Tecnología de Información
+Código:
+MC1103
+Tipo de curso:
+Teórico - Práctico
+Obligatorio o electivo:
+No
+Nº de créditos:
+4
+Nº horas de clase por semana:
+3
+Nº horas extraclase por semana:
+9
+Ubicación en el plan de estudios:
+Curso del p4 semestre del programa de Maestría de Gerencia de Tecnologías de la Información
+Requisitos:
+No Tiene
+Correquisitos:
+No Tiene
+El curso es requisito de:
+No es requisito de ningún curso
+Asistencia:
+Obligatoria
+Suficiencia:
+No
+Posibilidad de reconocimiento:
+No
+Aprobación y actualización del programa:
+I semestre 2021
+2 Descripción general
+Este curso se convierte en la puerta de entrada de los estudiantes al mundo de la gestión o administración, aplicada en este caso, al campo de la Tecnología de Información (TI).  Existen distintas propuestas sobre cómo gestionar adecuadamente TI. En este curso se estudian varias de estas propuestas, siempre desde un punto de vista crítico y promoviendo una reflexión del estudiante respecto a sus intereses, experiencias previas y expectativas profesionales.
+El curso, más que basarse en determinado marco de referencia de mejores prácticas de la industria, busca contextualizar estos marcos como medios útiles a tomar en cuenta para el gerenciamiento de TI.  Estos marcos, para un adecuado aprovechamiento, dependen de su combinación con otros modelos, conceptos y herramientas.  Así se logra un enfoque integrado, donde el estudiante concibe el proceso de gestión o gerenciamiento de TI como una combinación de cuatro elementos clave: personas, procesos, herramientas y proveedores.  Esta concepción crea las bases para su desarrollo como líder de departamentos o áreas de TI.  Esta forma de abordar el estudio de los marcos de referencia de procesos para la gestión de TI permite al estudiante adquirir un enfoque crítico sobre cómo discriminar respecto a lo que se requiere de estos modelos, así como la forma de integrarlos.
+Administrar TI es la búsqueda permanente de equilibrios en fuerzas en principio opuestas: hay que innovar pero al mismo tiempo hay que gestionar los riesgos, hay que ser agente de cambio pero al mismo tiempo hay que mantener la operación de los sistemas existentes a nivel impecable, hay que promover la incorporación de nuevas tecnologías pero al mismo tiempo reducir costos. Estos son los retos que tienen que enfrentar los líderes de TI. En este curso se estudian propuestas de cómo hacer frente a estos retos siempre teniendo presente que TI es un medio para mejorar la competitividad de las organizaciones.
+Este curso contribuye también a crear las bases para la profundización de conocimientos que se realiza posteriormente en otros cursos de este programa.
+3 Objetivos
+Objetivo General
+Desarrollar la capacidad para aplicar distintas propuestas, modelos y marcos de referencia para la gestión de tecnología de información.
+Objetivos específicos:
+- Conocer al menos tres propuestas o modelos para la gestión de tecnología de información.
+- Comprender los conceptos de cadena de valor y marcos de referencia de tecnología de información y la relación entre ambos.
+- Aplicar en forma combinada elementos de distintas propuestas, modelos y marcos de referencia para la gestión de tecnología de información.
+4 Contenidos
+4 Contenidos
+Temas del curso
+Temas del curso
+Nociones introductorias
+•	Administración y gerencia
+•	Funciones y procesos
+•	Relaciones de servicios
+•	Procesos administrativos: panificación, dirección, control y ejecución.
+Gobernanza de TI
+•	Concepto de gobernanza de TI
+•	Diferencia entre administración y gobernanza
+•	Importancia y beneficios de la gobernanza de TI
+•	Políticas, procedimientos y estándares
+•	Matriz de gobernanza de Weill: arquetipos y mecanismos
+Desarrollo organizacional de TI
+•	El espectro centralización-descentralización
+•	Ubicación del área de TI dentro de la estructura organizacional de la empresa
+•	Etapas de desarrollo organizacional
+•	Organización interna de TI (departamentalización)
+•	Diseño organizacional
+•	Mecanismos de integración
+•	Estructura de organización lógica para un proveedor de servicios de TI
+•	Concepto de TI liviano
+•	Introducción a los modelos de tercerización de servicios de TI
+•	Roles principales en las áreas de TI
+•	Modelo RACI o matriz de autoridad
+Propuestas para administración o gerenciamiento de TI
+•	De Broadbent y Kitzis (modelo de “IT Demand/IT Supply)
+•	De Scott Proctor
+•	De Dyche
+•	De Martha Heller
+•	Enfoque holístico de Al Kluebler
+•	Transformación digital y el rol de TI
+Cadena de valor y modelos de referencia de gestión aplicables para soportar el gerenciamiento de TI
+•	Concepto de cadena de valor
+•	Cadena de valor genérica para TI:  actividades “core” y de soporte
+•	De Dyche
+•	De Martha Heller
+•	Enfoque holístico de Al Kluebler
+•	Transformación digital y el rol de TI
+Control gerencial en el área de TI
+•	Concepto y características del cuadro de mando integral
+•	Factores críticos de éxito, indicadores clave de rendimiento y métricas
+•	El cuadro de mando de TI
+•	Control y mejora continua
+•	De Martha Heller
+•	Enfoque holístico de Al Kluebler
+•	Transformación digital y el rol de TI
+Tercerización de servicios de TI
+•	Factores críticos de éxito
+•	Consideraciones de contratación
+•	El cuadro de mando de TI
+•	Esquemas:  SaaS, IaaS, PaaS
+•	Tendencias
+Nociones introductorias
+•	Administración y gerencia
+•	Funciones y procesos
+•	Relaciones de servicios
+•	Procesos administrativos: panificación, dirección, control y ejecución.
+Gobernanza de TI
+•	Concepto de gobernanza de TI
+•	Diferencia entre administración y gobernanza
+•	Importancia y beneficios de la gobernanza de TI
+•	Políticas, procedimientos y estándares
+•	Matriz de gobernanza de Weill: arquetipos y mecanismos
+Desarrollo organizacional de TI
+•	El espectro centralización-descentralización
+•	Ubicación del área de TI dentro de la estructura organizacional de la empresa
+•	Etapas de desarrollo organizacional
+•	Organización interna de TI (departamentalización)
+•	Diseño organizacional
+•	Mecanismos de integración
+•	Estructura de organización lógica para un proveedor de servicios de TI
+•	Concepto de TI liviano
+•	Introducción a los modelos de tercerización de servicios de TI
+•	Roles principales en las áreas de TI
+•	Modelo RACI o matriz de autoridad
+Propuestas para administración o gerenciamiento de TI
+•	De Broadbent y Kitzis (modelo de “IT Demand/IT Supply)
+•	De Scott Proctor
+•	De Dyche
+•	De Martha Heller
+•	Enfoque holístico de Al Kluebler
+•	Transformación digital y el rol de TI
+Cadena de valor y modelos de referencia de gestión aplicables para soportar el gerenciamiento de TI
+•	Concepto de cadena de valor
+•	Cadena de valor genérica para TI:  actividades “core” y de soporte
+•	De Dyche
+•	De Martha Heller
+•	Enfoque holístico de Al Kluebler
+•	Transformación digital y el rol de TI
+Control gerencial en el área de TI
+•	Concepto y características del cuadro de mando integral
+•	Factores críticos de éxito, indicadores clave de rendimiento y métricas
+•	El cuadro de mando de TI
+•	Control y mejora continua
+•	De Martha Heller
+•	Enfoque holístico de Al Kluebler
+•	Transformación digital y el rol de TI
+Tercerización de servicios de TI
+•	Factores críticos de éxito
+•	Consideraciones de contratación
+•	El cuadro de mando de TI
+•	Esquemas:  SaaS, IaaS, PaaS
+•	Tendencias
+II
+5 Metodología de enseñanza y aprendizaje
+La metodología de enseñanza y aprendizaje en este curso comprende diferentes actividades que están estrechamente relacionadas.  Para propiciar un aprendizaje significativo se asigna a los estudiantes, de preferencia en forma semanal, el estudio de capítulos de los libros incluidos en la bibliografía donde se explican las propuestas para la gestión de TI. Se les solicita a los estudiantes que basados en estas referencias elaboren mapas mentales, mapas conceptuales, esquemas de ideas, infografías o cuadros sinópticos.  Paralelo al desarrollo de estas actividades el profesor realiza presentaciones donde profundiza en las propuestas de gestión de TI y realiza un análisis comparativo de las mismas.
+Para propiciar un enfoque socio-constructivista se utiliza la metodología de casos, donde primeramente el estudiante debe hacer un estudio individual, luego se realiza un análisis del caso en grupos y finalmente se realiza una sesión plenaria para discusión del caso.
+Por el nivel de maestría los casos son comprensivos, o sea que para su análisis se deben cubrir distintos aspectos del material estudiado.  Para los casos iniciales y mientras se introduce a los estudiantes en la metodología de casos el profesor puede asignar una guía de estudio.
+Para lograr un buen aprovechamiento de las plataformas y recursos tecnológicos disponibles, se realiza al menos un foro de discusión virtual.
+6 Evaluación
+Las evaluaciones están definidas acorde a la metodología explicada anteriormente.  Se combina el trabajo individual, principalmente en lo que respecta a organizadores previos y en el estudio inicial de la teoría, con el trabajo grupal por medio de análisis de casos de estudio.  El trabajo individual se evalúa principalmente por medio de tareas cortas y trabajos en clase (mapas mentales, mapas conceptuales, esquemas de ideas, infografías o cuadros sinópticos). Como culminación del curso el estudiante debe elaborar una investigación bibliográfica que profundice o complemente alguno de los temas del curso.
+En forma resumida la evaluación es así:
+Pruebas cortas, tareas y trabajo en clase                                       40%
+Estudio de casos                                                                              40%
+Investigación bibliográfica y exposición                                           20%
+Total:                                                                                                100%
+20% Total:                                                                                                     100%
+Las evaluaciones están definidas acorde a la metodología explicada anteriormente.  Se combina el trabajo individual, principalmente en lo que respecta a organizadores previos y en el estudio inicial de la teoría, con el trabajo grupal por medio de análisis de casos de estudio.  El trabajo individual se evalúa principalmente por medio de tareas cortas y trabajos en clase (mapas mentales, mapas conceptuales, esquemas de ideas, infografías o cuadros sinópticos). Como culminación del curso el estudiante debe elaborar una investigación bibliográfica que profundice o complemente alguno de los temas del curso.
+En forma resumida la evaluación es así:
+Pruebas cortas, tareas y trabajo en clase                                       40%
+Estudio de casos                                                                              40%
+Investigación bibliográfica y exposición                                           20%
+Total:                                                                                                100%
+20% Total:                                                                                                     100%
+7 Bibliografía
+- Austin, R., Nolan, R. y O´Donnell, S. (2009). The Adventures of an IT Leader. (primera edición). Boston, USA: Harvard Business School Press
+- Broadbent, M. y Kitzis, E. (2005). The New CIO Leader. (primera edición). Boston, USA: Harvard Business School Press
+- Colisto, N. (2012). The CIO Playbook. (primera edición). New Jersey,USA: John Wiley & Sons, Inc.
+- Dyché, J. (2015). The New IT.(primera edición). USA: McGraw-Hill Education
+- ISACA (2012). COBIT 5 A Business Framework for the Governance and Management of Enterprise IT. (primera edición). IL, USA: Autor. Kim, G.,
+- Behr, K. y Spafford, G. (2014). The Phoenix Project.(segunda edición). Oregon, USA: IT Revolution Press.
+- Kuebler, A. (2012). Technical Impact. (tercera edición). CA, USA.
+- Samllwood, R. (2014). Information Governance concepts, strategies, and best practices. (primera edición). New Jersey,USA: John Wiley & Sons, Inc.
+- Scott, K. (2011). Optimizing & Assessing Information Technology. (primera edición). New Jersey,USA: John Wiley & Sons, Inc.
+- Smith, G. (2006). Straight to the Top becoming a world-class CIO. (primera edición). New Jersey,USA: John Wiley & Sons, Inc.

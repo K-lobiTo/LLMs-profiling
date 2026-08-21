@@ -1,0 +1,116 @@
+Programa del curso MC1203
+Administración y estrategia de proyectos I
+Escuela de Ingeniería en Computación
+Programa de Maestría de Gerencia de Tecnologías de la Información
+1 Datos generales
+1 Datos generales
+Nombre del curso:
+Administración y estrategia de proyectos I
+Código:
+MC1203
+Tipo de curso:
+Teórico
+Obligatorio o electivo:
+No
+Nº de créditos:
+4
+Nº horas de clase por semana:
+3
+Nº horas extraclase por semana:
+9
+Ubicación en el plan de estudios:
+Curso del 3er semestre del Programa de Maestría de Gerencia de Tecnologías de la Información
+Requisitos:
+No Tiene
+Correquisitos:
+No Tiene
+El curso es requisito de:
+MC-6204 Administración y estrategia de proyectos II
+Asistencia:
+Obligatoria
+Suficiencia:
+No
+Posibilidad de reconocimiento:
+Si
+Aprobación y actualización del programa:
+I semestre 2021
+2 Descripción general
+Las tecnologías de información son uno de los motores transformadores de las organizaciones modernas y estas transformaciones se logran por medio de la realización de proyectos exitosos, por lo que la gestión estratégica de las iniciativas tecnológicas se convierte en una competencia indispensable para todo gerente en TI.
+Con este derrotero, este curso busca crear los conocimientos, habilidades y competencias que requiere el gerente de tecnologías de información para interpretar correctamente las estrategias de negocios y como se implementan estas por medio de la gestión de proyectos.   Se analizan en este curso los componentes estratégicos de la gestión de proyectos, los marcos de trabajo más utilizados, el análisis de factibilidad, el desarrollo de las condiciones de inicio de los proyectos, las fases iniciales de los proyectos y las áreas de alcances, calidad y costos en la planificación de los proyectos.
+Se pretende así que durante este curso se desarrolle la capacidad para comprender la relevancia estratégica de los proyectos y adquirir los conocimientos que demanda una gestión orientada a la generación de valor para las organizaciones.
+3 Objetivos
+Objetivo General
+Desarrollar el conocimiento y competencias requeridas para gestionar proyectos de tecnologías de información de manera exitosa, comprendiendo su valor estratégico como mecanismo de evolución para las organizaciones.
+Objetivos específicos:
+- Conocer el enlace estratégico de los proyectos en las organizaciones.
+- Comprender las condiciones estratégicas, tácticas y operacionales para la gestión de proyectos en tecnologías de información.
+- Aplicar diversos modelos y marcos de trabajo a la gestión de proyectos de tecnologías de información.
+4 Contenidos
+Temas del curso
+Introducción a la administración de proyectos en TI
+●	Conceptos para la gestión proyectos
+●	Evolución de los criterios de éxito
+●	Evolución organizacional y gestión de proyectos de TI
+●	Experiencias en gestión de proyectos de TI
+●	Marcos de trabajo para la gestión de proyectos
+●	PMBOK
+●	PRINCE2
+●	IPMA
+●	CMMI
+●	Orientación a planes versus orientación ágil en la gestión de proyectos
+Proyectos y entorno organizacional
+●	Enlace estratégico de los proyectos en TI
+●	Análisis del entorno en proyectos
+●	Gestión de portafolios y programas, modelo OPM3
+●	La oficina de proyectos y su papel en las organizaciones proyectizadas
+●	Visión procesal de la gestión de proyectos
+●	Procesos de gestión de proyectos y su relación con los procesos ingenieriles
+Formulación de proyectos
+●	De la idea al caso de negocio
+●	El proceso de formulación y sus herramientas
+●	Dimensiones y decisiones en la formulación efectiva
+●	La presentación de resultados del proceso de formulación
+Procesos en la gestión de proyectos
+●	Proceso de inicio
+●	Creación de las condiciones de inicio
+●	El “charter” del proyecto y sus posibles variantes
+●	Formalización del inicio de proyectos
+●	Proceso de planeación
+●	Proceso de ejecución y control
+●	Proceso de cierre
+El proceso de gestión de los alcances
+●	Determinado el alcance del producto y el alcance del proyecto
+●	Principales herramientas para gestionar el alcance de los proyectos
+●	El proceso de control de cambios
+●	Las preocupaciones del gerente de proyectos en la gestión de alcances
+Gestión de la calidad en proyectos de TI
+●	Conceptos de la calidad en la gestión de proyectos
+●	Procesos de la gestión de calidad
+●	Herramientas para la gestión de la calidad
+●	Dilemas en la gestión de la calidad
+●	Aplicación de la deuda técnica
+5 Metodología de enseñanza y aprendizaje
+El curso se desarrolla mediante una combinación de técnicas magistrales con otras de orden colaborativo y de desarrollo individual y autoaprendizaje.  Además de las sesiones guiadas por el docente, los estudiantes participarán en la resolución de casos, desarrollo de investigaciones, exposiciones y foros de discusión sobre diversos tópicos de la gestión de proyectos en TI. Será necesario que los estudiantes recurran a fuentes bibliográficas sólidas, así como a la aplicación de investigaciones de campo para la comprobación y puesta en práctica de los conocimientos generados a lo largo del curso
+6 Evaluación
+La evaluación del curso se concentra en actividades específicas como las mencionadas en la metodología de enseñanza y aprendizaje, como ejemplo de lo anterior se propone la evaluación siguiente:
+Investigación práctica aplicada 1                                                50%
+Investigación práctica aplicada 2                                                50%
+Total:                                                                                          100%
+La evaluación del curso se concentra en actividades específicas como las mencionadas en la metodología de enseñanza y aprendizaje, como ejemplo de lo anterior se propone la evaluación siguiente:
+Investigación práctica aplicada 1                                                50%
+Investigación práctica aplicada 2                                                50%
+Total:                                                                                          100%
+7 Bibliografía
+La evaluación del curso se divide en los siguientes rubros:
+Reporte de lecturas y ejercicios individuales:      20%
+Escritura de dos ensayos individuales:                30%
+Investigación sobre un tema seleccionado          25%
+Resolución de casos prácticos:                           25%
+Total:                                                                   100%
+- Project Management Body of Knowledge (PMBOK) Project Management Institute, 6th edition, 2017.
+- Kerzner, Harold. Project Management: A systems approach to Planning, Scheduling and Controlling, 10th edition., John Wiley & Sons, 2009.
+- Artículos seleccionados que se suministrarán a lo largo del curso y referencias a bases de datos electrónicas.
+- ICB - IPMA Competence Baseline Version 4.0, 2015
+- Shenhar, A, Dvir, D. “Reinventing Project Management”, Harvard Business School Press, 2007
+- Moustafaev, J, “Delivering Exceptional Project Results”, J. Ross Publishing, 2011.
+8 Profesor

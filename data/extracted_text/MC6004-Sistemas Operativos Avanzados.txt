@@ -1,0 +1,283 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Programa del curso MC -6004 
+Sistemas Operativos Avanzados 
+Escuela de Computación  
+Programa de Maestría en Computación 
+ 
+ 
+ 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+Escuela en Computación - Programa de Maestria en Computación                                                  
+Página | 2  de 16
+ 
+ 
+ 
+2 Descripción 
+general 
+ 
+Este es un curso a nivel de postgrado que cubre detalladamente varios temas 
+avanzados en diseño e implementación de Sistemas Operativos. 
+ 
+ 
+ 
+1 Datos generales
+Nombre del curso: 
+Sistemas Operativos Avanzados 
+Código: 
+MC-6004 
+Tipo de curso: 
+ Teórico – práctico 
+Electivo o no:  
+No electivo 
+Nº de créditos: 
+4 
+Nº horas de clase por semana: 
+3 
+Nº horas extraclase por semana:
+9 
+Ubicación en el plan de 
+estudios:
+II Periodo del Plan de Estudios de Maestría en 
+Computación con énfasis en Ciencias de la Computación
+Requisitos: 
+Ninguno 
+Correquisitos: 
+Ninguno 
+El curso es requisito de: 
+MC-6006 Redes de Computadores Avanzadas  
+Asistencia: 
+Obligatoria 
+Suficiencia: 
+Si 
+Posibilidad de reconocimiento: 
+Si 
+Vigencia del programa: 
+I Semestre 2020 
+I parte: Aspectos relativos al plan de estudios 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+Escuela en Computación - Programa de Maestria en Computación                                                  
+Página | 3  de 16
+3 Objetivos
+Objetivo General: Estudiar material avanzado de Sistemas Operativos, 
+revisando, al mismo tiempo, las tendencias actuales de investigación en el 
+área. 
+ 
+Objetivos específicos: 
+ 
+1- Desarrollar proyectos programados complejos asociados a Sistemas 
+Operativos 
+2- Entender como las técnicas clásicas de Sistemas Operativos tienen 
+vigencia en nuestra tecnología actual  
+ 
+4 Contenidos 
+ 
+1. Introducción 
+2. Estructuras de Sistemas Operativos 
+3. Monitores de Máquinas Virtuales 
+4. Mecanismo de Comunicación en Sistemas Distribuidos 
+5. Sincronización 
+6. Scheduling 
+7. Sistemas distribuidos: Conceptos 
+8. File Systems 
+9. Distributed Shared Memory (DSM) 
+10. Memoria Virtual Recuperable –Atomicidad 
+11. Sistemas de Tiempo Real: Conceptos Básicos y Scheduling 
+12. Conceptos de High Performance Computing 
+13. Dispositivos Móviles 
+14. Internet, Computación Distribuida y Cloud Computing  
+ 
+ 
+5 Metodología 
+de enseñanza 
+y aprendizaje 
+Calendario El curso es de 3 horas lectivas por semana. Para propósitos 
+oficiales, la asistencia se considerará obligatoria y valdrá una pequeña pero 
+real parte de la nota del curso. Al final de este documento podrá encontrar el 
+cronograma detallado del curso. Aunque no está escrito en piedra, es muy 
+poco probable que este cronograma sea alterado. 
+Exámenes Parciales Todo el material será evaluado en 2 exámenes 
+parciales no acumulativos durante el semestre, en los que se permite un 
+“forro” oficial de una página tamaño carta. Es posible (aún se está 
+decidiendo) que se permita también traer una antología impresa y 
+empastada de los papers a ser evaluados para cada examen. 
+II parte: Aspectos operativos
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+Escuela en Computación - Programa de Maestria en Computación                                                  
+Página | 4  de 16
+Apuntadores En cada clase, habrá al menos 2 apuntadores oficiales, los 
+cuales subirán sus apuntes al foro del curso antes de la siguiente lección. 
+Todos deben ser apuntadores durante el semestre pues es parte de la nota 
+final. Es indispensable que estos documentos sean de mucha calidad, no se 
+trata de un “resumen ejecutivo” de la clase, sino que es un reporte detallado 
+de todo lo que se dice y ocurra en 3 horas de clase, enriquecido con portada, 
+tabla de contenido, imágenes, gráficos, datos adicionales, etc. Se debe 
+poner en el foro del curso, bajo el thread de “Apuntes”, un archivo PDF cuyo 
+nombre será de la forma SOA16mmdd-k.pdf, donde mm es el mes, de la 
+fecha del día, y k un número secuencial para distinguir entre todos los 
+apuntes de la misma clase. Si se falla en el nombre del documento habrá 
+una penalidad en la nota respectiva. Este trabajo y el post respectivo en el 
+foro deben venir debidamente identificados para saber quién fue la persona 
+que los hizo. 
+Material de Clase No hay un libro de texto para este curso. Se leerán 
+múltiples papers de investigación tomados de una amplia antología 
+seleccionada por el profesor. Algunos serán explicados en clase de manera 
+explícita, otros serán presentados por estudiantes (ver detalles más 
+adelante), y otros deberán ser leídos y estudiados en forma individual. En 
+cualquiera de 
+los casos, se espera que los estudiantes obtengan un sólido entendimiento 
+del problema estudiado y de la solución propuesta por los autores. 
+Resúmenes De los N papers estudiados durante el semestre, cada 
+estudiante debe entregar al menos K resúmenes escritos, donde K es el 
+mínimo entre 23 y el 60% de N. Estos documentos tienen 2 partes 
+claramente separadas. En la primera parte, se presenta un resumen del 
+material del paper,  y en la segunda parte, se contestan las 5 preguntas 
+claves al leer un artículo científico: 
+1. ¿Cuál es el problema que plantea el paper? 2. ¿Por qué es un problema 
+interesante o importante? 3. ¿Qué otras soluciones se han intentado para 
+resolver este problema? 4. ¿Cuál es la solución propuesta por los autores? 
+5. ¿Qué tan exitosa es esta solución? 
+Los resúmenes se deben entregar en forma impresa antes de la clase 
+respectiva. Bajo ninguna circunstancia se aceptará la entrega atrasada de 
+resúmenes. Cada resumen debe venir en forma independiente, debidamente 
+identificado y mostrando una “cajita” con el código de cada paper en un 
+tamaño más grande (ver sección de contenidos). El trabajo completo no debe 
+ser menor a 2 páginas, ni mayor a 4 páginas (si se pasan de estos límites 
+habrá una penalización). Las copias de estos trabajos serán severamente 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+Escuela en Computación - Programa de Maestria en Computación                                                  
+Página | 5  de 16
+castigadas. Se estima que por semana se estudiarán 4 o 5 papers. El 
+profesor confirmará por adelantado cuales son los papers de cada sesión. 
+Presentación Oral Todos los estudiantes del curso deben presentar durante 
+el semestre un paper asignado por el profesor. Dicha presentación oral debe 
+seguir el formato de una conferencia científica (ver notas de clase de 
+“Introducción a la Investigación”). Por respeto a la clase, se recomienda que 
+cada presentador ensaye previamente y haga su mejor esfuerzo para 
+explicar el material asignado. Ninguna presentación puede durar más de 20 
+minutos ni menos de 16 minutos (no improvise elementos no ensayados). 
+Una ausencia el día de una presentación implica un 0 en el rubro respectivo. 
+Los presentadores de cada fecha son responsables de verificar que el equipo 
+necesario funcione correcta y oportunamente (consejo: revisar todo antes de 
+empezar la clase). 
+Proyectos Programados Un componente esencial del aprendizaje y de la 
+evaluación de este curso son los proyectos programados. Se debe trabajar 
+en grupos de 3 personas. Los grupos de trabajo requieren la aprobación del 
+profesor. Habrá una secuencia de 3 proyectos. Es indispensable tener 
+amplia experiencia en programación (particularmente en lenguaje C, 
+lenguaje ensamblador, y ambientes UNIX o Linux). Los proyectos deben 
+ejecutar estrictamente en las condiciones establecidas por el profesor, así 
+que cualquier alteración de las reglas deja al proyecto sujeto al juicio 
+unilateral del profesor (quien posiblemente le dará un 0 de calificación). 
+Algunos de los proyectos serán revisados mediante “demos” en cierta fecha 
+y hora establecida (ver cronograma). Una ausencia a esta demostración 
+implicará una calificación de 0 en el proyecto correspondiente. Estos no 
+serán revisados en ninguna otra ocasión. Cualquier otro proyecto o tarea 
+atrasado será penalizado con 3k puntos donde k son los días de atraso (k > 
+0). Es responsabilidad del estudiante hacerle llegar al profesor el trabajo 
+atrasado en las mismas condiciones que se solicitó. 
+Paper de Investigación Cada grupo de trabajo de los proyectos programados 
+debe escribir un artículo científico de temas relacionados a Sistemas 
+Operativos Avanzados (ver notas de “Introducción a la Investigación” para la 
+estructura y estilo de un artículo científico). El tema de este artículo puede 
+ser sugerido por los estudiantes pero debe ser sometido a la aprobación del 
+profesor, o puede ser tomado de una lista de temas propuestos por el 
+profesor. Hay 4 fechas asociadas al paper durante el semestre: 
+1. Aprobación del tema (correo electrónico)  
+2. Abstract y referencias (versión impresa - fuentes de LATEX y PDF por 
+correo) 3. Versión preliminar (versión impresa  - fuentes de LATEX y PDF 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+Escuela en Computación - Programa de Maestria en Computación                                                  
+Página | 6  de 16
+por correo) 4. Versión final (versión impresa  - fuentes de LATEX y PDF por 
+correo)  
+El paper debe estar escrito en inglés y se debe confeccionar con LATEX 
+(formato de IEEE Transactions). 
+Tareas Cortas y Quices Habrá una serie de quices y  tareas cortas durante 
+el semestre. Ningún quiz será repuesto bajo ninguna circunstancia. Al final 
+del semestre se eliminarán cierta cantidad de estas notas. 
+ 
+ 
+ 
+6 Evaluación 
+Trabajo en clase 
+5% 
+Presentación Oral 
+5% 
+Quices y tareas cortas 
+10% 
+Paper 
+10% (1% - 2% - 3% - 4%) 
+Resúmenes de papers 
+15% 
+2 Exámenes parciales 
+10% - 15% 
+Proyectos programados 
+30% (10% - 10% - 10%) 
+  
+ 
+7 Bibliografía 
+ “Operating System Concepts”, Silberschatz and Galvin. 
+ “OS: Advanced Concepts”, Maekawa, Oldehoeft. Addison-Wesley. 
+ “Distributed Operating Systems”, Andrew S. Tanenbaum. Prentice Hall. 
+ “An Introduction to Programming with Threads”, Andrew Burrell. 
+ Además, diferentes artículos recomendados por el profesor. 
+ 
+ 
+8 Profesor 
+Dr. Francisco J. Torres-Rojas 
+Doctor en Ciencia de la Computación, Georgia Institute of Technology, U.S.A. 
+Experto en Sistemas Operativos, Sistemas Distribuidos, Computación 
+Distribuida, Bioinformática 
+Consulta: Lunes después de la clase, Martes y Jueves de 9:30am a 11:30am, 
+por correo electrónico (torresrojas.cursos@gmail.com) y en el foro del curso 
+(http://www.ic-itcr.ac.cr/foro) 
+ 

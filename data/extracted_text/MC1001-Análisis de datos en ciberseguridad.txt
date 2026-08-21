@@ -1,0 +1,100 @@
+Programa del curso MC1001
+Análisis de Datos en Ciberseguridad
+Escuela de Ingeniería en Computación
+Programa de Maestría en Ciberseguridad
+1 Datos generales
+1 Datos generales
+Nombre del curso:
+Análisis de Datos en Ciberseguridad
+Código:
+MC1001
+Tipo de curso:
+Teórico Práctico
+Electivo o no:
+No
+Nº de créditos:
+4
+Nº horas de clase por semana:
+4
+Nº horas extraclase por semana:
+14
+% de las áreas curriculares:
+NA
+Ubicación en el plan de estudios:
+Curso de tercer trimestre
+Requisitos:
+Ninguno
+Correquisitos:
+Ninguno
+El curso es requisito de:
+Ninguno
+Asistencia:
+Obligatoria
+Suficiencia:
+Sí
+Posibilidad de reconocimiento:
+Sí
+Vigencia del programa:
+2023
+2 Descripción general
+La gestión de la ciberseguridad requiere del apoyo de herramientas automáticas para lograr con más eficiencia y eficacia su objetivo. Es así como por ejemplo un Centro de Operaciones en Seguridad, echa mano de la inteligencia artificial u otras técnicas para poder distinguir los vectores de ataque y además tomar decisiones sobre la respuesta a los incidentes de forma más precisa.
+El análisis de datos es uno de los tópicos más importantes en el campo de la ciberseguridad, ello conlleva manejar grandes cantidades datos que podrían contener falsos positivos. Tradicionalmente algunos ejemplos de los conjuntos de datos que son insumos para el análisis de anomalías, son las bitácoras de software, código de software, bitácoras de ejecución, entre otros.
+Este curso provee un conjunto de conceptos teóricos y prácticos para la aplicación de análisis de datos en el campo de la ciberseguridad. El análisis de ciber-datos es un campo amplio con gran diversidad de técnicas y aplicaciones. El presente curso se centra en estudiar las técnicas más utilizadas para la perfilación de comportamiento de personas y software: detección de anomalías, minería de datos en tiempo real (data stream mining), procesamiento de datos distribuidos e ingeniería inversa automatizada; teniendo presente en todas ellas la privacidad. Todo ello mediante el uso de herramientas de software de análisis de datos disponibles que facilitan alcanzar lo indicado.
+Para un buen desempeño en el curso, es requerido que el estudiante tenga conocimiento general de estadística y cálculo diferencial integral; principalmente en los siguientes conceptos: distribuciones de probabilidad, regresión lineal simple, regresión logarítmica, árboles de regresión y decisión, validación cruzada, “clustering”, optimización (de funciones).
+3 Objetivos
+Objetivo General
+El estudiante al finalizar el curso está en la capacidad de desarrollar soluciones para detección de anomalías, descubrimiento de conocimiento, análisis de amenazas y diagnóstico de software en ciberseguridad; mediante herramientas de software orientadas al análisis de datos.
+Objetivos específicos:
+- Aplicar algoritmos de modelos de aprendizaje automático utilizando múltiples fuentes de datos (por ejemplo, sitios web, código fuente, trazas de red, entre otros) para descubrir y analizar amenazas en los componentes de software.
+- Analizar anomalías en bitácoras de sistemas con el propósito de identificar conductas fraudulentas por medio de modelos de aprendizaje automático.
+- Construir perfiles de comportamiento de personas y software respetando la privacidad, mediante el análisis de datos, para la optimización de controles de seguridad.
+4 Contenidos
+Repaso de Conceptos de Estadística y Cálculo para el Análisis de Datos
+- Optimización (de funciones)
+- Distribuciones y pruebas de hipótesis
+- Regresión lineal simple
+- Regresión logarítmica
+- Validación cruzada
+- Árboles de decisión y regresión
+- Clustering
+Técnicas para identificación anomalías y detección de fraude
+- Técnicas para el sobremuestreo sintético de minorías (SMOTE)
+- Minería de patrones frecuentes
+- Perfilación estadística
+- Fingerprinting
+- Métodos de ensamblaje (ensamble methods)
+Técnicas de minería de Datos en Tiempo Real (Stream Mining)
+- Identificación de información relevante
+- Filtros de Bloom
+- Hashes localmente sensibles (LSH)
+- Árboles de Hoeffding
+Técnicas para el procesamiento de datos distribuidos
+- Map-Reduce
+- HADOOP
+- Spark
+Técnicas de ingeniería inversa automatizada
+- Protocolos de formato de inversión
+- N-gramas
+- Modelo oculto de Markov
+- Aprendizaje automático en estado pasivo
+Función de conocimiento
+- Redes Bayesianas
+- Densidad diversa
+- Detección de instrucción colaborativa
+5 Metodología de enseñanza y aprendizaje
+La metodología de enseñanza y aprendizaje que se empleará se basará en el desarrollo de laboratorios con el fin de lograr adoptar los aspectos prácticos de los conceptos del curso. También se llevarán casos de estudio alineados a la detección de anomalías e identificación de perfiles de comportamiento.
+6 Evaluación
+La evaluación estará dada principalmente por medio de tres componentes. El primero asociado a pruebas cortas o comprobaciones de lecturas como mecanismo de seguimiento y control de asimilación de la materia vista en clase. El segundo es una investigación bibliográfica sobre las tendencias en estándares para la seguridad de la información. El último elemento de evaluación corresponde al desarrollo de estudios de casos en escenarios de gestión de procesos de TI aplicando los conceptos vistos en clase.
+- Laboratorios                						75%
+- Resolución de casos de estudio					20%
+- Reporte de Lecturas						5%
+Total: 	                                                                                     	100%
+La evaluación estará dada principalmente por medio de tres componentes. El primero asociado a pruebas cortas o comprobaciones de lecturas como mecanismo de seguimiento y control de asimilación de la materia vista en clase. El segundo es una investigación bibliográfica sobre las tendencias en estándares para la seguridad de la información. El último elemento de evaluación corresponde al desarrollo de estudios de casos en escenarios de gestión de procesos de TI aplicando los conceptos vistos en clase.
+- Laboratorios                						75%
+- Resolución de casos de estudio					20%
+- Reporte de Lecturas						5%
+Total: 	                                                                                     	100%
+7 Bibliografía
+Satpathy, S., & Mohanty, S. N. (Eds.). (2020). Big data analytics and computing for digital forensic investigations (First edition). CRC Press.
+Vona, L. W. (2017). Fraud data analytics methodology: the fraud scenario approach to uncovering fraud in core business systems. Wiley.
+8 Profesores

@@ -1,0 +1,364 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Programa del curso MC-6102 
+Análisis y Diseño de Algoritmos 
+ 
+Escuela de Computación 
+Programa de Maestría en Computación 
+ 
+ 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+Escuela de Computación - Programa de Maestría en Computación                                                  
+Página | 2  de 7
+ 
+ 
+2 Descripción 
+general 
+ 
+El diseño de algoritmos es la actividad fundamental de las Ciencias de la 
+Computación. Una computación es el resultado de la ejecución de un 
+algoritmo. Por lo tanto, es natural que en todas las áreas de las Ciencias de la 
+Computación, investigadores y practicantes inviertan un alto porcentaje de su 
+tiempo diseñando algoritmos para, por ejemplo, administrar mejor los recursos 
+de un computador  (sistemas operativos), modelar la mente humana 
+ 
+ 
+1 Datos generales
+Nombre del curso: 
+Análisis de Algoritmos 
+Código: 
+MC-6102 
+Tipo de curso: 
+Teórico-práctico 
+Electivo o no:  
+No electivo 
+Nº de créditos: 
+4 
+Nº horas de clase por semana: 
+3 
+Nº horas extraclase por semana:
+9 
+Ubicación en el plan de 
+estudios:
+I Periodo del Plan de Estudios de Maestría en 
+Computación con Énfasis en Ciencias de la Computación
+Requisitos: 
+  Ninguno 
+Correquisitos: 
+Ninguno 
+El curso es requisito de: 
+Ninguno 
+Asistencia: 
+Obligatoria 
+Suficiencia: 
+Si 
+Posibilidad de reconocimiento: 
+Sí 
+Vigencia del programa: 
+  
+  I  Semestre 2020 
+ 
+I parte: Aspectos relativos al plan de estudios 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+Escuela de Computación - Programa de Maestría en Computación                                                  
+Página | 3  de 7
+(inteligencia artificial), modelar la representación perceptible de la realidad 
+(multimedios), etc.   
+Un algoritmo debe ser efectivo, es decir, resolver el problema concreto para el 
+cual fue diseñado. Esta efectividad debería ser demostrable, desde el punto 
+de vista matemático. La rama denominada Corrección de Programas, se 
+encarga de estudiar mecanismos formales para demostrar la efectividad de un 
+algoritmo y no será parte de este curso.  
+Por los altos volúmenes de datos que normalmente se manejan y la cantidad 
+finita de espacio y tiempo con que se cuenta, un algoritmo también debería 
+ser eficiente. La eficiencia se define como la utilización de “pocos” recursos de 
+almacenamiento o “poco” tiempo con respecto a otros algoritmos efectivos 
+para el mismo problema.  Esta segunda característica de la gran mayoría de 
+los algoritmos sí es tema esencial  de este curso. 
+Para lograr algoritmos eficientes, se necesitan tres “ingredientes” principales. 
+Primero que todo, técnicas de diseño que sugieran las maneras de abordar el 
+problema y cuáles son las estructuras de datos apropiadas para apoyar el 
+algoritmo. Segundo, técnicas de análisis que ayuden a determinar la 
+complejidad del algoritmo y, por lo tanto, a compararlo con otros. Finalmente,  
+creatividad para enfocar el problema usando esas técnicas y la intuición. En 
+este curso, el estudiante aprenderá sobre los primeros dos ingredientes y el 
+tercero, elusivo por naturaleza y no tan ameno al tratamiento formal, será 
+ilustrado con ejemplos clásicos de algoritmos creativos e inspiradores. 
+ 
+3 Objetivos 
+Conocer técnicas formales de análisis y de diseño de algoritmos que 
+permitan la discriminación y programación eficiente (desde el punto de vista 
+de tiempo de ejecución) de soluciones a problemas concretos. 
+ 
+El estudiante será capaz de analizar la complejidad de “peor caso” de 
+algoritmos utilizando herramientas tales como funciones recurrentes, 
+notación “o grande” e inducción. 
+ 
+El estudiante podrá entender el análisis de caso promedio y de tiempo 
+amortizado de algunos algoritmos clásicos. 
+ 
+Con base en el análisis formal de la complejidad de algoritmos, el 
+estudiante podrá determinar la(s) solución(es) más adecuada(s) para 
+problemas específicos. 
+ 
+En cuanto al diseño de algoritmos, el estudiante conocerá las estructuras 
+de datos y técnicas apropiadas para resolver problemas clásicos así como 
+problemas nuevos que se le presenten. 
+ 
+El estudiante conocerá técnicas para determinar si un problema está en 
+P, NP y si es NP-completo. 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+Escuela de Computación - Programa de Maestría en Computación                                                  
+Página | 4  de 7
+ 
+ 
+ 
+ 
+4 Contenidos 
+ 
+1. 
+Introducción  
+1.1. 
+¿Qué es un algoritmo? 
+1.2. 
+Historia. 
+1.3. 
+Conceptos básicos. 
+ 
+Capítulo 2 del libro de texto. 
+ 
+2. 
+Análisis del tiempo de ejecución de un algoritmo 
+2.1. 
+Notación asintótica. 
+2.2. 
+Ejemplos. 
+2.3. 
+Pruebas por inducción. 
+ 
+Capítulos 3 y 4 del libro de texto. 
+ 
+3. 
+Teoría de grafos  
+3.1. 
+Definiciones. 
+3.2. 
+Estructuras de datos. 
+3.3. 
+Búsqueda en árboles. 
+3.4. 
+Búsqueda en grafos. 
+3.5. 
+Familias especiales de grafos. 
+3.6. 
+Problemas clásicos. 
+ 
+Capítulo 9 del libro de texto. 
+ 
+4. 
+Autómatas de estados finitos  
+4.1. 
+Modelo general. 
+4.2. 
+Propiedades. 
+4.3. 
+Aplicaciones. 
+ 
+Capítulo 2 de [1]. 
+ 
+5. 
+Algoritmos avariciosos o voraces 
+5.1. 
+El caso general. 
+5.2. 
+Árbol de mínima expansión. 
+5.3. 
+Camino más corto. 
+5.4. 
+Aplicaciones en heurísticos. 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+Escuela de Computación - Programa de Maestría en Computación                                                  
+Página | 5  de 7
+ 
+Capítulo 6 del libro de texto. 
+ 
+6. 
+Algoritmos divide y vencerás  
+6.1. 
+El caso general. 
+6.2. 
+Merge sort. 
+6.3. 
+Multiplicación de matrices. 
+6.4. 
+Criptografía. 
+Capítulo 7 del libro de texto. 
+ 
+7. 
+Programación dinámica  
+7.1. 
+El caso general, principio de optimalidad. 
+7.2. 
+Multiplicación de matrices. 
+7.3. 
+Algoritmo CYK 
+7.4. 
+Conversión DFA -> exp. regular. 
+ 
+Capítulo 8 del libro de texto. 
+ 
+8. 
+Algoritmos genéticos  
+8.1. 
+El caso general. 
+8.2. 
+Aplicaciones 
+ 
+9. 
+Algoritmos probabilistas  
+9.1. 
+Introducción 
+9.2. 
+Ejemplos de algoritmos numéricos. 
+9.3. 
+Algoritmos de Monte Carlo. 
+9.4. 
+Algoritmos de Las Vegas. 
+ 
+Capítulo 10 del texto.  
+ 
+10. 
+Algoritmos paralelos  
+10.1. Un modelo computacional. 
+10.2. Técnicas básicas. 
+10.3. Ejemplos. 
+ 
+Capítulo 11 del texto. 
+ 
+11. 
+Complejidad computacional  
+11.1. Antecedentes. 
+11.2. Argumentos del adversario. 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+Escuela de Computación - Programa de Maestría en Computación                                                  
+Página | 6  de 7
+11.3. Reducciones entre problemas. 
+11.4. Las clases NP y P. 
+11.5. Problemas NP-completos y NP-difíciles. 
+11.6. Ejemplos. 
+ 
+ Capítulo 12 del texto. 
+ 
+12. 
+Algoritmos heurísticos y aprox.  
+12.1. Algoritmos heurísticos. 
+12.2. Algoritmos aproximados. 
+12.3. Ejemplos. 
+Capítulo 13 del texto. 
+ 
+ 
+5 Metodología 
+de enseñanza 
+y aprendizaje 
+Exposiciones magistrales sobre los temas del contenido. 
+Tareas semanales con ejercicios sobre la materia. 
+Investigación de temas selectos. 
+ 
+6 Evaluación 
+ 
+ 
+Tareas e investigaciones 
+50% 
+Exámenes parciales 
+50% 
+ 
+ 
+7 Bibliografía 
+Obligatoria 
+Brassard, G., Bratley, P. Fundamentos de Algoritmia. Prentice Hall, 1997. 
+Complementaria 
+Baase, S., Van Gelder, G. Algoritmos Computacionales: Introducción al 
+análisis y diseño. Pearson Educación, México, 2002. 
+Cormen, T. H., Leiserson, C.E., Rivest, R.L., Stein C. Introduction to 
+Algorithms. 3 ed., MIT Press, 2009. 
+Lehman, E., Leighton T. Mathematics for Computer Science, MIT, 2004. 
+Aho, A., Hopcroft, J. Introduction to Automata Theory, Formal Languages and 
+Computation. Addison-Wesley, 1979. 
+II parte: Aspectos operativos
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+Escuela de Computación - Programa de Maestría en Computación                                                  
+Página | 7  de 7
+Garey, M.R., Johnson, D. Computers and Intractability: A guide to the theory 
+of NP-completeness. W. H. Freeman and Company, 1979. 
+ 
+ 
+8 Profesor 
+Profesor: José E. Araya, Ph.D. 
+Correo: jaraya@itcr.ac.cr, josee.arayamonge@gmail.com 
+Teléfono oficina: 2550-2448 
+Horario del curso: martes 6:00pm – 8:50pm 
+Oficina: primer piso del CIC 
+Horas de consulta: 
+martes 4:40pm-5:40pm 
+ (oficina Maestria, Centro Académico San José) 
+ 
+miércoles, viernes: 2:00pm-3:00pm (CIC) 
+También se atenderán consultas por correo electrónico. Favor usar la 
+segunda dirección electrónica. 
+TecDigital será usado como mecanismo estándar para presentar material y 
+hacer anuncios. 
+ 

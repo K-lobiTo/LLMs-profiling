@@ -1,0 +1,124 @@
+Programa del curso MC3001
+Seguridad de Software Avanzado
+Escuela de Ingeniería en Computación
+Programa de Maestría en Ciberseguridad
+1 Datos generales
+1 Datos generales
+Nombre del curso:
+Seguridad de Software Avanzado
+Código:
+Mc3001
+Tipo de curso:
+Teórico Práctico
+Electivo o no:
+No
+Nº de créditos:
+4
+Nº horas de clase por semana:
+4
+Nº horas extraclase por semana:
+14
+% de las áreas curriculares:
+NA
+Ubicación en el plan de estudios:
+Curso del área de tópicos electivos profesionalizantes
+Requisitos:
+Ninguno
+Correquisitos:
+Ninguno
+El curso es requisito de:
+MC3004 Seguridad en la Nube
+MC3002 Tecnologías para Mejorar la Privacidad
+MC3006 Defensa y Ataque de Sistemas
+Asistencia:
+Obligatoria
+Suficiencia:
+No
+Posibilidad de reconocimiento:
+Sí
+Vigencia del programa:
+2023
+2 Descripción general
+El curso presenta un estudio de la seguridad del software. Se considerarán vulnerabilidades y vectores de ataque, desde una perspectiva avanzada, que pueden servir para violentar el software creado. Entre ellos: Buffer Overflows, SQL Injection, robo de sesiones, entre otros. Además también se considerarán defensas para prevenir o mitigar estos ataques incluyendo técnicas de programación, modelado de vulnerabilidades y algunas técnicas avanzadas de pruebas.
+Por otro lado, al final del curso se analizará el impacto de la "Seguridad por Diseño" en el proceso de desarrollo de software.
+3 Objetivos
+Objetivo General
+Al finalizar el curso, el estudiante estará en capacidad de diseñar soluciones de Software Seguro a través de mecanismos conocidos como Seguridad desde el Diseño; con el objetivo de garantizar la confidencialidad, integridad y disponibilidad de los datos en las aplicaciones.
+Objetivos específicos:
+- Conocer escenarios de vulnerabilidad y vectores de ataque en el software.
+- Evaluar las estrategias de defensa que generalmente se utilizan para prevenir y mitigar ataques hacia el software.
+- Diseñar software desde una perspectiva de seguridad desde su diseño y a través de todo el ciclo de desarrollo de software.
+4 Contenidos
+La importancia de la Seguridad en el Software
+- Introducción
+- Historia
+- ¿Qué es Seguridad del Software?
+- Complejidad, Extensibilidad y Conectividad
+- Implicaciones Éticas de la Seguridad del Software
+Administración de Riesgo Aplicado a la Seguridad del Software
+- Comprendiendo el contexto del negocio
+- Identificando los riesgos técnicos y de negocio
+- Sintetizado y priorización del riesgo
+- Definición de estrategias de mitigación
+- Creación de Correcciones y Validación
+Vulnerabilidades comunes en Seguridad de Software
+- Desbordamiento de Buffers y de Integers
+- Return Oriented Programming
+- Inyección de Código (SQL, XSS)
+- Condiciones de carrera
+- Exposición de información
+- Aleatoriedad y determinismo
+Principios de Programación Segura
+- Modelos de Amenazas
+- Trusted Computing base
+- Estándares de codificación para aseguramiento de fallos y estados por defecto
+- El menor privilegio
+- Prevención de ataques a través de la validación de la entrada
+Seguridad basada en el Lenguaje de programación
+- Tipado seguro
+- Type Soundness
+- Aseguramiento de memoria
+- Control de Acceso
+  - Autenticación por contraseñas
+  - Control de acceso clásico a bases de datos
+  - RBAC
+  - Control de Acceso en ambientes abiertos
+  - Nuevos mecanismos de autenticación e identificación
+- Semántica estática y dinámica
+Técnicas de Análisis Estático de código
+- Análisis de flujo de datos e información
+- Ofuscación
+- Pruebas de penetración en análisis estático
+- Ejecución simbólica
+Consideraciones para la seguridad del software
+- Code Review
+- Análisis de riesgo de la arquitectura
+- Pruebas de penetración
+- Pruebas de Seguridad basadas en el riesgo
+- Casos de abuso y mal uso
+- Requerimientos de Seguridad
+- Seguridad en la Operación
+- Análisis externo
+Base de Conocimiento en Seguridad del Software
+- Arquitectura de Conocimiento Unificado para la Seguridad del Software
+- Taxonomía de errores de codificación
+5 Metodología de enseñanza y aprendizaje
+La metodología de enseñanza y aprendizaje que se empleará se basará en el desarrollo de tareas programadas con el fin de lograr asimilar los aspectos prácticos de los conceptos del curso. También se llevarán casos de estudio alineados a la detección de vectores de ataque en diferentes contextos de arquitecturas de sistemas.
+6 Evaluación
+La evaluación estará dada principalmente por medio de cuatro componentes. El primero asociado a pruebas cortas o comprobaciones de lecturas como mecanismo de seguimiento y control de asimilación de la materia vista en clase. El segundo corresponde a tareas programadas. El tercero, es un examen final y el último elemento de evaluación corresponde al desarrollo de estudios de casos en escenarios de arquitecturas de sistemas.
+- Tareas programadas          						40%
+- Resolución de casos de estudio					20%
+- Reporte de Lecturas						10%
+- Examen								30%
+Total: 	                                                                                     	100%
+La evaluación estará dada principalmente por medio de cuatro componentes. El primero asociado a pruebas cortas o comprobaciones de lecturas como mecanismo de seguimiento y control de asimilación de la materia vista en clase. El segundo corresponde a tareas programadas. El tercero, es un examen final y el último elemento de evaluación corresponde al desarrollo de estudios de casos en escenarios de arquitecturas de sistemas.
+- Tareas programadas          						40%
+- Resolución de casos de estudio					20%
+- Reporte de Lecturas						10%
+- Examen								30%
+Total: 	                                                                                     	100%
+7 Bibliografía
+Hoglund, G., & McGraw, G. (2004). Exploiting software: how to break code. Addison-Wesley.
+McGraw, G. (2006). Software security: building security in. Addison-Wesley.
+Viega, J., & McGraw, G. (2002). Building secure software: how to avoid security problems the right way. Addison-Wesley.
+8 Profesores

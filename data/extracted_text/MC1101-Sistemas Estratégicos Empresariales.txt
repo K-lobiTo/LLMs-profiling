@@ -1,0 +1,94 @@
+Programa del curso MC1101
+SISTEMAS ESTRATEGICOS EMPRESARIALES
+Escuela de Ingeniería en Computación
+Programa de Maestría en Gerencia en Tecnologías de la Información
+1 Datos generales
+1 Datos generales
+Nombre del curso:
+Investigación Práctica Aplicada Sistemas Estratégicos Empresariales
+Código:
+MC1101
+Tipo de curso:
+Teórico - Práctico
+Obligatorio o electivo:
+Obligatorio
+Nº de créditos:
+4
+Nº horas de clase por semana:
+3
+Nº horas extraclase por semana:
+9
+Ubicación en el plan de estudios:
+Curso del I semestre del programa de Maestría de Gerencia de Tecnologías de la Información
+Requisitos:
+No Tiene
+Correquisitos:
+No Tiene
+El curso es requisito de:
+No es requisito de ningún curso
+Asistencia:
+Obligatoria
+Suficiencia:
+No
+Posibilidad de reconocimiento:
+No
+Aprobación y actualización del programa:
+2025
+2 Descripción general
+El uso de tecnologías de información debe, en principio, favorecer los objetivos de las organizaciones.  Los contextos empresariales parten de una propuesta de valor del negocio, donde, a través de una caracterización mediante principios de estrategia, se puede elaborar un sistema de actividades que puede darle una posición sólida a la empresa.  Dentro de este sistema de actividades, las tecnologías de información se articulan de forma coherente para favorecer la propuesta de valor identificada.  A través de la evolución de estas tecnologías, algunos tipos de sistemas de información se han ubicado como referentes para manejar aspectos internos y externos a la empresa:  por ejemplo, los sistemas de planificación de recursos (ERP por sus siglas en inglés), los administradores de relaciones con el cliente (CRM), los administradores de la cadena de suministro (SCM) entre otros.  Este curso se propone como un espacio donde el estudiante podrá conocer los principios detrás de un negocio, la caracterización de la industria que le afecta y cómo las tecnologías de información en forma general, pueden ser un recurso que puede favorecer a la empresa si son manejados de una forma estratégica.
+3 Objetivos
+Objetivo General
+Desarrollar el conocimiento alrededor de la problemática asociada al uso de sistemas de información y tecnologías de información y comunicación en un contexto estratégico-empresarial respondiendo a la propuesta de valor que fundamenta el negocio de la empresa.
+Objetivos específicos:
+- Caracterizar las fuerzas competitivas que influyen en los negocios.
+- Reconocer los principios que definen un sistema de actividades único que responde a la propuesta de valor del negocio
+- Investigar sobre los fundamentos y tendencias de los sistemas empresariales estratégicos
+- Aplicar con criterio estratégico la incorporación de los sistemas de información empresariales en función de la propuesta de valor y el manejo de las fuerzas competitivas en un negocio.
+4 Contenidos
+TEMAS DEL CURSO
+El entorno empresarial y de los negocios
+●	Las fuerzas competitivas: la amenaza de nuevos entrantes, el poder de los compradores, el poder de los proveedores, la amenaza de sustitutos y la competencia entre rivales
+●	La dinámica de las fuerzas competitivas y sus efectos en la estrategia.
+●	Las tecnologías de información y las fuerzas competitivas
+La creación de valor en las empresas
+●	La definición de una propuesta de valor y sus consideraciones en la estrategia
+●	El posicionamiento hacia los clientes: consideraciones en los sistemas de información
+●	La creación de un sistema de actividades en función de la propuesta de valor
+●	Cadenas de valor y sistemas de valor.
+●    Modelos basados en recursos
+Sistemas estratégicos empresariales
+●    La visión de una arquitectura de información: funciones de la empresa,
+entorno, niveles de decisión
+●    Sistemas de planificación de recursos empresariales, la perspectiva de
+la cadena de valor.
+●    Sistemas de administración de la cadena de abastecimiento: la
+perspectiva del sistema de valor
+●    Sistema de administración de relación con el cliente: la
+perspectiva del posicionamiento y creación de valor
+●    Sistemas de administración del conocimiento: la perspectiva de las
+actividades de soporte en la cadena de valor
+●    Tendencias tecnológicas y sus impactos en los sistemas
+empresariales y los negocios.
+5 Metodología de enseñanza y aprendizaje
+La estrategia de enseñanza y aprendizaje se orienta en suministrar las bases teóricas y de conocimiento que permitan al estudiante reconocer una problemática asociada con los negocios de una empresa en la perspectiva de su creación, posicionamiento estratégico y capacidad de mantener una ventaja competitiva a partir de una propuesta de valor.
+Para ello se suministrarán lecturas de artículos y casos donde el estudiante podrá reconocer y desarrollar el criterio, el cual, de forma paralela, se reforzará en su actividad de la Investigación Aplicada del curso.
+Además, el estudiante desarrollará habilidades de investigación, especialmente en la creación de un estado del arte en relación con los sistemas empresariales.  Complementariamente, en la Investigación Aplicada, el estudiante podrá enfrentar un problema real aplicando los conocimientos adquiridos en el curso, por lo cual es imperativo el correquisito correspondiente.
+Por lo tanto, el curso se divide metodológicamente de la siguiente forma:
+- Exposiciones magistrales del profesor: introducción de conceptos, presentación de ejemplos y casos promoviendo la participación y creación de criterio del estudiante.
+- Investigación del estudiante: profundización de los conceptos del curso con sistemas empresariales mediante la creación de un estado del arte donde el estudiante deberá consultar fundamentos, tendencias recientes y referentes de la industria.
+- Exposición de casos: a partir de la teoría asimilada, el estudiante tendrá la oportunidad de identificar casos que pueden ser interesantes dentro de la temática del curso el cual expondrá al grupo.
+- Aplicación del conocimiento en forma concurrente al caso analizado en el curso de Investigación Aplicada en Sistemas de Información Empresariales.
+6 Evaluación
+2 exámenes parciales: (20% cada uno).                                           40%
+Participación en clase:                                                                       10%
+Investigación en sistema empresarial (grupal):                                  40%
+Exposición artículo individual:                                                            10%
+Total:                                                                                                100%
+7 Bibliografía
+La bibliografía de las bases de los modelos empresariales se sustenta en alguna literatura clásica del tema, la cual se actualiza con el avance de las tecnologías de información.  En particular los modelos empresariales, en especial los descritos por Michael Porter y que son base para los sistemas de información empresariales, se analizan con algunos artículos base:
+- Porter, Michael E. (Reviewed and Updated 2008).  Five forces that shape the industry.  Harvard Business Review.
+- Porter, Michael E. 1999. What is strategy? Harvard Business Review
+- Porter, Michael E.; Hepeplemann James A. How smart connected devices are transforming competition. Harvard Business Review.
+- Osterwalder, Alexander and Pigneur, Yves (2012) "Designing Business Models and Similar Strategic Objects: The Contribution of IS," Journal of the Association for Information Systems:
+Se complementan estas lecturas de modelos competitivos y las bases de sistemas de información con otros modelos como el Resource Based View y Competencia por Capacidades enfocados en el uso estratégico de tecnologías de información.
+En los temas de sistemas empresariales (ERP, CRM, KMS, SCM) se propone que los estudiantes realicen un estado del arte, por lo cual, como parte de su formación en investigación, se propone que los estudiantes busquen y sinteticen referencias específicas en cada tipo de sistema.

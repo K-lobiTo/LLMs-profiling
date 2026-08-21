@@ -1,0 +1,109 @@
+Programa del curso MC2301
+Planificación estratégica de tecnología de información
+Escuela de Ingeniería en Computación
+Programa de Maestría de Gerencia de Tecnologías de la Información
+1 Datos generales
+1 Datos generales
+Nombre del curso:
+Planificación estratégica de tecnología de información
+Código:
+MC2301
+Tipo de curso:
+Teórico - Práctico
+Obligatorio o Electivo:
+Obligatorio
+Nº de créditos:
+4
+Nº horas de clase por semana:
+3
+Nº horas extraclase por semana:
+9
+% de las áreas curriculares:
+NA
+Ubicación en el plan de estudios:
+Curso del 3er semestre del programa de Maestría de Gerencia de Tecnologías de la Información
+Requisitos:
+No tiene
+Correquisitos:
+No tiene
+El curso es requisito de:
+No Es Requisito de Ningún Curso
+Asistencia:
+Obligatoria
+Suficiencia:
+No
+Posibilidad de reconocimiento:
+No
+Aprobación y actualización del programa:
+I semestre 2021
+2 Descripción general
+En este curso se presentan diferentes modelos de planificación estratégica para la función de información contemplando la definición del marco filosófico del negocio considerando aspectos como: Análisis foda, Misión, Visión, Valores, Objetivos, Estrategias, Políticas y Metas.
+Se muestran diferentes enfoques para derivar el Plan Estratégico para la función de información a partir del modelo estratégico del negocio, considerando aspectos como: tendencias de la T.I,  principios básicos de operación, procesos de negocio, arquitectura tecnológica, portafolio de aplicaciones, modelo organizativo, análisis de riesgo, estimación de recursos,  definición de prioridades, calendarización y proyección de inversión, recomendaciones de transición y seguimiento, así como factores críticos de éxito en el desarrollo.
+3 Objetivos
+Objetivo General
+Al finalizar del curso el estudiante tendrá la capacidad de desarrollar un plan estratégico de TI a partir de las bases técnicas derivadas de los lineamientos estratégicos del negocio, las tendencias de tecnología de Información, el modelo organizacional, los factores críticos de éxito, los procesos de negocio, mecanismos de priorización y la definición de un presupuesto.
+Objetivos específicos:
+- Conocer las tendencias de la tecnología de Información y su aplicación en la organización, así como los principios básicos que delimitan la introducción de tecnología como un habilitador del negocio.
+- Comprender los elementos básicos que deben tomarse en cuenta durante el proceso de creación de la planificación estratégica de tecnología de información de acuerdo con la estrategia organizacional.
+- Aplicar principios básicos y técnicas de análisis para diagnosticar y definir la función de información en la organización.
+4 Contenidos
+Nociones introductorias
+- Concepto de administración de la función de información y de la tecnología
+- Conceptos básicos de administración: organización, planificación, control y dirección
+- Importancia y tendencia de la planificación estratégica de la tecnología de información y su aplicación en la organización
+- Concepto de Gobierno de TI
+- Liderazgo y Administración desde la perspectiva del CIO
+Generalidades previas a la Planificación Estratégica de TI
+- Concepto de Planificación Estratégica de la empresa
+- Entendiendo los fundamentos y el ambiente del negocio
+- Gestión de expectativas para una empresa habilitada por TI
+- Creación del Gobierno de TI para la ejecución de un plan estratégico de TI
+- Modelos básicos para organizar la función de la información
+- Temas críticos/tendencias que impactan la administración de la función de la información y por ende su planificación.
+Proceso de la planificación estratégica de TI
+- Análisis de visión del negocio y sus procesos
+Iniciación y gestión del proyecto de planificación estratégica de TI
+Entender y analizar la industria y el negocio
+- Análisis de la función de TI (Diagnóstico de la Función de la Información)
+Tendencias actuales de la organización de la Función de TI
+Entendiendo y análisis la situación actual de TI
+Desarrollo de recomendaciones, alternativas de solución
+- Desarrollo de la dirección de TI y análisis de brecha
+Desarrollo de la visión y dirección de TI
+Desarrollo del Plan de TI
+Identificación de proyectos de TI y manejo del portafolio
+Análisis de brecha
+- Recomendaciones y portafolio de proyectos
+Desarrollo del “Roadmap”
+Desarrollo de “business case”
+5 Metodología de enseñanza y aprendizaje
+La metodología de enseñanza y aprendizaje que se empleará para el desarrollo del curso consistirá en la combinación de clases magistrales por parte del profesor con la incorporación de las estrategias de evaluación focalizadas en: comprobación de lectura, casos específicos de estudio, investigación bibliográfica, escritura de ensayos y conferencias.  Se espera una alta participación de los estudiantes del curso ya que se pretende realizar una integración entre los conceptos teóricos presentados con los respectivos casos de aplicación práctica.
+Aspectos a considerar:
+- El curso se reprueba con 4 faltas de asistencia injustificadas.
+- Los estudiantes tienen 30 minutos después de la hora oficial de entrada para llegar, luego de esto se considerará como ausencia.
+- Queda a criterio del profesor la justificación de ausencias tanto a lecciones como a evaluaciones.
+- Los exámenes cortos y las llamadas orales se realizarán todas las semanas de manera que el estudiante debe estar preparado en todas las lecciones.
+- El contenido académico de las actividades, exámenes cortos, exámenes, tareas, llamadas orales son acumulativos.
+6 Evaluación
+La evaluación del curso se concentra en actividades específicas como las mencionadas en la metodología de enseñanza y aprendizaje, como ejemplo de lo anterior se propone la evaluación siguiente:
+Investigación práctica aplicada 1                                                50%
+Investigación práctica aplicada 2                                                50%
+Total:                                                                                          100%
+La evaluación del curso se concentra en actividades específicas como las mencionadas en la metodología de enseñanza y aprendizaje, como ejemplo de lo anterior se propone la evaluación siguiente:
+Investigación práctica aplicada 1                                                50%
+Investigación práctica aplicada 2                                                50%
+Total:                                                                                          100%
+7 Bibliografía
+La evaluación estará dada principalmente por medio de tres componentes. El primero asociado a pruebas cortas como mecanismo de seguimiento y control de asimilación de la materia vista en clase. El segundo es una investigación corta sobre las tendencias de tecnología de Información que estén presentándose en el momento de la ejecución del curso. El último elemento de evaluación corresponde a la resolución de un conjunto de casos de escenarios de planificación estratégica de TI.
+- Pruebas cortas, comprobaciones de Lectura, ensayos                 40%
+- Investigación bibliográfica                                                              20%
+- Resolución de casos                                                                      40%
+Total:                                                                                               100%
+- Cassidy, Anita. “A Practical Guide to Information Systems Strategic Planning”, Second Edition, Auerbach Publications, USA, 2006
+- Stenzel, Joe. “CIO Best Practices”, John Wiley & Sons, 2007.
+- Heller, Martha. “The CIO Paradox: Battling the Contradictions of IT Leadership”, Bibliomotion Inc, 2013.
+- Kaplan, Robert; Norton, David."Strategy Maps: Converting intangible Assets into Tangible Outcomens", Harvard Business Press, 2004.
+- Boar, Bernard. “The Art of Strategic Planning for Information Technology”, primera edición, John Wiley & Sons Inc, USA, 1993
+- Smith, Gregory. “Straight to the Top becoming a World-Class CIO”, John Wiley & Sons Inc, USA, 2006
+- Broadbent, Marianne; Kitzis, Ellen. The New CIO Leader, Harvard Business School Press, USA, 2004.
+8 Profesor

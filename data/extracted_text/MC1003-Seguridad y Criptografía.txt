@@ -1,0 +1,95 @@
+Programa del curso MC1003
+Seguridad y Criptografía
+Escuela de Ingeniería en Computación
+Programa de Maestría en Ciberseguridad
+1 Datos generales
+1 Datos generales
+Nombre del curso:
+Seguridad y Criptografía
+Código:
+MC1003
+Tipo de curso:
+Teórico Práctico
+Electivo o no:
+No
+Nº de créditos:
+4
+Nº horas de clase por semana:
+4
+Nº horas extraclase por semana:
+14
+% de las áreas curriculares:
+NA
+Ubicación en el plan de estudios:
+Curso de cuarto trimestre
+Requisitos:
+Ninguno
+Correquisitos:
+Ninguno
+El curso es requisito de:
+MC4001 Blockchain y Ladger Distribuídos
+MC3008 Administración Segura de Datos
+Asistencia:
+Obligatoria
+Suficiencia:
+Sí
+Posibilidad de reconocimiento:
+Sí
+Vigencia del programa:
+2023
+2 Descripción general
+En este curso se estudian las tecnologías de criptografía y la teoría matemática, utilizadas diariamente en Internet y las tecnologías de la información en general, como medio para asegurar la confidencialidad, autenticidad y la integridad de las comunicaciones y los datos.
+Además, se estudiará en particular la matemática detrás de los cifrados simétricos y asimétricos, además de tópicos avanzados como el sellado de tiempo, Advanced Encryption Standard (AES), ataques diferenciales y lineales, Stream Ciphers, el protocolo Diffie-Hellman, Curvas Elípticas, entre otros.
+3 Objetivos
+Objetivo General
+El estudiante al finalizar el curso está en la capacidad de justificar soluciones de criptografía aplicada, mediante el análisis del estado del arte de los protocolos y algoritmos criptográficos para la seguridad y privacidad.
+Objetivos específicos:
+- Comprender el rol de la primitivas criptográficas incluyendo las diferencias entre las criptografía simétrica y asimétrica; el rol de las funciones de hash, las firmas digitales e infraestructura de llave pública y privada.
+- Comprender tópicos avanzados de criptografía necesarios en una sociedad digital con entidades no confiables entre sí.
+- Aplicar los conceptos criptográficos por medio de algoritmos en sistemas computacionales.
+- Discutir sobre tendencias en el campo de la criptografía cuántica.
+4 Contenidos
+Historia del cifrado
+- Introducción
+- Cifrado César
+- Cifrado por sustitución
+- Cifrado Vigènere
+- Cifrado por Permutación
+- La máquina Enigma
+Cifrado Simétrico
+- Probabilidad y cifrado
+- Entropía
+- Stream Cyphers
+- Block Cyphers
+- Funciones de Hash
+Cifrado Asimétrico
+- Criptografía Llave Pública
+- RSA
+- Curvas Elípticas
+- Firmas Digitales
+- Algoritmo de Diffie-Hellman
+- Infraestructura de Llave Pública (PKI)
+- GPG
+Tópicos Avanzados
+- Esquemas de Compartición de Secretos (Secret Sharing Schemes)
+- Protocolos criptográficos
+- Técnicas computaciones multiparte
+- Técnica Zero-knowledge proofs
+- Criptografía Cuántica
+5 Metodología de enseñanza y aprendizaje
+La metodología de enseñanza y aprendizaje que se empleará se basará en el desarrollo de laboratorios con el fin de lograr adoptar los aspectos prácticos de los conceptos del curso. También se realizarán casos de estudio alineados a la determinación de protocolos y algoritmos criptográficos a utilizar en una solución.
+6 Evaluación
+La evaluación estará dada principalmente por medio de tres componentes. El primero asociado a tareas para lograr la asimilación de la materia vista en clase. El segundo componente son laboratorios prácticos. El último elemento de evaluación corresponde a un examen final.
+- Tareas	               						50%
+- Laboratorios								20%
+- Examen								30%
+Total: 	                                                                                     	100%
+La evaluación estará dada principalmente por medio de tres componentes. El primero asociado a tareas para lograr la asimilación de la materia vista en clase. El segundo componente son laboratorios prácticos. El último elemento de evaluación corresponde a un examen final.
+- Tareas	               						50%
+- Laboratorios								20%
+- Examen								30%
+Total: 	                                                                                     	100%
+7 Bibliografía
+Menezes, A. J., Van Oorschot, P. C., & Vanstone, S. A. (1997). Handbook of applied cryptography. CRC Press.
+Smart, N. P. (2003). Cryptography: An introduction. McGraw-Hill.
+8 Profesores

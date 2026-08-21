@@ -12,8 +12,8 @@ import sys
 sys.path.insert(0, os.path.dirname(__file__))
 from files_to_text import extract_text
 
-RAW_DOCS_DIR = os.path.join("data", "raw_docs")
-EXTRACTED_TEXT_DIR = os.path.join("data", "extracted_text")
+RAW_DOCS_DIR = os.path.join("../..", "data", "raw_docs")
+EXTRACTED_TEXT_DIR = os.path.join("../..", "data", "extracted_text")
 
 SUPPORTED_EXTENSIONS = (".pdf", ".docx")
 

@@ -1,0 +1,348 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Programa del curso MC-7201 
+Introducción a la Investigación 
+ 
+Escuela de Computación 
+Programa de Maestría en Computación 
+ 
+ 
+ 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+ Escuela de Computación -  Programa de Maestría en Computación                                                 
+Página | 2  de 6
+ 
+ 
+2 Descripción  
+general 
+Una Maestría Académica implica completar un número de 
+créditos en trabajo decursos y el desarrollo de investigación 
+científica original presentada en la forma de una Tesis de 
+Maestría. Este curso se enfoca en esta última, pues se busca 
+brindar al estudiante el contexto histórico y filosófico, las 
+técnicas y herramientas básicas del oficio de investigador, y la 
+orientación administrativa de nuestro programa particular, 
+para maximizar la probabilidad de éxito. 
+ 
+ 
+1 Datos generales
+Nombre del curso: 
+Introducción a la Investigación 
+Código: 
+MC-7201 
+Tipo de curso: 
+Teórico – práctico 
+Electivo o no:  
+No 
+Nº de créditos: 
+4 
+Nº horas de clase por semana: 
+3 
+Nº horas extraclase por semana:
+9 
+Ubicación en el plan de 
+estudios: 
+I Periodo del Plan de Estudios de Maestría en 
+Computación 
+con 
+Énfasis 
+en 
+Ciencias 
+de 
+la 
+Computación.  
+Requisitos: 
+Ninguno 
+Correquisitos: 
+MC-7205 Tema Selecto de Investigación 
+El curso es requisito de: 
+Ninguno 
+Asistencia: 
+Obligatoria 
+Suficiencia: 
+Si 
+Posibilidad de reconocimiento: 
+Si 
+Vigencia del programa: 
+I Semestre 2020 
+I parte: Aspectos relativos al plan de estudios 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+ Escuela de Computación -  Programa de Maestría en Computación                                                 
+Página | 3  de 6
+Se estudiarán conceptos de Historia y Filosofía de la Ciencia 
+para entender los criterios que separan Ciencia de 
+charlatanería y pseudociencia. Se inculcará a los estudiantes 
+que el trabajo esencial de un científico es generar y comunicar 
+conocimiento nuevo, obtenido a través de un exigente 
+escepticismo. Se pretende orientar al estudiante en el 
+desarrollo de la investigación científica en computación 
+(incluyendo el diseño de experimentos con tratamiento 
+estadístico) así como en la elaboración y presentación de 
+artículos científicos. De manera similar, se revisa el proceso 
+de presentación de propuestas de investigación y el desarrollo 
+de tesis de investigación, relacionado a los reglamentos y 
+lineamientos del Programa de Maestría en Computación del 
+ITCR.
+ 
+3 Objetivos 
+II. Objetivo General 
+Desarrollar habilidades y conocimientos básicos relevantes para el desarrollo 
+de investigación científica en el área de la computación.  
+ 
+III. Objetivos Específicos 
+Al finalizar el semestre, el estudiante estará en capacidad de:  
+• 
+Estudiar y analizar resultados de investigaciones de punta en el 
+área de la computación realizadas en el ITCR así como en 
+universidades y empresas nacionales y extranjeras.  
+• 
+Conocer la metodología de la investigación científica y de solución 
+de problemas, así como aspectos técnicos y formales para la 
+publicación de resultados.  
+• 
+Proponer y desarrollar un proyecto de investigación científica. 
+• 
+Leer, elaborar y presentar adecuadamente artículos científicos en 
+computación 
+ 
+4 Contenidos 
+ 
+Según se avanza en el curso, se desarrollan en forma intercalada 3 grandes 
+temas principales: 
+• 
+Filosofía de la Ciencia 
+1. Irracionalidad 
+2. Método Científico  
+3. Observación  
+4. Falacias lógicas  
+5. Hipótesis científicas  
+6. Ciencia y Pseudociencia 
+7. Inferencia a la Mejor Explicación (I.B.E.) 
+8. Virtudes Explicativas 
+9. Experimentos 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+ Escuela de Computación -  Programa de Maestría en Computación                                                 
+Página | 4  de 6
+10. Análisis Estadísstico (D.o.E.) 
+11. Investigación Cualitativa  
+ 
+Infraestructura de Investigación 
+1. Cómo dar presentaciones Científicas 
+2. Cómo leer papers 
+3. Escritura de Documentos Científicos 
+4. Cómo escribir papers 
+5. Escogiendo tema de Tesis 
+6. Escogiendo asesor de Tesis 
+7. Cómo escribir y juzgar Propuestas de Investigación 
+8. Cómo escribir una Tesis 
+9. Administración del Tiempo 
+ 
+ 
+ 
+ 
+5 Metodología 
+de enseñanza y 
+aprendizaje 
+Calendario 
+El curso es de 3 horas lectivas por semana. Para propósitos oficiales, la asistencia se 
+considerará obligatoria. 
+Al final de este documento podrá encontrar el cronograma detallado del curso. 
+Aunque no está escrito en piedra, es muy poco probable que este cronograma sea 
+alterado. 
+Exámenes Parciales 
+Todo el material será evaluado en 2 exámenes parciales no acumulativos durante el 
+semestre, en los que se permite un “forro” oficial de una página tamaño carta. 
+También se permitirá una antología impresa y empastada de los papers a ser 
+evaluados para cada examen (siempre y cuando se sigan las reglas específicas a ser 
+detalladas en su momento). 
+Apuntadores 
+En cada clase habrá al menos 2 apuntadores oficiales, cuyo trabajo es tomar nota de 
+todo lo sucedido en clase. Son inaceptables transcripciones o un montón de 
+fotografías. No se trata de un resumen ejecutivo, tampoco se quiere una 
+reconstrucción de las presentaciones del profesor, sino que se quiere que el 
+apuntador comprenda el material de la clase y lo plasme en un documento hermoso, 
+detallado, de mucha calidad, enriquecido con imágenes, gráficos, datos adicionales 
+- inclusive un poco de humor no es mal visto. 
+Antes de cinco días, se debe colgar en el foro del curso, bajo el thread de “Apuntes”, 
+un archivo PDF cuyo nombre será de la forma ININ19mmdd-k.pdf, donde mm es el 
+II parte: Aspectos operativos 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+ Escuela de Computación -  Programa de Maestría en Computación                                                 
+Página | 5  de 6
+mes, dd la fecha del día, y k un número secuencial para distinguir entre los apuntes 
+de una misma 
+clase. Si se falla en el nombre del documento, la nota será 0 (sin apelaciones). Este 
+trabajo y el post respectivo en el foro deben venir debidamente identificados para 
+saber 
+quién fue la persona que los hizo. No se permite usar la cuenta de usuario de otra 
+persona para subir los apuntes. Todos deben ser apuntadores durante el semestre 
+pues es parte de la nota final. 
+Material de Clase 
+No hay un libro de texto para este curso. El profesor desarrollará la mayor parte de 
+los temas del curso. También, se leerá material asignado por el profesor para las 
+presentaciones de los estudiantes. En los exámenes se evaluará el material original, 
+independiente de que tan completa haya estado la presentación hecha en clases por
+los estudiantes. 
+Presentaciones Orales 
+Un componente muy importante de este curso es la práctica de presentaciones 
+científicas tipo conferencia. Se buscar reforzar las habilidades y reducir las 
+debilidades de cada estudiante como presentador. Cada persona realizará al menos 
+1 presentación durante 
+el semestre1. El material será asignado por el profesor y posiblemente sean capítulos 
+de libros o papers científicos. Salvo raras excepciones, el material les será entregado 
+2 semanas antes de la presentación respectiva. Las presentaciones serán analizadas, 
+criticadas (muy duramente) y evaluadas por el grupo y el profesor. 
+Las reglas básicas son: 
+Todas las presentaciones deben prepararse con Beamer. 
+La duración será estrictamente cronometrada. Buscamos que duren 20 minutos.  
+No improvise elementos no ensayados. Si se pasan excesivamente del tiempo, la 
+presentación será interrumpida y recibirá una nota muy deficiente. Si la 
+presentación es demasiado corta, también será muy penalizada. 
+Los presentadores de cada fecha son responsables de entregar al grupo entero 
+fotocopias del material una semana antes de la presentación. Es inaceptable fallar 
+en este aspecto. 
+Los presentadores de cada fecha son responsables de verificar que el equipo 
+necesario funcione correcta y oportunamente (esto incluye cualquier equipo 
+personal que hayan traído). Consejo: revisar todo al menos 30 minutos antes de 
+empezar la clase. 
+Por su naturaleza de examen, una ausencia a una presentación asignada solo puede 
+ser justificada de acuerdo a los reglamentos vigentes (los cuales no incluyen motivos 
+de trabajo). 
+Paper de Investigación 
+Se trabajará en parejas (las cuales deben ser aprobadas por el profesor). Cada 
+equipo debe escribir un pequeño artículo científico de algún tema de Ciencia de la 
+Computacion que puede ser sugerido por cada equipo (pero que debe ser aprobado 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+ Escuela de Computación -  Programa de Maestría en Computación                                                 
+Página | 6  de 6
+por el profesor) o que puede ser tomado de una lista de temas propuestos por el 
+profesor. Según puede consultarse en el cronograma del curso, hay 4 fechas 
+asociadas al paper durante el 
+semestre: 
+1. Aprobación del tema (correo electrónico). Para esto se debe mandar un ´único 
+párrafo al profesor, escrito en inglés y que incluya estos elementos: 
+a) ¿Cuál es el problema en el qué va a trabajar? 
+b) ¿Por qué es un problema interesante o importante? 
+c) ¿Que otras soluciones se han intentado para resolver este problema? 
+d) ¿Cuál es la solución qué usted propone? 
+e) ¿De ser exitosa su solución que efectos habría? 
+2. Abstract y referencias (trabajo impreso – fuentes de LATEX y PDF por correo) 
+3. Versión preliminar (trabajo impreso – fuentes de LATEX y PDF por correo) 
+4. Versión final (trabajo impreso - fuentes de LATEX y PDF por correo) 
+El paper debe estar escrito en inglés y se debe confeccionar con LATEX (formato de 
+IEEE Transactions). Está claro que en las 16 semanas que toma el curso no hay 
+suficiente tiempo para el desarrollo de una investigación completa y original. Su 
+paper debe enfocarse como una propuesta de investigación bien documentada y 
+con muchas referencias pertinentes. 
+Tareas Cortas y Quices 
+Habrá una serie de quices y tareas cortas durante el semestre. Ningún quiz será 
+repuesto bajo ninguna circunstancia. Al final del semestre se eliminarán cierta 
+cantidad de estas notas. 
+ 
+ 
+6 Evaluación
+ 
+Trabajo en Clase                               
+5% 
+Tareas Cortas - Quices   
+15% 
+Exámenes Parciales                      
+(la nota más alta vale un 25%) 
+20%-25% 
+Paper 
+10% (1% - 2%- 3%-4%) 
+Presentación 
+25% 
+Presentaciones 
+18%‐10% 
+ 
+ 
+7 Bibliografía 
+1. R. Dawkins, “The Magic of Reality”, Free Press, New York, 2011. 
+2. M. R. C. van Dogen, “Latex and Friends”, Springer, Berlin, 2012.  
+3. R. Feynman, “The Meaning of it All”, Perseus Books, USA, 1998. 
+4. G. Gr¨atzer, “First Steps in Latex”, Springer Verlag, New York, 1999. 
+
+ 
+                                                                                                                                    
+ 
+ 
+ 
+ 
+ Escuela de Computación -  Programa de Maestría en Computación                                                 
+Página | 7  de 6
+5. R. Hernández Sampieri et al., “Metodología de la Investigación para 
+Bachillerato”, McGraw Hill Education, México, 2013. 
+6. R. Hern´andez Sampieri et al., “Metodología de la Investigación”, McGraw 
+Hill Education, 6ta. Edición, M´exico, 2014. 
+7. T. Kuhn, “The Structure of Scientific Revolutions”, The University of 
+Chicago Press, 3rd. Edition, Chicago, 1996. 
+8. P. Leedy, J. Ormrod, “Practical Research: Planning and Design”, Person, 
+10th. Edition, 
+Boston, 2013. 
+9. R. M. Roberts, “Serendipity: Accidental Discoveries in Science”, Wiley 
+Science Editions, New York, 1989. 
+10. C. Sagan, “The Demon-Haunted World”, Ballantine Books, New Tork, 
+1996. 
+11. M. Shermer, “Why People Believe Weird Things”, Holt Paperback, New 
+Tork, 2002. 
+12. A. Schopenhauer, “El Arte de Tener Razón”, Biblioteca Edaf, Madrid, 
+2015. 
+ 
+8 Profesor 
+Dr. Francisco J. Torres-Rojas 
+Doctor en Ciencia de la Computación, Georgia Institute of Technology, U.S.A. 
+Experto en Sistemas Operativos, Sistemas Distribuidos, Computación 
+Distribuida. 
+Consulta: Lunes después de la clase, Martes y Jueves de 9:30am a 11:30am, 
+por correo electrónico (torresrojas.cursos@gmail.com) y en el foro del curso 
+(http://www.ic-itcr.ac.cr/foro)  
+ 

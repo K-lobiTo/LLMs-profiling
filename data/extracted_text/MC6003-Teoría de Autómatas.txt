@@ -1,0 +1,250 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Programa del curso MC-6003 
+Teoría de Autómatas 
+ 
+Escuela de Computación 
+Programa de Maestría en Computación 
+ 
+ 
+
+Página | 2  de 6
+ 
+                                                                                                                                    
+ 
+ 
+ 
+Escuela de Computación – Programa de  Maestría en Computación                                                  
+ 
+ 
+ 
+1 Datos generales
+Nombre del curso: 
+MC-6003 
+Código: 
+Teoría de Autómatas 
+Tipo de curso: 
+Teórico – práctico 
+Electivo o no:  
+No electivo 
+Nº de créditos: 
+4 
+Nº horas de clase por 
+semana:
+3 
+Nº horas extraclase por 
+semana:
+9 
+Ubicación en el plan de 
+estudios: 
+II Periodo del Plan de Estudios de Maestría en 
+Computación 
+con 
+Énfasis 
+en 
+Ciencias 
+de 
+la 
+Computación
+Requisitos: 
+Ninguno 
+Correquisitos: 
+Ninguno 
+El curso es requisito de: 
+Ninguno 
+Asistencia: 
+Obligatoria 
+Suficiencia: 
+Si 
+Posibilidad de 
+reconocimiento:
+Si 
+Vigencia del programa: 
+I Semestre 2020 
+ 
+ 
+ 
+ 
+I parte: Aspectos relativos al plan de estudios 
+
+Página | 3  de 6
+ 
+                                                                                                                                    
+ 
+ 
+ 
+Escuela de Computación – Programa de  Maestría en Computación                                                  
+2 Descripción 
+general 
+Contrario a la creencia popular, el concepto fundamental de las “Ciencias de 
+la Computación” es el de cómputo, no el de computadora. Para modelar este 
+concepto, debemos recurrir a la definición de mecanismos abstractos que 
+capturen la esencia del proceso de cómputo sin apelar por ejemplo a lenguajes 
+de programación o computadoras específicas.  
+Este es un curso teórico fundamental en las Ciencias de la Computación que 
+desarrolla en los estudiantes la apreciación y comprensión de los modelos 
+formales que subyacen en el análisis y diseño de algoritmos. Es fundamental 
+para comprender las relaciones entre la computación teórica y la construcción 
+de compiladores, la lingüística computacional, el manejo de bases de datos 
+textuales, y el análisis de complejidad y computabilidad de algoritmos y 
+problemas. 
+ 
+3 Objetivos 
+Objetivo General: El objetivo general de este curso es estudiar los modelos 
+clásicos de computación abstracta, sus propiedades, límites, relaciones y 
+aplicaciones, 
+especialmente 
+en el 
+contexto 
+de 
+la 
+generación y 
+reconocimiento de lenguajes formales.  
+ 
+Objetivos específicos: 
+ Estudiar los límites de la computación (Teoría de la computabilidad). 
+ Estudiar los modelos matemáticos básicos para la generación de 
+lenguajes formales (gramáticas con estructura de frase. 
+ Estudiar los modelos matemáticos básicos para el reconocimiento de 
+ lenguajes formales (desde los autómatas de estados finitos hasta las 
+ máquinas de Turing). 
+ Aplicar estos conceptos en el modelaje formal de sistemas de 
+estados finitos. 
+ 
+ 
+
+Página | 4  de 6
+ 
+                                                                                                                                    
+ 
+ 
+ 
+Escuela de Computación – Programa de  Maestría en Computación                                                  
+4 Contenidos
+1. Introducción a la Teoría de Autómatas y a la Teoría de Lenguajes 
+Formales [1 semana]. 
+ Problemas fundamentales. 
+ Definiciones básicas. 
+ Herramientas matemáticas. 
+2. Autómatas de estados finitos (FA’s) y expresiones regulares [3 
+semanas]. 
+ Sistemas de estados finitos. 
+ Modelo básico. 
+ Nodeterministmo y ε- 
+ transiciones. 
+ Expresiones regulares. 
+ Otros autómatas equivalentes. 
+3. Gramáticas regulares [1 semana]. 
+ Gramáticas con estructura de frase (jerarquía de Chomsky). 
+ Definiciones básicas. 
+ Equivalencia entre gramáticas regulares y FA’s. 
+4. Propiedades de los lenguajes regulares [2 semana]. 
+ Pumping Lemma. 
+ Propiedades de los lenguajes regulares (clausura, minimización y 
+decisión). 
+5. Autómatas de pila (PDA’s) [1semana]. 
+ Modelo básico. 
+ Aplicaciones. 
+6. Gramáticas libres de contexto [2 semanas]. 
+ Definiciones básicas. 
+ Simplificación y normalización de CFG’s. 
+ Equivalencia entre gramáticas libres de contexto y PDA´S. 
+7. Propiedades de los lenguajes libres de contexto [2 semana]. 
+ Pumping Lemma. 
+ Propiedades de los lenguajes de contexto (clausura y decisión) 
+8. Máquinas de Turing [3 semanas]. 
+ Modelo básico e interpretaciones. 
+ Variaciones del modelo básico. 
+9. Decidibilidad [1 semana]. 
+ Lenguajes recursivos y recursivamente numerables. 
+ Problemas no decidibles. 
+ 
+ 
+
+Página | 5  de 6
+ 
+                                                                                                                                    
+ 
+ 
+ 
+Escuela de Computación – Programa de  Maestría en Computación                                                  
+ 
+ 
+5 Metodología 
+de enseñanza y 
+aprendizaje 
+Este es un curso teórico que cuenta con un excelente libro de texto (Hopcroft 
+et al] en el cual nos basamos para resolver muchos ejercicios mediante 
+tareas, exámenes cortos y discusiones en clase. Se asume que los 
+estudiantes han aprobado a nivel de bachillerato dos o más cursos de 
+matemática discreta, los cuales brindan herramientas para resolver los 
+problemas de teoría de autómatas y lenguajes formales discutidos en clase. 
+Una vez que los estudiantes se han familiarizado con los modelos básicos 
+de computación, se les da la oportunidad de escoger un tema para llevar a 
+cabo una presentación que profundice sobre un tema específico, 
+individualmente o en grupos de dos personas. 
+ 
+6 Evaluación 
+ 
+[1] Examen parcial 
+20% 
+[5] Quices 
+25% 
+[5] Tareas cortas 
+15% 
+[1] Presentación 
+10% 
+[1] Examen final 
+30% 
+ 
+ 
+ 
+ 
+7 Bibliografía 
+El libro de texto del curso es: 
+Hopcroft et al. Introducción a la Teoría de Autómatas, Lenguajes y 
+Computación. 
+Addison Wesley, 2002. 
+ 
+Sin embargo, para temas especiales, se asignarán lecturas de otros libros 
+y artículos. 
+ 
+II parte: Aspectos operativos
+
+Página | 6  de 6
+ 
+                                                                                                                                    
+ 
+ 
+ 
+Escuela de Computación – Programa de  Maestría en Computación                                                  
+8 Profesor 
+Erick Mata Montero es Ph.D. y M.Sc. en Ciencias de la Computación   de la 
+Universidad de Oregon, EEUU. Es profesor en el ITCR desde el año 1980. 
+Trabajó en el INBio durante 15 años como Director del Programa de 
+Informática para la Biodiversidad y en el Smithsonian Institution, en 
+Washington, DC, por 2.5 años como Director Ejecutivo de la iniciativa 
+Enciclopedia de la Vida. Sus áreas de interés son la teoría algorítmica de 
+grafos, informática para la biodiversidad, visión computacional, y 
+visualización científica. Se atenderán consultas por medio de correo 
+electrónico (emata@itcr.ac.cr) y se utilizará TECDigital para comunicación 
+y para apoyar el curso en general. 
+ 

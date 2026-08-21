@@ -1,0 +1,132 @@
+Programa del curso MC1006
+Políticas y Gobernanza en Ciberseguridad
+Escuela de Ingeniería en Computación
+Programa de Maestría en Ciberseguridad
+1 Datos generales
+1 Datos generales
+Nombre del curso:
+Políticas y Gobernanza en Ciberseguridad
+Código:
+MC1006
+Tipo de curso:
+Teórico Práctico
+Electivo o no:
+No
+Nº de créditos:
+4
+Nº horas de clase por semana:
+4
+Nº horas extraclase por semana:
+14
+% de las áreas curriculares:
+NA
+Ubicación en el plan de estudios:
+Curso del primer trimestre
+Requisitos:
+Ninguno
+Correquisitos:
+Ninguno
+El curso es requisito de:
+Ninguno
+Asistencia:
+Obligatoria
+Suficiencia:
+Sí
+Posibilidad de reconocimiento:
+No
+Vigencia del programa:
+2023
+2 Descripción general
+La tecnología de la información es utilizada en casi toda actividad de negocio, generalmente para aumentar sus ingresos o disminuir sus costos. Sin embargo, ello a la vez presenta desafíos relacionados con el aumento de su vulnerabilidad y exposición a ataques malintencionados que podrían producir grandes daños a nivel institucional, a sus funcionarios y a sus clientes. Asegurar que ello no pase, necesariamente implica gestionar un conjunto de procesos que impulsen la seguridad de la información producida por la actividad productiva de los negocios.
+La conceptualización de la seguridad de información se ha basado en la integración de los recursos corporativos y estratégicos de seguridad. Ello con el fin de mostrar las ventajas en la minimización de los riesgos y amenazas de manera efectiva, con eficiencia operacional y ahorro en los costos. Esto implica conocer las principales funciones o tareas relacionadas a la seguridad de la información que son llevadas a cabo en las empresas con el fin de asegurar (lo más posible) la confidencialidad, la integridad, la autenticidad y la disponibilidad de la información.
+En este curso se estudian los aspectos asociadas a la aplicación de políticas y gobernanza en ciberseguridad en un entorno organizacional, tanto internas como externas, como medio para ejercer un gobierno responsable y efectivo en la implementación de un planeamiento estratégico, análisis de riesgo y cumplimiento regulatorio, a través de la creación de políticas, planes y programas de aseguramiento de la organización.
+Además, se estudiarán en particular tópicos relacionados al análisis del contexto, privacidad de datos, estado actual de la legislación nacional e internacional, cumplimiento de estándares, comunicación a nivel ejecutivo en la organización y presentación de la información.
+3 Objetivos
+Objetivo General
+El estudiante al finalizar el curso está en la capacidad de establecer estrategias de gestión en ciberseguridad para la protección de una organización mediante la definición de políticas o acciones para los diferentes procesos involucrados en la gestión de la seguridad de la información y la privacidad.
+Objetivos específicos:
+- Conocer los principales procesos y regulaciones que están inmersos en la gestión de la seguridad de la información.
+- Definir políticas, planes o programas en ciberseguridad que apoyen la gobernanza y los procesos de TI mediante el pensamiento estratégico en la seguridad de la información, la identificación de riesgos y continuidad del negocio.
+- Definir políticas, planes o programas para la promoción del entendimiento y concientización de la seguridad de la información dentro de la organización.
+4 Contenidos
+Gobernanza y Políticas en Ciberseguridad
+- Áreas de Conocimiento en Ciberseguridad según ACM
+- Áreas de Especialización en Ciberseguridad según Framework NICE
+- Estándares referentes en Ciberseguridad y el Sistema de Gestión de la Seguridad de la Información (SGSI).
+- Regulaciones y Leyes
+  - Principios Introductorios sobre leyes e investigación legal
+  - Jurisdicción territorial, contenido en línea, delitos informáticos y protección de datos (GDPR, Ley 8968 de Protección de los Datos)
+  - Privacidad
+  - Propiedad Intelectual
+- Comunicación efectiva con el nivel ejecutivo de la organización y Junta Directiva
+- Ciber Ética
+Diagnóstico y Evaluación en Ciberseguridad
+- Métricas de Ciberseguridad
+  - Uso de métricas de seguridad en la toma de decisiones.
+  - Uso de métricas de seguridad para el planeamiento estratégico, táctico y operacional.
+  - Uso de métricas de seguridad en la evaluación de programas de seguridad, auditaje y rendimiento.
+- Mecanismos para la evaluación del Riesgo en Ciberseguridad
+  - Identificación de Riesgo
+  - Modelos y metodologías de evaluación y medición de riesgo
+  - Análisis y Aseguramiento del Riesgo
+  - Control de Riesgo
+  - Amenazas Internas
+- Análisis de Capacidad
+Aprovisionamiento de Soluciones Seguras
+- Planificación de requerimientos de seguridad de los sistemas informáticos.
+- Criterios para el desarrollo de software seguro
+  - “Seguridad por diseño” como principio para el desarrollo soluciones tecnológicas.
+  - Principales vulnerabilidades en el desarrollo de software
+  - Impacto de DevOps y otros mecanismos en el ciclo de vida del software seguro.
+- Aseguramiento de Sistemas de Control Industrial (ICS)
+Operación y Mantenimiento
+- Gestión de la privacidad, integridad y confidencialidad de los datos
+- Base de conocimiento para la gestión de la seguridad
+- Interrelacionamiento de la configuración de los activos y los servicios.
+- Caracterización de una red e infraestructura segura.
+- Mecanismos de control de acceso
+- Respuesta a Incidentes de Seguridad (SOC, NOC y CSIRT)
+Monitoreo y Mejora continua
+- Defensa y Protección
+  - Modelos de infraestructura de defensa
+  - Análisis defensivo y evaluación de vulnerabilidades
+- Conciencia, educación y entrenamiento
+  - Ciber higiene
+    - Creación y almacenamiento de contraseñas
+    - Herramientas de mitigación (anti-virus)
+    - Identificación de sitios web seguros
+    - Identificación de niveles de privacidad
+  - Educación de Usuarios
+    - Vulnerabilidades y riesgos comunes (Wi-Fi abiertas, ransomware, malware, spyware)
+  - Percepción de Riesgo y Comunicación
+- Políticas de Administración de Talento Humano
+  - Contratación y retención de Personal
+  - Prácticas de seguridad en extremos laborales
+  - Seguridad de contratación de terceros
+  - Privacidad de información personal del empleado
+Planeamiento Estratégico en Ciberseguridad
+- Definición de políticas en ciberseguridad.
+- Definición de programas y proyectos de iniciativas estratégicas en Ciberseguridad.
+- Alineación de KPI de ciberseguridad a la misión y visión de la organización.
+- Gestión del portafolio de programas y proyectos.
+5 Metodología de enseñanza y aprendizaje
+La metodología de enseñanza y aprendizaje que se empleará para el desarrollo del curso consistirá en la combinación de clases magistrales por parte del profesor con la incorporación de las estrategias de evaluación focalizadas en: comprobación de lectura, casos específicos de estudio e investigación bibliográfica.  Se espera una alta participación de los estudiantes del curso ya que se pretende realizar una integración entre los conceptos teóricos presentados con los respectivos casos de aplicación práctica.
+6 Evaluación
+La evaluación estará dada principalmente por medio de tres componentes. El primero asociado a pruebas cortas o comprobaciones de lecturas como mecanismo de seguimiento y control de asimilación de la materia vista en clase. El segundo es una investigación bibliográfica sobre las tendencias en políticas y gobernanza de la ciberseguridad. El último elemento de evaluación corresponde al desarrollo de estudios de casos en escenarios de gestión de procesos de TI aplicando los conceptos vistos en clase.
+- Pruebas cortas, comprobaciones de Lectura                		40%
+- Investigación bibliográfica                                                             	20%
+- Estudio de casos                                                                     	40%
+Total: 	                                                                                     	100%
+7 Bibliografía
+Clinton, L. (2020). Cyber-Risk Oversight 2020: Key Principles and Practical Guidance for Corporate Boards. Internet Security Alliance.
+Fischer-Hübner, S., Hansen, M., Kosta, E., & Nai-Fovino, I. (Eds.). (2018). Privacy and Identity Management. The Smart Revolution (1st ed. 2018). Springer International Publishing : Imprint: Springer. https://doi.org/10.1007/978-3-319-92925-5
+ISO. (2013a). ISO/IEC 27001:2013: Information technology—Security techniques—Information security management systems—Requirements.
+ISO. (2013b). ISO/IEC 27002:2013: Information technology—Security techniques—Code of practice for information security controls.
+ISO. (2018). ISO/IEC 27000:2018: Key International Standard for Information Security.
+Mallery, J. (2005). Blindaje de redes: Tu red invulnerable a los hackers. Anaya Multimedia.
+Petersen, R., Santos, D., Smith, M. C., Wetzel, K. A., & Witte, G. (2020). Workforce Framework for Cybersecurity (NICE Framework). National Institute of Standards and Technology. https://doi.org/10.6028/NIST.SP.800-181r1
+Rashid, A., Chivers, H., Danezis, G., Lupu, E., & Martin, A. (s. f.). The Cyber Security Body of Knowledge. 854.
+Sánchez, C. M. F. (2012). Modelo para el gobierno de las TIC basado en las normas ISO. Aenor.
+Sheward, M. (2020). Security operations in practice: Building effective blue and red teams. http://www.vlebooks.com/vleweb/product/openreader?id=none&isbn=9781780175072
+Taylor, A. (2013). Information security management principles (Second edition). BCS, the Chartered Institute for IT.
+8 Profesores

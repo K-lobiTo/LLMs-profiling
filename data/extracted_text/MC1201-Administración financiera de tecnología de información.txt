@@ -1,0 +1,104 @@
+Programa del curso MC1201
+Administración financiera de tecnología de información
+Escuela de Ingeniería en Computación
+Programa de Maestría de Gerencia de Tecnologías de la Información
+1 Datos generales
+1 Datos generales
+Nombre del curso:
+Administración financiera de tecnología de información
+Código:
+MC1201
+Tipo de curso:
+Teórico - Práctico
+Obligatorio o electivo:
+Obligatorio
+Nº de créditos:
+4
+Nº horas de clase por semana:
+3
+Nº horas extraclase por semana:
+9
+Ubicación en el plan de estudios:
+Curso del 2do semestre del Programa de Maestría de Gerencia de Tecnologías de la Información
+Requisitos:
+No Tiene
+Correquisitos:
+No Tiene
+El curso es requisito de:
+No es requisito de ningún curso
+Asistencia:
+Obligatoria
+Suficiencia:
+No
+Posibilidad de reconocimiento:
+Si
+Aprobación y actualización del programa:
+I semestre 2021
+2 Descripción general
+El curso de administración financiera de tecnología de información presenta una introducción a la gestión de los recursos financieros que son invertidos por parte de las organizaciones para el logro de sus objetivos estratégicos en tecnología de información, considerando aspectos tales como la entrega de los beneficios acordados a partir de la optimización de los recursos asignados y la gestión de los riesgos inherentes a las inversiones en esta materia, considerando entre otros aspectos la planificación, operación, control, evaluación y toma de decisiones fundamentadas en información financiera..
+3 Objetivos
+Objetivo General
+Desarrollar los elementos teóricos fundamentales que respaldan la administración financiera de las tecnologías de información en las organizaciones, los cuales permitan la entrega de los beneficios acordados a partir de la optimización de los recursos asignados y la gestión de los riesgos inherentes a las inversiones en proyectos y servicios de tecnología de información.
+Objetivos específicos:
+- Conocer los fundamentos teóricos de contabilidad, finanzas, presupuesto, costos y evaluación de proyectos para la administración financiera de proyectos y servicios de tecnología de información.
+- Comprender estudios formales generados a partir de los procesos de administración financiera para proyectos y servicios de tecnología de información
+- Aplicar los conceptos de administración financiera de tecnología de información a procesos formales de toma de decisiones de inversión tanto en proyectos como de servicios.
+4 Contenidos
+Temas del curso
+Contabilidad financiera
+•	Concepto y tipos de contabilidad
+•	Sistema, ciclo e información contable
+•	Conceptos de activo, pasivo, capital, ingreso y gastos
+•	Ecuación contable y estados financieros principales
+•	Normas internacionales de información financiera
+•	Registro contable de la operación de tecnología de información
+Análisis financiero
+•	Bases del análisis financiero
+•	Análisis porcentual de estados financieros
+•	Análisis de las principales razones financieras
+•	Análisis financiero de la operación de tecnología de información
+Contabilidad de costos
+•	Conceptos introductorios a la contabilidad de costos
+•	Sistema de costeo para productos y servicios
+•	Elementos de costeo de productos y servicios
+•	Sistema de costeo para la operación de tecnología de información
+Presupuestos
+•	Conceptos introductorios al presupuesto
+•	Metodologías para la elaboración de presupuestos
+•	Presupuestos para la operación de tecnología de información
+Formulación y evaluación financiera de proyectos
+•	Formulación de proyectos
+•	Evaluación financiera de proyectos
+•	Casos de negocio para proyectos de tecnología de información
+Estándares internacionales para la administración financiera de tecnología de información
+•Objetivos de Control de Tecnología de Información (COBIT 5.0), APO06: Gestionar el presupuesto y los costos de tecnología de información.
+•Information Technology Infrastructure Library (ITIL 2011), Procesos de servicios de estrategia, administración financiera para servicios de tecnología de información
+5 Metodología de enseñanza y aprendizaje
+La metodología de enseñanza y aprendizaje que se empleará para el desarrollo del curso consistirá en la combinación de clases magistrales por parte del profesor con la incorporación de las estrategias de evaluación focalizadas en: comprobación de lectura, casos específicos de estudio, investigación bibliográfica, escritura de ensayos, conferencias, exámenes, entre otras.  Se espera una alta participación de los estudiantes del curso ya que se pretende realizar una integración entre los conceptos teóricos presentados con los respectivos casos de aplicación práctica.
+En el caso de las carreras acreditadas con las diferentes agencias con el tema de atributos, resultados de aprendizaje, competencias, entre otros, es de acatamiento obligatorio, como AAPIA y ACAAI o el MNEFTP, según corresponda, especificar la relación del objetivo general con el atributo  y su nivel de complejidad o elementos del Estándar en caso de técnicosHacer referencia al mecanismo de accesibilidad académica y apoyos educativos que podría presentar algún estudiante  (ver artículo 25 del RREA 2025) y personas estudiantes próximas a graduarse (ver definición artículo 5 del RREA 2025).
+6 Evaluación
+La evaluación del curso se concentra en actividades específicas como las mencionadas en la metodología de enseñanza y aprendizaje, como ejemplo de lo anterior se propone la evaluación siguiente:
+Investigación práctica aplicada 1                                                50%
+Investigación práctica aplicada 2                                                50%
+Total:                                                                                          100%
+La evaluación del curso se concentra en actividades específicas como las mencionadas en la metodología de enseñanza y aprendizaje, como ejemplo de lo anterior se propone la evaluación siguiente:
+Investigación práctica aplicada 1                                                50%
+Investigación práctica aplicada 2                                                50%
+Total:                                                                                          100%
+- Bibliografía
+La evaluación del curso se concentra en actividades específicas como las mencionadas en la metodología de enseñanza y aprendizaje, como ejemplo de lo anterior se propone la evaluación siguiente:
+Examen parcial 1	                     25%
+Examen parcial 2	                     25%
+Investigación bibliográfica            20%
+Comprobación de lectura	          15%
+Trabajo en clase           	          15%
+Total:                                            100%
+  - Objetivos de Control de Tecnología de Información (COBIT 5.0), ISACA 2012.
+  - Information Technology Infrastructure Library (ITIL 2011), IT Governance 2011.
+  - Contabilidad la base para las decisiones gerenciales, Meigs, Williams, Haka, Betther, Undécima Edición, 2000, McGrawHill,
+  - Análisis para la dirección financiera, Higgins Robert, Séptima Edición, McGrawHill, 2004.
+  - Análisis y diagnóstico financiero, Salas Tarcisio, Primera Edición 2009.
+  - Contabilidad de costos, Polimeni, Fabozzi, Adelberg, Tercera Edición, 1994.
+  - Presupuestos, Burbano, Ortiz, Segunda Edición, McGrawHill, 1995.
+- Formulación y evaluación de proyectos informáticos, Baca, McGrawHill, 2006
+8 Profesor

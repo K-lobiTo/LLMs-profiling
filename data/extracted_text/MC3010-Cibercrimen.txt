@@ -1,0 +1,101 @@
+Programa del curso MC3010
+Cibercrimen
+Escuela de Ingeniería en Computación
+Programa de Maestría en Ciberseguridad
+1 Datos generales
+1 Datos generales
+Nombre del curso:
+Cibercrimen
+Código:
+MC3010
+Tipo de curso:
+Teórico Práctico
+Electivo o no:
+Sí
+Nº de créditos:
+4
+Nº horas de clase por semana:
+4
+Nº horas extraclase por semana:
+14
+% de las áreas curriculares:
+NA
+Ubicación en el plan de estudios:
+Curso del área de tópicos electivos profesionalizantes
+Requisitos:
+Ninguno
+Correquisitos:
+Ninguno
+El curso es requisito de:
+Ninguno
+Asistencia:
+Obligatoria
+Suficiencia:
+No
+Posibilidad de reconocimiento:
+No
+Vigencia del programa:
+2023
+2 Descripción general
+Muchos de los problemas relacionados a la ciberseguridad no necesariamente son del área técnica, y en su lugar se pueden analizar desde una perspectiva de ciencias sociales y legal. Por ejemplo, el phishing ocurre debido a que las personas típicamente forman parte del eslabón más débil, donde la relación de costo-beneficio para un atacante es muy atractiva, y por otro lado la legislación dificulta el abordaje de los problemas desde una perspectiva transnacional.
+En este curso el estudiante conocerá las principales acciones utilizadas por el cibercrimen para obtener información confidencial mediante la manipulación de usuarios legítimos, a través del uso de herramientas de espionaje, investigación y de recopilación de información; con el objetivo de proteger sistemas evaluando distintos escenarios de phising, vishing, espionaje industrial, entre otros.
+3 Objetivos
+Objetivo General
+El estudiante al finalizar el curso estará en la capacidad valorar la naturaleza de las acciones de individuos involucrados en actos de cibercrimen mediante el estudio de diferentes motivadores sociales y perspectivas legales, con el fin de potenciar la identificación de amenazas y su naturaleza.
+Objetivos específicos:
+- Comprender los principios teóricos que explican las acciones en el cibercrimen.
+- Comprender la psicología inmersa en la cibercriminalidad.
+- Analizar el espectro actual del cibercrimen en la sociedad digital actual.
+- Plantear medidas de prevención para mitigar los efectos del cibercrimen.
+4 Contenidos
+Métodos de investigación de las Ciencias Sociales
+- Teorización
+- Hipótesis
+- Recolección de Datos
+- Diseño experimental
+- Causalidad versus Correlación
+- Validación
+- Pruebas aleatorias controladas
+- Replicación
+- Unidads de análisis
+- Variables
+- SPSS
+Ingeniería Social
+- Principios de persuación
+- Juicio y toma de decisión
+- Economía conductual o del comportamiento
+La ciencia del Crimen
+- Orígenes del Crimen
+- Elección racional
+- Actividades de Rutina
+- Estudios de autoreporte
+- Estudios de Victimización
+- Registros policiales
+- Sensores Técnicos
+- Estudios Meta
+Prevención del Crimen en situación
+- Teoría de Oportunidad
+- Triángulo del Crimen
+- Desplazamiento
+- Difusión de beneficio
+Cibercrimen
+- Crimen asistido por computadora
+- Integridad
+- Crimen de contenido
+- Modus Operandi en Cibercrimen
+  - Crime Scripts
+  - Cómo la tecnología afecta el crimen
+- Cuestiones éticas
+5 Metodología de enseñanza y aprendizaje
+La metodología de enseñanza y aprendizaje que se empleará para el desarrollo del curso consistirá en la combinación de clases magistrales por parte del profesor con la incorporación de las estrategias de evaluación focalizadas en: comprobación de lectura, casos específicos de estudio e investigación bibliográfica.  Se espera una alta participación de los estudiantes del curso ya que se pretende realizar una integración entre los conceptos teóricos presentados con los respectivos casos de aplicación práctica.
+6 Evaluación
+La evaluación estará dada principalmente por medio de tres componentes. El primero asociado a pruebas cortas o comprobaciones de lecturas como mecanismo de seguimiento y control de asimilación de la materia vista en clase. El segundo es una investigación social aplicada en el contexto del cibercrimen. El último elemento de evaluación corresponde al desarrollo de estudios de casos en escenarios comunes de cibercrimen.
+- Pruebas cortas, comprobaciones de Lectura                		20%
+- Investigación                                		                            	40%
+- Estudio de casos                                                                     	40%
+Total: 	                                                                                     	100%
+7 Bibliografía
+Bhattacherjee, A. (2012). Social science research: Principles, methods, and practices.
+Lastdrager, E., Gallardo, I. C., Hartel, P., & Junger, M. (2017). How Effective is Anti-Phishing Training for Children? Thirteenth Symposium on Usable Privacy and Security (SOUPS 2017), 229-239. https://www.usenix.org/conference/soups2017/technical-sessions/presentation/lastdrager
+Stottelaar, B., Senden, J., & Montoya, L. (2014). Online social sports networks as crime facilitators. Crime Science, 3(1), 8. https://doi.org/10.1186/s40163-014-0008-z
+8 Profesores
