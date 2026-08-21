@@ -218,6 +218,19 @@ We define the following benchmarking structure
 %pipeline used to build the retrieval context, plus how the QA dataset
 %(90 questions per category) was constructed/validated.
 
+%TODO (Limitations): retrieval uses free (unfiltered) semantic search
+%across all 15 documents, deliberately, to evaluate the full RAG
+%pipeline rather than isolating generation quality. Manual inspection
+%during pipeline validation found cases where the correct source chunk
+%was retrieved but ranked below chunks from a different, topically
+%adjacent document (e.g. a course's own curriculum sentence on SOC/AI
+%outranked by a generic policy-governance document's incident-response
+%language) -- consistent with known limitations of lightweight
+%multilingual embedding models (paraphrase-multilingual-MiniLM-L12-v2)
+%on nuanced domain content. This affects all benchmarked models equally,
+%preserving fairness of the comparison, but likely places an upper bound
+%on achievable accuracy independent of generator quality.
+
 \subsection{LLMs to benchmark}
 
 Models are grouped into three tiers, reflecting the accuracy-vs-efficiency tradeoff central to this study's motivation. All models are loaded from their native (safetensors) Hugging Face repositories and quantized on-the-fly via \texttt{bitsandbytes}, rather than relying on pre-quantized GGUF files, so that a single loading and generation codepath is shared across every configuration.
