@@ -50,13 +50,24 @@ def chunk_documents(doc_texts, chunk_size=500, overlap=50):
 
     Returns: list of dicts, one per chunk:
              {"text": ..., "source": filename, "chunk_id": i}
+
+    Each chunk's embedded text is prefixed with the document name. This
+    matters here specifically: all 15 source documents share near-
+    identical boilerplate structure ("Asistencia: Obligatoria",
+    "Requisitos: Ninguno", etc.), so without a course identifier baked
+    into the embedded text, the same generic line from two different
+    courses embeds almost indistinguishably — causing retrieval to pull
+    the wrong course's chunk. The prefix gives the embedding model a
+    consistent, course-specific anchor to differentiate on.
     """
     all_chunks = []
     for filename, text in doc_texts.items():
+        doc_title = Path(filename).stem  # drop .txt extension
         chunks = chunk_text(text, chunk_size=chunk_size, overlap=overlap)
         for i, chunk in enumerate(chunks):
+            prefixed_text = f"[Documento: {doc_title}]\n{chunk}"
             all_chunks.append({
-                "text": chunk,
+                "text": prefixed_text,
                 "source": filename,
                 "chunk_id": i,
             })
@@ -169,7 +180,6 @@ def generate_answer(question, rag_index, top_k=5, generate_fn=None):
 
 
 if __name__ == "__main__":
-    # Minimal smoke test with dummy text
     sample_docs = {
         "curso_cibercrimen.txt": (
             "Programa del curso MC3010 Cibercrimen. "
