@@ -70,6 +70,17 @@ def build_or_load_index(text_dir, index_dir, chunk_size=500, overlap=50):
     return rag_index
 
 
+def compose_question(row):
+    """
+    The raw 'Pregunta' text alone is ambiguous — it doesn't say which
+    course or program it's about, so retrieval has no way to find the
+    right document among 15, and the model has no way to disambiguate
+    "el curso" on its own. Prepend course/program context, same format
+    validated in main.py.
+    """
+    return f'En el curso {row["Curso"]} de la {row["Maestría"]}, {row["Pregunta"]}'
+
+
 # ---------------------------------------------------------------------
 # Benchmark loop
 # ---------------------------------------------------------------------
@@ -119,7 +130,7 @@ def run_benchmark(
     suffix = f"_limit{limit}" if limit is not None else ""
     output_path = output_dir / f"{model_key}{suffix}.csv"
     fieldnames = [
-        "model_key", "category", "question", "expected_answer",
+        "model_key", "category", "question", "composed_question", "expected_answer",
         "predicted_answer", "retrieved_sources", "generation_time_s",
         "curso", "codigo", "error",
     ]
@@ -134,13 +145,14 @@ def run_benchmark(
 
         for category, df in qa.items():
             for _, row in df.iterrows():
-                question = row["Pregunta"]
+                question = row["Pregunta"]  # raw, kept for reference/scoring readability
+                composed_question = compose_question(row)  # actual query sent to RAG
                 expected = row["Respuesta"]
 
                 start = time.time()
                 predicted, sources, error = None, None, None
                 try:
-                    rag_result = generate_answer(question, rag_index, top_k=top_k, generate_fn=generate_fn)
+                    rag_result = generate_answer(composed_question, rag_index, top_k=top_k, generate_fn=generate_fn)
                     predicted = rag_result["answer"]
                     sources = ";".join(c["source"] for c in rag_result["retrieved"])
                 except Exception as e:
@@ -153,6 +165,7 @@ def run_benchmark(
                     "model_key": model_key,
                     "category": category,
                     "question": question,
+                    "composed_question": composed_question,
                     "expected_answer": expected,
                     "predicted_answer": predicted,
                     "retrieved_sources": sources,
