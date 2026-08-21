@@ -77,4 +77,8 @@ def extract_text(path):
     else:
         raise ValueError(f"Unsupported file type: {path}")
 
-corpus = {f: extract_text(os.path.join("files/", f)) for f in os.listdir("files/")}
+
+if __name__ == "__main__":
+    # Ad hoc standalone run, kept for reference — the real batch extraction
+    # for this project is handled by extract_all.py instead.
+    corpus = {f: extract_text(os.path.join("files/", f)) for f in os.listdir("files/")}
