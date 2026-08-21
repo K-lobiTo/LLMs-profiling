@@ -103,23 +103,50 @@ class RAGIndex:
         self.index = faiss.IndexFlatIP(dim)  # inner product == cosine sim, since normalized
         self.index.add(embeddings)
 
-    def retrieve(self, query, top_k=5):
+    def retrieve(self, query, top_k=5, max_per_source=2):
         """
         Returns top_k chunk dicts most relevant to the query, each with
         an added "score" key.
+
+        max_per_source: caps how many chunks from the same source
+        document can appear in the results, keeping the correct ranking
+        order but skipping extra chunks once a source hits the cap. This
+        is a standard retrieval-diversity technique — purely based on
+        ranking, uses no ground-truth information about which document
+        "should" be relevant — that prevents one verbose/generic
+        document from crowding out all top_k slots with its own
+        near-duplicate overlapping chunks, at the expense of other
+        genuinely relevant documents. Set to None to disable.
         """
+        # Over-fetch from FAISS since some results may get filtered by
+        # the per-source cap; fetch more candidates than top_k to have
+        # enough left after filtering.
+        fetch_k = top_k * 4 if max_per_source is not None else top_k
+
         query_vec = self.embedder.encode(
             [query], convert_to_numpy=True, normalize_embeddings=True
         )
-        scores, indices = self.index.search(query_vec, top_k)
+        scores, indices = self.index.search(query_vec, fetch_k)
 
         results = []
+        source_counts = {}
         for score, idx in zip(scores[0], indices[0]):
             if idx == -1:
                 continue
             chunk = dict(self.chunks[idx])
+
+            if max_per_source is not None:
+                count = source_counts.get(chunk["source"], 0)
+                if count >= max_per_source:
+                    continue
+                source_counts[chunk["source"]] = count + 1
+
             chunk["score"] = float(score)
             results.append(chunk)
+
+            if len(results) >= top_k:
+                break
+
         return results
 
     def save(self, dir_path):
