@@ -83,6 +83,7 @@ def run_benchmark(
     top_k=5,
     max_new_tokens=None,
     skip_reasoning=None,
+    limit=None,
 ):
     if model_key not in MODELS:
         raise ValueError(f"Unknown model key: {model_key}. Options: {list(MODELS)}")
@@ -93,8 +94,11 @@ def run_benchmark(
     # --- RAG index: identical for every model ---
     rag_index = build_or_load_index(text_dir, index_dir)
 
-    # --- QA dataset: full 90 questions per category, no subsampling ---
+    # --- QA dataset: full 90 questions per category, unless --limit is set ---
     qa = load_qa_dataset(qa_dir)
+    if limit is not None:
+        qa = {category: df.head(limit) for category, df in qa.items()}
+        print(f"--limit={limit}: using only the first {limit} question(s) per category")
     total_questions = sum(len(df) for df in qa.values())
     print(f"Loaded QA dataset: {total_questions} questions across {len(qa)} categories")
 
@@ -112,7 +116,8 @@ def run_benchmark(
     print(f"Model loaded in {meta['load_time_s']:.1f}s, max_new_tokens={max_new_tokens}")
 
     # --- Run every question once, through the RAG pipeline ---
-    output_path = output_dir / f"{model_key}.csv"
+    suffix = f"_limit{limit}" if limit is not None else ""
+    output_path = output_dir / f"{model_key}{suffix}.csv"
     fieldnames = [
         "model_key", "category", "question", "expected_answer",
         "predicted_answer", "retrieved_sources", "generation_time_s",
@@ -182,6 +187,8 @@ if __name__ == "__main__":
     parser.add_argument("--text-dir", default=str(DEFAULT_TEXT_DIR))
     parser.add_argument("--index-dir", default=str(DEFAULT_INDEX_DIR))
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR))
+    parser.add_argument("--limit", type=int, default=None,
+                         help="Only process the first N questions per category (for quick pipeline validation)")
     args = parser.parse_args()
 
     skip_reasoning = None
@@ -199,4 +206,5 @@ if __name__ == "__main__":
         top_k=args.top_k,
         max_new_tokens=args.max_new_tokens,
         skip_reasoning=skip_reasoning,
+        limit=args.limit,
     )
