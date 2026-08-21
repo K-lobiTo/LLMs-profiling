@@ -32,3 +32,6 @@ models/
 # OS junk
 .DS_Store
 Thumbs.db
+
+# Results
+results/raw/
