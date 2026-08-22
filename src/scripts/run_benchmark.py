@@ -24,6 +24,7 @@ from rag_pipeline import RAGIndex, chunk_documents, generate_answer
 from model_loading import get_generate_fn
 from model_config import MODELS
 from load_qa_dataset import load_qa_dataset
+from qa_prompts import build_instructed_question
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]  # src/scripts/.. -> src -> project root
 DEFAULT_TEXT_DIR = PROJECT_ROOT / "data" / "extracted_text"
@@ -68,17 +69,6 @@ def build_or_load_index(text_dir, index_dir, chunk_size=500, overlap=50):
     rag_index.save(index_dir)
     print(f"  Index saved to {index_dir}")
     return rag_index
-
-
-def compose_question(row):
-    """
-    The raw 'Pregunta' text alone is ambiguous — it doesn't say which
-    course or program it's about, so retrieval has no way to find the
-    right document among 15, and the model has no way to disambiguate
-    "el curso" on its own. Prepend course/program context, same format
-    validated in main.py.
-    """
-    return f'En el curso {row["Curso"]} de la {row["Maestría"]}, {row["Pregunta"]}'
 
 
 # ---------------------------------------------------------------------
@@ -146,7 +136,7 @@ def run_benchmark(
         for category, df in qa.items():
             for _, row in df.iterrows():
                 question = row["Pregunta"]  # raw, kept for reference/scoring readability
-                composed_question = compose_question(row)  # actual query sent to RAG
+                composed_question = build_instructed_question(row, category)  # actual query sent to RAG
                 expected = row["Respuesta"]
 
                 start = time.time()
