@@ -1,0 +1,224 @@
+"""
+Metric implementations for the QA benchmark, matching the Experimental
+Design section of the paper:
+  - binary        -> classification F1 (Sí/No as a 2-class label problem)
+  - short_answer   -> token-overlap F1 (SQuAD-style)
+  - open_ended     -> BERTScore, ROUGE-L, METEOR
+
+Design notes:
+  - Binary and short-answer both get called "F1 score" in the paper, but
+    they're conceptually different: binary questions have a fixed label
+    space (Sí/No), so classification F1 makes sense; short answers don't,
+    so token-overlap F1 (same family as SQuAD) is used instead.
+  - BERTScore uses BETO (dccuchile/bert-base-spanish-wwm-cased), a
+    Spanish BERT model, rather than a multilingual or English model,
+    since both the source documents and expected answers are in Spanish.
+  - ROUGE and METEOR were both designed primarily for English (METEOR in
+    particular leans on WordNet synonym matching, which is far weaker
+    for Spanish). Both are still computed since the paper's Experimental
+    Design specifies them, but scores should be read as approximate,
+    not as precisely calibrated for Spanish — worth a caveat in the
+    paper's methodology or limitations section.
+"""
+
+import re
+import string
+import unicodedata
+from collections import Counter
+
+# ---------------------------------------------------------------------
+# Binary: classification F1
+# ---------------------------------------------------------------------
+
+def extract_binary_label(text):
+    """
+    Extracts a 'sí' / 'no' label from a model's free-text answer. Looks
+    at the first few words rather than requiring an exact single-token
+    answer, since models sometimes prepend a label before elaborating
+    (e.g. "No, el curso no tiene requisitos...").
+
+    Returns "si", "no", or None if no clear label could be extracted
+    (counted as a wrong/unparseable answer during aggregation, not
+    silently dropped).
+    """
+    if not isinstance(text, str) or not text.strip():
+        return None
+
+    normalized = strip_accents(text.strip().lower())
+    normalized = normalized.lstrip(string.punctuation + " ")
+
+    # Check the first word only — "sí, ..." / "no, ..." / "si." / "no"
+    first_word = re.split(r"[\s,\.;:!]", normalized, maxsplit=1)[0]
+
+    if first_word in ("si", "sí"):
+        return "si"
+    if first_word == "no":
+        return "no"
+    return None
+
+
+def binary_classification_f1(pairs):
+    """
+    pairs: list of (predicted_text, expected_text) tuples.
+
+    Returns a dict with precision/recall/F1 (macro-averaged over the two
+    classes) plus the count of unparseable predictions, which are scored
+    as wrong (neither class) rather than excluded.
+    """
+    tp = {"si": 0, "no": 0}
+    fp = {"si": 0, "no": 0}
+    fn = {"si": 0, "no": 0}
+    n_unparseable = 0
+
+    for pred_text, expected_text in pairs:
+        gold = extract_binary_label(expected_text)
+        pred = extract_binary_label(pred_text)
+
+        if gold is None:
+            continue  # shouldn't happen — expected answers are curated Sí/No
+
+        if pred is None:
+            n_unparseable += 1
+            fn[gold] += 1
+            continue
+
+        if pred == gold:
+            tp[pred] += 1
+        else:
+            fp[pred] += 1
+            fn[gold] += 1
+
+    per_class_f1 = {}
+    for label in ("si", "no"):
+        precision = tp[label] / (tp[label] + fp[label]) if (tp[label] + fp[label]) > 0 else 0.0
+        recall = tp[label] / (tp[label] + fn[label]) if (tp[label] + fn[label]) > 0 else 0.0
+        f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
+        per_class_f1[label] = {"precision": precision, "recall": recall, "f1": f1}
+
+    macro_f1 = (per_class_f1["si"]["f1"] + per_class_f1["no"]["f1"]) / 2
+
+    return {
+        "macro_f1": macro_f1,
+        "per_class": per_class_f1,
+        "n_unparseable": n_unparseable,
+        "n_total": len(pairs),
+    }
+
+
+# ---------------------------------------------------------------------
+# Short answer: token-overlap F1 (SQuAD-style)
+# ---------------------------------------------------------------------
+
+def strip_accents(text):
+    nfkd = unicodedata.normalize("NFKD", text)
+    return "".join(c for c in nfkd if not unicodedata.combining(c))
+
+
+def normalize_text(text):
+    """Lowercase, strip accents and punctuation, collapse whitespace."""
+    if not isinstance(text, str):
+        return ""
+    text = text.lower()
+    text = strip_accents(text)
+    text = "".join(c for c in text if c not in string.punctuation)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+def token_f1(predicted, expected):
+    """
+    SQuAD-style token-overlap F1 between two free-text answers. Returns
+    0.0 if there is no overlap at all (including when either string is
+    empty after normalization).
+    """
+    pred_tokens = normalize_text(predicted).split()
+    gold_tokens = normalize_text(expected).split()
+
+    if not pred_tokens or not gold_tokens:
+        return 0.0
+
+    common = Counter(pred_tokens) & Counter(gold_tokens)
+    n_same = sum(common.values())
+    if n_same == 0:
+        return 0.0
+
+    precision = n_same / len(pred_tokens)
+    recall = n_same / len(gold_tokens)
+    return 2 * precision * recall / (precision + recall)
+
+
+# ---------------------------------------------------------------------
+# Open-ended: BERTScore, ROUGE-L, METEOR
+# ---------------------------------------------------------------------
+# Loaded lazily (only when open-ended metrics are actually requested) —
+# these pull in heavier dependencies (bert_score, rouge_score, nltk) and
+# a Spanish BERT model download, no need to pay that cost for a run that
+# only touches binary/short_answer categories.
+
+_bertscore_model = None
+_nltk_ready = False
+
+
+def _ensure_nltk_data():
+    global _nltk_ready
+    if _nltk_ready:
+        return
+    import nltk
+    for resource in ("wordnet", "omw-1.4", "punkt", "punkt_tab"):
+        try:
+            nltk.data.find(f"corpora/{resource}")
+        except LookupError:
+            nltk.download(resource, quiet=True)
+    _nltk_ready = True
+
+
+def compute_bertscore(predictions, references, lang_model="dccuchile/bert-base-spanish-wwm-cased"):
+    """
+    predictions, references: parallel lists of strings.
+    Returns lists of precision/recall/F1 (one per pair), using BETO
+    (Spanish BERT) rather than a multilingual model, since the
+    documents and expected answers are in Spanish.
+    """
+    from bert_score import score as bertscore_score
+
+    P, R, F1 = bertscore_score(
+        predictions, references, model_type=lang_model, lang="es", verbose=False
+    )
+    return {
+        "precision": P.tolist(),
+        "recall": R.tolist(),
+        "f1": F1.tolist(),
+    }
+
+
+def compute_rouge_l(predictions, references):
+    """Returns a list of ROUGE-L F-measure scores, one per pair."""
+    from rouge_score import rouge_scorer
+
+    scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=False)
+    scores = []
+    for pred, ref in zip(predictions, references):
+        result = scorer.score(ref, pred)
+        scores.append(result["rougeL"].fmeasure)
+    return scores
+
+
+def compute_meteor(predictions, references):
+    """
+    Returns a list of METEOR scores, one per pair. Uses nltk's
+    implementation — designed primarily for English (WordNet-based
+    synonym matching), so treat Spanish scores as approximate.
+    """
+    _ensure_nltk_data()
+    from nltk.translate.meteor_score import meteor_score
+    from nltk.tokenize import word_tokenize
+
+    scores = []
+    for pred, ref in zip(predictions, references):
+        pred_tokens = word_tokenize(pred.lower()) if isinstance(pred, str) else []
+        ref_tokens = word_tokenize(ref.lower()) if isinstance(ref, str) else []
+        if not pred_tokens or not ref_tokens:
+            scores.append(0.0)
+            continue
+        scores.append(meteor_score([ref_tokens], pred_tokens))
+    return scores
