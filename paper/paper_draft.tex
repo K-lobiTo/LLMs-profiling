@@ -189,7 +189,7 @@ Cartago, Costa Rica\\
 
 Universities are increasingly incorporating \gls{AI} tools into administrative and academic processes as part of broader digital transformation strategies. However, the most capable \glspl{LLM} are typically proprietary and cloud-hosted, which raises concerns around recurring costs, data privacy, and dependency on external infrastructure --- concerns that are particularly relevant for institutions with limited computational resources. This creates a need to evaluate whether smaller, open-source \glspl{LLM}, deployable on modest institutional hardware, can perform reliably on domain-specific \gls{QA} tasks grounded in an institution's own documents, such as course syllabi and program descriptions.
 
-This study benchmarks eight open-source \gls{LLM} configurations, spanning three model families (Qwen2.5, Llama 3.1, and DeepSeek-R1-Distill) at multiple parameter scales and quantization levels, using a \gls{RAG} pipeline over a curated set of university postgraduate course documents. Model performance is assessed across three question types (binary, short-answer, and open-ended), with the goal of identifying the configurations that offer the best practical balance between answer accuracy and computational efficiency for self-hosted deployment at the university.
+This study benchmarks six open-source \gls{LLM} configurations, spanning two model families (Qwen2.5 and Llama 3.1 at the efficient tier, DeepSeek-R1-Distill across the mid and upper-bound tiers) at multiple parameter scales and quantization levels, using a \gls{RAG} pipeline over a curated set of university postgraduate course documents. Model performance is assessed across three question types (binary, short-answer, and open-ended), with the goal of identifying the configurations that offer the best practical balance between answer accuracy and computational efficiency for self-hosted deployment at the university.
 
 %TODO: once results are available, close this section with explicit
 %research questions, e.g.:
@@ -246,12 +246,10 @@ Models are grouped into three tiers, reflecting the accuracy-vs-efficiency trade
     \item Llama-3.1-8B-Instruct (full precision)
     \item DeepSeek-R1-Distill-Qwen-14B (4-bit)
     \item DeepSeek-R1-Distill-Qwen-14B (8-bit)
-    \item Qwen2.5-32B-Instruct (4-bit)
   \end{itemize}
   \item \textbf{Upper-bound reference tier} (to quantify what is given up by deploying smaller models):
   \begin{itemize}
     \item DeepSeek-R1-Distill-Qwen-14B (full precision)
-    \item Qwen2.5-32B-Instruct (8-bit)
   \end{itemize}
 \end{itemize}
 
@@ -261,6 +259,16 @@ Models are grouped into three tiers, reflecting the accuracy-vs-efficiency trade
 %quantization of a 70B model leaves too little headroom for the KV cache
 %at the context lengths used here, and true multi-node distributed
 %inference was judged out of scope given the project timeline.
+
+%TODO: Qwen2.5-32B-Instruct (both 4-bit and 8-bit) was also considered,
+%as a mid/upper-bound-tier counterpart to the DeepSeek-R1-Distill-14B
+%configurations, but was excluded: downloading the ~65GB fp16 weights
+%failed with a Lustre disk-quota error on Kabre's /data allocation
+%(a per-user quota, not a lack of raw storage capacity on the mount).
+%Requesting a quota increase from CeNAT was judged not worth the delay
+%given the project timeline. As a result this study's mid/upper tiers
+%are represented only by the DeepSeek-R1-Distill-14B family, and the
+%comparison lacks a second model family at the 30B+ parameter scale.
 
 For each configuration, model size (parameters), GPU memory footprint, inference latency, and approximate GPU cost in the current market are reported and compared.
 

@@ -53,12 +53,15 @@ MODELS = {
         "is_reasoning_model": True,
         "skip_reasoning": True,
     },
-    "qwen2.5-32b-4bit": {
-        "repo": "Qwen/Qwen2.5-32B-Instruct",
-        "quant": "4bit",
-        "is_reasoning_model": False,
-        "skip_reasoning": False,
-    },
+
+    # NOTE: Qwen2.5-32B (both 4bit and 8bit) was dropped from this study.
+    # Download failed with "Disk quota exceeded" partway through fetching
+    # the ~65GB fp16 weights on Kabré's /data allocation — a per-user
+    # Lustre quota, not actual free space (78TB was available on the
+    # mount at the time). Raising the quota would require a support
+    # request to CeNAT, judged not worth the delay given the project
+    # timeline. This affects both the RAG and full-context benchmarks
+    # equally, since it's the same weights either way.
 
     # --- Upper-bound reference tier ---
     "deepseek-r1-14b-f16": {
@@ -66,11 +69,5 @@ MODELS = {
         "quant": None,
         "is_reasoning_model": True,
         "skip_reasoning": True,
-    },
-    "qwen2.5-32b-8bit": {
-        "repo": "Qwen/Qwen2.5-32B-Instruct",
-        "quant": "8bit",
-        "is_reasoning_model": False,
-        "skip_reasoning": False,
     },
 }
