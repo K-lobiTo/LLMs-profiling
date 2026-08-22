@@ -173,7 +173,16 @@ def get_generate_fn(model_key, max_new_tokens=512, skip_reasoning=None, verbose=
     generate_fn = build_generate_fn(
         model, tokenizer, model_key, max_new_tokens=max_new_tokens, skip_reasoning=skip_reasoning
     )
-    return generate_fn, {"load_time_s": load_time}
+
+    # Actual usable context length can differ from the marketed figure
+    # (e.g. Qwen2.5-3B lists "up to 128K" but this checkpoint's default
+    # config caps at 32768 without explicit RoPE-scaling/YaRN setup) —
+    # expose it so callers can check before sending a large prompt.
+    context_limit = getattr(model.config, "max_position_embeddings", None)
+    if verbose:
+        print(f"[{model_key}] max_position_embeddings (actual context limit): {context_limit}")
+
+    return generate_fn, {"load_time_s": load_time, "context_limit": context_limit}
 
 
 if __name__ == "__main__":

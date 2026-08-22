@@ -106,6 +106,18 @@ def run_full_context_benchmark(
     )
     print(f"Model loaded in {meta['load_time_s']:.1f}s, max_new_tokens={max_new_tokens}")
 
+    context_limit = meta.get("context_limit")
+    estimated_prompt_tokens = int(corpus_word_count * 1.4) + 200  # + rough instruction/question overhead
+    if context_limit is not None and (estimated_prompt_tokens + max_new_tokens) > context_limit:
+        print(
+            f"\nWARNING: estimated prompt tokens (~{estimated_prompt_tokens}) + "
+            f"max_new_tokens ({max_new_tokens}) = ~{estimated_prompt_tokens + max_new_tokens}, "
+            f"which exceeds {model_key}'s actual context limit ({context_limit}). "
+            f"Results may silently degrade or truncate context. Consider a smaller "
+            f"corpus subset, a shorter max_new_tokens, or skip this model for the "
+            f"full-context comparison.\n"
+        )
+
     # --- Run every question once, full corpus in every prompt ---
     suffix = f"_limit{limit}" if limit is not None else ""
     output_path = output_dir / f"{model_key}{suffix}.csv"
