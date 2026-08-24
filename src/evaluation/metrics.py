@@ -172,17 +172,30 @@ def _ensure_nltk_data():
     _nltk_ready = True
 
 
-def compute_bertscore(predictions, references, lang_model="dccuchile/bert-base-spanish-wwm-cased"):
+def compute_bertscore(predictions, references, lang_model="dccuchile/bert-base-spanish-wwm-cased", num_layers=10):
     """
     predictions, references: parallel lists of strings.
     Returns lists of precision/recall/F1 (one per pair), using BETO
     (Spanish BERT) rather than a multilingual model, since the
     documents and expected answers are in Spanish.
+
+    num_layers: bert_score's internal model2layers table only has
+    empirically-calibrated (via WMT16 correlation data) layer choices
+    for a fixed set of well-known checkpoints; BETO isn't among them, so
+    this must be passed explicitly or the library raises KeyError.
+    10 (of BETO's 12 layers) follows the common convention of using a
+    late-but-not-final layer for semantic similarity (the final layer
+    tends to be more pretraining-objective-specific, less semantic) —
+    this is a reasonable default, NOT an empirically-tuned choice for
+    Spanish/BETO the way bert_score's built-in models are. Worth noting
+    as a methodology caveat in the paper rather than presenting
+    BERTScore numbers as precisely calibrated.
     """
     from bert_score import score as bertscore_score
 
     P, R, F1 = bertscore_score(
-        predictions, references, model_type=lang_model, lang="es", verbose=False
+        predictions, references, model_type=lang_model, num_layers=num_layers,
+        lang="es", verbose=False,
     )
     return {
         "precision": P.tolist(),
