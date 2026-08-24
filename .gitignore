@@ -37,3 +37,8 @@ Thumbs.db
 results/raw/
 results/raw_fullcontext/
 results/metrics/
+
+# LaTeX
+paper/
+! paper/paper_draft.tex
+! paper/bibli.bib
