@@ -21,10 +21,12 @@ Design notes:
     paper's methodology or limitations section.
 """
 
+import os
 import re
 import string
 import unicodedata
 from collections import Counter
+from pathlib import Path
 
 # ---------------------------------------------------------------------
 # Binary: classification F1
@@ -164,11 +166,35 @@ def _ensure_nltk_data():
     if _nltk_ready:
         return
     import nltk
-    for resource in ("wordnet", "omw-1.4", "punkt", "punkt_tab"):
+
+    # NLTK defaults to ~/nltk_data — a completely separate cache path
+    # from HF_HOME, unaffected by that env var. On a cluster with a
+    # tight home-directory quota this fails outright ("Disk quota
+    # exceeded"), so redirect it alongside HF_HOME instead. Falls back
+    # to nltk's default only if HF_HOME isn't set either.
+    nltk_dir = os.environ.get("NLTK_DATA")
+    if not nltk_dir:
+        hf_home = os.environ.get("HF_HOME")
+        nltk_dir = str(Path(hf_home).parent / "nltk_data") if hf_home else str(Path.home() / "nltk_data")
+    os.makedirs(nltk_dir, exist_ok=True)
+    if nltk_dir not in nltk.data.path:
+        nltk.data.path.insert(0, nltk_dir)
+
+    # wordnet/omw-1.4 live under corpora/, punkt/punkt_tab under
+    # tokenizers/ — the original code checked all four under corpora/,
+    # which meant punkt/punkt_tab always looked "missing" and re-
+    # attempted downloading every run even when already cached.
+    resource_paths = {
+        "wordnet": "corpora/wordnet",
+        "omw-1.4": "corpora/omw-1.4",
+        "punkt": "tokenizers/punkt",
+        "punkt_tab": "tokenizers/punkt_tab",
+    }
+    for resource, check_path in resource_paths.items():
         try:
-            nltk.data.find(f"corpora/{resource}")
+            nltk.data.find(check_path)
         except LookupError:
-            nltk.download(resource, quiet=True)
+            nltk.download(resource, download_dir=nltk_dir, quiet=True)
     _nltk_ready = True
 
 
