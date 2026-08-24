@@ -24,7 +24,8 @@ import pandas as pd
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))  # src/scripts -> src
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "evaluation"))
 from evaluation.metrics import (
-    binary_classification_f1, token_f1, compute_bertscore, compute_rouge_l, compute_meteor,
+    binary_classification_f1, extract_binary_label, token_f1,
+    compute_bertscore, compute_rouge_l, compute_meteor,
 )
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -37,9 +38,10 @@ METRICS_DIR = PROJECT_ROOT / "results" / "metrics"
 # clusters are typically free/allocation-based) — it's a stand-in for
 # "what would this cost on commercial cloud infrastructure", which is
 # the actual comparison point for the paper's cost argument (self-hosted
-# open models vs. paying per-token for a commercial API). 
-# TODO: Adjust when I get a more specific reference rate to cite.
-GPU_HOURLY_RATE_USD = 1.10
+# open models vs. paying per-token for a commercial API). Rate is
+# Spheron's on-demand dedicated L40S rate — see spheron2026l40s in
+# bibli.bib.
+GPU_HOURLY_RATE_USD = 0.96
 
 
 def load_all_results():
@@ -65,6 +67,54 @@ def load_all_results():
         )
 
     return pd.concat(frames, ignore_index=True)
+
+
+def compute_per_question_scores(df, skip_open_ended=False):
+    """
+    Returns a copy of df with per-question scoring columns added, so
+    individual wrong answers can be inspected directly rather than only
+    seeing aggregate F1/BERTScore numbers. This is the piece that was
+    missing before: n_errors/n_unparseable in the aggregate table are
+    pipeline-health counters, not correctness counters — this is where
+    actual right/wrong per question lives.
+    """
+    df = df.copy()
+    df["predicted_binary_label"] = None
+    df["expected_binary_label"] = None
+    df["binary_correct"] = None
+    df["token_f1"] = None
+    df["bertscore_f1"] = None
+    df["rouge_l"] = None
+    df["meteor"] = None
+
+    valid_mask = df["predicted_answer"].notna() & df["error"].isna()
+
+    binary_mask = valid_mask & (df["category"] == "binary")
+    df.loc[binary_mask, "predicted_binary_label"] = df.loc[binary_mask, "predicted_answer"].apply(extract_binary_label)
+    df.loc[binary_mask, "expected_binary_label"] = df.loc[binary_mask, "expected_answer"].apply(extract_binary_label)
+    df.loc[binary_mask, "binary_correct"] = (
+        df.loc[binary_mask, "predicted_binary_label"] == df.loc[binary_mask, "expected_binary_label"]
+    )
+
+    short_mask = valid_mask & (df["category"] == "short_answer")
+    df.loc[short_mask, "token_f1"] = [
+        token_f1(pred, exp)
+        for pred, exp in zip(df.loc[short_mask, "predicted_answer"], df.loc[short_mask, "expected_answer"])
+    ]
+
+    if not skip_open_ended:
+        open_mask = valid_mask & (df["category"] == "open_ended")
+        if open_mask.any():
+            preds = df.loc[open_mask, "predicted_answer"].tolist()
+            refs = df.loc[open_mask, "expected_answer"].tolist()
+            bert = compute_bertscore(preds, refs)
+            rouge = compute_rouge_l(preds, refs)
+            meteor = compute_meteor(preds, refs)
+            df.loc[open_mask, "bertscore_f1"] = bert["f1"]
+            df.loc[open_mask, "rouge_l"] = rouge
+            df.loc[open_mask, "meteor"] = meteor
+
+    return df
 
 
 def compute_accuracy_metrics(df, skip_open_ended=False):
@@ -184,6 +234,18 @@ def main(skip_open_ended=False):
     accuracy_path = METRICS_DIR / "accuracy_by_model_category.csv"
     accuracy_df.to_csv(accuracy_path, index=False)
     print(f"  Saved to {accuracy_path}")
+
+    print("\nComputing per-question scores (for inspecting individual wrong answers)...")
+    per_question_df = compute_per_question_scores(df, skip_open_ended=skip_open_ended)
+    per_question_path = METRICS_DIR / "per_question_scores.csv"
+    per_question_df.to_csv(per_question_path, index=False)
+    print(f"  Saved to {per_question_path}")
+
+    n_binary_wrong = (per_question_df["binary_correct"] == False).sum()
+    n_binary_total = per_question_df["binary_correct"].notna().sum()
+    if n_binary_total > 0:
+        print(f"  Binary questions: {n_binary_wrong}/{n_binary_total} wrong "
+              f"(this is where actual mistakes live, not n_errors/n_unparseable)")
 
     print("\nComputing efficiency metrics...")
     efficiency_df = compute_efficiency_metrics(df)
