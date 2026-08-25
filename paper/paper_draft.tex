@@ -26,6 +26,7 @@
 \usepackage{siunitx} 
 \usepackage{tikz}
 \usepackage{pgfplots}
+\usepackage{pgfplotstable}
 \pgfplotsset{compat=1.18}
 
 \usepackage[acronym]{glossaries}
@@ -201,16 +202,15 @@ This study benchmarks six open-source \gls{LLM} configurations, spanning two mod
 \section{Experimental Design}
 
 \subsection{Dataset}
+The dataset was generated from 15 university postgraduate course program files in PDF and DOCX formats, all in Spanish. These documents were processed through a text-extraction and \gls{RAG} pipeline to create a retrieval context for the \glspl{LLM}.
+A total of 270 questions were constructed, divided into three categories: 90 binary (yes/no) questions, 90 short-answer questions, and 90 open-ended questions.
+The questions were generated using Gemini Notebook after an initial manual review of the source documents to identify key information and topics.
+Each question was validated to ensure it could be answered based on the information contained within the source documents. 
 
-We define the following benchmarking structure
-
-%I will do batches of 20 questions out of the 90 options each category has
-%The process will be repreated several times in order to get statistical info such as standart deviation, population mean, etc
 \begin{itemize}
-    \item 20 yes or no questions -> Metrics: F1 score
-    \item 20 short answer questions -> Metrics: F1 score
-    \item 20 open ended questions -> BERT Score, ROUGE, METEOR
-
+    \item 90 yes or no questions -> Metrics: F1 score
+    \item 90 short answer questions -> Metrics: F1 score
+    \item 90 open ended questions -> Metrics: BERT Score, ROUGE, METEOR
 \end{itemize}
 
 %TODO: describe the source documents (15 university postgraduate course
@@ -284,6 +284,167 @@ Experiments are run on Kabr\'e, the national HPC cluster operated by Costa Rica'
 %runtime. All reported results therefore use L40S nodes exclusively.
 
 This setup is itself part of the paper's motivation: rather than benchmarking on ad hoc consumer hardware, all models are evaluated on infrastructure a Costa Rican university can realistically access today through CeNAT, without relying on paid commercial cloud APIs.
+
+\section{Results}
+
+Tables and figures in this section are typeset directly from the result CSV files in \texttt{data/} at compile time via \texttt{pgfplotstable} and \texttt{pgfplots}, rather than transcribed by hand, so they always reflect the current contents of those files. \texttt{comparison\_accuracy.csv} holds all three question categories in one file (long format); the \texttt{\textbackslash FilterByCategory} macro below filters it per category at compile time, so no separate per-category files are needed.
+
+\pgfplotstableread[col sep=comma]{data/comparison_accuracy.csv}\accuracytable
+\pgfplotstableread[col sep=comma]{data/comparison_efficiency.csv}\efficiencytable
+
+\makeatletter
+% Loops over \accuracytable, building one tabular row (formatted with
+% \pgfmathprintnumber) for every row whose 'category' column equals #1,
+% using only the columns listed in #2 (comma-separated, first output
+% column is always model_key). Output is accumulated into a macro and
+% printed only after the loop's own grouping has closed — emitting
+% "&"/"\\" directly from inside \foreach's body breaks tabular's
+% alignment parser, hence the two-step accumulate-then-print structure.
+\newcommand{\FilterByCategory}[2]{%
+  \gdef\FBC@accum{}%
+  \pgfplotstablegetrowsof{\accuracytable}%
+  \pgfmathtruncatemacro{\FBC@numrows}{\pgfplotsretval-1}%
+  \foreach \FBC@i in {0,...,\FBC@numrows}{%
+    \pgfplotstablegetelem{\FBC@i}{category}\of\accuracytable%
+    \edef\FBC@cat{\pgfplotsretval}%
+    \def\FBC@target{#1}%
+    \ifx\FBC@cat\FBC@target
+      \pgfplotstablegetelem{\FBC@i}{model_key}\of\accuracytable%
+      \edef\FBC@row{\pgfplotsretval}%
+      \foreach \FBC@col in {#2}{%
+        \pgfplotstablegetelem{\FBC@i}{\FBC@col}\of\accuracytable%
+        \edef\FBC@val{\pgfplotsretval}%
+        \xdef\FBC@row{\FBC@row\noexpand&\noexpand\pgfmathprintnumber[fixed,fixed zerofill,precision=3]{\FBC@val}}%
+      }%
+      \xdef\FBC@accum{\FBC@accum\FBC@row\noexpand\\}%
+    \fi
+  }%
+  \FBC@accum
+}
+\makeatother
+
+\subsection{Binary Questions}
+
+\begin{table}[H]
+\centering
+\caption{Binary question F1 score, RAG vs. full-context, by model.}
+\label{tab:binary-accuracy}
+\begin{tabular}{lcc}
+\toprule
+Model & F1 (RAG) & F1 (Full-context) \\
+\midrule
+\FilterByCategory{binary}{f1_rag,f1_fullcontext}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Short-Answer Questions}
+
+\begin{table}[H]
+\centering
+\caption{Short-answer question token-overlap F1 score, RAG vs. full-context, by model.}
+\label{tab:short-answer-accuracy}
+\begin{tabular}{lcc}
+\toprule
+Model & F1 (RAG) & F1 (Full-context) \\
+\midrule
+\FilterByCategory{short_answer}{f1_rag,f1_fullcontext}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Open-Ended Questions}
+
+\begin{table}[H]
+\centering
+\caption{Open-ended question metrics (BERTScore F1, ROUGE-L, METEOR), RAG vs. full-context, by model.}
+\label{tab:open-ended-accuracy}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+Model & BERTScore (RAG) & BERTScore (Full-ctx) & ROUGE-L (RAG) & ROUGE-L (Full-ctx) & METEOR (RAG) & METEOR (Full-ctx) \\
+\midrule
+\FilterByCategory{open_ended}{bertscore_f1_rag,bertscore_f1_fullcontext,rouge_l_rag,rouge_l_fullcontext,meteor_rag,meteor_fullcontext}
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\subsection{Efficiency and Cost}
+
+\begin{table}[H]
+\centering
+\caption{Mean generation time and estimated cost per 1000 queries, RAG vs. full-context, by model. Cost estimated at \$0.96/hr (NVIDIA L40S, on-demand)~\cite{spheron2026l40s}.}
+\label{tab:efficiency}
+\resizebox{\columnwidth}{!}{%
+\pgfplotstabletypeset[
+  columns={model_key,mean_generation_time_s_rag,mean_generation_time_s_fullcontext,est_cost_per_1000_queries_usd_rag,est_cost_per_1000_queries_usd_fullcontext},
+  columns/model_key/.style={string type, column name={Model}},
+  columns/mean_generation_time_s_rag/.style={column name={Time RAG (s)}, fixed, fixed zerofill, precision=3},
+  columns/mean_generation_time_s_fullcontext/.style={column name={Time Full-ctx (s)}, fixed, fixed zerofill, precision=3},
+  columns/est_cost_per_1000_queries_usd_rag/.style={column name={Cost RAG (\$/1k)}, fixed, fixed zerofill, precision=4},
+  columns/est_cost_per_1000_queries_usd_fullcontext/.style={column name={Cost Full-ctx (\$/1k)}, fixed, fixed zerofill, precision=4},
+  every head row/.style={before row=\toprule, after row=\midrule},
+  every last row/.style={after row=\bottomrule},
+]\efficiencytable
+}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  ybar,
+  bar width=6pt,
+  width=\columnwidth,
+  height=5cm,
+  ylabel={Estimated cost per 1000 queries (USD)},
+  symbolic x coords={deepseek-r1-14b-4bit,deepseek-r1-14b-8bit,deepseek-r1-14b-f16,llama3.1-8b-4bit,llama3.1-8b-f16,qwen2.5-3b},
+  xtick=data,
+  x tick label style={rotate=45, anchor=east, font=\tiny},
+  legend style={font=\tiny, at={(0.5,1.15)}, anchor=north, legend columns=2},
+  ymajorgrids=true,
+]
+\addplot table[x=model_key, y=est_cost_per_1000_queries_usd_rag, col sep=comma] {data/comparison_efficiency.csv};
+\addplot table[x=model_key, y=est_cost_per_1000_queries_usd_fullcontext, col sep=comma] {data/comparison_efficiency.csv};
+\legend{RAG, Full-context}
+\end{axis}
+\end{tikzpicture}
+\caption{Cost per 1000 queries, RAG vs. full-context, by model. RAG is consistently cheaper across all six models, since it sends far fewer tokens per prompt than stuffing the entire 15-document corpus into context.}
+\label{fig:cost-comparison}
+\end{figure}
+
+%TODO: add a second figure directly addressing the paper's central
+%question — accuracy vs. cost tradeoff across models (e.g. binary F1 on
+%the y-axis, cost per 1000 queries on the x-axis, one point per model,
+%RAG and full-context as separate series) — once the specific framing
+%for the Discussion section's argument is finalized.
+
+\section{Discussion}
+
+%TODO: synthesize the tables above. Candidate points, drawn from
+%observations made during pipeline development and validation:
+%  - RAG vs. full-context: does full-context's higher cost translate to
+%    a proportionally better accuracy? (Table \ref{tab:binary-accuracy}
+%    and \ref{tab:efficiency} suggest this is NOT uniform across models
+%    or categories -- worth checking short-answer F1 in particular,
+%    where full-context accuracy looks lower for several models despite
+%    higher cost.)
+%  - DeepSeek-R1-Distill's reasoning overhead: skip_reasoning=True was
+%    used throughout (see model_config.py) after smoke testing showed
+%    negligible accuracy impact but a ~5-10x latency cost when reasoning
+%    was left enabled -- worth stating this explicitly as a design
+%    decision with its own accuracy/cost tradeoff data if available.
+%  - Retrieval quality ceiling: RAG's retrieval step was observed to
+%    occasionally rank a topically-adjacent but incorrect document above
+%    the correct source chunk (see Limitations note in Experimental
+%    Design), which may partly explain any cases where full-context
+%    outperforms RAG on accuracy despite retrieving from a much smaller,
+%    cheaper context.
+%  - Efficient-tier models (Qwen2.5-3B, Llama-3.1-8B) vs. larger
+%    DeepSeek-R1-Distill-14B variants: does the smaller/cheaper tier
+%    retain most of the larger tier's accuracy, supporting the paper's
+%    central deployment-feasibility argument?
 
 \section{Conclusions}
 
