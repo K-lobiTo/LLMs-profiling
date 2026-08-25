@@ -202,21 +202,12 @@ This study benchmarks six open-source \gls{LLM} configurations, spanning two mod
 \section{Experimental Design}
 
 \subsection{Dataset}
-The dataset was generated from 15 university postgraduate course program files in PDF and DOCX formats, all in Spanish. These documents were processed through a text-extraction and \gls{RAG} pipeline to create a retrieval context for the \glspl{LLM}.
-A total of 270 questions were constructed, divided into three categories: 90 binary (yes/no) questions, 90 short-answer questions, and 90 open-ended questions.
-The questions were generated using Gemini Notebook after an initial manual review of the source documents to identify key information and topics.
-Each question was validated to ensure it could be answered based on the information contained within the source documents. 
 
-\begin{itemize}
-    \item 90 yes or no questions -> Metrics: F1 score
-    \item 90 short answer questions -> Metrics: F1 score
-    \item 90 open ended questions -> Metrics: BERT Score, ROUGE, METEOR
-\end{itemize}
+The QA dataset consists of 270 questions in Spanish (90 per category: binary, short-answer, open-ended), each labeled with its source course and program (\textit{Maestr\'ia}) and a curated expected answer. Each of the 90 questions per category is evaluated exactly once per model per context-supply condition (Section~\ref{ssec:context-conditions}), using greedy (deterministic, \texttt{do\_sample=False}) decoding throughout, rather than repeated sampled batches --- an earlier design considered drawing random 20-question batches per run to estimate variance across samples, but was dropped in favor of evaluating the full 90-question set once per condition, given the project timeline.
 
-%TODO: describe the source documents (15 university postgraduate course
-%program files, PDF/DOCX, in Spanish) and the text-extraction/RAG
-%pipeline used to build the retrieval context, plus how the QA dataset
-%(90 questions per category) was constructed/validated.
+The retrieval/context corpus consists of 15 university postgraduate course-program documents (PDF and DOCX, in Spanish), covering course descriptions, objectives, evaluation structure, and bibliography. Each document is converted to plain text with a custom extractor that walks paragraphs and tables in document order (\texttt{python-docx}'s default paragraph-only traversal misses table content entirely, and all 15 source documents store their content inside tables) and preserves list structure, including nested bullets, via each paragraph's \texttt{numPr}/\texttt{ilvl} properties.
+
+Because a raw question (e.g. \textit{``\textquestiondown Es la asistencia obligatoria?''}) does not identify which of the 15 courses it refers to, each question is composed with its course and program before being sent to a model: \textit{``En el curso \{Curso\} de la \{Maestr\'ia\}, \{Pregunta\}''}. A category-specific instruction is appended to the composed question, so that binary and short-answer questions are not padded with unneeded elaboration that would hurt exact-match-style scoring, while open-ended questions are explicitly invited to elaborate: \textit{``Responde \'unicamente con `S\'i' o `No'.''} (binary); \textit{``Da una respuesta breve y directa, en una sola frase.''} (short-answer); \textit{``Da una respuesta completa y explicativa.''} (open-ended).
 
 %TODO (Limitations): retrieval uses free (unfiltered) semantic search
 %across all 15 documents, deliberately, to evaluate the full RAG
@@ -230,6 +221,18 @@ Each question was validated to ensure it could be answered based on the informat
 %on nuanced domain content. This affects all benchmarked models equally,
 %preserving fairness of the comparison, but likely places an upper bound
 %on achievable accuracy independent of generator quality.
+
+\subsubsection{Context-supply conditions}
+\label{ssec:context-conditions}
+
+Every question is answered under two context-supply conditions, using an otherwise identical prompt template, so the only variable between them is how context is supplied:
+
+\begin{itemize}
+  \item \textbf{RAG}: the 15 documents are split into $\sim$500-word chunks (50-word overlap). Each chunk's embedded text is prefixed with its source document's title before embedding (\textit{``[Documento: \ldots]''}), since the source documents share near-identical boilerplate structure across courses (e.g. \textit{``Asistencia: Obligatoria''}) that would otherwise embed indistinguishably regardless of course. Chunks are embedded with \texttt{paraphrase-multilingual-MiniLM-L12-v2} and indexed with FAISS (cosine similarity via normalized inner product). Retrieval returns the top 5 chunks for the composed question, capped at 2 chunks per source document, so a single verbose document cannot crowd out all 5 slots with its own near-duplicate chunks.
+  \item \textbf{Full-context}: the entire 15-document corpus ($\sim$17K words, $\sim$24K estimated tokens) is concatenated (each document labeled the same way as the RAG chunk prefix) and included in every prompt, in place of retrieved chunks. Feasible here because the corpus is small relative to all benchmarked models' context windows, with one exception: Qwen2.5-3B-Instruct's default configuration caps at 32{,}768 tokens (despite being marketed with a 32K--128K range, which requires explicit RoPE-scaling configuration not used here), close enough to the corpus-plus-prompt size to occasionally trigger a context-length warning; results for this model under the full-context condition should be read with that caveat.
+\end{itemize}
+
+Both conditions were run to completion for all 6 benchmarked models (3{,}240 total question-answer pairs: 270 questions $\times$ 6 models $\times$ 2 conditions), so that RAG and full-context can be compared directly per model and per category, not just in aggregate.
 
 \subsection{LLMs to benchmark}
 
@@ -269,6 +272,10 @@ Models are grouped into three tiers, reflecting the accuracy-vs-efficiency trade
 %given the project timeline. As a result this study's mid/upper tiers
 %are represented only by the DeepSeek-R1-Distill-14B family, and the
 %comparison lacks a second model family at the 30B+ parameter scale.
+
+\subsubsection{Generation settings}
+
+All models generate with greedy decoding (\texttt{do\_sample=False}) for reproducibility, with a 300-token budget per answer. DeepSeek-R1-Distill-Qwen-14B is a reasoning model: by default, its chat template opens a \texttt{<think>} block that the model fills with a chain-of-thought trace before producing a final answer. Pipeline validation showed this reasoning trace added substantial latency (up to $\sim$40s for a single trivial question, such as confirming $2+2=4$) without changing the final answer's content on the validation questions tested. All three DeepSeek-R1-Distill-Qwen-14B configurations therefore run with reasoning explicitly disabled: the \texttt{<think>} block is force-closed immediately after the prompt (appending \texttt{"\textbackslash n\textbackslash n</think>\textbackslash n\textbackslash n"} before generation begins), so the model answers directly. This is a deliberate accuracy-for-latency tradeoff specific to this study's efficiency framing, not a claim that reasoning never helps; it is reported here as part of the experimental design rather than left implicit in the results.
 
 For each configuration, model size (parameters), GPU memory footprint, inference latency, and approximate GPU cost in the current market are reported and compared. Cost is estimated as mean generation time per query multiplied by an hourly GPU rental rate, projected to a cost-per-1000-queries figure; this is not what Kabr\'e itself charges (allocation-based, not billed per hour) but a stand-in for what the same workload would cost on commercial cloud infrastructure --- the actual comparison point for this paper's cost argument against paid, proprietary LLM APIs. The rate used is \$0.96/hr, the on-demand dedicated price for an NVIDIA L40S --- the same GPU model used throughout this study's own infrastructure --- as listed by Spheron Network~\cite{spheron2026l40s}.
 
