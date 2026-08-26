@@ -141,24 +141,27 @@ marroyo@itcr.ac.cr}
 \and
 
 \IEEEauthorblockN{Mónica Hernández}
-\IEEEauthorblockA{\textit{Instituto Tecnológico de Costa Rica (??)}\\
+\IEEEauthorblockA{\textit{Instituto Tecnológico de Costa Rica }\\
 Cartago, Costa Rica\\
 mohernandez@itcr.ac.cr}
 
 \and
 
 \IEEEauthorblockN{José Aguilar}
-\IEEEauthorblockA{\textit{Instituto Tecnológico de Costa Rica (??)}\\
-Cartago, Costa Rica\\
-???}
+\IEEEauthorblockA{\textit{}\\
+Cartago, Costa Rica\\ % GIDITIC, Department of Informatics and Systems, Universidad Eafit, Medellín, Colombia; 
+% CEMISID, Universidad de Los Andes, Mérida, Venezuela; 
+% Dpto. de Automática, Universidad de Alcalá, Alcalá de Henares, Spain
+aguilarjos@gmail.com}
 
 }
 
 
+
 \maketitle
-
+ 
 \begin{abstract}
-
+ 
 %TODO: write last, once results are in. Should cover: motivation
 %(on-premise LLMs for university digital transformation), method (RAG +
 %QA benchmark over course-program documents), models compared, and the
@@ -166,11 +169,11 @@ Cartago, Costa Rica\\
 %tradeoff).
     
 \end{abstract}
-
+ 
 \keywords{ \footnote{\textbf{}} }
-
+ 
 \section{Introduction}
-
+ 
 %TODO: expand into full introduction. Suggested flow:
 %  1. Universities are adopting AI tools as part of digital transformation
 %     strategies (admissions, student support, academic advising, etc.)
@@ -185,30 +188,30 @@ Cartago, Costa Rica\\
 %     to assess whether they are accurate and efficient enough for
 %     practical institutional deployment.
 %  5. Brief roadmap of the paper's sections.
-
+ 
 \section{Problem Definition}
-
+ 
 Universities are increasingly incorporating \gls{AI} tools into administrative and academic processes as part of broader digital transformation strategies. However, the most capable \glspl{LLM} are typically proprietary and cloud-hosted, which raises concerns around recurring costs, data privacy, and dependency on external infrastructure --- concerns that are particularly relevant for institutions with limited computational resources. This creates a need to evaluate whether smaller, open-source \glspl{LLM}, deployable on modest institutional hardware, can perform reliably on domain-specific \gls{QA} tasks grounded in an institution's own documents, such as course syllabi and program descriptions.
-
+ 
 This study benchmarks six open-source \gls{LLM} configurations, spanning two model families (Qwen2.5 and Llama 3.1 at the efficient tier, DeepSeek-R1-Distill across the mid and upper-bound tiers) at multiple parameter scales and quantization levels, using a \gls{RAG} pipeline over a curated set of university postgraduate course documents. Model performance is assessed across three question types (binary, short-answer, and open-ended), with the goal of identifying the configurations that offer the best practical balance between answer accuracy and computational efficiency for self-hosted deployment at the university.
-
+ 
 %TODO: once results are available, close this section with explicit
 %research questions, e.g.:
 %  RQ1: How does QA accuracy vary across model and question type?
 %  RQ2: What is the accuracy-vs-inference-cost tradeoff across models?
 %  RQ3: Is any of the benchmarked models viable for deployment on the
 %       university's available hardware?
-
+ 
 \section{Experimental Design}
-
+ 
 \subsection{Dataset}
-
+ 
 The QA dataset consists of 270 questions in Spanish (90 per category: binary, short-answer, open-ended), each labeled with its source course and program (\textit{Maestr\'ia}) and a curated expected answer. Each of the 90 questions per category is evaluated exactly once per model per context-supply condition (Section~\ref{ssec:context-conditions}), using greedy (deterministic, \texttt{do\_sample=False}) decoding throughout, rather than repeated sampled batches --- an earlier design considered drawing random 20-question batches per run to estimate variance across samples, but was dropped in favor of evaluating the full 90-question set once per condition, given the project timeline.
-
+ 
 The retrieval/context corpus consists of 15 university postgraduate course-program documents (PDF and DOCX, in Spanish), covering course descriptions, objectives, evaluation structure, and bibliography. Each document is converted to plain text with a custom extractor that walks paragraphs and tables in document order (\texttt{python-docx}'s default paragraph-only traversal misses table content entirely, and all 15 source documents store their content inside tables) and preserves list structure, including nested bullets, via each paragraph's \texttt{numPr}/\texttt{ilvl} properties.
-
+ 
 Because a raw question (e.g. \textit{``\textquestiondown Es la asistencia obligatoria?''}) does not identify which of the 15 courses it refers to, each question is composed with its course and program before being sent to a model: \textit{``En el curso \{Curso\} de la \{Maestr\'ia\}, \{Pregunta\}''}. A category-specific instruction is appended to the composed question, so that binary and short-answer questions are not padded with unneeded elaboration that would hurt exact-match-style scoring, while open-ended questions are explicitly invited to elaborate: \textit{``Responde \'unicamente con `S\'i' o `No'.''} (binary); \textit{``Da una respuesta breve y directa, en una sola frase.''} (short-answer); \textit{``Da una respuesta completa y explicativa.''} (open-ended).
-
+ 
 %TODO (Limitations): retrieval uses free (unfiltered) semantic search
 %across all 15 documents, deliberately, to evaluate the full RAG
 %pipeline rather than isolating generation quality. Manual inspection
@@ -221,23 +224,23 @@ Because a raw question (e.g. \textit{``\textquestiondown Es la asistencia obliga
 %on nuanced domain content. This affects all benchmarked models equally,
 %preserving fairness of the comparison, but likely places an upper bound
 %on achievable accuracy independent of generator quality.
-
+ 
 \subsubsection{Context-supply conditions}
 \label{ssec:context-conditions}
-
+ 
 Every question is answered under two context-supply conditions, using an otherwise identical prompt template, so the only variable between them is how context is supplied:
-
+ 
 \begin{itemize}
   \item \textbf{RAG}: the 15 documents are split into $\sim$500-word chunks (50-word overlap). Each chunk's embedded text is prefixed with its source document's title before embedding (\textit{``[Documento: \ldots]''}), since the source documents share near-identical boilerplate structure across courses (e.g. \textit{``Asistencia: Obligatoria''}) that would otherwise embed indistinguishably regardless of course. Chunks are embedded with \texttt{paraphrase-multilingual-MiniLM-L12-v2} and indexed with FAISS (cosine similarity via normalized inner product). Retrieval returns the top 5 chunks for the composed question, capped at 2 chunks per source document, so a single verbose document cannot crowd out all 5 slots with its own near-duplicate chunks.
   \item \textbf{Full-context}: the entire 15-document corpus ($\sim$17K words, $\sim$24K estimated tokens) is concatenated (each document labeled the same way as the RAG chunk prefix) and included in every prompt, in place of retrieved chunks. Feasible here because the corpus is small relative to all benchmarked models' context windows, with one exception: Qwen2.5-3B-Instruct's default configuration caps at 32{,}768 tokens (despite being marketed with a 32K--128K range, which requires explicit RoPE-scaling configuration not used here), close enough to the corpus-plus-prompt size to occasionally trigger a context-length warning; results for this model under the full-context condition should be read with that caveat.
 \end{itemize}
-
+ 
 Both conditions were run to completion for all 6 benchmarked models (3{,}240 total question-answer pairs: 270 questions $\times$ 6 models $\times$ 2 conditions), so that RAG and full-context can be compared directly per model and per category, not just in aggregate.
-
+ 
 \subsection{LLMs to benchmark}
-
+ 
 Models are grouped into three tiers, reflecting the accuracy-vs-efficiency tradeoff central to this study's motivation. All models are loaded from their native (safetensors) Hugging Face repositories and quantized on-the-fly via \texttt{bitsandbytes}, rather than relying on pre-quantized GGUF files, so that a single loading and generation codepath is shared across every configuration.
-
+ 
 \begin{itemize}
   \item \textbf{Efficient tier} (target deployment candidates):
   \begin{itemize}
@@ -255,14 +258,14 @@ Models are grouped into three tiers, reflecting the accuracy-vs-efficiency trade
     \item DeepSeek-R1-Distill-Qwen-14B (full precision)
   \end{itemize}
 \end{itemize}
-
+ 
 %TODO: A Llama-3.3-70B-Instruct configuration was initially considered as
 %an additional upper-bound reference, but was excluded: on Kabre's
 %single-GPU-per-node allocation (NVIDIA L40S, 46GB VRAM), a 4-bit
 %quantization of a 70B model leaves too little headroom for the KV cache
 %at the context lengths used here, and true multi-node distributed
 %inference was judged out of scope given the project timeline.
-
+ 
 %TODO: Qwen2.5-32B-Instruct (both 4-bit and 8-bit) was also considered,
 %as a mid/upper-bound-tier counterpart to the DeepSeek-R1-Distill-14B
 %configurations, but was excluded: downloading the ~65GB fp16 weights
@@ -272,33 +275,33 @@ Models are grouped into three tiers, reflecting the accuracy-vs-efficiency trade
 %given the project timeline. As a result this study's mid/upper tiers
 %are represented only by the DeepSeek-R1-Distill-14B family, and the
 %comparison lacks a second model family at the 30B+ parameter scale.
-
+ 
 \subsubsection{Generation settings}
-
+ 
 All models generate with greedy decoding (\texttt{do\_sample=False}) for reproducibility, with a 300-token budget per answer. DeepSeek-R1-Distill-Qwen-14B is a reasoning model: by default, its chat template opens a \texttt{<think>} block that the model fills with a chain-of-thought trace before producing a final answer. Pipeline validation showed this reasoning trace added substantial latency (up to $\sim$40s for a single trivial question, such as confirming $2+2=4$) without changing the final answer's content on the validation questions tested. All three DeepSeek-R1-Distill-Qwen-14B configurations therefore run with reasoning explicitly disabled: the \texttt{<think>} block is force-closed immediately after the prompt (appending \texttt{"\textbackslash n\textbackslash n</think>\textbackslash n\textbackslash n"} before generation begins), so the model answers directly. This is a deliberate accuracy-for-latency tradeoff specific to this study's efficiency framing, not a claim that reasoning never helps; it is reported here as part of the experimental design rather than left implicit in the results.
-
+ 
 For each configuration, model size (parameters), GPU memory footprint, inference latency, and approximate GPU cost in the current market are reported and compared. Cost is estimated as mean generation time per query multiplied by an hourly GPU rental rate, projected to a cost-per-1000-queries figure; this is not what Kabr\'e itself charges (allocation-based, not billed per hour) but a stand-in for what the same workload would cost on commercial cloud infrastructure --- the actual comparison point for this paper's cost argument against paid, proprietary LLM APIs. The rate used is \$0.96/hr, the on-demand dedicated price for an NVIDIA L40S --- the same GPU model used throughout this study's own infrastructure --- as listed by Spheron Network~\cite{spheron2026l40s}.
-
+ 
 \subsection{Infrastructure}
-
+ 
 Experiments are run on Kabr\'e, the national HPC cluster operated by Costa Rica's Centro Nacional de Alta Tecnolog\'ia (CeNAT), accessible to CONARE-affiliated universities including the Instituto Tecnol\'ogico de Costa Rica. Jobs are scheduled via Slurm on the \texttt{nukwa} partition family, which provides single-GPU compute nodes: 4 nodes with an NVIDIA Tesla V100 (32GB), and 7 nodes with an NVIDIA Ada L40S (46GB usable VRAM).
-
+ 
 %TODO: V100 (Volta, compute capability 7.0) nodes are excluded from this
 %study: the PyTorch build required for the other models' CUDA/driver
 %stack (cu128) is compiled for compute capability >=7.5 and does not
 %include kernels for Volta, causing a
 %"no kernel image is available for execution on the device" error at
 %runtime. All reported results therefore use L40S nodes exclusively.
-
+ 
 This setup is itself part of the paper's motivation: rather than benchmarking on ad hoc consumer hardware, all models are evaluated on infrastructure a Costa Rican university can realistically access today through CeNAT, without relying on paid commercial cloud APIs.
-
+ 
 \section{Results}
-
+ 
 Tables and figures in this section are typeset directly from the result CSV files in \texttt{data/} at compile time via \texttt{pgfplotstable} and \texttt{pgfplots}, rather than transcribed by hand, so they always reflect the current contents of those files. \texttt{comparison\_accuracy.csv} holds all three question categories in one file (long format); the \texttt{\textbackslash FilterByCategory} macro below filters it per category at compile time, so no separate per-category files are needed.
-
+ 
 \pgfplotstableread[col sep=comma]{data/comparison_accuracy.csv}\accuracytable
 \pgfplotstableread[col sep=comma]{data/comparison_efficiency.csv}\efficiencytable
-
+ 
 \makeatletter
 % Loops over \accuracytable, building one tabular row (formatted with
 % \pgfmathprintnumber) for every row whose 'category' column equals #1,
@@ -329,9 +332,9 @@ Tables and figures in this section are typeset directly from the result CSV file
   \FBC@accum
 }
 \makeatother
-
+ 
 \subsection{Binary Questions}
-
+ 
 \begin{table}[H]
 \centering
 \caption{Binary question F1 score, RAG vs. full-context, by model.}
@@ -344,9 +347,9 @@ Model & F1 (RAG) & F1 (Full-context) \\
 \bottomrule
 \end{tabular}
 \end{table}
-
+ 
 \subsection{Short-Answer Questions}
-
+ 
 \begin{table}[H]
 \centering
 \caption{Short-answer question token-overlap F1 score, RAG vs. full-context, by model.}
@@ -359,26 +362,39 @@ Model & F1 (RAG) & F1 (Full-context) \\
 \bottomrule
 \end{tabular}
 \end{table}
-
+ 
 \subsection{Open-Ended Questions}
-
+ 
 \begin{table}[H]
 \centering
-\caption{Open-ended question metrics (BERTScore F1, ROUGE-L, METEOR), RAG vs. full-context, by model.}
-\label{tab:open-ended-accuracy}
+\caption{Open-ended question BERTScore F1 and ROUGE-L, RAG vs. full-context, by model.}
+\label{tab:open-ended-bertscore-rouge}
 \resizebox{\columnwidth}{!}{%
-\begin{tabular}{lcccccc}
+\begin{tabular}{lcccc}
 \toprule
-Model & BERTScore (RAG) & BERTScore (Full-ctx) & ROUGE-L (RAG) & ROUGE-L (Full-ctx) & METEOR (RAG) & METEOR (Full-ctx) \\
+Model & BERTScore (RAG) & BERTScore (Full-ctx) & ROUGE-L (RAG) & ROUGE-L (Full-ctx) \\
 \midrule
-\FilterByCategory{open_ended}{bertscore_f1_rag,bertscore_f1_fullcontext,rouge_l_rag,rouge_l_fullcontext,meteor_rag,meteor_fullcontext}
+\FilterByCategory{open_ended}{bertscore_f1_rag,bertscore_f1_fullcontext,rouge_l_rag,rouge_l_fullcontext}
 \bottomrule
 \end{tabular}
 }
 \end{table}
-
+ 
+\begin{table}[H]
+\centering
+\caption{Open-ended question METEOR score, RAG vs. full-context, by model.}
+\label{tab:open-ended-meteor}
+\begin{tabular}{lcc}
+\toprule
+Model & METEOR (RAG) & METEOR (Full-ctx) \\
+\midrule
+\FilterByCategory{open_ended}{meteor_rag,meteor_fullcontext}
+\bottomrule
+\end{tabular}
+\end{table}
+ 
 \subsection{Efficiency and Cost}
-
+ 
 \begin{table}[H]
 \centering
 \caption{Mean generation time and estimated cost per 1000 queries, RAG vs. full-context, by model. Cost estimated at \$0.96/hr (NVIDIA L40S, on-demand)~\cite{spheron2026l40s}.}
@@ -396,7 +412,7 @@ Model & BERTScore (RAG) & BERTScore (Full-ctx) & ROUGE-L (RAG) & ROUGE-L (Full-c
 ]\efficiencytable
 }
 \end{table}
-
+ 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}
@@ -420,45 +436,63 @@ Model & BERTScore (RAG) & BERTScore (Full-ctx) & ROUGE-L (RAG) & ROUGE-L (Full-c
 \caption{Cost per 1000 queries, RAG vs. full-context, by model. RAG is consistently cheaper across all six models, since it sends far fewer tokens per prompt than stuffing the entire 15-document corpus into context.}
 \label{fig:cost-comparison}
 \end{figure}
-
+ 
 %TODO: add a second figure directly addressing the paper's central
 %question — accuracy vs. cost tradeoff across models (e.g. binary F1 on
 %the y-axis, cost per 1000 queries on the x-axis, one point per model,
 %RAG and full-context as separate series) — once the specific framing
 %for the Discussion section's argument is finalized.
-
+ 
 \section{Discussion}
-
-%TODO: synthesize the tables above. Candidate points, drawn from
-%observations made during pipeline development and validation:
-%  - RAG vs. full-context: does full-context's higher cost translate to
-%    a proportionally better accuracy? (Table \ref{tab:binary-accuracy}
-%    and \ref{tab:efficiency} suggest this is NOT uniform across models
-%    or categories -- worth checking short-answer F1 in particular,
-%    where full-context accuracy looks lower for several models despite
-%    higher cost.)
-%  - DeepSeek-R1-Distill's reasoning overhead: skip_reasoning=True was
-%    used throughout (see model_config.py) after smoke testing showed
-%    negligible accuracy impact but a ~5-10x latency cost when reasoning
-%    was left enabled -- worth stating this explicitly as a design
-%    decision with its own accuracy/cost tradeoff data if available.
-%  - Retrieval quality ceiling: RAG's retrieval step was observed to
-%    occasionally rank a topically-adjacent but incorrect document above
-%    the correct source chunk (see Limitations note in Experimental
-%    Design), which may partly explain any cases where full-context
-%    outperforms RAG on accuracy despite retrieving from a much smaller,
-%    cheaper context.
-%  - Efficient-tier models (Qwen2.5-3B, Llama-3.1-8B) vs. larger
-%    DeepSeek-R1-Distill-14B variants: does the smaller/cheaper tier
-%    retain most of the larger tier's accuracy, supporting the paper's
-%    central deployment-feasibility argument?
-
+ 
+\subsection{RAG vs. Full-Context: Accuracy Is Model-Dependent, Not Universal}
+ 
+Contrary to the intuition that more context should not hurt, full-context accuracy relative to RAG diverges sharply by model family rather than moving uniformly in one direction (Tables~\ref{tab:binary-accuracy}--\ref{tab:open-ended-meteor}).
+ 
+DeepSeek-R1-Distill-Qwen-14B is consistently \textit{worse} under full-context on binary questions --- the 8-bit and full-precision variants drop from F1 $\approx$0.72--0.76 under RAG to $\approx$0.43 under full-context, a loss large enough that it cannot be attributed to noise. The same direction, though smaller in magnitude, holds for this model's open-ended BERTScore, ROUGE-L, and METEOR scores (RAG ahead by 1--3 points across all three metrics, all three quantization levels).
+ 
+Llama-3.1-8B-Instruct shows the opposite pattern and more strongly: full-context improves binary F1 by 8--11 points over RAG, and short-answer F1 by 17--23 points (0.096$\to$0.322 at 4-bit; 0.101$\to$0.270 at full precision) --- the single largest effect observed anywhere in this study. METEOR shows the same direction for Llama at 4-bit (0.110 RAG vs.\ 0.234 full-context).
+ 
+Qwen2.5-3B-Instruct sits between these two patterns: full-context and RAG are close throughout (within 3--6 points on every metric), with RAG marginally ahead on binary and open-ended metrics and full-context marginally ahead on short-answer.
+ 
+No single context strategy dominates across models. This directly complicates any claim that RAG (or full-context) is simply "better": for this corpus and question set, the right choice depends on which model is deployed.
+ 
+\subsection{RAG vs. Full-Context: Cost Is Never Close}
+ 
+Unlike accuracy, the cost comparison is unambiguous: full-context costs more than RAG for every model, by a factor of 2.4$\times$ (DeepSeek-R1-Distill-14B, 8-bit) to 9.6$\times$ (Llama-3.1-8B, 4-bit) per 1000 queries (Table~\ref{tab:efficiency}, Figure~\ref{fig:cost-comparison}).
+ 
+This produces the central tension for this study's cost-vs-accuracy framing: Llama-3.1-8B-4bit is simultaneously the model with the \textit{largest accuracy gain} from full-context and the \textit{largest cost penalty} for using it (9.6$\times$). Whether that tradeoff is worthwhile depends on the deployment's tolerance for latency and cost, not on accuracy alone --- exactly the kind of question this study's efficiency framing was designed to surface rather than resolve with a single number.
+ 
+\subsection{Efficient Tier vs. Upper-Bound Tier}
+ 
+Under RAG, the efficient tier (Qwen2.5-3B, Llama-3.1-8B-4bit) costs \$0.20--\$0.38 per 1000 queries, versus \$1.36 for the upper-bound DeepSeek-R1-Distill-14B (full precision) --- a 3.6--6.8$\times$ cost reduction (Table~\ref{tab:efficiency}).
+ 
+Accuracy retention across that cost drop is uneven by category. On open-ended BERTScore, the efficient tier is nearly indistinguishable from the upper-bound tier (0.679--0.682 vs.\ 0.693, a 1--2 point gap), suggesting semantic-similarity quality on free-form answers is not strongly size-dependent for this corpus. On binary questions, the gap is larger and asymmetric: Llama-3.1-8B-4bit (0.691) trails the upper-bound tier (0.763) by 7 points, while Qwen2.5-3B (0.543) trails by 22 points --- a much larger drop. On short-answer questions the ordering inverts entirely: Qwen2.5-3B (0.278) \textit{exceeds} the upper-bound tier (0.110), while Llama-3.1-8B-4bit (0.096) falls well below it.
+ 
+This non-monotonic pattern --- no model is uniformly best or worst across all three question categories --- suggests that "which model to deploy" is itself category-dependent for this use case, not settled by a single aggregate accuracy figure.
+ 
+\subsection{DeepSeek-R1's Reasoning Was Disabled Throughout}
+ 
+As described in Section~III-B1, all DeepSeek-R1-Distill-Qwen-14B results in this paper use reasoning disabled (forced-closed \texttt{<think>} block), based on pipeline-validation observations that reasoning added substantial latency without changing answers on the questions checked at that stage. No systematic reasoning-enabled comparison was run across the full 270-question set, so it remains an open question whether reasoning would have changed DeepSeek's accuracy at scale, particularly on the harder open-ended questions where a chain-of-thought trace might plausibly help more than on the trivial validation questions used to justify disabling it. This is a limitation of the present study rather than a settled result, and a natural next experiment.
+ 
+\subsection{Retrieval Quality as a Ceiling on RAG Accuracy}
+ 
+Section~III-A notes a retrieval-quality limitation found during pipeline validation: the correct source chunk was sometimes outranked by a topically-adjacent chunk from a different course, due to shared boilerplate structure across the 15 source documents. This affects all models equally, so it does not bias the RAG-vs-RAG model comparison, but it may partly explain why RAG does not uniformly beat full-context: full-context sidesteps retrieval entirely by including every document, so any case where RAG's retrieval step drops the one chunk that actually answers the question is a case full-context cannot lose to for that specific reason. DeepSeek's stronger RAG performance despite this shared limitation suggests retrieval noise did not uniformly harm every model equally either, though the current data cannot isolate why.
+ 
 \section{Conclusions}
-
-%TODO: write after results/discussion sections exist.
-
+ 
+This study set out to answer a practical question for institutions like the Instituto Tecnol\'ogico de Costa Rica: can small, open-source \glspl{LLM}, self-hosted on infrastructure a Costa Rican university can realistically access today, answer domain-specific questions about its own course programs accurately enough to be useful --- and at what cost relative to the alternative of paying for a commercial API?
+ 
+The results do not support a single universal answer, and that is itself the main finding. Neither context-supply strategy (RAG or full-context) nor model tier dominates across every question category: DeepSeek-R1-Distill-Qwen-14B answers binary questions substantially better with RAG's curated 5-chunk context than with the full 15-document corpus, while Llama-3.1-8B-Instruct shows the opposite pattern just as strongly, and Qwen2.5-3B-Instruct sits close to indifferent between the two. Cost, by contrast, is unambiguous: full-context is 2.4--9.6$\times$ more expensive than RAG per 1000 queries for every model tested, so the accuracy gains full-context does provide (chiefly for Llama-3.1-8B) come at a real and consistent price.
+ 
+For a deployment decision, this suggests RAG is the safer default across model choices given its consistently lower cost, with Llama-3.1-8B under full-context as a deliberate exception worth considering if a deployment's accuracy requirements on binary/short-answer questions outweigh its higher cost and latency. The efficient tier (Qwen2.5-3B, Llama-3.1-8B-4bit) retains open-ended answer quality close to the larger DeepSeek-R1-Distill-14B tier at 3.6--6.8$\times$ lower cost, but trails meaningfully on binary questions --- so the practical recommendation depends on which question types a given deployment expects to face most.
+ 
+More broadly, this study demonstrates that the full pipeline --- document extraction, RAG retrieval, multi-model inference, and multi-metric evaluation --- runs end to end on Kabr\'e, CeNAT's shared national HPC infrastructure, without any paid commercial API. At the \$0.96/hr commercial reference rate used here, per-query costs are on the order of fractions of a cent to a few cents; on Kabr\'e itself, where compute is allocation-based rather than billed per query, the marginal cost is effectively zero. This is the concrete evidence behind this paper's motivating claim: self-hosted open-source \glspl{LLM} are a technically viable alternative to proprietary APIs for this class of institutional deployment.
+ 
+Several limitations bound these conclusions and motivate future work. Two model configurations (Llama-3.3-70B and Qwen2.5-32B) were excluded for infrastructure reasons --- single-GPU-node VRAM limits and a Lustre storage quota, respectively --- rather than for any property of the models themselves, so this study's upper-bound tier is represented only by the DeepSeek-R1-Distill-14B family. DeepSeek-R1's reasoning was disabled throughout based on limited validation-stage evidence rather than a full-scale ablation; whether reasoning would change accuracy on the harder open-ended questions remains untested. Retrieval quality was observed to occasionally favor a topically-adjacent but incorrect document over the correct one, placing a ceiling on RAG accuracy that is independent of generator quality. Finally, ROUGE and METEOR were designed primarily for English, and BERTScore's layer selection for the Spanish BETO model was not empirically calibrated the way the library's built-in models are --- all three open-ended metrics should be read as approximate indicators of answer quality in Spanish, not precisely validated scores. Future work should prioritize a reasoning-enabled DeepSeek comparison at full scale, a retrieval-quality improvement pass (larger or better-calibrated embedding models, tuned chunk sizes), and, infrastructure permitting, closing the model-scale gap with a second model family at the 30B+ parameter tier.
+ 
 % Referencias
 \bibliographystyle{ieeetr}
 \bibliography{bibli}
-
+ 
 \end{document}
