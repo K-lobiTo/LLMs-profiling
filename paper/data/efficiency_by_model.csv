@@ -1,0 +1,13 @@
+model_key,context_strategy,mean_generation_time_s,median_generation_time_s,est_cost_per_1000_queries_usd
+deepseek-r1-14b-4bit,fullcontext,14.024,11.01,3.7397
+deepseek-r1-14b-4bit,rag,3.468,1.68,0.9248
+deepseek-r1-14b-8bit,fullcontext,20.96,13.55,5.5893
+deepseek-r1-14b-8bit,rag,8.662,3.75,2.3099
+deepseek-r1-14b-f16,fullcontext,16.253,11.57,4.3341
+deepseek-r1-14b-f16,rag,5.103,2.32,1.3609
+llama3.1-8b-4bit,fullcontext,7.262,5.55,1.9366
+llama3.1-8b-4bit,rag,0.753,0.59,0.2008
+llama3.1-8b-f16,fullcontext,8.577,5.845,2.2871
+llama3.1-8b-f16,rag,2.183,0.94,0.5823
+qwen2.5-3b,fullcontext,4.044,2.665,1.0784
+qwen2.5-3b,rag,1.417,0.43,0.378
