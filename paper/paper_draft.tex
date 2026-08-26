@@ -177,10 +177,40 @@ The most capable \glspl{LLM} that could power such tools, however, are typically
 This raises a practical question this paper investigates directly: can smaller, open-source \glspl{LLM}, self-hosted on infrastructure a resource-constrained university can realistically access, answer domain-specific questions about its own institutional documents accurately and cheaply enough to be useful in practice?
 
 The remainder of this paper is organized as follows.
-Section~II frames this question concretely as a \gls{RAG}-based \gls{QA} benchmark over university course-program documents.
-Section~III describes the experimental design: the question dataset, the two context-supply strategies compared (RAG and full-context), the six benchmarked model configurations, and the HPC infrastructure used.
-Section~IV reports accuracy, latency, and cost results across all configurations.
-Section~V discusses what those results imply for model and context-strategy selection, and Section~VI concludes with practical deployment recommendations and this study's limitations.
+Section~II surveys related work on RAG benchmarking and non-English institutional QA, and positions this study's contribution relative to it.
+Section~III frames this question concretely as a \gls{RAG}-based \gls{QA} benchmark over university course-program documents.
+Section~IV describes the experimental design: the question dataset, the two context-supply strategies compared (RAG and full-context), the six benchmarked model configurations, and the HPC infrastructure used.
+Section~V reports accuracy, latency, and cost results across all configurations.
+Section~VI discusses what those results imply for model and context-strategy selection, and Section~VII concludes with practical deployment recommendations and this study's limitations.
+
+\section{State of the Art}
+
+\subsection{Benchmarking Retrieval-Augmented Generation}
+
+\gls{RAG} has become a standard mitigation for \gls{LLM} hallucination and outdated parametric knowledge, but comparing RAG configurations rigorously requires dedicated benchmarks and standardized evaluation protocols rather than ad hoc pipelines.
+BERGEN provides an end-to-end library for reproducible RAG experimentation, standardizing the comparison of retrievers, rerankers, and generator \glspl{LLM} under shared metrics and datasets~\cite{rau2024bergen}.
+Chen et al. decompose RAG evaluation along four fundamental abilities --- noise robustness, negative rejection, information integration, and counterfactual robustness --- to diagnose where different LLMs' RAG pipelines specifically fail~\cite{chen2024rgb}.
+Most directly relevant to this study's design, LaRA benchmarks RAG against long-context LLMs across 2{,}326 test cases spanning four \gls{QA} tasks, finding that the optimal choice between the two depends on a complex interplay of model capability, context length, task type, and retrieval characteristics, with no universally superior strategy~\cite{li2025lara} --- a finding this paper's own RAG-vs-full-context comparison (Section~VI-A) independently corroborates in a different language and domain.
+
+\subsection{Domain-Specific and Resource-Constrained RAG Evaluation}
+
+Domain-specific RAG benchmarks have emerged to test whether general-purpose findings transfer to specialized, knowledge-intensive settings.
+MIRAGE evaluates RAG for medical \gls{QA} across multiple datasets and retrieval configurations, using precision, recall, and F1-score to analyze effects such as ``lost-in-the-middle'' context degradation~\cite{xiong2024mirage}.
+Vinayan Kozhipuram et al. compare RAG against baseline LLMs on knowledge-intensive educational content using a multi-metric protocol combining lexical, semantic, and factuality measures, similar in spirit to the accuracy metrics used in this paper~\cite{vinayankozhipuram2025multimetric}.
+Pingua et al. compare fine-tuning against RAG as competing adaptation strategies for medical LLMs, finding neither strategy dominates uniformly across all five models tested~\cite{pingua2025medicalllms} --- a non-monotonic pattern this paper also observes across its own six model configurations (Section~VI-C).
+Closest in spirit to the present work, Lima de Oliveira and Cerqueira evaluate quantized, locally-hosted LLMs for RAG under realistic resource constraints, treating answer quality, provenance recovery, latency, and runtime robustness as joint outcomes on a reduced corpus~\cite{limadeoliveira2026quantizedrag}.
+This paper extends that resource-constrained framing to a Spanish-language institutional setting, adding an explicit RAG-vs-full-context comparison and a cost-per-query estimate benchmarked directly against commercial \gls{LLM} API pricing, neither of which that study addresses.
+
+\subsection{LLMs for Institutional and Educational Question Answering Beyond English}
+
+Most \gls{LLM} \gls{QA} benchmarking remains English-centric, and results do not automatically transfer to other languages or institutional domains.
+S\'anchez Salido et al. introduce LUNES, an 11{,}881-question, contamination-controlled benchmark drawn from official Spanish university exams across 104 courses and 22 programs, finding that LLMs perform well on general factual Spanish QA but degrade markedly on institution- and context-specific knowledge~\cite{sanchezsalido2026lunes} --- a gap this paper's institutional course-document grounding is designed to probe directly.
+Rodrigues et al. evaluate \gls{LLM} performance on educational questions in Brazilian Portuguese, reporting high aggregate scores alongside errors tied to context and question type, and note that natural-language understanding and context management remain open challenges for non-English educational \gls{QA}~\cite{rodrigues2025brazilianqa}.
+Badry et al. evaluate open-source LLMs for cognitively-aligned assessment-item generation on the LearningQ dataset, showing open-source models are viable for educational tasks but still limited in structural validity and cognitive alignment~\cite{badry2026learningq}.
+S\'aez et al. compare six state-of-the-art LLMs for AI-assisted grading in a university-level course, evaluating agreement with human instructors via statistical and semantic measures~\cite{saez2026aigrading} --- methodologically close to this paper's own multi-model, multi-metric evaluation, though applied to grading rather than \gls{QA}.
+
+Taken together, this body of work establishes that RAG-vs-long-context tradeoffs are model- and task-dependent, that domain-specific RAG evaluation surfaces failure modes general benchmarks miss, and that non-English institutional \gls{QA} lags behind English-language benchmarking in both scale and contamination control.
+No prior study, to our knowledge, jointly evaluates the RAG-vs-full-context tradeoff and quantization-driven cost efficiency for Spanish-language institutional \gls{QA} on self-hosted infrastructure, which is the gap this paper addresses.
 
 \section{Problem Definition}
 
@@ -224,7 +254,7 @@ Every question is answered under two context-supply conditions, using an otherwi
   Each chunk's embedded text is prefixed with its source document's title before embedding (\textit{``[Documento: \ldots]''}), since the source documents share near-identical boilerplate structure across courses (e.g. \textit{``Asistencia: Obligatoria''}) that would otherwise embed indistinguishably regardless of course.
   Chunks are embedded with \texttt{paraphrase-multilingual-MiniLM-L12-v2} and indexed with FAISS (cosine similarity via normalized inner product).
   Retrieval returns the top 5 chunks for the composed question, capped at 2 chunks per source document, so a single verbose document cannot crowd out all 5 slots with its own near-duplicate chunks.
-  Retrieval is deliberately left unfiltered (free semantic search across all 15 documents, with no per-question restriction to the correct source document), so as to evaluate the full RAG pipeline end to end rather than isolating generation quality from retrieval quality; Section~V-E discusses the accuracy ceiling this imposes.
+  Retrieval is deliberately left unfiltered (free semantic search across all 15 documents, with no per-question restriction to the correct source document), so as to evaluate the full RAG pipeline end to end rather than isolating generation quality from retrieval quality; Section~VI-E discusses the accuracy ceiling this imposes.
   \item \textbf{Full-context}: the entire 15-document corpus ($\sim$17K words, $\sim$24K estimated tokens) is concatenated (each document labeled the same way as the RAG chunk prefix) and included in every prompt, in place of retrieved chunks.
   Feasible here because the corpus is small relative to all benchmarked models' context windows, with one exception: Qwen2.5-3B-Instruct's default configuration caps at 32{,}768 tokens (despite being marketed with a 32K--128K range, which requires explicit RoPE-scaling configuration not used here), close enough to the corpus-plus-prompt size to occasionally trigger a context-length warning; results for this model under the full-context condition should be read with that caveat.
 \end{itemize}
@@ -234,7 +264,7 @@ Both conditions were run to completion for all 6 benchmarked models (3{,}240 tot
 \subsection{LLMs to benchmark}
 
 Models are grouped into three tiers, reflecting the accuracy-vs-efficiency tradeoff central to this study's motivation.
-Candidate models and quantization levels were pre-screened for feasibility on the available hardware (single GPU, up to 46GB usable VRAM) using canirun.ai~\cite{canirun2026}, which estimates GPU memory requirements for a given model size and quantization level, before being confirmed empirically via the measured GPU memory footprints reported alongside the results (Section~IV).
+Candidate models and quantization levels were pre-screened for feasibility on the available hardware (single GPU, up to 46GB usable VRAM) using canirun.ai~\cite{canirun2026}, which estimates GPU memory requirements for a given model size and quantization level, before being confirmed empirically via the measured GPU memory footprints reported alongside the results (Section~V).
 All models are loaded from their native (safetensors) Hugging Face repositories and quantized on-the-fly via \texttt{bitsandbytes}, rather than relying on pre-quantized GGUF files, so that a single loading and generation codepath is shared across every configuration.
 
 \begin{itemize}
@@ -255,7 +285,7 @@ All models are loaded from their native (safetensors) Hugging Face repositories 
   \end{itemize}
 \end{itemize}
 
-Two additional configurations were considered as upper-bound references but excluded for infrastructure reasons (Section~VI elaborates): a Llama-3.3-70B-Instruct configuration, and Qwen2.5-32B-Instruct (4-bit and 8-bit) as a second model family at this study's upper-bound scale.
+Two additional configurations were considered as upper-bound references but excluded for infrastructure reasons (Section~VII elaborates): a Llama-3.3-70B-Instruct configuration, and Qwen2.5-32B-Instruct (4-bit and 8-bit) as a second model family at this study's upper-bound scale.
 
 \subsubsection{Generation settings}
 
@@ -484,7 +514,7 @@ Model & METEOR (RAG) & METEOR (Full-ctx) \\
 \legend{RAG, Full-context}
 \end{axis}
 \end{tikzpicture}
-\caption{Binary question F1 score vs. estimated cost per 1000 queries, one point per model, RAG vs. full-context. RAG-condition points cluster at low cost across a wide accuracy range, while full-context points spread further right (higher cost) with more model-dependent accuracy, illustrating that neither strategy dominates on this central accuracy-vs-cost tradeoff (Section~V).}
+\caption{Binary question F1 score vs. estimated cost per 1000 queries, one point per model, RAG vs. full-context. RAG-condition points cluster at low cost across a wide accuracy range, while full-context points spread further right (higher cost) with more model-dependent accuracy, illustrating that neither strategy dominates on this central accuracy-vs-cost tradeoff (Section~VI).}
 \label{fig:accuracy-cost-tradeoff}
 \end{figure}
 
@@ -525,13 +555,13 @@ This non-monotonic pattern --- no model is uniformly best or worst across all th
 
 \subsection{DeepSeek-R1's Reasoning Was Disabled Throughout}
 
-As described in Section~III-B1, all DeepSeek-R1-Distill-Qwen-14B results in this paper use reasoning disabled (forced-closed \texttt{<think>} block), based on pipeline-validation observations that reasoning added substantial latency without changing answers on the questions checked at that stage.
+As described in Section~IV-B1, all DeepSeek-R1-Distill-Qwen-14B results in this paper use reasoning disabled (forced-closed \texttt{<think>} block), based on pipeline-validation observations that reasoning added substantial latency without changing answers on the questions checked at that stage.
 No systematic reasoning-enabled comparison was run across the full 270-question set, so it remains an open question whether reasoning would have changed DeepSeek's accuracy at scale, particularly on the harder open-ended questions where a chain-of-thought trace might plausibly help more than on the trivial validation questions used to justify disabling it.
 This is a limitation of the present study rather than a settled result, and a natural next experiment.
 
 \subsection{Retrieval Quality as a Ceiling on RAG Accuracy}
 
-Section~III-A notes a retrieval-quality limitation found during pipeline validation: the correct source chunk was sometimes outranked by a topically-adjacent chunk from a different course, due to shared boilerplate structure across the 15 source documents.
+Section~IV-A notes a retrieval-quality limitation found during pipeline validation: the correct source chunk was sometimes outranked by a topically-adjacent chunk from a different course, due to shared boilerplate structure across the 15 source documents.
 This affects all models equally, so it does not bias the RAG-vs-RAG model comparison, but it may partly explain why RAG does not uniformly beat full-context: full-context sidesteps retrieval entirely by including every document, so any case where RAG's retrieval step drops the one chunk that actually answers the question is a case full-context cannot lose to for that specific reason.
 DeepSeek's stronger RAG performance despite this shared limitation suggests retrieval noise did not uniformly harm every model equally either, though the current data cannot isolate why.
 
