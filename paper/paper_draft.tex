@@ -241,7 +241,7 @@ Both conditions were run to completion for all 6 benchmarked models (3{,}240 tot
  
 \subsection{LLMs to benchmark}
  
-Models are grouped into three tiers, reflecting the accuracy-vs-efficiency tradeoff central to this study's motivation. All models are loaded from their native (safetensors) Hugging Face repositories and quantized on-the-fly via \texttt{bitsandbytes}, rather than relying on pre-quantized GGUF files, so that a single loading and generation codepath is shared across every configuration.
+Models are grouped into three tiers, reflecting the accuracy-vs-efficiency tradeoff central to this study's motivation. Candidate models and quantization levels were pre-screened for feasibility on the available hardware (single GPU, up to 46GB usable VRAM) using canirun.ai~\cite{canirun2026}, which estimates GPU memory requirements for a given model size and quantization level, before being confirmed empirically via the measured GPU memory footprints reported alongside the results (Section~IV). All models are loaded from their native (safetensors) Hugging Face repositories and quantized on-the-fly via \texttt{bitsandbytes}, rather than relying on pre-quantized GGUF files, so that a single loading and generation codepath is shared across every configuration.
  
 \begin{itemize}
   \item \textbf{Efficient tier} (target deployment candidates):
