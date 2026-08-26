@@ -1,0 +1,7 @@
+model_key,est_cost_per_1000_queries_usd_fullcontext,est_cost_per_1000_queries_usd_rag,mean_generation_time_s_fullcontext,mean_generation_time_s_rag
+deepseek-r1-14b-4bit,3.7397,0.9248,14.024,3.468
+deepseek-r1-14b-8bit,5.5893,2.3099,20.96,8.662
+deepseek-r1-14b-f16,4.3341,1.3609,16.253,5.103
+llama3.1-8b-4bit,1.9366,0.2008,7.262,0.753
+llama3.1-8b-f16,2.2871,0.5823,8.577,2.183
+qwen2.5-3b,1.0784,0.378,4.044,1.417
