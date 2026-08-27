@@ -190,7 +190,7 @@ Section~VI discusses what those results imply for model and context-strategy sel
 
 \subsection{Benchmarking Retrieval-Augmented Generation}
 
-\gls{RAG} has become a standard mitigation for \gls{LLM} hallucination and outdated parametric knowledge, but comparing RAG configurations rigorously requires dedicated benchmarks and standardized evaluation protocols rather than ad hoc pipelines.
+\gls{RAG} has become a standard mitigation for \gls{LLM} hallucination and outdated parametric knowledge, but comparing RAG configurations rigorously requires dedicated benchmarks and standardized evaluation protocols rather than ad hoc pipelines~\cite{rau2024bergen}.
 BERGEN provides an end-to-end library for reproducible RAG experimentation, standardizing the comparison of retrievers, rerankers, and generator \glspl{LLM} under shared metrics and datasets~\cite{rau2024bergen}.
 Chen et al. decompose RAG evaluation along four fundamental abilities --- noise robustness, negative rejection, information integration, and counterfactual robustness (to diagnose where different LLMs' RAG pipelines specifically fail~\cite{chen2024rgb}).
 Most directly relevant to this study's design, LaRA benchmarks RAG against long-context LLMs across 2{,}326 test cases spanning four \gls{QA} tasks, finding that the optimal choice between the two depends on a complex interplay of model capability, context length, task type, and retrieval characteristics, with no universally superior strategy~\cite{li2025lara} --- a finding this paper's own RAG-vs-full-context comparison (Section~VI-A) independently corroborates in a different language and domain.
@@ -200,7 +200,7 @@ Most directly relevant to this study's design, LaRA benchmarks RAG against long-
 Domain-specific RAG benchmarks have emerged to test whether general-purpose findings transfer to specialized, knowledge-intensive settings.
 MIRAGE evaluates RAG for medical \gls{QA} across multiple datasets and retrieval configurations, using precision, recall, and F1-score to analyze effects such as ``lost-in-the-middle'' context degradation~\cite{xiong2024mirage}.
 Vinayan Kozhipuram et al. compare RAG against baseline LLMs on knowledge-intensive educational content using a multi-metric protocol combining lexical, semantic, and factuality measures, similar in spirit to the accuracy metrics used in this paper~\cite{vinayankozhipuram2025multimetric}.
-Pingua et al. compare fine-tuning against RAG as competing adaptation strategies for medical LLMs, finding neither strategy dominates uniformly across all five models tested~\cite{pingua2025medicalllms} --- a non-monotonic pattern this paper also observes across its own six model configurations (Section~VI-C).
+Pingua et al. compare fine-tuning against RAG as competing adaptation strategies for medical LLMs, finding that RAG and combined fine-tuning-plus-RAG consistently outperform fine-tuning alone across most of the five models tested, though the size of that advantage is architecture-dependent, with one model showing little benefit from retrieval at all~\cite{pingua2025medicalllms}.
 Closest in spirit to the present work, Lima de Oliveira and Cerqueira evaluate quantized, locally-hosted LLMs for RAG under realistic resource constraints, treating answer quality, provenance recovery, latency, and runtime robustness as joint outcomes on a reduced corpus~\cite{limadeoliveira2026quantizedrag}.
 This paper extends that resource-constrained framing to a Spanish-language institutional setting, adding an explicit RAG-vs-full-context comparison and a cost-per-query estimate benchmarked directly against commercial \gls{LLM} API pricing, neither of which that study addresses.
 
@@ -536,6 +536,10 @@ Qwen2.5-3B-Instruct sits between these two patterns: full-context and RAG are cl
 No single context strategy dominates across models.
 This directly complicates any claim that RAG (or full-context) is simply "better": for this corpus and question set, the right choice depends on which model is deployed.
 
+This pattern echoes recent work comparing RAG and long-context strategies directly: Li et al. similarly find no single approach dominates general-domain \gls{QA}, with long-context retaining an edge on tasks requiring global reasoning and cross-passage comparison and outperforming RAG on clean Wikipedia-based benchmarks, while RAG remains competitive on single-fact localization, is more effective at mitigating hallucination, and retains an advantage on dialogue-based and general \gls{QA} queries~\cite{li2024longcontext}.
+Long-context degradation is also architecture-sensitive: models including Qwen2.5 have been reported to lose accuracy beyond roughly 32{,}000 tokens~\cite{li2024longcontext}, consistent with this study's own observation that Qwen2.5-3B-Instruct's default 32{,}768-token cap occasionally triggered context-length warnings under the full-context condition (Section~IV-A).
+This degradation is a specific instance of the broader ``lost-in-the-middle'' phenomenon, in which relevant information buried mid-context is systematically underused by long-context models~\cite{liu2024lostinthemiddle}.
+
 \subsection{RAG vs. Full-Context: Cost Is Never Close}
 
 Unlike accuracy, the cost comparison is unambiguous: full-context costs more than RAG for every model, by a factor of 2.4$\times$ (DeepSeek-R1-Distill-14B, 8-bit) to 9.6$\times$ (Llama-3.1-8B, 4-bit) per 1000 queries (Table~\ref{tab:efficiency}, Figure~\ref{fig:cost-comparison}).
@@ -554,6 +558,8 @@ On short-answer questions the ordering inverts entirely: Qwen2.5-3B (0.278) \tex
 
 This non-monotonic pattern --- no model is uniformly best or worst across all three question categories --- suggests that "which model to deploy" is itself category-dependent for this use case, not settled by a single aggregate accuracy figure.
 
+This aligns with reports that pairing RAG with smaller open-source models can close much of the gap to larger baselines: Vinayan Kozhipuram et al. found that adding RAG to models such as Mistral-7B and Llama-3.1-8B produced substantial lexical-metric gains over the same models without retrieval, while requiring markedly less GPU memory than larger baseline models~\cite{vinayankozhipuram2025multimetric} --- consistent with this study's own observation that the efficient tier's cost savings do not come at a uniform accuracy cost.
+
 \subsection{DeepSeek-R1's Reasoning Was Disabled Throughout}
 
 As described in Section~IV-B1, all DeepSeek-R1-Distill-Qwen-14B results in this paper use reasoning disabled (forced-closed \texttt{<think>} block), based on pipeline-validation observations that reasoning added substantial latency without changing answers on the questions checked at that stage.
@@ -568,11 +574,18 @@ DeepSeek's stronger RAG performance despite this shared limitation suggests retr
 
 \section{Conclusions}
 
-This study set out to answer a practical question for institutions like the Instituto Tecnol\'ogico de Costa Rica: can small, open-source \glspl{LLM}, self-hosted on infrastructure a Costa Rican university can realistically access today, answer domain-specific questions about its own course programs accurately enough to be useful --- and at what cost relative to the alternative of paying for a commercial API?
+This study addressed the limited empirical evidence on the joint evaluation of \gls{RAG} versus full-context strategies and quantization-driven cost efficiency for Spanish-language educational \gls{QA} on self-hosted infrastructure.
+Specifically, it examined the feasibility of small, open-source \glspl{LLM} under the infrastructure and resource constraints that may characterize higher education institutions.
+Using course-program documentation from the Instituto Tecnol\'ogico de Costa Rica as an empirical case, the study provides evidence on how model choice, context-supply strategy, and quantization shape \gls{QA} accuracy and inference costs, and whether locally deployable models can achieve useful performance at computational and economic costs that are realistic for resource-constrained higher education settings.
+In doing so, the study contributes to the broader discussion on the feasibility of privacy-conscious, locally controlled, and cost-efficient \gls{AI} solutions for higher education in the region.
+To our knowledge, this is among the first studies to jointly evaluate this tradeoff for Spanish-language institutional \gls{QA} (Section~II), extending RAG benchmarking research that has so far been concentrated in English and other high-resource languages.
+
+Concretely, for the Instituto Tecnol\'ogico de Costa Rica and institutions like it, this means asking whether small, open-source \glspl{LLM} can answer domain-specific questions about their own course programs accurately enough to be useful, at a cost that beats paying for a commercial \gls{LLM} API.
 
 The results do not support a single universal answer, and that is itself the main finding.
 Neither context-supply strategy (RAG or full-context) nor model tier dominates across every question category: DeepSeek-R1-Distill-Qwen-14B answers binary questions substantially better with RAG's curated 5-chunk context than with the full 15-document corpus, while Llama-3.1-8B-Instruct shows the opposite pattern just as strongly, and Qwen2.5-3B-Instruct sits close to indifferent between the two.
 Cost, by contrast, is unambiguous: full-context is 2.4--9.6$\times$ more expensive than RAG per 1000 queries for every model tested, so the accuracy gains full-context does provide (chiefly for Llama-3.1-8B) come at a real and consistent price.
+This lack of a universal winner is not unique to this study: Li et al. similarly found no universally superior strategy between RAG and long-context LLMs across general-domain QA tasks~\cite{li2025lara}; this study's contribution is showing that the same model- and task-dependence holds for Spanish-language institutional QA, suggesting it may be a general property of RAG deployment rather than an artifact specific to this corpus or language.
 
 For a deployment decision, this suggests RAG is the safer default across model choices given its consistently lower cost, with Llama-3.1-8B under full-context as a deliberate exception worth considering if a deployment's accuracy requirements on binary/short-answer questions outweigh its higher cost and latency.
 The efficient tier (Qwen2.5-3B, Llama-3.1-8B-4bit) retains open-ended answer quality close to the larger DeepSeek-R1-Distill-14B tier at 3.6--6.8$\times$ lower cost, but trails meaningfully on binary questions --- so the practical recommendation depends on which question types a given deployment expects to face most.
@@ -586,7 +599,9 @@ Two model configurations (Llama-3.3-70B and Qwen2.5-32B) were excluded for infra
 DeepSeek-R1's reasoning was disabled throughout based on limited validation-stage evidence rather than a full-scale ablation; whether reasoning would change accuracy on the harder open-ended questions remains untested.
 Retrieval quality was observed to occasionally favor a topically-adjacent but incorrect document over the correct one, placing a ceiling on RAG accuracy that is independent of generator quality.
 Finally, ROUGE and METEOR were designed primarily for English, and BERTScore's layer selection for the Spanish BETO model was not empirically calibrated the way the library's built-in models are --- all three open-ended metrics should be read as approximate indicators of answer quality in Spanish, not precisely validated scores.
-Future work should prioritize a reasoning-enabled DeepSeek comparison at full scale, a retrieval-quality improvement pass (larger or better-calibrated embedding models, tuned chunk sizes), and, infrastructure permitting, closing the model-scale gap with a second model family at the 30B+ parameter tier.
+A further direction follows directly from this study's own finding that no single context-supply strategy dominates across models and question types (Section~VI-A): rather than fixing RAG or full-context per deployment, adaptive routing could select the strategy per query.
+Recent work proposes eliciting this decision from an \gls{LLM}'s own latent competence to judge task requirements before retrieving, using lightweight query metadata to route proactively between RAG and long-context processing~\cite{chen2026routebeforeretrieve}; a related hybrid pattern, using RAG to narrow a large corpus before reasoning over the reduced subset with full context, is a natural extension of this study's own RAG-vs-full-context comparison.
+Future work should also prioritize a reasoning-enabled DeepSeek comparison at full scale, a retrieval-quality improvement pass (larger or better-calibrated embedding models, tuned chunk sizes), and, infrastructure permitting, closing the model-scale gap with a second model family at the 30B+ parameter tier.
 
 % Referencias
 \bibliographystyle{ieeetr}
