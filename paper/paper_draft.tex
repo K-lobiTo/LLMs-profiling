@@ -173,8 +173,10 @@ large language models, retrieval-augmented generation, question answering, model
 
 \section{Introduction}
 
-Universities worldwide are incorporating \gls{AI} tools into administrative and academic processes as part of broader digital transformation strategies, from admissions and student support to academic advising.
-The most capable \glspl{LLM} that could power such tools, however, are typically proprietary and cloud-hosted, which is a poor fit for institutions with limited computational resources and strict data-privacy requirements over their own students' and courses' data.
+Universities worldwide are incorporating \gls{AI} tools into administrative and academic processes as part of broader digital transformation strategies, from admissions and student support to academic advising~\cite{dawson2026leveraging}.
+The most capable \glspl{LLM} that could power such tools are typically proprietary and cloud-hosted.
+Although cloud-based deployment reduces local computational requirements, it raises concerns regarding data privacy, institutional control, and regulatory compliance when sensitive student and course data are processed by external providers~\cite{yan2025ethical}.
+In this context, small language models (SLMs) represent a promising alternative, as their lower computational requirements can enable local deployment while providing greater control over sensitive educational data.
 This raises a practical question this paper investigates directly: can smaller, open-source \glspl{LLM}, self-hosted on infrastructure a resource-constrained university can realistically access, answer domain-specific questions about its own institutional documents accurately and cheaply enough to be useful in practice?
 
 The remainder of this paper is organized as follows.
@@ -215,9 +217,7 @@ No prior study, to our knowledge, jointly evaluates the RAG-vs-full-context trad
 
 \section{Problem Definition}
 
-Universities are increasingly incorporating \gls{AI} tools into administrative and academic processes as part of broader digital transformation strategies.
-However, the most capable \glspl{LLM} are typically proprietary and cloud-hosted, which raises concerns around recurring costs, data privacy, and dependency on external infrastructure --- concerns that are particularly relevant for institutions with limited computational resources.
-This creates a need to evaluate whether smaller, open-source \glspl{LLM}, deployable on modest institutional hardware, can perform reliably on domain-specific \gls{QA} tasks grounded in an institution's own documents, such as course syllabi and program descriptions.
+Answering the question raised in Section~I requires evaluating whether smaller, open-source \glspl{LLM}, deployable on modest institutional hardware, can perform reliably on domain-specific \gls{QA} tasks grounded in an institution's own documents, such as course syllabi and program descriptions, at meaningfully lower recurring cost and infrastructure dependency than proprietary, cloud-hosted alternatives.
 
 This study benchmarks six open-source \gls{LLM} configurations, spanning two model families (Qwen2.5 and Llama 3.1 at the efficient tier, DeepSeek-R1-Distill across the mid and upper-bound tiers) at multiple parameter scales and quantization levels, using a \gls{RAG} pipeline over a curated set of university postgraduate course documents.
 Model performance is assessed across three question types (binary, short-answer, and open-ended), with the goal of identifying the configurations that offer the best practical balance between answer accuracy and computational efficiency for self-hosted deployment at the university.
