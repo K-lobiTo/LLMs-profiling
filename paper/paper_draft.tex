@@ -227,12 +227,17 @@ This study is guided by three research questions, addressed in turn in Sections~
   \item \textbf{RQ3}: Is any of the benchmarked configurations viable for self-hosted deployment on the university's available hardware, and at what cost relative to a commercial \gls{LLM} API?
 \end{itemize}
 
-\section{Experimental Design}
+\section{Methodology}
+
+\subsection{Experimental Design}
+
+This study follows a full factorial design crossing three factors: \textit{model configuration} (6 levels --- the model/quantization combinations listed under LLMs to benchmark, below), \textit{question type} (3 levels: binary, short-answer, open-ended), and \textit{context-supply strategy} (2 levels: RAG, full-context).
+Crossing all three factors fully ($6 \times 3 \times 2$) yields 36 treatments, each evaluated on the 90 questions belonging to its question-type category, for a total of 3{,}240 question-answer pairs (270 questions $\times$ 6 models $\times$ 2 conditions).
 
 \subsection{Dataset}
 
 The QA dataset consists of 270 questions in Spanish (90 per category: binary, short-answer, open-ended), each labeled with its source course and postgraduate program (\textit{Maestr\'ia}) and a curated expected answer.
-Each of the 90 questions per category is evaluated exactly once per model per context-supply condition (Section~\ref{ssec:context-conditions}), using greedy (deterministic, \texttt{do\_sample=False}) decoding throughout, rather than repeated sampled batches --- an earlier design considered drawing random 20-question batches per run to estimate variance across samples, but was dropped in favor of evaluating the full 90-question set once per condition, given the project timeline.
+Each of the 90 questions per category is evaluated exactly once per model per context-supply condition (Section~\ref{ssec:context-conditions}), using greedy (deterministic, \texttt{do\_sample=False}) decoding throughout.
 
 The retrieval/context corpus consists of 15 university postgraduate course-program documents (PDF and DOCX, in Spanish), covering course descriptions, objectives, evaluation structure, and bibliography.
 Each document is converted to plain text with a custom extractor that walks paragraphs and tables in document order (\texttt{python-docx}'s default paragraph-only traversal misses table content entirely, and all 15 source documents store their content inside tables) and preserves list structure, including nested bullets, via each paragraph's \texttt{numPr}/\texttt{ilvl} properties.
@@ -243,7 +248,7 @@ A category-specific instruction is appended to the composed question, so that bi
 \textit{``Da una respuesta breve y directa, en una sola frase.''} (short-answer);
 \textit{``Da una respuesta completa y explicativa.''} (open-ended).
 
-\subsubsection{Context-supply conditions}
+\subsection{Context-supply conditions}
 \label{ssec:context-conditions}
 
 Every question is answered under two context-supply conditions, using an otherwise identical prompt template, so the only variable between them is how context is supplied:
@@ -607,7 +612,7 @@ No single context strategy dominates across models.
 This directly complicates any claim that RAG (or full-context) is simply "better": for this corpus and question set, the right choice depends on which model is deployed.
 
 This pattern echoes recent work comparing RAG and long-context strategies directly: Li et al. similarly find no single approach dominates general-domain \gls{QA}, with long-context retaining an edge on tasks requiring global reasoning and cross-passage comparison and outperforming RAG on clean Wikipedia-based benchmarks, while RAG remains competitive on single-fact localization, is more effective at mitigating hallucination, and retains an advantage on dialogue-based and general \gls{QA} queries~\cite{li2024longcontext}.
-Long-context degradation is also architecture-sensitive: models including Qwen2.5 have been reported to lose accuracy beyond roughly 32{,}000 tokens~\cite{li2024longcontext}, consistent with this study's own observation that Qwen2.5-3B-Instruct's default 32{,}768-token cap occasionally triggered context-length warnings under the full-context condition (Section~IV-A).
+Long-context degradation is also architecture-sensitive: models including Qwen2.5 have been reported to lose accuracy beyond roughly 32{,}000 tokens~\cite{li2024longcontext}, consistent with this study's own observation that Qwen2.5-3B-Instruct's default 32{,}768-token cap occasionally triggered context-length warnings under the full-context condition (Section~IV-C).
 This degradation is a specific instance of the broader ``lost-in-the-middle'' phenomenon, in which relevant information buried mid-context is systematically underused by long-context models~\cite{liu2024lostinthemiddle}.
 
 \subsection{RAG vs. Full-Context: Cost Is Never Close}
@@ -632,13 +637,13 @@ This aligns with reports that pairing RAG with smaller open-source models can cl
 
 \subsection{DeepSeek-R1's Reasoning Was Disabled Throughout}
 
-As described in Section~IV-B1, all DeepSeek-R1-Distill-Qwen-14B results in this paper use reasoning disabled (forced-closed \texttt{<think>} block), based on pipeline-validation observations that reasoning added substantial latency without changing answers on the questions checked at that stage.
+As described in Section~IV-D1, all DeepSeek-R1-Distill-Qwen-14B results in this paper use reasoning disabled (forced-closed \texttt{<think>} block), based on pipeline-validation observations that reasoning added substantial latency without changing answers on the questions checked at that stage.
 No systematic reasoning-enabled comparison was run across the full 270-question set, so it remains an open question whether reasoning would have changed DeepSeek's accuracy at scale, particularly on the harder open-ended questions where a chain-of-thought trace might plausibly help more than on the trivial validation questions used to justify disabling it.
 This is a limitation of the present study rather than a settled result, and a natural next experiment.
 
 \subsection{Retrieval Quality as a Ceiling on RAG Accuracy}
 
-Section~IV-A notes a retrieval-quality limitation found during pipeline validation: the correct source chunk was sometimes outranked by a topically-adjacent chunk from a different course, due to shared boilerplate structure across the 15 source documents.
+Section~IV-C notes a retrieval-quality limitation found during pipeline validation: the correct source chunk was sometimes outranked by a topically-adjacent chunk from a different course, due to shared boilerplate structure across the 15 source documents.
 This affects all models equally, so it does not bias the RAG-vs-RAG model comparison, but it may partly explain why RAG does not uniformly beat full-context: full-context sidesteps retrieval entirely by including every document, so any case where RAG's retrieval step drops the one chunk that actually answers the question is a case full-context cannot lose to for that specific reason.
 DeepSeek's stronger RAG performance despite this shared limitation suggests retrieval noise did not uniformly harm every model equally either, though the current data cannot isolate why.
 
