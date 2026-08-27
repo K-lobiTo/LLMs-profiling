@@ -1,0 +1,1339 @@
+model_key,category,question,composed_question,expected_answer,predicted_answer,generation_time_s,curso,codigo,error
+llama3.1-8b-4bit,binary,¿Es la asistencia obligatoria?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Es la asistencia obligatoria?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.26,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,binary,¿Tiene el curso requisitos previos?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Tiene el curso requisitos previos?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,4.85,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,binary,¿Es un curso electivo?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Es un curso electivo?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,4.82,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,binary,¿Existe la posibilidad de ganar el curso por suficiencia?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Existe la posibilidad de ganar el curso por suficiencia?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,4.87,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,binary,¿Es posible el reconocimiento del curso?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Es posible el reconocimiento del curso?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,4.9,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,binary,¿Los laboratorios representan el 75% de la nota final?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Los laboratorios representan el 75% de la nota final?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,4.97,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,binary,¿Es la asistencia obligatoria?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Es la asistencia obligatoria?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,4.97,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,binary,¿Es este un curso electivo?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Es este un curso electivo?
+
+Responde únicamente con 'Sí' o 'No'.",No,Sí,5.03,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,binary,¿Tiene correquisitos establecidos?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Tiene correquisitos establecidos?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.05,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,binary,"¿Es este curso requisito para ""Blockchain y Ledger Distribuidos""?","En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Es este curso requisito para ""Blockchain y Ledger Distribuidos""?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,No,5.07,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,binary,¿Se permite el reconocimiento del curso?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Se permite el reconocimiento del curso?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.09,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,binary,¿El examen final tiene un valor del 30%?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿El examen final tiene un valor del 30%?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.1,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,binary,¿Es el curso de tipo electivo?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Es el curso de tipo electivo?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.03,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,binary,¿Es la asistencia obligatoria?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Es la asistencia obligatoria?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.05,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,binary,¿Se permite el reconocimiento de este curso?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Se permite el reconocimiento de este curso?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.02,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,binary,¿Existe la posibilidad de suficiencia?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Existe la posibilidad de suficiencia?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.11,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,binary,¿Se ubica el curso en el primer trimestre del plan de estudios?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Se ubica el curso en el primer trimestre del plan de estudios?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.14,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,binary,¿El estudio de casos vale un 40% de la calificación?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿El estudio de casos vale un 40% de la calificación?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.18,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,binary,¿Es un curso electivo?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Es un curso electivo?
+
+Responde únicamente con 'Sí' o 'No'.",No,Sí,5.19,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,binary,¿Es obligatoria la asistencia?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Es obligatoria la asistencia?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.18,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,binary,¿Tiene requisitos previos?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Tiene requisitos previos?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.15,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,binary,¿Es requisito para el curso de Seguridad en la Nube?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Es requisito para el curso de Seguridad en la Nube?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,No,5.16,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,binary,¿Se permite la suficiencia?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Se permite la suficiencia?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.15,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,binary,¿El examen final vale el 30% de la nota?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿El examen final vale el 30% de la nota?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.18,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,binary,¿Es el curso de tipo electivo?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Es el curso de tipo electivo?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.2,Cibercrimen,MC3010,
+llama3.1-8b-4bit,binary,¿Es obligatoria la asistencia?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Es obligatoria la asistencia?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.2,Cibercrimen,MC3010,
+llama3.1-8b-4bit,binary,¿Tiene requisitos o correquisitos?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Tiene requisitos o correquisitos?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.17,Cibercrimen,MC3010,
+llama3.1-8b-4bit,binary,¿Se permite la suficiencia para este curso?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Se permite la suficiencia para este curso?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.16,Cibercrimen,MC3010,
+llama3.1-8b-4bit,binary,¿Existe la posibilidad de reconocimiento?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Existe la posibilidad de reconocimiento?
+
+Responde únicamente con 'Sí' o 'No'.",No,Sí,5.16,Cibercrimen,MC3010,
+llama3.1-8b-4bit,binary,¿La investigación social aplicada tiene un peso del 40%?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿La investigación social aplicada tiene un peso del 40%?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.17,Cibercrimen,MC3010,
+llama3.1-8b-4bit,binary,¿Es un curso obligatorio?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Es un curso obligatorio?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.18,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,binary,¿Tiene requisitos o correquisitos previos?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Tiene requisitos o correquisitos previos?
+
+Responde únicamente con 'Sí' o 'No'.",No,Sí,5.15,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,binary,¿Es la asistencia obligatoria?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Es la asistencia obligatoria?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.13,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,binary,¿Existe la posibilidad de suficiencia?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Existe la posibilidad de suficiencia?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.15,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,binary,¿Es posible el reconocimiento del curso?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Es posible el reconocimiento del curso?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.12,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,binary,¿La investigación en sistema empresarial vale un 40%?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿La investigación en sistema empresarial vale un 40%?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.15,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,binary,¿Es la asistencia obligatoria?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Es la asistencia obligatoria?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.1,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,binary,¿Tiene el curso requisitos previos?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Tiene el curso requisitos previos?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.07,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,binary,¿Se permite la suficiencia?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Se permite la suficiencia?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.05,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,binary,¿Es posible el reconocimiento del curso?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Es posible el reconocimiento del curso?
+
+Responde únicamente con 'Sí' o 'No'.",No,Sí,5.05,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,binary,¿El estudio de casos vale un 40% de la nota?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿El estudio de casos vale un 40% de la nota?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,No,5.05,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,binary,¿Requiere el curso la elaboración de una investigación bibliográfica?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Requiere el curso la elaboración de una investigación bibliográfica?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.09,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,binary,¿Es este un curso obligatorio?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Es este un curso obligatorio?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.11,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,binary,¿Se permite el reconocimiento del curso?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Se permite el reconocimiento del curso?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.09,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,binary,¿Existe la posibilidad de suficiencia?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Existe la posibilidad de suficiencia?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.05,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,binary,¿Es la asistencia obligatoria?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Es la asistencia obligatoria?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.08,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,binary,¿Se ubica en el segundo semestre del programa?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Se ubica en el segundo semestre del programa?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.07,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,binary,¿Los dos exámenes parciales valen un 50% en total?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Los dos exámenes parciales valen un 50% en total?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,No,5.03,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,binary,¿Es un curso obligatorio?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Es un curso obligatorio?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.0,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,binary,¿Es la asistencia obligatoria?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Es la asistencia obligatoria?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.03,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,binary,¿Es requisito para el curso de Administración y Estrategia de Proyectos II?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Es requisito para el curso de Administración y Estrategia de Proyectos II?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.07,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,binary,¿Permite el curso la suficiencia?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Permite el curso la suficiencia?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.1,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,binary,¿Existe la posibilidad de reconocimiento?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Existe la posibilidad de reconocimiento?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.16,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,binary,¿La resolución de casos prácticos vale un 25%?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿La resolución de casos prácticos vale un 25%?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,No,5.13,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,binary,¿Es un curso obligatorio?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Es un curso obligatorio?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.17,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,binary,¿Es la asistencia obligatoria?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Es la asistencia obligatoria?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.16,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,binary,¿Se reprueba el curso con 4 faltas de asistencia injustificadas?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Se reprueba el curso con 4 faltas de asistencia injustificadas?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.19,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,binary,¿Existe la posibilidad de suficiencia?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Existe la posibilidad de suficiencia?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.17,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,binary,¿Se permite el reconocimiento del curso?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Se permite el reconocimiento del curso?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.16,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,binary,¿La resolución de casos vale un 40% de la nota?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿La resolución de casos vale un 40% de la nota?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,No,5.13,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,binary,¿Es un curso electivo?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Es un curso electivo?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.12,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,binary,¿Es la asistencia obligatoria?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Es la asistencia obligatoria?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.14,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,binary,¿Se permite la suficiencia?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Se permite la suficiencia?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,No,5.1,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,binary,¿Es posible el reconocimiento del curso?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Es posible el reconocimiento del curso?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.11,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,binary,¿Tiene requisitos previos?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Tiene requisitos previos?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.09,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,binary,¿El examen final vale el 30%?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿El examen final vale el 30%?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.12,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,binary,¿Es un curso electivo?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Es un curso electivo?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.05,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,binary,¿Es la asistencia obligatoria?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Es la asistencia obligatoria?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.08,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,binary,"¿Es requisito para ""Redes de Computadores Avanzadas""?","En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Es requisito para ""Redes de Computadores Avanzadas""?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.05,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,binary,¿Permite el curso la suficiencia?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Permite el curso la suficiencia?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,No,5.0,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,binary,¿Se permite el reconocimiento?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Se permite el reconocimiento?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,No,5.01,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,binary,¿Los proyectos programados valen un 30%?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Los proyectos programados valen un 30%?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.03,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,binary,¿Es un curso electivo?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Es un curso electivo?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,4.98,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,binary,¿Es la asistencia obligatoria?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Es la asistencia obligatoria?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,4.99,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,binary,¿Existe la posibilidad de suficiencia?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Existe la posibilidad de suficiencia?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,No,4.96,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,binary,¿Se permite el reconocimiento del curso?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Se permite el reconocimiento del curso?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.0,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,binary,¿Las tareas e investigaciones valen el 50% de la nota?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Las tareas e investigaciones valen el 50% de la nota?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.0,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,binary,¿Se imparte el curso los martes por la noche?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Se imparte el curso los martes por la noche?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,No,4.99,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,binary,¿Es este un curso electivo?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Es este un curso electivo?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.01,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,binary,¿Es la asistencia obligatoria?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Es la asistencia obligatoria?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.02,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,binary,¿Se permite la suficiencia?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Se permite la suficiencia?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,4.98,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,binary,¿Es posible el reconocimiento del curso?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Es posible el reconocimiento del curso?
+
+Responde únicamente con 'Sí' o 'No'.",No,Sí,5.03,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,binary,¿Requiere conocimientos previos de Probabilidades?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Requiere conocimientos previos de Probabilidades?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.05,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,binary,¿La presentación oral tiene un valor del 5%?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿La presentación oral tiene un valor del 5%?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.12,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,binary,¿Es un curso electivo?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Es un curso electivo?
+
+Responde únicamente con 'Sí' o 'No'.",No,No,5.11,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,binary,¿Es la asistencia obligatoria?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Es la asistencia obligatoria?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.15,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,binary,¿Permite el curso la suficiencia?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Permite el curso la suficiencia?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.12,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,binary,¿Es posible el reconocimiento?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Es posible el reconocimiento?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,No,5.08,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,binary,"¿Es ""Tema Selecto de Investigación"" un correquisito?","En el curso Introducción a la Investigación de la Maestría en Computación, ¿Es ""Tema Selecto de Investigación"" un correquisito?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,No,5.08,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,binary,¿La presentación tiene un valor del 25%?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿La presentación tiene un valor del 25%?
+
+Responde únicamente con 'Sí' o 'No'.",Sí,Sí,5.08,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,short_answer,¿Cuántos créditos tiene el curso?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Cuántos créditos tiene el curso?
+
+Da una respuesta breve y directa, en una sola frase.",4 créditos,El curso Análisis de Datos en Ciberseguridad tiene 4 créditos.,5.5,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,short_answer,¿En qué trimestre del plan de estudios se ubica?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿En qué trimestre del plan de estudios se ubica?
+
+Da una respuesta breve y directa, en una sola frase.",Tercer trimestre,No tengo suficiente información para determinar en qué trimestre del plan de estudios se ubica el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad.,6.16,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota final representan los laboratorios?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Qué porcentaje de la nota final representan los laboratorios?
+
+Da una respuesta breve y directa, en una sola frase.",75%,Los laboratorios representan el 75% de la nota final en el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad.,6.03,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,short_answer,¿Permite el curso la modalidad de suficiencia?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Permite el curso la modalidad de suficiencia?
+
+Da una respuesta breve y directa, en una sola frase.",Sí,"Sí, el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad permite la modalidad de suficiencia.",5.95,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,short_answer,¿Cuál es la vigencia del programa?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Cuál es la vigencia del programa?
+
+Da una respuesta breve y directa, en una sola frase.",2023,La vigencia del programa es 2023.,5.32,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la evaluación corresponde a la resolución de casos de estudio?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Qué porcentaje de la evaluación corresponde a la resolución de casos de estudio?
+
+Da una respuesta breve y directa, en una sola frase.",20%,20%,5.1,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,short_answer,¿En qué trimestre se imparte esta materia?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿En qué trimestre se imparte esta materia?
+
+Da una respuesta breve y directa, en una sola frase.",Cuarto trimestre,El curso Seguridad y Criptografía de la Maestría en Ciberseguridad se imparte en el cuarto trimestre.,5.83,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,short_answer,¿De qué curso de Blockchain es requisito esta materia?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿De qué curso de Blockchain es requisito esta materia?
+
+Da una respuesta breve y directa, en una sola frase.",MC4001 Blockchain y Ledger Distribuidos,El curso Seguridad y Criptografía de la Maestría en Ciberseguridad es requisito del curso Blockchain y Ledger Distribuídos (MC1003).,5.97,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota corresponde al examen final?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Qué porcentaje de la nota corresponde al examen final?
+
+Da una respuesta breve y directa, en una sola frase.",30%,El examen final corresponde al 30% de la nota.,5.37,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,short_answer,¿Cuántas horas de clase por semana tiene el curso?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Cuántas horas de clase por semana tiene el curso?
+
+Da una respuesta breve y directa, en una sola frase.",4 horas,El curso Seguridad y Criptografía de la Maestría en Ciberseguridad tiene 4 horas de clase por semana.,5.75,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,short_answer,"¿Quiénes son los autores del ""Handbook of applied cryptography"" incluido en la bibliografía?","En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Quiénes son los autores del ""Handbook of applied cryptography"" incluido en la bibliografía?
+
+Da una respuesta breve y directa, en una sola frase.","Menezes, Van Oorschot y Vanstone","Los autores del ""Handbook of applied cryptography"" son A. J. Menezes, P. C. Van Oorschot y S. A. Vanstone.",5.98,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la calificación representan las tareas?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Qué porcentaje de la calificación representan las tareas?
+
+Da una respuesta breve y directa, en una sola frase.",50%,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, las tareas representan el 50% de la calificación.",5.99,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,short_answer,¿Permite este curso la posibilidad de reconocimiento?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Permite este curso la posibilidad de reconocimiento?
+
+Da una respuesta breve y directa, en una sola frase.",No,"No, el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad no permite la posibilidad de reconocimiento.",6.05,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota final representa el estudio de casos?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Qué porcentaje de la nota final representa el estudio de casos?
+
+Da una respuesta breve y directa, en una sola frase.",40%,El estudio de casos representa el 40% de la nota final en el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad.,6.17,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,short_answer,¿En qué trimestre se ubica el curso?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿En qué trimestre se ubica el curso?
+
+Da una respuesta breve y directa, en una sola frase.",Primer trimestre,El curso Políticas y Gobernanza en Ciberseguridad se ubica en el primer trimestre del plan de estudios.,5.83,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota corresponde a la investigación bibliográfica?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Qué porcentaje de la nota corresponde a la investigación bibliográfica?
+
+Da una respuesta breve y directa, en una sola frase.",20%,La investigación bibliográfica corresponde al 20% de la nota.,5.44,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,short_answer,¿Cuál es la vigencia de este programa?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Cuál es la vigencia de este programa?
+
+Da una respuesta breve y directa, en una sola frase.",2023,La vigencia del programa es 2023.,5.26,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,short_answer,¿Cuántas horas extraclase por semana se requieren?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Cuántas horas extraclase por semana se requieren?
+
+Da una respuesta breve y directa, en una sola frase.",14 horas,14 horas extraclase por semana.,5.22,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,short_answer,¿En qué área del plan de estudios se ubica este curso?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿En qué área del plan de estudios se ubica este curso?
+
+Da una respuesta breve y directa, en una sola frase.",Área de tópicos electivos profesionalizantes,El curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad se ubica en el área de tópicos electivos profesionalizantes.,5.95,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,short_answer,¿Permite el curso la modalidad de suficiencia?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Permite el curso la modalidad de suficiencia?
+
+Da una respuesta breve y directa, en una sola frase.",No,"No, el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad no permite la modalidad de suficiencia.",5.8,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota valen las tareas programadas?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Qué porcentaje de la nota valen las tareas programadas?
+
+Da una respuesta breve y directa, en una sola frase.",40%,Las tareas programadas valen el 40% de la nota.,5.38,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,short_answer,¿De qué curso de defensa y ataque es requisito esta materia?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿De qué curso de defensa y ataque es requisito esta materia?
+
+Da una respuesta breve y directa, en una sola frase.",MC3006 Defensa y Ataque de Sistemas,No se especifica en el documento que el curso Seguridad de Software Avanzado sea requisito de algún curso de defensa y ataque.,5.79,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota final corresponde al examen final?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Qué porcentaje de la nota final corresponde al examen final?
+
+Da una respuesta breve y directa, en una sola frase.",30%,El examen final corresponde al 30% de la nota final.,5.36,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,short_answer,¿Cuál es el valor porcentual del reporte de lecturas?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Cuál es el valor porcentual del reporte de lecturas?
+
+Da una respuesta breve y directa, en una sola frase.",10%,10%,5.04,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,short_answer,¿Es este curso obligatorio o electivo?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Es este curso obligatorio o electivo?
+
+Da una respuesta breve y directa, en una sola frase.",Electivo,El curso Cibercrimen de la Maestría en Ciberseguridad es electivo.,5.63,Cibercrimen,MC3010,
+llama3.1-8b-4bit,short_answer,¿Permite la posibilidad de reconocimiento?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Permite la posibilidad de reconocimiento?
+
+Da una respuesta breve y directa, en una sola frase.",No,No.,5.14,Cibercrimen,MC3010,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota final representa la investigación?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Qué porcentaje de la nota final representa la investigación?
+
+Da una respuesta breve y directa, en una sola frase.",40%,La investigación representa el 40% de la nota final en el curso Cibercrimen de la Maestría en Ciberseguridad.,5.91,Cibercrimen,MC3010,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la evaluación corresponde al estudio de casos?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Qué porcentaje de la evaluación corresponde al estudio de casos?
+
+Da una respuesta breve y directa, en una sola frase.",40%,40%,5.13,Cibercrimen,MC3010,
+llama3.1-8b-4bit,short_answer,¿Qué software específico se menciona en los contenidos para el análisis de datos?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Qué software específico se menciona en los contenidos para el análisis de datos?
+
+Da una respuesta breve y directa, en una sola frase.",SPSS,No se menciona un software específico para el análisis de datos en el curso Cibercrimen de la Maestría en Ciberseguridad.,5.97,Cibercrimen,MC3010,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota representan las pruebas cortas o comprobaciones?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Qué porcentaje de la nota representan las pruebas cortas o comprobaciones?
+
+Da una respuesta breve y directa, en una sola frase.",20%,Las pruebas cortas o comprobaciones de lecturas representan el 20% de la nota.,5.65,Cibercrimen,MC3010,
+llama3.1-8b-4bit,short_answer,¿En qué año se aprobó y actualizó este programa?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿En qué año se aprobó y actualizó este programa?
+
+Da una respuesta breve y directa, en una sola frase.",2025,"El año de aprobación y actualización del programa de Maestría en Gerencia de Tecnologías de la Información, específicamente para el curso Sistemas Estratégicos Empresariales, es 2025.",6.37,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota final es la investigación en sistema empresarial?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué porcentaje de la nota final es la investigación en sistema empresarial?
+
+Da una respuesta breve y directa, en una sola frase.",40%,40%,5.12,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,short_answer,¿En qué semestre del programa se ubica este curso?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿En qué semestre del programa se ubica este curso?
+
+Da una respuesta breve y directa, en una sola frase.",I semestre,El curso Sistemas Estratégicos Empresariales se ubica en el I semestre del programa de Maestría en Gerencia de Tecnologías de la Información.,6.06,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje total suman los dos exámenes parciales?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué porcentaje total suman los dos exámenes parciales?
+
+Da una respuesta breve y directa, en una sola frase.",40%,Los dos exámenes parciales suman un 40% del total de la evaluación.,5.62,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,short_answer,¿Cuántas horas de clase por semana tiene la materia?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Cuántas horas de clase por semana tiene la materia?
+
+Da una respuesta breve y directa, en una sola frase.",3 horas,3 horas de clase por semana.,5.19,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,short_answer,¿Quién es el autor de los artículos sobre las cinco fuerzas competitivas citados?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Quién es el autor de los artículos sobre las cinco fuerzas competitivas citados?
+
+Da una respuesta breve y directa, en una sola frase.",Michael Porter,Michael Porter es el autor de los artículos sobre las cinco fuerzas competitivas citados en el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información.,6.35,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,short_answer,¿Permite este curso la suficiencia?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Permite este curso la suficiencia?
+
+Da una respuesta breve y directa, en una sola frase.",No,"No, el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información no permite la suficiencia.",6.0,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,short_answer,¿En qué semestre del programa se ubica (indicado como código)?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿En qué semestre del programa se ubica (indicado como código)?
+
+Da una respuesta breve y directa, en una sola frase.",P4 semestre,"El curso Gerencia de Tecnología de Información se ubica en el 2do semestre del programa de Maestría en Gerencia de Tecnologías de la Información, con el código MC1201.",6.27,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la evaluación corresponde al estudio de casos?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué porcentaje de la evaluación corresponde al estudio de casos?
+
+Da una respuesta breve y directa, en una sola frase.",40%,20%,5.07,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota es la investigación bibliográfica y exposición?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué porcentaje de la nota es la investigación bibliográfica y exposición?
+
+Da una respuesta breve y directa, en una sola frase.",20%,La investigación bibliográfica y exposición representa el 20% de la evaluación del curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información.,6.23,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,short_answer,¿Cuántas horas extraclase se requieren semanalmente?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Cuántas horas extraclase se requieren semanalmente?
+
+Da una respuesta breve y directa, en una sola frase.",9 horas,9 horas extraclase por semana.,5.22,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,short_answer,¿Es posible el reconocimiento del curso?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Es posible el reconocimiento del curso?
+
+Da una respuesta breve y directa, en una sola frase.",No,"Sí, es posible el reconocimiento del curso.",5.33,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,short_answer,¿Permite este curso la posibilidad de reconocimiento?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Permite este curso la posibilidad de reconocimiento?
+
+Da una respuesta breve y directa, en una sola frase.",Sí,"Sí, el curso de Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información permite la posibilidad de reconocimiento.",6.05,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,short_answer,¿En qué semestre se ubica la materia?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿En qué semestre se ubica la materia?
+
+Da una respuesta breve y directa, en una sola frase.",2do semestre,El curso Administración Financiera de TI se ubica en el 2do semestre del Programa de Maestría de Gerencia de Tecnologías de la Información.,6.05,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje total de la nota suman los dos exámenes parciales?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué porcentaje total de la nota suman los dos exámenes parciales?
+
+Da una respuesta breve y directa, en una sola frase.",50%,Los dos exámenes parciales suman un 50% de la nota total.,5.64,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la evaluación corresponde a la investigación bibliográfica?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué porcentaje de la evaluación corresponde a la investigación bibliográfica?
+
+Da una respuesta breve y directa, en una sola frase.",20%,La investigación bibliográfica corresponde al 20% de la evaluación del curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información.,6.26,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota representan las comprobaciones de lectura?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué porcentaje de la nota representan las comprobaciones de lectura?
+
+Da una respuesta breve y directa, en una sola frase.",15%,La comprobación de lectura representa el 5% de la nota del curso de Administración Financiera de TI.,5.85,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,short_answer,¿Permite el curso la suficiencia?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Permite el curso la suficiencia?
+
+Da una respuesta breve y directa, en una sola frase.",No,"No, el curso de Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información no permite la suficiencia.",6.09,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,short_answer,¿De qué curso de nivel II es requisito esta materia?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿De qué curso de nivel II es requisito esta materia?
+
+Da una respuesta breve y directa, en una sola frase.",MC-6204 Administración y estrategia de proyectos II,No se especifica en el documento que el curso Administración y Estrategia de Proyectos I sea requisito de algún curso de nivel II.,5.94,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,short_answer,¿Cuál es el tipo de curso según los datos generales?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Cuál es el tipo de curso según los datos generales?
+
+Da una respuesta breve y directa, en una sola frase.",Teórico,El curso Administración y Estrategia de Proyectos I es un curso teórico.,5.65,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,short_answer,¿En qué semestre del programa se ubica?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿En qué semestre del programa se ubica?
+
+Da una respuesta breve y directa, en una sola frase.",3er semestre,El curso Administración y Estrategia de Proyectos I se ubica en el 3er semestre del programa de Maestría en Gerencia de Tecnologías de la Información.,6.21,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota final corresponde a la escritura de dos ensayos individuales?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué porcentaje de la nota final corresponde a la escritura de dos ensayos individuales?
+
+Da una respuesta breve y directa, en una sola frase.",30%,30% de la nota final corresponde a la escritura de dos ensayos individuales.,5.63,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la evaluación es la resolución de casos prácticos?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué porcentaje de la evaluación es la resolución de casos prácticos?
+
+Da una respuesta breve y directa, en una sola frase.",25%,25%,5.11,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota vale la investigación sobre un tema seleccionado?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué porcentaje de la nota vale la investigación sobre un tema seleccionado?
+
+Da una respuesta breve y directa, en una sola frase.",25%,25%,5.09,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,short_answer,¿Con cuántas faltas de asistencia injustificadas se reprueba el curso?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Con cuántas faltas de asistencia injustificadas se reprueba el curso?
+
+Da una respuesta breve y directa, en una sola frase.",4 faltas,El curso se reprueba con 4 faltas de asistencia injustificadas.,5.51,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota final representa la resolución de casos?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué porcentaje de la nota final representa la resolución de casos?
+
+Da una respuesta breve y directa, en una sola frase.",40%,La resolución de casos representa el 40% de la nota final en el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información.,6.13,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,short_answer,¿Cuántos minutos después de la hora oficial de entrada se consideran para marcar ausencia?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Cuántos minutos después de la hora oficial de entrada se consideran para marcar ausencia?
+
+Da una respuesta breve y directa, en una sola frase.",30 minutos,30 minutos después de la hora oficial de entrada se consideran para marcar ausencia.,5.5,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la evaluación corresponde a la investigación bibliográfica?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué porcentaje de la evaluación corresponde a la investigación bibliográfica?
+
+Da una respuesta breve y directa, en una sola frase.",20%,La investigación bibliográfica corresponde al 20% de la evaluación del curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información.,6.22,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,short_answer,¿Permite el curso la suficiencia?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Permite el curso la suficiencia?
+
+Da una respuesta breve y directa, en una sola frase.",No,"No, el curso de Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información no permite la suficiencia.",6.06,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,short_answer,"¿Qué porcentaje de la nota representan las pruebas cortas, comprobaciones y ensayos?","En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué porcentaje de la nota representan las pruebas cortas, comprobaciones y ensayos?
+
+Da una respuesta breve y directa, en una sola frase.",40%,40%,5.13,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,short_answer,¿En qué periodo del plan de estudios se ubica?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿En qué periodo del plan de estudios se ubica?
+
+Da una respuesta breve y directa, en una sola frase.",II Periodo,El curso Teoría de Autómatas se ubica en el II Periodo del Plan de Estudios de Maestría en Computación con Énfasis en Ciencias de la Computación.,6.23,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,short_answer,¿Quién es el profesor titular del curso?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Quién es el profesor titular del curso?
+
+Da una respuesta breve y directa, en una sola frase.",Erick Mata Montero,El profesor titular del curso Teoría de Autómatas de la Maestría en Computación es Erick Mata Montero.,5.82,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota final representa el examen final?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Qué porcentaje de la nota final representa el examen final?
+
+Da una respuesta breve y directa, en una sola frase.",30%,El examen final representa el 30% de la nota final.,5.4,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,short_answer,¿Cuál es el porcentaje asignado al examen parcial?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Cuál es el porcentaje asignado al examen parcial?
+
+Da una respuesta breve y directa, en una sola frase.",20%,20%,5.09,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,short_answer,¿Permite el curso la modalidad de suficiencia?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Permite el curso la modalidad de suficiencia?
+
+Da una respuesta breve y directa, en una sola frase.",Sí,"No, el curso Teoría de Autómatas de la Maestría en Computación no permite la modalidad de suficiencia.",5.87,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,short_answer,¿Quiénes son los autores principales del libro de texto base?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Quiénes son los autores principales del libro de texto base?
+
+Da una respuesta breve y directa, en una sola frase.",Hopcroft et al.,"Hopcroft, et al.",5.21,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,short_answer,¿De qué curso de redes es requisito esta materia?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿De qué curso de redes es requisito esta materia?
+
+Da una respuesta breve y directa, en una sola frase.",MC-6006 Redes de Computadores Avanzadas,No se especifica en el documento que el curso de Sistemas Operativos Avanzados sea requisito de algún curso de redes.,5.8,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,short_answer,¿Cuál es la duración mínima exigida para la presentación oral?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Cuál es la duración mínima exigida para la presentación oral?
+
+Da una respuesta breve y directa, en una sola frase.",16 minutos,La duración mínima exigida para la presentación oral es de 16 minutos.,5.54,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,short_answer,¿En qué formato deben confeccionarse los reportes de proyectos y el paper?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿En qué formato deben confeccionarse los reportes de proyectos y el paper?
+
+Da una respuesta breve y directa, en una sola frase.",IEEE Transactions,Los reportes de proyectos y el paper deben confeccionarse con LATEX (formato de IEEE Transactions).,5.71,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,short_answer,¿En qué idioma debe estar escrito el paper de investigación?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿En qué idioma debe estar escrito el paper de investigación?
+
+Da una respuesta breve y directa, en una sola frase.",Inglés,El paper de investigación debe estar escrito en inglés.,5.4,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje total de la nota suman los tres proyectos programados?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Qué porcentaje total de la nota suman los tres proyectos programados?
+
+Da una respuesta breve y directa, en una sola frase.",30%,Los tres proyectos programados suman un 30% de la nota total del curso.,5.56,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,short_answer,¿Quién es el profesor titular del curso?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Quién es el profesor titular del curso?
+
+Da una respuesta breve y directa, en una sola frase.",Dr. Francisco J. Torres-Rojas,Dr. Francisco J. Torres-Rojas.,5.31,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,short_answer,¿En qué periodo del plan de estudios se imparte?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿En qué periodo del plan de estudios se imparte?
+
+Da una respuesta breve y directa, en una sola frase.",I Periodo,El curso Análisis de Algoritmos de la Maestría en Computación se imparte en el I Periodo del Plan de Estudios de Maestría en Computación con Énfasis en Ciencias de la Computación.,6.38,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,short_answer,¿En qué horario se dictan las clases los martes?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿En qué horario se dictan las clases los martes?
+
+Da una respuesta breve y directa, en una sola frase.",6:00 p. m. a 8:50 p. m.,No tengo suficiente información para responder a esta pregunta.,5.33,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,short_answer,¿Quién es el profesor del curso?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Quién es el profesor del curso?
+
+Da una respuesta breve y directa, en una sola frase.",José E. Araya,"El profesor del curso Análisis de Algoritmos de la Maestría en Computación es José E. Araya, Ph.D.",5.86,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota final representan las tareas e investigaciones?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Qué porcentaje de la nota final representan las tareas e investigaciones?
+
+Da una respuesta breve y directa, en una sola frase.",50%,50%,5.08,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la evaluación corresponde a los exámenes parciales?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Qué porcentaje de la evaluación corresponde a los exámenes parciales?
+
+Da una respuesta breve y directa, en una sola frase.",50%,50%,5.09,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,short_answer,¿Cuál es el libro de texto de carácter obligatorio?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Cuál es el libro de texto de carácter obligatorio?
+
+Da una respuesta breve y directa, en una sola frase.",Fundamentos de Algoritmia de Brassard y Bratley,"El libro de texto de carácter obligatorio para el curso Análisis de Algoritmos de la Maestría en Computación es ""Introduction to Algorithms"" de Cormen, Leiserson, Rivest y Stein.",6.28,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,short_answer,¿Es este curso obligatorio o electivo?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Es este curso obligatorio o electivo?
+
+Da una respuesta breve y directa, en una sola frase.",Electivo,Este curso es electivo.,5.14,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,short_answer,¿De qué curso de Seminario de Investigación es requisito?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿De qué curso de Seminario de Investigación es requisito?
+
+Da una respuesta breve y directa, en una sola frase.",MC-7203 – Seminario de Investigación - Tesis II,No se especifica en el documento proporcionado que el curso Diseño de Experimentos sea requisito de algún curso de Seminario de Investigación.,5.83,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota final representan los proyectos?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Qué porcentaje de la nota final representan los proyectos?
+
+Da una respuesta breve y directa, en una sola frase.",35%,"Los proyectos representan el 35% de la nota final, distribuido en cuatro componentes de 5%, 10%, 10% y 10%.",5.89,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,short_answer,¿En qué idioma deben escribirse los reportes de los proyectos?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿En qué idioma deben escribirse los reportes de los proyectos?
+
+Da una respuesta breve y directa, en una sola frase.",Inglés,Los reportes de los proyectos deben estar escritos en inglés.,5.43,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,short_answer,¿Permite el curso la suficiencia?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Permite el curso la suficiencia?
+
+Da una respuesta breve y directa, en una sola frase.",No,"No, el curso de Diseño de Experimentos de la Maestría en Computación no permite la suficiencia.",5.77,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota corresponde al segundo examen parcial?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Qué porcentaje de la nota corresponde al segundo examen parcial?
+
+Da una respuesta breve y directa, en una sola frase.",25%,El segundo examen parcial corresponde a un 25% de la nota.,5.54,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,short_answer,¿Cuál es el correquisito obligatorio de este curso?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Cuál es el correquisito obligatorio de este curso?
+
+Da una respuesta breve y directa, en una sola frase.",MC-7205 Tema Selecto de Investigación,El correquisito obligatorio del curso Introducción a la Investigación de la Maestría en Computación es MC-7205 Tema Selecto de Investigación.,6.03,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,short_answer,¿Qué porcentaje de la nota final representa la presentación?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Qué porcentaje de la nota final representa la presentación?
+
+Da una respuesta breve y directa, en una sola frase.",25%,La presentación representa el 25% de la nota final.,5.38,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,short_answer,¿Qué herramienta es obligatoria para preparar las presentaciones?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Qué herramienta es obligatoria para preparar las presentaciones?
+
+Da una respuesta breve y directa, en una sola frase.",Beamer,Beamer.,5.11,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,short_answer,¿En qué idioma debe escribirse el paper de investigación?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿En qué idioma debe escribirse el paper de investigación?
+
+Da una respuesta breve y directa, en una sola frase.",Inglés,El paper de investigación debe estar escrito en inglés.,5.36,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,short_answer,¿Quién es el profesor titular del curso?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Quién es el profesor titular del curso?
+
+Da una respuesta breve y directa, en una sola frase.",Dr. Francisco J. Torres-Rojas,Dr. Francisco J. Torres-Rojas.,5.29,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,short_answer,¿Permite el curso la posibilidad de reconocimiento?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Permite el curso la posibilidad de reconocimiento?
+
+Da una respuesta breve y directa, en una sola frase.",Sí,"Sí, el curso permite la posibilidad de reconocimiento.",5.38,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,open_ended,¿Cuál es el propósito principal de integrar inteligencia artificial en un Centro de Operaciones en Seguridad (SOC)?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Cuál es el propósito principal de integrar inteligencia artificial en un Centro de Operaciones en Seguridad (SOC)?
+
+Da una respuesta completa y explicativa.",Facilitar la distinción de vectores de ataque y permitir una toma de decisiones más precisa en la respuesta a incidentes.,"El propósito principal de integrar inteligencia artificial en un Centro de Operaciones en Seguridad (SOC) es distinguir los vectores de ataque y tomar decisiones sobre la respuesta a los incidentes de forma más precisa. Esto se logra mediante la automatización de procesos y la capacidad de analizar grandes cantidades de datos en tiempo real, lo que permite a los SOC responder de manera más efectiva a amenazas y ataques cibernéticos.",7.67,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,open_ended,¿Qué temas matemáticos específicos debe dominar el estudiante para tener un buen desempeño?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Qué temas matemáticos específicos debe dominar el estudiante para tener un buen desempeño?
+
+Da una respuesta completa y explicativa.","Conceptos de estadística y cálculo diferencial integral, como distribuciones de probabilidad, regresiones y optimización.","Para tener un buen desempeño en el curso Análisis de Datos en Ciberseguridad, el estudiante debe dominar los siguientes temas matemáticos específicos:
+
+1. **Distribuciones de probabilidad**: Es fundamental entender las diferentes distribuciones de probabilidad, como la distribución normal, la distribución binomial, la distribución poisson, entre otras. Esto les permitirá analizar y comprender los patrones de comportamiento de los datos.
+2. **Regresión lineal simple**: La regresión lineal simple es una técnica estadística para modelar la relación entre dos variables. El estudiante debe entender cómo funciona la regresión lineal simple y cómo se puede aplicar para predecir variables dependientes.
+3. **Regresión logarítmica**: La regresión logarítmica es una extensión de la regresión lineal simple, que permite modelar relaciones entre variables con escalas muy diferentes. El estudiante debe entender cómo funciona la regresión logarítmica y cómo se puede aplicar para predecir variables dependientes.
+4. **Árboles de regresión y decisión**: Los árboles de regresión y decisión son una técnica de aprendizaje automático que permite clasificar datos en categorías. El estudiante debe entender cómo funciona el algoritmo de árboles de",13.2,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,open_ended,¿Cómo contribuye este curso a la perfilación del comportamiento humano y de software?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Cómo contribuye este curso a la perfilación del comportamiento humano y de software?
+
+Da una respuesta completa y explicativa.","Provee técnicas de detección de anomalías, minería de datos en tiempo real y procesamiento distribuido para analizar grandes volúmenes de datos.","El curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad contribuye a la perfilación del comportamiento humano y de software al proporcionar herramientas y técnicas para la detección de anomalías, la minería de datos en tiempo real, el procesamiento de datos distribuidos e ingeniería inversa automatizada. Estas herramientas y técnicas permiten a los estudiantes comprender y analizar los patrones de comportamiento de los usuarios y los sistemas de software, lo que puede ayudar a identificar posibles amenazas y vulnerabilidades.
+
+Algunas de las técnicas y herramientas que se enseñan en este curso incluyen:
+
+* Deteción de anomalías: Identificar patrones de comportamiento anormal en los datos de usuario o sistema.
+* Minería de datos en tiempo real: Analizar grandes cantidades de datos en tiempo real para identificar patrones y tendencias.
+* Procesamiento de datos distribuidos: Procesar grandes cantidades de datos en sistemas distribuidos para identificar patrones y tendencias.
+* Ingeniería inversa automatizada: Analizar el código de software para identificar patrones y vulnerabilidades.
+
+Estas técnicas y herramientas pueden ser utilizadas para:
+
+* Identificar posibles amenazas y vulnerabilidades en los sistemas de software y los datos de usuario.
+* Mejorar la",13.23,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,open_ended,¿Qué capacidades desarrolla el estudiante respecto al diagnóstico de software?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Qué capacidades desarrolla el estudiante respecto al diagnóstico de software?
+
+Da una respuesta completa y explicativa.",La capacidad de desarrollar soluciones para el descubrimiento de conocimiento y análisis de amenazas mediante herramientas de análisis de datos.,"El curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad desarrolla en el estudiante las capacidades necesarias para el diagnóstico de software, específicamente en el contexto de la ciberseguridad. Al finalizar el curso, el estudiante estará en capacidad de:
+
+1. Identificar y analizar patrones y anomalías en los datos de software, lo que le permite diagnosticar problemas y vulnerabilidades en los sistemas.
+2. Utilizar técnicas de minería de datos y análisis de datos para identificar patrones de comportamiento y actividad en los sistemas, lo que ayuda a detectar posibles amenazas y vulnerabilidades.
+3. Aplicar modelos de aprendizaje automático y técnicas de machine learning para mejorar la precisión y eficiencia en el diagnóstico de software.
+4. Comprender la importancia de la privacidad y la seguridad en la gestión de datos de software, lo que le permite tomar decisiones informadas sobre la protección de la información y la prevención de amenazas.
+5. Desarrollar habilidades para la interpretación y análisis de datos complejos, lo que le permite tomar decisiones informadas sobre la gestión de la seguridad de la información y la prevención de amenazas.
+
+En resumen, el curso Análisis de Datos en Ciberseguridad desarrolla en el est",13.34,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,open_ended,¿En qué consiste la metodología de evaluación práctica del curso?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿En qué consiste la metodología de evaluación práctica del curso?
+
+Da una respuesta completa y explicativa.",Se basa principalmente en laboratorios (75% de la nota) y la resolución de casos de estudio (20%).,"La metodología de evaluación del curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad consiste en la combinación de clases magistrales con la incorporación de estrategias de evaluación focalizadas en comprobación de lectura, casos específicos de estudio, investigación bibliográfica, escritura de ensayos, conferencias, exámenes y otros. Se espera una alta participación de los estudiantes del curso, ya que se pretende realizar una integración entre los conceptos teóricos presentados con los respectivos casos de aplicación práctica.
+
+La evaluación del curso se concentra en actividades específicas como las mencionadas en la metodología de enseñanza y aprendizaje. La evaluación se divide en los siguientes rubros:
+
+* Pruebas cortas, tareas y trabajo en clase: 40%
+* Estudio de casos: 40%
+* Investigación bibliográfica y exposición: 20%
+
+La evaluación del curso se concentra en actividades específicas como las mencionadas en la metodología de enseñanza y aprendizaje, como ejemplo de lo anterior se propone la evaluación siguiente:
+
+* Pruebas cortas, tareas y trabajo en clase: 40%
+* Estudio de casos: 40%
+* Investigación bibliográfica y exposición: 20%
+
+Total: 100%
+
+La evaluación del curso",13.34,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,open_ended,¿Qué técnicas de minería de datos se aplican específicamente para el procesamiento en tiempo real?,"En el curso Análisis de Datos en Ciberseguridad de la Maestría en Ciberseguridad, ¿Qué técnicas de minería de datos se aplican específicamente para el procesamiento en tiempo real?
+
+Da una respuesta completa y explicativa.","Se estudian los filtros de Bloom, hashes localmente sensibles y árboles de Hoeffding.","Lo siento, pero no tengo suficiente información para responder a esta pregunta específica. El curso Análisis de Datos en Ciberseguridad menciona técnicas de minería de datos, pero no proporciona detalles sobre las técnicas específicas de minería de datos en tiempo real que se aplican en este contexto.
+
+Sin embargo, puedo proporcionar una respuesta general sobre las técnicas de minería de datos en tiempo real. La minería de datos en tiempo real se refiere a la capacidad de analizar y procesar grandes cantidades de datos en tiempo real, lo que permite a los sistemas tomar decisiones informadas en tiempo real.
+
+Algunas técnicas de minería de datos en tiempo real incluyen:
+
+1. **Stream Mining**: Es una técnica de minería de datos que se enfoca en la extracción de patrones y conocimientos de flujos de datos en tiempo real.
+2. **Análisis de Series Temporales**: Es una técnica de minería de datos que se enfoca en la extracción de patrones y conocimientos de series temporales de datos.
+3. **Minería de Datos en Nube**: Es una técnica de minería de datos que se enfoca en la extracción de patrones y conocimientos de grandes cantidades de datos en la nube.
+4. **Procesamiento de Datos en Paralelo**: Es una técnica de minería de datos que se",13.25,Análisis de Datos en Ciberseguridad,MC1001,
+llama3.1-8b-4bit,open_ended,¿Qué rol desempeña la criptografía en la infraestructura de Internet actual?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Qué rol desempeña la criptografía en la infraestructura de Internet actual?
+
+Da una respuesta completa y explicativa.","Actúa como el medio para asegurar la confidencialidad, autenticidad e integridad de las comunicaciones y los datos almacenados.","La criptografía desempeña un papel fundamental en la infraestructura de Internet actual, garantizando la confidencialidad, integridad y autenticidad de las comunicaciones y los datos en línea. La criptografía se utiliza para proteger las comunicaciones en Internet, permitiendo que los usuarios compartan información confidencial sin temor a la interceptación o alteración por parte de terceros malintencionados.
+
+La criptografía se utiliza en diversas formas en la infraestructura de Internet, incluyendo:
+
+1. **Autenticación**: La criptografía se utiliza para autenticar los usuarios y garantizar que sean quienes dicen ser. Esto se logra mediante el uso de algoritmos de criptografía como RSA y Diffie-Hellman.
+2. **Integridad**: La criptografía se utiliza para garantizar la integridad de los datos, asegurando que sean modificados o alterados durante su transmisión.
+3. **Confidencialidad**: La criptografía se utiliza para proteger la confidencialidad de los datos, asegurando que solo los destinatarios autorizados puedan acceder a ellos.
+4. **Certificación**: La criptografía se utiliza para certificar la identidad de los servidores y los clientes, garantizando que sean legítimos y no estén siendo interceptados por tercer",13.26,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,open_ended,¿Qué aspectos avanzados de la matemática se exploran para entender los cifrados modernos?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Qué aspectos avanzados de la matemática se exploran para entender los cifrados modernos?
+
+Da una respuesta completa y explicativa.","El estudio de curvas elípticas, ataques diferenciales y lineales, y el protocolo Diffie-Hellman.","En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, se exploran aspectos avanzados de la matemática para entender los cifrados modernos, como:
+
+1. **Cifrado Simétrico**: Se estudian las probabilidades y la entropía en cifrado, así como los tipos de cifrados, como los Stream Ciphers y los Block Ciphers.
+2. **Cifrado Asimétrico**: Se analiza la criptografía con llave pública, incluyendo el algoritmo RSA, las curvas elípticas y las firmas digitales.
+3. **Protocolos Criptográficos**: Se examinan los protocolos criptográficos, como el protocolo Diffie-Hellman, y se estudian las técnicas computacionales multiparte.
+4. **Técnicas Computacionales Multiparte**: Se exploran las técnicas computacionales multiparte, como la criptografía cuántica y la ingeniería inversa automatizada.
+5. **Ingeniería Inversa Automatizada**: Se estudia la ingeniería inversa automatizada, incluyendo los protocolos de formato de inversión, los N-gramas y el modelo oculto de Markov.
+
+Estos aspectos avanzados de la matemática permiten a los estudiantes entender los mecanismos detrás de",13.27,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,open_ended,¿Qué diferencias conceptuales se analizan entre las primitivas de criptografía simétrica y asimétrica?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Qué diferencias conceptuales se analizan entre las primitivas de criptografía simétrica y asimétrica?
+
+Da una respuesta completa y explicativa.","Se estudia el rol de las funciones hash, las firmas digitales y la infraestructura de llave pública y privada (PKI).","En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, se analizan las diferencias conceptuales entre las primitivas de criptografía simétrica y asimétrica.
+
+Las primitivas de criptografía simétrica se basan en la idea de que ambas partes involucradas en la comunicación compartan un secreto, conocido como clave secreta, para cifrar y descifrar el mensaje. Esta clave secreta se utiliza para realizar operaciones aritméticas, como sumas y multiplicaciones, para transformar el mensaje original en un texto cifrado. Algunos ejemplos de primitivas de criptografía simétrica incluyen el algoritmo de Data Encryption Standard (DES) y el algoritmo de Advanced Encryption Standard (AES).
+
+Por otro lado, las primitivas de criptografía asimétrica se basan en la idea de que una de las partes involucradas en la comunicación posee una clave pública, que se utiliza para cifrar el mensaje, mientras que la otra parte posee una clave privada, que se utiliza para descifrar el mensaje. Esta diferencia en las claves permite que las dos partes involucradas en la comunicación sean independientes y no necesiten compartir una clave secreta. Algunos ejemplos de primitivas",13.29,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,open_ended,¿Sobre qué tendencias futuras en el campo de la seguridad se discute en clase?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Sobre qué tendencias futuras en el campo de la seguridad se discute en clase?
+
+Da una respuesta completa y explicativa.",Sobre los avances y desafíos que presenta la criptografía cuántica.,No tengo suficiente información para responder a esta pregunta.,5.36,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,open_ended,¿Qué elementos históricos sirven de base para comprender la evolución del cifrado?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Qué elementos históricos sirven de base para comprender la evolución del cifrado?
+
+Da una respuesta completa y explicativa.","El estudio del Cifrado César, la máquina Enigma y el cifrado por permutación, entre otros.",No tengo suficiente información para responder a esta pregunta.,5.36,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,open_ended,¿Cómo se estructura el sistema de evaluación del aprendizaje en esta materia?,"En el curso Seguridad y Criptografía de la Maestría en Ciberseguridad, ¿Cómo se estructura el sistema de evaluación del aprendizaje en esta materia?
+
+Da una respuesta completa y explicativa.","Se compone de tareas para asimilación de materia (50%), laboratorios prácticos (20%) y un examen final (30%).","Según el documento proporcionado, el sistema de evaluación del aprendizaje en el curso de Seguridad y Criptografía de la Maestría en Ciberseguridad se estructura de la siguiente manera:
+
+- Tareas: 50%
+- Laboratorios: 20%
+- Examen: 30%
+
+Total: 100%
+
+Este sistema de evaluación busca evaluar la comprensión y aplicación de los conceptos teóricos y prácticos de la seguridad y criptografía, así como la capacidad de resolver problemas y casos de estudio en la práctica. Las tareas y laboratorios permiten evaluar la comprensión y aplicación de los conceptos teóricos, mientras que el examen evalúa la capacidad de resolver problemas y casos de estudio en la práctica.",9.7,Seguridad y Criptografía,MC1003,
+llama3.1-8b-4bit,open_ended,¿Por qué es fundamental la gestión de procesos ante la vulnerabilidad tecnológica de los negocios?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Por qué es fundamental la gestión de procesos ante la vulnerabilidad tecnológica de los negocios?
+
+Da una respuesta completa y explicativa.","Porque permite minimizar riesgos y amenazas de manera efectiva, asegurando la continuidad del negocio y el ahorro en costos.","La gestión de procesos es fundamental en la Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad debido a que la vulnerabilidad tecnológica de los negocios es un desafío significativo en la era digital. La gestión de procesos permite a las organizaciones identificar, evaluar y mitigar los riesgos asociados con la ciberseguridad, lo que ayuda a proteger sus activos y mantener la confianza de sus clientes y partes interesadas.
+
+La gestión de procesos es un enfoque sistemático y estructurado para gestionar los riesgos y amenazas de ciberseguridad, lo que incluye la identificación de vulnerabilidades, la evaluación de riesgos, la implementación de controles y la monitoreo y respuesta a incidentes. Esto requiere una comprensión profunda de los procesos y sistemas de la organización, así como la capacidad de analizar y evaluar los riesgos y amenazas de ciberseguridad.
+
+En la Políticas y Gobernanza en Ciberseguridad, la gestión de procesos es fundamental para:
+
+1. Identificar y evaluar los riesgos y amenazas de ciberseguridad: La gestión de procesos permite a las organizaciones identificar y evaluar los riesgos y amenazas de ciberseguridad, lo",13.22,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,open_ended,¿Qué áreas de especialización se utilizan como marco de referencia para el conocimiento en este curso?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Qué áreas de especialización se utilizan como marco de referencia para el conocimiento en este curso?
+
+Da una respuesta completa y explicativa.",El Framework NICE y las áreas de conocimiento en ciberseguridad según la ACM.,"Según el documento proporcionado, el curso Políticas y Gobernanza en Ciberseguridad utiliza el Framework NICE (National Initiative for Cybersecurity Education) como marco de referencia para el conocimiento en este curso. El Framework NICE es un conjunto de áreas de especialización en ciberseguridad que se utilizan para desarrollar habilidades y conocimientos en la materia. En este curso, se enfatiza en las áreas de especialización en ciberseguridad según el Framework NICE, lo que permite a los estudiantes desarrollar habilidades y conocimientos en áreas específicas de la ciberseguridad.",8.61,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,open_ended,¿Cómo se aborda el diagnóstico del riesgo organizacional en este programa?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Cómo se aborda el diagnóstico del riesgo organizacional en este programa?
+
+Da una respuesta completa y explicativa.",Mediante el uso de métricas de seguridad para la toma de decisiones estratégicas y modelos de evaluación de riesgo.,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, el diagnóstico del riesgo organizacional se aborda a través de la evaluación de los factores internos y externos que pueden afectar la seguridad de la información de la organización. Esto incluye la identificación de los riesgos técnicos y de negocio, la síntesis y priorización del riesgo, y la definición de estrategias de mitigación.
+
+El curso cubre temas como la gobernanza de la información, la seguridad de la información, la privacidad y la protección de datos, la gestión de la información y la comunicación, la gestión de la seguridad y la protección de la información, y la gestión de la información y la comunicación en la organización.
+
+El diagnóstico del riesgo organizacional se realiza a través de la aplicación de técnicas y herramientas de análisis, como la matriz de gobernanza de Weill, la cual ayuda a identificar los arquetipos y mecanismos de gobernanza en la organización.
+
+Además, el curso cubre temas como la gestión de la información y la comunicación en la organización, la gestión de la seguridad y la protección de la información, y la gestión de la información y la comunicación en la organización.
+
+El diagnóst",13.35,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,open_ended,"¿Qué importancia tiene el principio de ""Seguridad por diseño"" en el ciclo de vida del software?","En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Qué importancia tiene el principio de ""Seguridad por diseño"" en el ciclo de vida del software?
+
+Da una respuesta completa y explicativa.",Es un criterio clave para el aprovisionamiento de soluciones tecnológicas seguras y la planificación de requerimientos.,"El principio de ""Seguridad por diseño"" es fundamental en el ciclo de vida del software, ya que implica que la seguridad debe ser considerada desde el diseño y la planificación del software, en lugar de ser agregada como un componente adicional en un momento posterior. Esto significa que la seguridad debe ser una consideración integral en todo el proceso de desarrollo del software, desde la especificación de requisitos hasta la implementación y pruebas.
+
+En el contexto del curso Políticas y Gobernanza en Ciberseguridad, el principio de ""Seguridad por diseño"" es crucial para garantizar que los sistemas de información sean seguros y resistan a los ataques cibernéticos. Esto requiere que los desarrolladores de software consideren las amenazas y vulnerabilidades potenciales en el diseño y la implementación del software, y que tomen medidas para mitigarlas.
+
+Algunas de las razones por las que el principio de ""Seguridad por diseño"" es importante en el ciclo de vida del software incluyen:
+
+1. Reducción de vulnerabilidades: Al considerar la seguridad desde el diseño y la planificación del software, se pueden reducir las vulnerabilidades y debilidades en el código y la arquitectura del sistema.
+2. Mejora de la confiabilidad: La seguridad por diseño ayuda a garantizar que el software sea confiable y resistente a los ataques cibernéticos",13.26,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,open_ended,¿Qué elementos legales se analizan respecto a la protección de datos en Costa Rica?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Qué elementos legales se analizan respecto a la protección de datos en Costa Rica?
+
+Da una respuesta completa y explicativa.",La legislación sobre delitos informáticos y la Ley 8968 de Protección de los Datos.,"Según el documento MC1006-Políticas y Gobernanza en Ciberseguridad, el curso analiza los elementos legales relacionados con la protección de datos en Costa Rica, específicamente:
+
+* La Ley 8968 de Protección de los Datos, que es la ley principal que regula la protección de datos en Costa Rica.
+* La privacidad, que es un aspecto clave en la protección de datos.
+* La propiedad intelectual, que es un tema relacionado con la protección de datos.
+
+Además, el curso también analiza otros elementos legales y regulatorios relacionados con la ciberseguridad y la protección de datos, como:
+
+* Los estándares internacionales de seguridad de la información, como la ISO 27001.
+* Las regulaciones y leyes nacionales e internacionales que regulan la ciberseguridad y la protección de datos.
+
+Es importante destacar que el curso no solo se centra en la protección de datos, sino que también aborda otros aspectos de la gobernanza y la política en ciberseguridad, como la gestión de la información, la seguridad de la información, la privacidad y la propiedad intelectual.",12.13,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,open_ended,¿Cuál es el objetivo de integrar los KPI de ciberseguridad con la visión de la empresa?,"En el curso Políticas y Gobernanza en Ciberseguridad de la Maestría en Ciberseguridad, ¿Cuál es el objetivo de integrar los KPI de ciberseguridad con la visión de la empresa?
+
+Da una respuesta completa y explicativa.",Lograr una alineación estratégica que permita gestionar el portafolio de proyectos de seguridad según la misión organizacional.,"El objetivo de integrar los KPI de ciberseguridad con la visión de la empresa es asegurar que la estrategia de ciberseguridad esté alineada con los objetivos y metas de la organización. Esto implica que los indicadores clave de rendimiento (KPI) de ciberseguridad se utilicen para medir y evaluar el desempeño de la función de ciberseguridad en relación con los objetivos de la empresa.
+
+Al integrar los KPI de ciberseguridad con la visión de la empresa, se busca asegurar que la función de ciberseguridad esté enfocada en resolver problemas y oportunidades que sean relevantes para la empresa, y que los recursos asignados a la ciberseguridad estén utilizados de manera efectiva para lograr los objetivos de la empresa.
+
+Por ejemplo, si la visión de la empresa es ""ser líder en la industria de tecnología"", los KPI de ciberseguridad podrían incluir indicadores como:
+
+* La tasa de incidentes de ciberseguridad
+* La velocidad de respuesta a los incidentes de ciberseguridad
+* La efectividad de las medidas de ciberseguridad para prevenir incidentes
+* La satisfacción del cliente con la seguridad de la información
+
+Al integrar estos KPI con la visión de la empresa, la función de ciberseg",13.26,Políticas y Gobernanza en Ciberseguridad,MC1006,
+llama3.1-8b-4bit,open_ended,¿Desde qué perspectiva se analizan vulnerabilidades como el Buffer Overflow?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Desde qué perspectiva se analizan vulnerabilidades como el Buffer Overflow?
+
+Da una respuesta completa y explicativa.",Desde una perspectiva avanzada que estudia vectores de ataque utilizados para violentar el software creado.,"La respuesta es: Desde una perspectiva avanzada, que puede servir para violentar el software creado, considerando vulnerabilidades y vectores de ataque, como el Buffer Overflow, SQL Injection, robo de sesiones, entre otros.",6.5,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,open_ended,¿Qué estrategias de defensa se consideran para prevenir ataques a las aplicaciones?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Qué estrategias de defensa se consideran para prevenir ataques a las aplicaciones?
+
+Da una respuesta completa y explicativa.","Técnicas de programación segura, modelado de vulnerabilidades y técnicas avanzadas de pruebas de seguridad.","En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, se consideran varias estrategias de defensa para prevenir ataques a las aplicaciones. Algunas de estas estrategias incluyen:
+
+1. **Seguridad por Diseño**: Esta estrategia implica incorporar principios de seguridad en el diseño y desarrollo de la aplicación, desde el principio, para evitar vulnerabilidades y debilidades.
+2. **Validación de Entrada**: Esta estrategia implica verificar y validar la entrada de datos en la aplicación para evitar inyecciones de código y otros tipos de ataques.
+3. **Autenticación y Autorización**: Esta estrategia implica implementar sistemas de autenticación y autorización para asegurar que solo los usuarios autorizados puedan acceder a la aplicación y realizar acciones.
+4. **Control de Acceso**: Esta estrategia implica implementar sistemas de control de acceso para asegurar que los datos y recursos de la aplicación sean accesibles solo para los usuarios autorizados.
+5. **Cifrado de Datos**: Esta estrategia implica cifrar los datos de la aplicación para asegurar que sean ininteligibles para cualquier persona que no tenga la clave de descifrado.
+6. **Monitoreo y Análisis de Tráfico**: Esta estrategia implica monitorear y analizar el tráfico de la aplicación para",13.35,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,open_ended,"¿Cómo influye el concepto de ""Seguridad por Diseño"" en el estudiante?","En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Cómo influye el concepto de ""Seguridad por Diseño"" en el estudiante?
+
+Da una respuesta completa y explicativa.","Lo capacita para diseñar soluciones que garanticen la tríada de la seguridad (confidencialidad, integridad y disponibilidad) desde el inicio del desarrollo.","El concepto de ""Seguridad por Diseño"" en el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad influye en el estudiante de la siguiente manera:
+
+El concepto de ""Seguridad por Diseño"" se refiere a la idea de incorporar la seguridad en el diseño y desarrollo de software desde un principio, en lugar de agregarla como una capa adicional después de que el software ya está desarrollado. Esto implica que el estudiante debe considerar la seguridad como un aspecto integral del proceso de desarrollo de software, en lugar de verla como una tarea separada.
+
+En el curso, el estudiante aprenderá sobre las técnicas y herramientas para diseñar y desarrollar software seguro, incluyendo la identificación de vulnerabilidades y vectores de ataque, la implementación de medidas de seguridad y la evaluación de la seguridad del software. Esto les permitirá desarrollar habilidades para diseñar y desarrollar software seguro, lo que es esencial en la era digital actual.
+
+El concepto de ""Seguridad por Diseño"" también se refleja en la importancia de la seguridad en el desarrollo de software, lo que incluye la consideración de factores como la privacidad, la integridad y la disponibilidad de los datos. Esto les permitirá a los estudiantes comprender la complejidad de la seguridad en el desarrollo de software y la necesidad de",13.31,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,open_ended,¿Qué temas abarca la administración de riesgo aplicada específicamente al software?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Qué temas abarca la administración de riesgo aplicada específicamente al software?
+
+Da una respuesta completa y explicativa.","Identificación de riesgos técnicos y de negocio, priorización de riesgos y validación de correcciones.","La administración de riesgo aplicada al software en el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad abarca temas como la comprensión del contexto del negocio, la identificación de riesgos técnicos y de negocio, la síntesis y priorización del riesgo, la definición de estrategias de mitigación, la creación de correcciones y validación, entre otros.
+
+En particular, el curso cubre temas como:
+
+* La comprensión del contexto del negocio y la identificación de riesgos técnicos y de negocio.
+* La síntesis y priorización del riesgo, para identificar los riesgos más críticos y priorizar la mitigación.
+* La definición de estrategias de mitigación, para reducir o eliminar los riesgos identificados.
+* La creación de correcciones y validación, para asegurarse de que las correcciones implementadas sean efectivas y no introduzcan nuevos riesgos.
+
+Estos temas son fundamentales para la administración de riesgo aplicada al software, ya que permiten a los profesionales de la ciberseguridad identificar y mitigar los riesgos asociados con el software, lo que ayuda a proteger la integridad y la confidencialidad de los datos.",12.57,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,open_ended,¿Qué se entiende por seguridad basada en el lenguaje de programación en este contexto?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Qué se entiende por seguridad basada en el lenguaje de programación en este contexto?
+
+Da una respuesta completa y explicativa.","El estudio del tipado seguro, el aseguramiento de memoria y el control de acceso en ambientes abiertos.","La seguridad basada en el lenguaje de programación se refiere a la implementación de características de seguridad en el lenguaje de programación utilizado para desarrollar software. Esto implica incorporar mecanismos de seguridad en el lenguaje de programación para prevenir o mitigar ataques cibernéticos, como buffer overflows, inyección de código, robo de sesiones, etc.
+
+En el contexto del curso Seguridad de Software Avanzado, la seguridad basada en el lenguaje de programación se enfoca en la implementación de características de seguridad en el lenguaje de programación para prevenir o mitigar ataques cibernéticos. Esto incluye la utilización de técnicas como tipado seguro, control de acceso, autenticación, etc.
+
+Algunas de las características de seguridad que se pueden implementar en el lenguaje de programación incluyen:
+
+* Tipado seguro: Impedir que se asignen valores de tipo incorrecto a variables.
+* Control de acceso: Implementar mecanismos de control de acceso para limitar el acceso a recursos y datos sensibles.
+* Autenticación: Implementar mecanismos de autenticación para verificar la identidad de los usuarios y evitar accesos no autorizados.
+* Control de acceso clásico a bases de datos: Implementar mecanismos de control de acceso para bases de datos para limitar el",13.29,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,open_ended,¿Cómo se aplican las técnicas de análisis estático para mejorar la calidad del código?,"En el curso Seguridad de Software Avanzado de la Maestría en Ciberseguridad, ¿Cómo se aplican las técnicas de análisis estático para mejorar la calidad del código?
+
+Da una respuesta completa y explicativa.","Mediante el análisis de flujo de datos, la ejecución simbólica y la ofuscación.","Lo siento, pero no puedo proporcionar una respuesta completa y explicativa a la pregunta dada, ya que la pregunta parece ser una parte de un documento de curso y no proporciona suficiente contexto para una respuesta completa. Sin embargo, puedo proporcionar una respuesta general sobre cómo se aplican las técnicas de análisis estático para mejorar la calidad del código.
+
+Las técnicas de análisis estático se utilizan para analizar el código sin ejecutarlo, lo que permite identificar problemas y errores en el código antes de que se ejecuten. Estas técnicas pueden incluir:
+
+1. **Análisis de flujo de datos**: Se analiza el flujo de datos a través del código para identificar posibles errores o problemas.
+2. **Ofuscación**: Se oculta el código para evitar la copia y pegar, lo que ayuda a proteger la propiedad intelectual.
+3. **Pruebas de penetración en análisis estático**: Se utilizan técnicas de análisis estático para identificar vulnerabilidades y errores en el código.
+4. **Ejecución simbólica**: Se ejecuta el código simbólicamente para identificar errores y problemas.
+
+Estas técnicas se pueden aplicar en diferentes etapas del desarrollo de software, como:
+
+1. **Diseño**: Se utilizan técnicas de análisis estático para identificar posibles errores y",13.26,Seguridad de Software Avanzado,MC3001,
+llama3.1-8b-4bit,open_ended,¿Por qué el cibercrimen se estudia también desde la perspectiva de las ciencias sociales?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Por qué el cibercrimen se estudia también desde la perspectiva de las ciencias sociales?
+
+Da una respuesta completa y explicativa.","Porque muchos problemas, como el phishing, ocurren por motivadores conductuales y debilidades en el comportamiento humano, no solo por fallas técnicas.","El cibercrimen se estudia también desde la perspectiva de las ciencias sociales porque muchos de los problemas relacionados a la ciberseguridad no son del área técnica, sino que se pueden analizar desde una perspectiva de ciencias sociales y legal. Por ejemplo, el phishing ocurre debido a que las personas típicamente forman parte del eslabón más débil, donde la relación de costo-beneficio para un atacante es muy atractiva, y por otro lado la legislación dificulta el abordaje de los problemas desde una perspectiva transnacional.
+
+En este curso, el estudiante conocerá las principales acciones utilizadas por el cibercrimen para obtener información confidencial mediante la manipulación de usuarios legítimos, a través del uso de herramientas de espionaje, investigación y de recopilación de información; con el objetivo de proteger sistemas evaluando distintos escenarios de phising, vishing, espionaje industrial, entre otros.
+
+El estudio del cibercrimen desde la perspectiva de las ciencias sociales permite comprender los motivos y comportamientos de los individuos involucrados en actos de cibercrimen, lo que puede ayudar a desarrollar estrategias efectivas para prevenir y combatir estos delitos. Además, el estudio de la psicología inmersa en la cib",13.22,Cibercrimen,MC3010,
+llama3.1-8b-4bit,open_ended,¿Qué objetivos persiguen los criminales al manipular a usuarios legítimos?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Qué objetivos persiguen los criminales al manipular a usuarios legítimos?
+
+Da una respuesta completa y explicativa.","Obtener información confidencial mediante ingeniería social, espionaje industrial e investigación de recopilación de datos.","Lo siento, pero no tengo suficiente información para responder a esta pregunta. El curso Cibercrimen de la Maestría en Ciberseguridad no está disponible en los documentos proporcionados. Si necesitas ayuda con otra pregunta, por favor házmelo saber.",6.7,Cibercrimen,MC3010,
+llama3.1-8b-4bit,open_ended,¿Cómo ayudan los motivadores sociales a identificar la naturaleza de las amenazas?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Cómo ayudan los motivadores sociales a identificar la naturaleza de las amenazas?
+
+Da una respuesta completa y explicativa.",Permiten valorar las acciones de los individuos y potenciar la identificación temprana de actos delictivos.,"Lo siento, pero no tengo suficiente información para responder a la pregunta de manera completa y explicativa. El curso Cibercrimen de la Maestría en Ciberseguridad no está disponible en los documentos proporcionados. Si necesitas ayuda con otra pregunta, por favor házmelo saber.",6.84,Cibercrimen,MC3010,
+llama3.1-8b-4bit,open_ended,¿Qué métodos de investigación social se aplican para entender el fenómeno criminal?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Qué métodos de investigación social se aplican para entender el fenómeno criminal?
+
+Da una respuesta completa y explicativa.","La teorización, el diseño experimental, la validación de hipótesis y el análisis de datos con SPSS.","Lo siento, pero no tengo suficiente información para responder a esta pregunta específica. El curso Cibercrimen de la Maestría en Ciberseguridad no está disponible en los documentos proporcionados. Si necesitas ayuda con otra pregunta, por favor házmelo saber.",6.72,Cibercrimen,MC3010,
+llama3.1-8b-4bit,open_ended,"¿Qué aspectos analiza la ""Ciencia del Crimen"" respecto a los actos delictivos?","En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿Qué aspectos analiza la ""Ciencia del Crimen"" respecto a los actos delictivos?
+
+Da una respuesta completa y explicativa.","La elección racional del criminal, las actividades de rutina y los estudios de victimización y autoreporte.","La ""Ciencia del Crimen"" es un campo que estudia los aspectos sociales y legales de los actos delictivos, incluyendo el cibercrimen. En el contexto del curso Cibercrimen de la Maestría en Ciberseguridad, la ""Ciencia del Crimen"" analiza los siguientes aspectos:
+
+1. **Orígenes del Crimen**: Estudia las causas y factores que contribuyen al surgimiento de la delincuencia, incluyendo la psicología del delincuente, la economía del crimen y la influencia de la sociedad.
+2. **Elección racional**: Analiza cómo los individuos toman decisiones sobre participar en actividades delictivas, considerando factores como la utilidad, la frecuencia y la oportunidad.
+3. **Actividades de Rutina**: Estudia cómo los individuos pueden involucrarse en actividades delictivas como una parte de su rutina diaria, lo que puede incluir el cibercrimen.
+4. **Estudios de autoreporte**: Analiza cómo los individuos pueden reportar sus propias actividades delictivas, lo que puede incluir el cibercrimen.
+5. **Estudios de Victimización**: Estudia cómo las víctimas de delitos pueden ser seleccionadas y cómo pueden ser afectadas por las actividades delictivas",13.33,Cibercrimen,MC3010,
+llama3.1-8b-4bit,open_ended,¿En qué consiste la teoría de prevención del crimen en situación según el curso?,"En el curso Cibercrimen de la Maestría en Ciberseguridad, ¿En qué consiste la teoría de prevención del crimen en situación según el curso?
+
+Da una respuesta completa y explicativa.","Analiza la oportunidad del crimen, el triángulo del crimen y el desplazamiento del beneficio delictivo.","La teoría de prevención del crimen en situación, según el curso Cibercrimen de la Maestría en Ciberseguridad, se refiere a la comprensión de los factores que contribuyen a la comisión de delitos cibernéticos. Esto incluye la identificación de los eslabones más débiles en la cadena de eventos que llevan a la comisión de un delito, así como la comprensión de las motivaciones y comportamientos de los individuos involucrados en la cibercriminalidad.
+
+La teoría de prevención del crimen en situación se basa en la idea de que la cibercriminalidad es un fenómeno complejo que involucra factores sociales, económicos y tecnológicos. Por lo tanto, la prevención del crimen en situación requiere una comprensión profunda de estos factores y la capacidad de desarrollar estrategias efectivas para mitigarlos.
+
+Algunos de los conceptos clave de la teoría de prevención del crimen en situación incluyen:
+
+* El triángulo del crimen: una teoría que sugiere que la cibercriminalidad se puede prevenir mediante la reducción de la oportunidad, la reducción de la motivación y la reducción de la habilidad.
+* La teoría de la oportunidad: una teoría que sugiere que la ciberc",13.27,Cibercrimen,MC3010,
+llama3.1-8b-4bit,open_ended,¿Cómo se articulan las TI con la propuesta de valor de un negocio?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Cómo se articulan las TI con la propuesta de valor de un negocio?
+
+Da una respuesta completa y explicativa.",Se integran coherentemente dentro de un sistema de actividades para fortalecer la posición estratégica de la empresa.,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, las TI se articulan con la propuesta de valor de un negocio a través de la caracterización de la industria que afecta al negocio, la creación de un sistema de actividades único que responde a la propuesta de valor del negocio, y la aplicación de los sistemas de información empresariales de manera estratégica.
+
+El curso busca que los estudiantes comprendan la importancia de la gestión de TI como un medio para mejorar la competitividad de las organizaciones, y cómo los sistemas de información pueden ser utilizados para apoyar la propuesta de valor de un negocio. A través de la exploración de los fundamentos y tendencias de los sistemas empresariales estratégicos, los estudiantes pueden desarrollar habilidades para aplicar los sistemas de información de manera estratégica y apoyar la propuesta de valor de un negocio.
+
+La articulación de las TI con la propuesta de valor de un negocio implica considerar factores como la caracterización de la industria, la creación de un sistema de actividades único, y la aplicación de los sistemas de información de manera estratégica. Esto requiere una comprensión profunda de la propuesta de valor del negocio, así como de los sistemas de información que pueden ser utilizados para apoyarla.
+
+Al finalizar el",13.32,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,open_ended,¿Qué tipos de sistemas de información se estudian como referentes de manejo interno y externo?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué tipos de sistemas de información se estudian como referentes de manejo interno y externo?
+
+Da una respuesta completa y explicativa.","Los sistemas ERP, CRM y SCM.","En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, se estudian varios tipos de sistemas de información como referentes de manejo interno y externo. Algunos de estos sistemas incluyen:
+
+* Sistemas de planificación de recursos (ERP por sus siglas en inglés): Estos sistemas se utilizan para gestionar y coordinar las actividades de una empresa, incluyendo la planificación, el seguimiento y el control de los recursos.
+* Administradores de relaciones con el cliente (CRM): Estos sistemas se utilizan para gestionar las relaciones con los clientes, incluyendo la gestión de pedidos, la atención al cliente y la gestión de la base de datos de clientes.
+* Administradores de la cadena de suministro (SCM): Estos sistemas se utilizan para gestionar la cadena de suministro, incluyendo la gestión de la cadena de producción, la gestión de inventarios y la gestión de la cadena de suministro.
+* Sistemas de administración de conocimiento: Estos sistemas se utilizan para gestionar el conocimiento y la información dentro de la empresa, incluyendo la gestión de la base de datos de conocimiento y la gestión de la información.
+
+Estos sistemas de información se estudian en el curso como referentes de manejo interno y externo, ya",13.31,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,open_ended,¿Qué fuerzas competitivas influyen en la dinámica de una industria según Michael Porter?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué fuerzas competitivas influyen en la dinámica de una industria según Michael Porter?
+
+Da una respuesta completa y explicativa.","La amenaza de nuevos entrantes, el poder de compradores y proveedores, los sustitutos y la rivalidad entre competidores.","Según Michael Porter, las fuerzas competitivas que influyen en la dinámica de una industria son:
+
+1. La amenaza de nuevos entrantes (Threat of New Entrants): La capacidad de nuevos competidores para entrar en el mercado y desplazar a los existentes.
+2. El poder de los compradores (Bargaining Power of Buyers): La capacidad de los compradores para influir en los precios y las características de los productos.
+3. El poder de los proveedores (Bargaining Power of Suppliers): La capacidad de los proveedores para influir en los precios y las características de los productos.
+4. La amenaza de sustitutos (Threat of Substitute Products): La capacidad de productos sustitutos para atraer a los compradores y desplazar a los productos existentes.
+5. La competencia entre rivales (Rivalry Among Existing Competitors): La competencia entre los competidores existentes para atraer a los compradores y desplazar a los demás.
+
+Estas fuerzas competitivas influyen en la dinámica de la industria y pueden afectar la posición de las empresas en el mercado.",11.82,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,open_ended,¿Qué papel desempeña la investigación en la metodología de enseñanza de este curso?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué papel desempeña la investigación en la metodología de enseñanza de este curso?
+
+Da una respuesta completa y explicativa.",Permite al estudiante profundizar en fundamentos y tendencias mediante la creación de un estado del arte de sistemas empresariales.,"La investigación es un componente fundamental en la metodología de enseñanza del curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información. El curso se enfoca en desarrollar la capacidad de los estudiantes para aplicar distintas propuestas, modelos y marcos de referencia para la gestión de tecnología de información, y la investigación es una herramienta clave para lograr este objetivo.
+
+En la metodología de enseñanza del curso, la investigación se integra en varias etapas. Primero, los estudiantes deben realizar una investigación individual sobre los temas del curso, lo que les permite profundizar en los conceptos y desarrollar su capacidad de análisis y pensamiento crítico. Luego, los estudiantes trabajan en grupos para resolver casos prácticos, lo que les permite aplicar los conceptos teóricos a situaciones reales y desarrollar su capacidad de trabajo en equipo.
+
+Además, el curso incluye la presentación de casos de estudio, lo que permite a los estudiantes analizar y discutir casos reales de sistemas estratégicos empresariales, lo que les ayuda a desarrollar su capacidad de pensamiento crítico y resolución de problemas. La investigación también se integra en la evaluación del curso, donde los estudiantes deben realizar una investigación bibliográfica y presentar un paper sobre un tema relacionado con los sistemas estratégicos empresaria",13.3,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,open_ended,¿Cómo se vincula el conocimiento teórico con la práctica real en este programa?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Cómo se vincula el conocimiento teórico con la práctica real en este programa?
+
+Da una respuesta completa y explicativa.",A través de una investigación aplicada donde el estudiante enfrenta un problema real de una empresa utilizando los conocimientos adquiridos.,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, el conocimiento teórico se vincula con la práctica real a través de la metodología de enseñanza y aprendizaje. El curso se divide en tres partes: exposiciones magistrales, investigación del estudiante y exposición de casos.
+
+En la primera parte, el profesor presenta los conceptos teóricos y los ejemplos y casos promueven la participación y creación de criterio del estudiante. En la segunda parte, el estudiante profundiza los conceptos del curso con sistemas empresariales mediante la creación de un estado del arte, donde el estudiante debe consultar fundamentos, tendencias recientes y referentes de la industria. En la tercera parte, el estudiante identifica casos que pueden ser interesantes dentro de la temática del curso y expondrá al grupo.
+
+Además, el curso incluye la aplicación del conocimiento en forma concurrente al caso analizado en el curso de Investigación Aplicada en Sistemas de Información Empresariales. Esto permite que el estudiante integre los conceptos teóricos con la práctica real y desarrolle habilidades para aplicar el conocimiento en contextos reales.
+
+La evaluación del curso se concentra en actividades específicas, como la investigación del est",13.24,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,open_ended,¿Qué modelos complementarios a las fuerzas de Porter se analizan para el uso estratégico de TI?,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué modelos complementarios a las fuerzas de Porter se analizan para el uso estratégico de TI?
+
+Da una respuesta completa y explicativa.",El modelo basado en recursos (Resource Based View) y la competencia por capacidades.,"En el curso Sistemas Estratégicos Empresariales de la Maestría en Gerencia de Tecnologías de la Información, se analizan modelos complementarios a las fuerzas de Porter para el uso estratégico de TI, como el Resource Based View (RBV) y Competencia por Capacidades. Estos modelos buscan entender cómo las organizaciones pueden crear y mantener una ventaja competitiva a través de sus recursos internos y capacidades, en lugar de simplemente analizar las fuerzas competitivas externas.
+
+El Resource Based View (RBV) se enfoca en la idea de que las organizaciones pueden crear una ventaja competitiva a través de la gestión de sus recursos internos, como la tecnología, la innovación y la capacidad de innovar. Este modelo busca entender cómo las organizaciones pueden crear y mantener una ventaja competitiva a través de la gestión de sus recursos internos, en lugar de simplemente analizar las fuerzas competitivas externas.
+
+La Competencia por Capacidades se enfoca en la idea de que las organizaciones pueden crear una ventaja competitiva a través de la gestión de sus capacidades, como la innovación, la tecnología y la capacidad de innovar. Este modelo busca entender cómo las organizaciones pueden crear y mantener una ventaja competitiva a través de la gestión de sus capacidades, en lugar de simplemente analizar las fuerzas competitivas externas",13.26,Sistemas Estratégicos Empresariales,MC1101,
+llama3.1-8b-4bit,open_ended,¿Qué elementos componen el enfoque integrado del proceso de gestión de TI?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué elementos componen el enfoque integrado del proceso de gestión de TI?
+
+Da una respuesta completa y explicativa.","La combinación de cuatro factores clave: personas, procesos, herramientas y proveedores.","El enfoque integrado del proceso de gestión de TI, según el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, se compone de cuatro elementos clave: personas, procesos, herramientas y proveedores. Esto significa que la gestión de TI debe considerar no solo los aspectos técnicos y financieros, sino también la dimensión humana y la gestión de los recursos humanos, los procesos y las herramientas utilizadas para apoyar la gestión de TI, y los proveedores de servicios y tecnologías que pueden ayudar a la organización a alcanzar sus objetivos.
+
+En otras palabras, el enfoque integrado de la gestión de TI implica considerar la gestión de TI como una combinación de cuatro elementos clave: la gestión de personas, la gestión de procesos, la gestión de herramientas y la gestión de proveedores. Esto permite a la organización gestionar de manera efectiva sus recursos y tecnologías de TI, y alcanzar sus objetivos de negocio de manera más eficiente y efectiva.",11.8,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,open_ended,¿Cuáles son los equilibrios críticos que un líder de TI debe buscar permanentemente?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Cuáles son los equilibrios críticos que un líder de TI debe buscar permanentemente?
+
+Da una respuesta completa y explicativa.","El balance entre innovación y gestión de riesgos, y entre ser agente de cambio y mantener la operación impecable.","Un líder de TI debe buscar permanentemente equilibrios críticos entre innovar y gestionar riesgos, ser agente de cambio y mantener la operación de los sistemas existentes a nivel impecable, promover la incorporación de nuevas tecnologías y reducir costos. Estos son los retos que tienen que enfrentar los líderes de TI.",7.17,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,open_ended,¿Qué diferencia establece el curso entre administración y gobernanza de TI?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué diferencia establece el curso entre administración y gobernanza de TI?
+
+Da una respuesta completa y explicativa.","Se analizan como conceptos distintos, estudiando la gobernanza a través de arquetipos y mecanismos de la matriz de Weill.","El curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información establece una diferencia clave entre administración y gobernanza de TI. Según el curso, la administración de TI se enfoca en la gestión de los recursos y procesos de TI, mientras que la gobernanza de TI se centra en la definición de políticas, procedimientos y estándares para la gestión de TI.
+
+En otras palabras, la administración de TI se enfoca en la gestión operativa de TI, mientras que la gobernanza de TI se enfoca en la definición de la estrategia y la política de TI. La administración de TI es más enfocada en la gestión diaria de TI, mientras que la gobernanza de TI es más enfocada en la definición de la visión y la estrategia de TI.
+
+Por ejemplo, la administración de TI se enfoca en la gestión de los recursos de TI, como la planificación de la inversión en TI, la gestión de los proyectos de TI y la gestión de los riesgos de TI. Por otro lado, la gobernanza de TI se enfoca en la definición de la política de TI, como la definición de la estrategia de TI, la gestión de los riesgos de TI y la gestión de los",13.26,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,open_ended,¿Qué modelos de tercerización de servicios se introducen en el contenido?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué modelos de tercerización de servicios se introducen en el contenido?
+
+Da una respuesta completa y explicativa.","SaaS, IaaS y PaaS, junto con los factores críticos de éxito para su gestión.","No se proporciona información sobre el curso Gerencia de Tecnología de Información en la documentación proporcionada. La documentación proporcionada es sobre el curso MC1101-Sistemas Estratégicos Empresariales, no sobre el curso Gerencia de Tecnología de Información.
+
+Sin embargo, en el curso MC1101-Sistemas Estratégicos Empresariales, se menciona que se introducen los modelos de tercerización de servicios de TI, pero no se proporciona información específica sobre los modelos que se introducen.
+
+Si deseas obtener más información sobre el curso Gerencia de Tecnología de Información, te recomendaría buscar en la documentación proporcionada o contactar con el profesor o la institución para obtener más información.",9.38,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,open_ended,¿Cómo se utiliza la metodología de casos para fomentar el aprendizaje socio-constructivista?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Cómo se utiliza la metodología de casos para fomentar el aprendizaje socio-constructivista?
+
+Da una respuesta completa y explicativa.","Mediante estudio individual, análisis grupal y sesiones plenarias de discusión sobre casos comprensivos.","La metodología de casos en el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información se utiliza para fomentar el aprendizaje socio-constructivista de los estudiantes. Esta metodología implica que los estudiantes deben hacer un estudio individual, luego analizar el caso en grupos y finalmente discutir el caso en una sesión plenaria.
+
+En primer lugar, los estudiantes deben realizar un estudio individual del caso, lo que les permite profundizar en los conceptos del curso y aplicarlos a la situación específica del caso. Esto les permite desarrollar una comprensión más profunda de los temas y relacionarlos con sus experiencias previas.
+
+Luego, los estudiantes se reúnen en grupos para analizar el caso. Esto les permite compartir sus conocimientos y experiencias con sus compañeros, lo que les permite aprender de ellos y desarrollar una comprensión más completa del tema.
+
+Finalmente, los estudiantes se reúnen en una sesión plenaria para discutir el caso. Esto les permite compartir sus ideas y experiencias con todos los estudiantes, lo que les permite aprender de ellos y desarrollar una comprensión más completa del tema.
+
+La metodología de casos en el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información es una forma efectiva de fomentar el aprend",13.34,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,open_ended,¿Qué herramientas pedagógicas deben elaborar los estudiantes para demostrar la asimilación semanal de la teoría?,"En el curso Gerencia de Tecnología de Información de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué herramientas pedagógicas deben elaborar los estudiantes para demostrar la asimilación semanal de la teoría?
+
+Da una respuesta completa y explicativa.","Mapas mentales, conceptuales, infografías o cuadros sinópticos basados en la bibliografía.","Según el documento, los estudiantes deben elaborar mapas mentales, mapas conceptuales, esquemas de ideas, infografías o cuadros sinópticos para demostrar la asimilación semanal de la teoría en el curso de Gerencia de Tecnología de Información.
+
+Además, los estudiantes deben realizar un estudio individual, luego un análisis de caso en grupos y finalmente una sesión plenaria para discusión del caso, utilizando la metodología de casos.
+
+Es importante destacar que los estudiantes deben desarrollar habilidades de investigación, especialmente en la creación de un estado del arte, y aplicar los conocimientos adquiridos en el curso a través de la resolución de casos y la elaboración de un artículo científico.
+
+La evaluación del curso se concentra en actividades específicas como las mencionadas en la metodología de enseñanza y aprendizaje, como ejemplo de lo anterior se propone la evaluación siguiente:
+
+- Investigación práctica aplicada 1: 50%
+- Investigación práctica aplicada 2: 50%
+- Total: 100%
+
+La evaluación del curso se concentra en actividades específicas como las mencionadas en la metodología de enseñanza y aprendizaje, como ejemplo de lo anterior se propone la evaluación siguiente:
+
+- Investigación práctica aplicada 1: 50%
+- Investigación práctica aplicada",13.28,Gerencia de Tecnología de Información,MC1103,
+llama3.1-8b-4bit,open_ended,¿Qué abarca la gestión de recursos financieros invertidos en TI?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué abarca la gestión de recursos financieros invertidos en TI?
+
+Da una respuesta completa y explicativa.","La planificación, operación, control, evaluación y toma de decisiones fundamentadas en información financiera.","La gestión de recursos financieros invertidos en TI abarca la planificación, operación, control, evaluación y toma de decisiones fundamentadas en información financiera, con el objetivo de optimizar los recursos asignados y gestionar los riesgos inherentes a las inversiones en proyectos y servicios de tecnología de información.",6.97,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,open_ended,¿Cuál es el objetivo final de aplicar finanzas a los proyectos y servicios de TI?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Cuál es el objetivo final de aplicar finanzas a los proyectos y servicios de TI?
+
+Da una respuesta completa y explicativa.",Optimizar los recursos asignados y gestionar los riesgos inherentes a las inversiones tecnológicas.,El objetivo final de aplicar finanzas a los proyectos y servicios de TI es lograr la entrega de los beneficios acordados a partir de la optimización de los recursos asignados y la gestión de los riesgos inherentes a las inversiones en proyectos y servicios de tecnología de información.,6.83,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,open_ended,¿Qué áreas de la contabilidad se estudian para respaldar la operación técnica?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué áreas de la contabilidad se estudian para respaldar la operación técnica?
+
+Da una respuesta completa y explicativa.","Contabilidad financiera (activos, pasivos, capital), análisis financiero (razones financieras) y contabilidad de costos.","En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, se estudian las siguientes áreas de la contabilidad para respaldar la operación técnica:
+
+1. **Contabilidad financiera**: Se estudian los conceptos básicos de la contabilidad financiera, como el sistema contable, el ciclo contable, los estados financieros principales (balance general, estado de resultados y estado de flujo de efectivo), y las normas internacionales de información financiera.
+2. **Análisis financiero**: Se estudian las técnicas de análisis financiero, como el análisis porcentual de estados financieros, el análisis de las principales razones financieras y el análisis financiero de la operación de tecnología de la información.
+3. **Contabilidad de costos**: Se estudian los conceptos introductorios a la contabilidad de costos, como el sistema de costeo para productos y servicios, los elementos de costeo de productos y servicios, y el sistema de costeo para la operación de tecnología de la información.
+4. **Presupuestos**: Se estudian los conceptos introductorios al presupuesto, como las metodologías para la elaboración de presupuestos, y los presupuestos para la operación de tecnología de la información.
+5. **Formulación y evaluación financiera de proyectos**: Se",13.32,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,open_ended,¿Cómo se integra el presupuesto en la administración de la función de información?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Cómo se integra el presupuesto en la administración de la función de información?
+
+Da una respuesta completa y explicativa.",Mediante el estudio de metodologías de elaboración presupuestaria específicas para la operación de TI.,"Lo siento, pero no puedo proporcionar una respuesta completa y explicativa a la pregunta dada, ya que la pregunta parece estar relacionada con un curso específico de la Maestría en Gerencia de Tecnologías de la Información, pero no tengo acceso a la información completa del curso o de la pregunta.
+
+Sin embargo, puedo proporcionar una respuesta general sobre cómo se integra el presupuesto en la administración de la función de información.
+
+En la administración de la función de información, el presupuesto es un componente crucial para la planificación y el control de los recursos. El presupuesto se utiliza para establecer objetivos financieros y para asignar recursos a diferentes áreas de la función de información.
+
+La integración del presupuesto en la administración de la función de información implica considerar los siguientes pasos:
+
+1. **Establecer objetivos financieros**: El presupuesto se utiliza para establecer objetivos financieros para la función de información, como la reducción de costos, la mejora de la eficiencia o la inversión en tecnología.
+2. **Asignar recursos**: El presupuesto se utiliza para asignar recursos a diferentes áreas de la función de información, como la tecnología, la personalidad o la infraestructura.
+3. **Monitorear y controlar**: El presupuesto se utiliza para monitorear y controlar los gastos y los ingresos de la función de información, para",13.27,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,open_ended,¿Qué estándares internacionales se referencian para la gestión de costos?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué estándares internacionales se referencian para la gestión de costos?
+
+Da una respuesta completa y explicativa.",El dominio APO06 de COBIT 5.0 y los procesos de estrategia de servicios de ITIL 2011.,"Según el documento, los estándares internacionales para la administración financiera de tecnología de información mencionados son:
+
+* Objetivos de Control de Tecnología de Información (COBIT 5.0), APO06: Gestionar el presupuesto y los costos de tecnología de información.
+* Information Technology Infrastructure Library (ITIL 2011), Procesos de servicios de estrategia, administración financiera para servicios de tecnología de información.
+
+Estos estándares internacionales proporcionan una guía para la gestión de costos y presupuestos en la tecnología de información, y ayudan a los gerentes de TI a tomar decisiones informadas sobre la asignación de recursos financieros.",9.24,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,open_ended,¿En qué tipo de actividades se concentra la evaluación del curso?,"En el curso Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿En qué tipo de actividades se concentra la evaluación del curso?
+
+Da una respuesta completa y explicativa.","En exámenes parciales, investigación bibliográfica, comprobaciones de lectura y trabajo en clase.","La evaluación del curso de Administración Financiera de TI de la Maestría en Gerencia de Tecnologías de la Información se concentra en actividades específicas como las mencionadas en la metodología de enseñanza y aprendizaje. La evaluación se divide en los siguientes rubros:
+
+- Examen parcial 1: 25%
+- Examen parcial 2: 25%
+- Investigación bibliográfica: 20%
+- Comprobación de lectura: 15%
+- Trabajo en clase: 15%
+
+Total: 100%
+
+Estas actividades buscan evaluar la comprensión y aplicación de los conceptos teóricos y prácticos en la administración financiera de tecnología de información, así como la capacidad de analizar y resolver casos prácticos.",9.82,Administración Financiera de TI,MC1201,
+llama3.1-8b-4bit,open_ended,¿Por qué la gestión de proyectos es una competencia indispensable para un gerente de TI?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Por qué la gestión de proyectos es una competencia indispensable para un gerente de TI?
+
+Da una respuesta completa y explicativa.",Porque las transformaciones modernas de las organizaciones se ejecutan a través de proyectos tecnológicos exitosos.,"La gestión de proyectos es una competencia indispensable para un gerente de TI porque permite a la organización lograr sus objetivos estratégicos a través de la planificación, ejecución y control de proyectos tecnológicos. Esto implica que el gerente de TI debe tener habilidades y conocimientos para interpretar correctamente las estrategias de negocios y como se implementan estas a través de la gestión de proyectos.
+
+En el curso Administración y Estrategia de Proyectos I, se analiza el enlace estratégico de los proyectos en las organizaciones, las condiciones estratégicas, tácticas y operacionales para la gestión de proyectos en tecnologías de la información, y se aplican diversos modelos y marcos de trabajo a la gestión de proyectos de tecnologías de la información.
+
+La gestión de proyectos es crucial para la organización porque permite:
+
+1. Lograr objetivos estratégicos: La gestión de proyectos permite a la organización lograr sus objetivos estratégicos a través de la planificación, ejecución y control de proyectos tecnológicos.
+2. Mejorar la eficiencia y eficacia: La gestión de proyectos permite a la organización mejorar la eficiencia y eficacia en la ejecución de proyectos, lo que conduce a ahorros de tiempo y recursos.
+3. Reducir riesgos: La gestión de proyectos permite a la organiz",13.28,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,open_ended,¿Qué componentes estratégicos se analizan en las fases iniciales de un proyecto?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué componentes estratégicos se analizan en las fases iniciales de un proyecto?
+
+Da una respuesta completa y explicativa.","El análisis de factibilidad, las condiciones de inicio y la planificación de alcance, calidad y costos.","En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, se analizan los componentes estratégicos de la gestión de proyectos, los marcos de trabajo más utilizados, el análisis de factibilidad, el desarrollo de las condiciones de inicio de los proyectos, las fases iniciales de los proyectos y las áreas de alcances, calidad y costos en la planificación de los proyectos.
+
+En particular, se estudian los siguientes componentes estratégicos:
+
+* El enlace estratégico de los proyectos en las organizaciones.
+* Las condiciones estratégicas, tácticas y operacionales para la gestión de proyectos en tecnologías de información.
+* Los marcos de trabajo más utilizados, como el PMBOK, PRINCE2, IPMA y CMMI.
+* El análisis de factibilidad, que implica evaluar la viabilidad de un proyecto en términos de su alcance, presupuesto y plazo.
+* El desarrollo de las condiciones de inicio de los proyectos, que incluye la definición del alcance, el presupuesto y el plazo del proyecto.
+* Las fases iniciales de los proyectos, que incluyen la planificación, la ejecución y el control.
+* Las áreas de alcances, calidad y costos en la planificación de los proyectos, que incluyen la definición",13.24,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,open_ended,¿Cómo ha evolucionado la orientación de la gestión de proyectos según el curso?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Cómo ha evolucionado la orientación de la gestión de proyectos según el curso?
+
+Da una respuesta completa y explicativa.",Ha pasado de una orientación basada exclusivamente en planes hacia una orientación ágil.,No tengo suficiente información para responder a esta pregunta.,5.35,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,open_ended,¿Qué papel desempeña la Oficina de Proyectos (PMO) en las organizaciones modernas?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué papel desempeña la Oficina de Proyectos (PMO) en las organizaciones modernas?
+
+Da una respuesta completa y explicativa.",Actúa como soporte estratégico para la gestión de portafolios y programas bajo modelos como OPM3.,"La Oficina de Proyectos (PMO) desempeña un papel crucial en las organizaciones modernas, ya que es responsable de gestionar y coordinar los proyectos de tecnología de información de manera efectiva. La PMO es el órgano encargado de asegurar que los proyectos se realicen dentro de los plazos, presupuestos y calidad establecidos.
+
+Entre sus funciones principales se encuentran:
+
+1. Establecer y gestionar los planes de proyectos, incluyendo la definición de objetivos, alcances, cronogramas y presupuestos.
+2. Coordinar y supervisar la ejecución de los proyectos, asegurando que se cumplan los requisitos y estándares establecidos.
+3. Monitorear y controlar el progreso de los proyectos, identificando y mitigando riesgos y problemas potenciales.
+4. Proporcionar informes y análisis a los gerentes y stakeholders sobre el estado de los proyectos.
+5. Garantizar la calidad y la integridad de los proyectos, asegurando que se cumplan los requisitos y estándares establecidos.
+
+La PMO también es responsable de:
+
+1. Establecer y gestionar los procesos y procedimientos para la gestión de proyectos.
+2. Proporcionar capacitación y entrenamiento a los miembros del equipo de proyectos.
+3. Mantener la comunicación",13.32,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,open_ended,¿En qué consiste el proceso de formulación de un caso de negocio efectivo?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿En qué consiste el proceso de formulación de un caso de negocio efectivo?
+
+Da una respuesta completa y explicativa.",En el desarrollo de herramientas y dimensiones de decisión para presentar resultados sólidos de una idea de proyecto.,"El proceso de formulación de un caso de negocio efectivo en el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información consiste en desarrollar un plan de acción que responda a las necesidades y objetivos de la organización, considerando factores como la identificación de oportunidades, la evaluación de riesgos, la definición de recursos y la creación de un plan de ejecución.
+
+Este proceso implica varias etapas, como la identificación de la oportunidad, la evaluación de la viabilidad del proyecto, la definición de los objetivos y los recursos necesarios, la creación de un plan de ejecución y la identificación de los riesgos y las oportunidades asociados al proyecto.
+
+En el curso, se enfatiza la importancia de desarrollar un caso de negocio efectivo que responda a las necesidades y objetivos de la organización, considerando factores como la identificación de oportunidades, la evaluación de riesgos, la definición de recursos y la creación de un plan de ejecución.
+
+El proceso de formulación de un caso de negocio efectivo implica:
+
+1. Identificar la oportunidad: Se identifican las oportunidades que pueden generar valor para la organización y se evalúa su viabilidad.
+2. Evaluar la viabilidad del proyecto: Se evalúa la viabilidad",13.24,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,open_ended,¿Qué dilemas se presentan comúnmente en la gestión de la calidad de proyectos de TI?,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué dilemas se presentan comúnmente en la gestión de la calidad de proyectos de TI?
+
+Da una respuesta completa y explicativa.",La aplicación del concepto de deuda técnica y el equilibrio entre procesos de gestión e ingeniería.,"En el curso Administración y Estrategia de Proyectos I de la Maestría en Gerencia de Tecnologías de la Información, los dilemas comunes en la gestión de la calidad de proyectos de TI pueden incluir:
+
+1. **Balance entre la calidad y el plazo**: Los proyectos de TI suelen tener plazos ajustados, lo que puede llevar a comprometer la calidad en favor de la velocidad. Esto puede generar dilemas sobre priorizar la calidad o el plazo.
+2. **Limitaciones de recursos**: Los proyectos de TI a menudo enfrentan limitaciones de recursos, como personal, presupuesto y tecnología. Esto puede generar dilemas sobre cómo asignar los recursos disponibles para maximizar la calidad del proyecto.
+3. **Cambios en las prioridades del negocio**: Los proyectos de TI suelen estar estrechamente relacionados con las prioridades del negocio. Si las prioridades cambian durante el proyecto, puede generar dilemas sobre cómo adaptar el proyecto para cumplir con las nuevas necesidades.
+4. **Dificultades en la comunicación**: La comunicación efectiva es crucial en la gestión de la calidad de proyectos de TI. Dificultades en la comunicación pueden generar dilemas sobre cómo coordinar los esfuerzos del equipo y garantizar que todos estén alineados con la visión del proyecto.
+5. **Presión para cumplir con los estándares",13.28,Administración y Estrategia de Proyectos I,MC1203,
+llama3.1-8b-4bit,open_ended,¿Qué elementos integran el marco filosófico de un negocio necesario para la planificación?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué elementos integran el marco filosófico de un negocio necesario para la planificación?
+
+Da una respuesta completa y explicativa.","Análisis FODA, misión, visión, valores, objetivos, estrategias, políticas y metas.","El curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información aborda la planificación estratégica de tecnología de información considerando aspectos como la definición del marco filosófico del negocio, que incluye:
+
+1. Análisis foda: Un análisis profundo y detallado de la situación actual del negocio, identificando fortalezas, debilidades, oportunidades y amenazas.
+2. Misión: Una declaración clara y concisa de la misión del negocio, que define su propósito y objetivo.
+3. Visión: Una visión clara y concisa de lo que el negocio quiere lograr en el futuro, que define su objetivo a largo plazo.
+4. Valores: Los valores y principios que guían la toma de decisiones y la acción del negocio.
+5. Objetivos: Los objetivos específicos y medibles que el negocio quiere lograr en el corto y largo plazo.
+6. Estrategias: Las estrategias y planes para lograr los objetivos del negocio.
+7. Políticas: Las políticas y procedimientos que guían la toma de decisiones y la acción del negocio.
+8. Metas: Las metas y objetivos específicos que el negocio quiere lograr en el corto y largo plazo.
+
+Estos elementos integran el",13.25,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,open_ended,¿Qué factores se consideran para derivar el plan de información desde el modelo de negocio?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué factores se consideran para derivar el plan de información desde el modelo de negocio?
+
+Da una respuesta completa y explicativa.","Tendencias tecnológicas, procesos de negocio, arquitectura de aplicaciones y proyección de inversión.","Para derivar el plan de información desde el modelo de negocio en el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, se consideran varios factores. Estos incluyen:
+
+1. Análisis foda: Se analiza la misión, visión, valores, objetivos, estrategias, políticas y metas del negocio para entender su propósito y dirección.
+2. Principios básicos de operación: Se consideran los principios básicos de operación del negocio, como su estructura organizativa, procesos de negocio y arquitectura tecnológica.
+3. Tendencias de la T.I: Se analizan las tendencias de la tecnología de la información y su impacto en el negocio.
+4. Procesos de negocio: Se consideran los procesos de negocio y cómo se pueden mejorar con la tecnología de la información.
+5. Arquitectura tecnológica: Se analiza la arquitectura tecnológica del negocio y cómo se puede mejorar para apoyar los procesos de negocio.
+6. Modelo organizativo: Se considera el modelo organizativo del negocio y cómo se puede mejorar con la tecnología de la información.
+7. Análisis de riesgo: Se analiza el riesgo y la seguridad de la información en el negocio.
+8. Estimación de recursos: Se estiman los",13.27,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,open_ended,¿Qué capacidad específica adquiere el estudiante al finalizar este programa?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Qué capacidad específica adquiere el estudiante al finalizar este programa?
+
+Da una respuesta completa y explicativa.",La capacidad de desarrollar un plan estratégico de TI basado en lineamientos del negocio y mecanismos de priorización.,"Al finalizar el curso de Planificación Estratégica de TI, el estudiante adquiere la capacidad de desarrollar un plan estratégico de TI a partir de las bases técnicas derivadas de los lineamientos estratégicos del negocio, las tendencias de tecnología de Información, el modelo organizacional, los factores críticos de éxito, los procesos de negocio, mecanismos de priorización y la definición de un presupuesto.",7.78,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,open_ended,¿Cómo se define el liderazgo y la administración desde la perspectiva del CIO?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Cómo se define el liderazgo y la administración desde la perspectiva del CIO?
+
+Da una respuesta completa y explicativa.",Se analiza como la gestión de expectativas para lograr una empresa habilitada por TI bajo un gobierno sólido.,"La definición del liderazgo y la administración desde la perspectiva del CIO (Chief Information Officer) en el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, se enfoca en la capacidad del CIO para liderar y administrar la función de tecnología de información de manera estratégica, eficiente y efectiva.
+
+Desde esta perspectiva, el liderazgo del CIO implica:
+
+1. **Definir la visión y la estrategia de TI**: El CIO debe establecer una visión clara y una estrategia para la función de tecnología de información que se alinee con los objetivos y necesidades de la organización.
+2. **liderar la transformación digital**: El CIO debe liderar la transformación digital de la organización, impulsando la adopción de tecnologías innovadoras y la implementación de soluciones de TI que mejoren la eficiencia, la efectividad y la competitividad.
+3. **gestionar los riesgos y las oportunidades**: El CIO debe gestionar los riesgos y las oportunidades asociados con la tecnología de información, asegurando que la organización esté preparada para enfrentar los desafíos y aprovechar las oportunidades que se presenten.
+4. **liderar la innovación y la mejora continua**:",13.34,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,open_ended,¿Cómo se aborda el diagnóstico de la situación actual de TI?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Cómo se aborda el diagnóstico de la situación actual de TI?
+
+Da una respuesta completa y explicativa.","Mediante el análisis de brecha, tendencias de organización de la función de TI y análisis de la industria.",No tengo suficiente información para responder a esta pregunta.,5.33,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,open_ended,¿Bajo qué condiciones específicas un estudiante puede reprobar el curso por asistencia?,"En el curso Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información, ¿Bajo qué condiciones específicas un estudiante puede reprobar el curso por asistencia?
+
+Da una respuesta completa y explicativa.",Si acumula 4 faltas de asistencia injustificadas durante el semestre.,"Según el documento, un estudiante puede reprobar el curso de Planificación Estratégica de TI de la Maestría en Gerencia de Tecnologías de la Información si cumple con las siguientes condiciones específicas:
+
+* El estudiante debe tener 4 faltas de asistencia injustificadas.
+* El estudiante debe tener 30 minutos después de la hora oficial de entrada para llegar a clase, de lo contrario se considerará como ausencia.
+* El profesor tiene la facultad de justificar o no las ausencias, por lo que el estudiante debe estar atento a las instrucciones del profesor.
+* El estudiante debe estar preparado para los exámenes cortos y las llamadas orales, que se realizarán todas las semanas.
+* El contenido académico de las actividades, exámenes cortos, exámenes, tareas, llamadas orales son acumulativos.
+
+Es importante destacar que estas condiciones específicas pueden variar dependiendo de la política de la institución y del profesor, por lo que es importante consultar con el profesor o la institución para obtener información más detallada.",11.78,Planificación Estratégica de TI,MC2301,
+llama3.1-8b-4bit,open_ended,¿Cuál es el concepto fundamental que modela este curso por encima de la tecnología física?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Cuál es el concepto fundamental que modela este curso por encima de la tecnología física?
+
+Da una respuesta completa y explicativa.","El concepto de cómputo, definido a través de mecanismos abstractos independientes de computadoras específicas.","La respuesta es el concepto de cómputo, no el de computadora. El curso Teoría de Autómatas se enfoca en modelar este concepto a través de mecanismos abstractos que capturen la esencia del proceso de cómputo sin apelar a lenguajes de programación o computadoras específicas.",7.07,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,open_ended,¿Cómo se relaciona la computación teórica con la construcción práctica de compiladores?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Cómo se relaciona la computación teórica con la construcción práctica de compiladores?
+
+Da una respuesta completa y explicativa.",Brinda los modelos formales necesarios para el reconocimiento y generación de lenguajes formales usados en compilación.,"La computación teórica se relaciona con la construcción práctica de compiladores a través de la teoría de autómatas y lenguajes formales. Los autómatas y lenguajes formales son conceptos fundamentales en la computación teórica que se utilizan para modelar y analizar la estructura y el comportamiento de los lenguajes de programación.
+
+En la construcción práctica de compiladores, los autómatas y lenguajes formales se utilizan para:
+
+1. **Análisis de lenguajes**: Los autómatas y lenguajes formales se utilizan para analizar la estructura y el comportamiento de los lenguajes de programación, lo que permite identificar patrones y regularidades en el código.
+2. **Compilación**: Los autómatas y lenguajes formales se utilizan para compilar el código fuente en código objeto, lo que implica traducir el código fuente en un lenguaje de máquina.
+3. **Optimización**: Los autómatas y lenguajes formales se utilizan para optimizar el código objeto, lo que implica eliminar redundancias y mejorar la eficiencia del código.
+4. **Verificación**: Los autómatas y lenguajes formales se utilizan para verificar la corrección del código objeto, lo que implica compro",13.27,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,open_ended,¿Qué jerarquía se utiliza para clasificar gramáticas según su estructura de frase?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Qué jerarquía se utiliza para clasificar gramáticas según su estructura de frase?
+
+Da una respuesta completa y explicativa.",La jerarquía de Chomsky.,"La jerarquía utilizada para clasificar gramáticas según su estructura de frase en el curso Teoría de Autómatas de la Maestría en Computación es la jerarquía de Chomsky.
+
+La jerarquía de Chomsky es una clasificación de las gramáticas en función de su estructura de frase, que se basa en la complejidad de la estructura de la gramática. La jerarquía de Chomsky es la siguiente:
+
+1. Gramáticas libres de contexto (L)
+2. Gramáticas contextuales (K)
+3. Gramáticas regulares (R)
+4. Gramáticas de tipo 0 (0)
+
+Cada una de estas categorías tiene sus propias características y propiedades, y se clasifican en función de la complejidad de su estructura de frase.
+
+La jerarquía de Chomsky es importante en la teoría de autómatas y lenguajes formales, ya que permite clasificar y analizar las gramáticas de acuerdo con su estructura y complejidad.",11.32,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,open_ended,¿Qué herramienta matemática se estudia para demostrar que un lenguaje no es regular?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Qué herramienta matemática se estudia para demostrar que un lenguaje no es regular?
+
+Da una respuesta completa y explicativa.",El Pumping Lemma.,"Lo siento, pero no puedo encontrar la información solicitada en los documentos proporcionados. ¿Puedo ayudarte con algo más?",5.79,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,open_ended,¿Qué modelos matemáticos se analizan para el reconocimiento de lenguajes formales?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Qué modelos matemáticos se analizan para el reconocimiento de lenguajes formales?
+
+Da una respuesta completa y explicativa.",Desde los autómatas de estados finitos hasta las máquinas de Turing.,"En el curso Teoría de Autómatas de la Maestría en Computación, se analizan los siguientes modelos matemáticos para el reconocimiento de lenguajes formales:
+
+1. Autómatas de estados finitos (FA's)
+2. Expresiones regulares
+3. Gramáticas regulares
+4. Autómatas de pila (PDA's)
+5. Gramáticas libres de contexto
+6. Máquinas de Turing
+
+Estos modelos matemáticos son fundamentales para entender la teoría de autómatas y lenguajes formales, y son utilizados para analizar y reconocer lenguajes formales.",9.01,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,open_ended,¿Qué formación matemática previa se asume en los estudiantes de este curso de postgrado?,"En el curso Teoría de Autómatas de la Maestría en Computación, ¿Qué formación matemática previa se asume en los estudiantes de este curso de postgrado?
+
+Da una respuesta completa y explicativa.",Conocimientos sólidos de matemática discreta adquiridos durante el bachillerato.,"Según el documento, se asume que los estudiantes han aprobado a nivel de bachillerato dos o más cursos de matemática discreta, los cuales brindan herramientas para resolver los problemas de teoría de autómatas y lenguajes formales discutidos en clase.",6.78,Teoría de Autómatas,MC6003,
+llama3.1-8b-4bit,open_ended,¿Qué tipo de material se revisa para estudiar las tendencias actuales de investigación?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Qué tipo de material se revisa para estudiar las tendencias actuales de investigación?
+
+Da una respuesta completa y explicativa.",Diferentes papers y artículos científicos seleccionados por el profesor en lugar de un libro de texto único.,No tengo suficiente información para responder a esta pregunta.,5.37,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,open_ended,¿Qué requisitos de calidad deben cumplir los apuntes oficiales realizados por los estudiantes?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Qué requisitos de calidad deben cumplir los apuntes oficiales realizados por los estudiantes?
+
+Da una respuesta completa y explicativa.","Deben ser reportes detallados con imágenes, gráficos y datos adicionales, evitando ser simples resúmenes ejecutivos.","Según el documento, los apuntes oficiales deben cumplir con los siguientes requisitos de calidad:
+
+* Deben ser de mucha calidad, detallados y enriquecidos con imágenes, gráficos, datos adicionales y un poco de humor.
+* Deben ser presentados en un documento hermoso, con portada, tabla de contenido, etc.
+* Deben ser subidos al foro del curso, bajo el thread de ""Apuntes"", antes de cinco días.
+* Deben tener un nombre que cumpla con la forma DOE20mmdd-k.pdf, donde mm es el mes, dd la fecha del día, y k un número secuencial para distinguir entre los apuntes de una misma clase.
+* Si se falla en el nombre del documento, la nota será 0 (sin apelaciones).
+* Todos deben ser apuntadores durante el semestre, pues es parte de la nota final.
+
+Estos requisitos de calidad buscan asegurar que los apuntes oficiales sean completos, precisos y útiles para el desarrollo del curso.",11.45,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,open_ended,¿Qué cinco preguntas clave deben responderse al entregar los resúmenes de los artículos científicos?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Qué cinco preguntas clave deben responderse al entregar los resúmenes de los artículos científicos?
+
+Da una respuesta completa y explicativa.","Problema planteado, importancia, soluciones previas, propuesta de los autores y éxito de la misma.",No tengo suficiente información para responder a esta pregunta.,5.34,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,open_ended,¿Cómo se evalúa la capacidad de comunicación científica de los estudiantes?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Cómo se evalúa la capacidad de comunicación científica de los estudiantes?
+
+Da una respuesta completa y explicativa.",Mediante una presentación oral obligatoria que sigue el formato de una conferencia científica.,"La capacidad de comunicación científica de los estudiantes en el curso Sistemas Operativos Avanzados de la Maestría en Computación se evalúa a través de varias actividades y evaluaciones. Algunas de estas actividades incluyen:
+
+* Presentaciones orales: Los estudiantes deben presentar un paper asignado por el profesor, siguiendo el formato de una conferencia científica. La duración de la presentación será estrictamente cronometrada, y los estudiantes deben prepararse con Beamer.
+* Apuntes: Los estudiantes deben tomar nota de todo lo sucedido en clase y plasmarlo en un documento hermoso, detallado, de mucha calidad, enriquecido con imágenes, gráficos, datos adicionales - inclusive un poco de humor no es mal visto.
+* Exámenes parciales: Todo el material será evaluado en 2 exámenes parciales no acumulativos durante el semestre, en los que se permite un “forro” oficial de una página tamaño carta.
+* Tareas cortas y quices: Habrá una serie de quices y tareas cortas durante el semestre, y los estudiantes deben entregar un trabajo impreso - fuentes de LATEX y PDF por correo.
+
+La evaluación de la capacidad de comunicación científica de los estudiantes se realiza a través de la calificación de estas actividades y evaluaciones.",13.28,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,open_ended,¿Qué experiencia técnica previa es indispensable para el éxito en los proyectos programados?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Qué experiencia técnica previa es indispensable para el éxito en los proyectos programados?
+
+Da una respuesta completa y explicativa.","Programación en C, lenguaje ensamblador y dominio de ambientes UNIX o Linux.","La experiencia técnica previa indispensable para el éxito en los proyectos programados en el curso Sistemas Operativos Avanzados de la Maestría en Computación es amplia experiencia en programación, particularmente en lenguaje C, lenguaje ensamblador, y ambientes UNIX o Linux.",6.83,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,open_ended,¿Qué temas de computación moderna se incluyen en los contenidos técnicos?,"En el curso Sistemas Operativos Avanzados de la Maestría en Computación, ¿Qué temas de computación moderna se incluyen en los contenidos técnicos?
+
+Da una respuesta completa y explicativa.","Cloud Computing, High Performance Computing, dispositivos móviles y sistemas de tiempo real.","Lo siento, pero no puedo proporcionar una respuesta completa y explicativa a la pregunta dada, ya que la pregunta parece estar relacionada con un curso específico de la Maestría en Computación, pero no proporciona suficiente contexto o detalles sobre el curso o la pregunta específica.
+
+Sin embargo, puedo ofrecer una posible respuesta general a la pregunta, basada en la información proporcionada en el documento de curso MC-6004-Sistemas Operativos Avanzados.
+
+El curso de Sistemas Operativos Avanzados cubre detalladamente varios temas avanzados en diseño e implementación de Sistemas Operativos. Algunos de los temas incluidos son:
+
+* Estructuras de Sistemas Operativos
+* Monitores de Máquinas Virtuales
+* Mecanismo de Comunicación en Sistemas Distribuidos
+* Sincronización
+* Scheduling
+* Sistemas distribuidos: Conceptos
+* File Systems
+* Distributed Shared Memory (DSM)
+* Memoria Virtual Recuperable – Atomicidad
+* Sistemas de Tiempo Real: Conceptos Básicos y Scheduling
+* Conceptos de High Performance Computing
+* Dispositivos Móviles
+* Internet, Computación Distribuida y Cloud Computing
+
+Estos temas cubren una amplia gama de temas avanzados en Sistemas Operativos, incluyendo diseño e implementación de sistemas operativos, comunicación",13.32,Sistemas Operativos Avanzados,MC6004,
+llama3.1-8b-4bit,open_ended,¿Por qué el diseño de algoritmos se considera la actividad fundamental de la computación?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Por qué el diseño de algoritmos se considera la actividad fundamental de la computación?
+
+Da una respuesta completa y explicativa.","Porque toda computación es, por definición, el resultado de la ejecución de un algoritmo.","La respuesta es que el diseño de algoritmos es la actividad fundamental de la computación porque es el proceso de crear soluciones efectivas y eficientes para resolver problemas concretos. En la computación, la eficacia y la eficiencia son cruciales para resolver problemas complejos y grandes volúmenes de datos. Los algoritmos son la base de la computación y su diseño es fundamental para desarrollar sistemas y aplicaciones computacionales.
+
+En el curso Análisis de Algoritmos, se estudian técnicas formales de análisis y diseño de algoritmos que permiten la discriminación y programación eficiente de soluciones a problemas concretos. El curso se enfoca en la complejidad de los algoritmos y cómo analizarla para determinar la eficiencia de la solución.
+
+El diseño de algoritmos es fundamental en la computación porque permite:
+
+1. **Resolución de problemas complejos**: Los algoritmos permiten resolver problemas complejos y grandes volúmenes de datos de manera efectiva y eficiente.
+2. **Eficiencia**: Los algoritmos deben ser eficientes en términos de tiempo de ejecución y uso de recursos para resolver problemas.
+3. **Eficacia**: Los algoritmos deben ser efectivos en términos de resolver el problema concreto para el cual fueron diseñados.
+4. **Comparación con otros al",13.22,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,open_ended,¿Cuál es la diferencia crítica entre la efectividad y la eficiencia de un algoritmo?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Cuál es la diferencia crítica entre la efectividad y la eficiencia de un algoritmo?
+
+Da una respuesta completa y explicativa.",La efectividad asegura que resuelva el problema; la eficiencia asegura que lo haga usando pocos recursos de tiempo y espacio.,"La diferencia crítica entre la efectividad y la eficiencia de un algoritmo es fundamental en el análisis y diseño de algoritmos.
+
+La efectividad de un algoritmo se refiere a su capacidad para resolver el problema para el cual fue diseñado. Un algoritmo es efectivo si puede encontrar la solución correcta para el problema, independientemente del tiempo o la cantidad de recursos que requiere. La efectividad es un requisito fundamental para cualquier algoritmo, ya que sin ella, el algoritmo no puede proporcionar la solución correcta al problema.
+
+Por otro lado, la eficiencia de un algoritmo se refiere a su capacidad para resolver el problema en un tiempo y con recursos (como memoria o procesamiento) razonables. Un algoritmo es eficiente si puede resolver el problema en un tiempo y con recursos que son proporcionalmente pequeños a la complejidad del problema. La eficiencia es importante porque permite a los algoritmos ser utilizados en aplicaciones prácticas, donde el tiempo y los recursos son limitados.
+
+En resumen, la efectividad es un requisito fundamental para cualquier algoritmo, mientras que la eficiencia es una característica deseable que permite a los algoritmos ser utilizados en aplicaciones prácticas.
+
+En el curso Análisis de Algoritmos, se estudian técnicas formales de análisis y",13.21,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,open_ended,¿Qué tres componentes son necesarios para lograr algoritmos eficientes?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Qué tres componentes son necesarios para lograr algoritmos eficientes?
+
+Da una respuesta completa y explicativa.","Técnicas de diseño, técnicas de análisis y la creatividad intuitiva.","Para lograr algoritmos eficientes, se necesitan tres componentes principales:
+
+1.  Técnicas de diseño: Estas técnicas sugieren las maneras de abordar el problema y cuáles son las estructuras de datos apropiadas para apoyar el algoritmo.
+2.  Técnicas de análisis: Estas técnicas ayudan a determinar la complejidad del algoritmo y, por lo tanto, a compararlo con otros.
+3.  Creatividad: La creatividad es necesaria para enfocar el problema usando las técnicas de diseño y análisis, y para encontrar soluciones innovadoras.
+
+Estos tres componentes son fundamentales para diseñar algoritmos eficientes y resolver problemas complejos en computación.",9.52,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,open_ended,"¿Qué herramientas se utilizan para analizar la complejidad de ""peor caso""?","En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Qué herramientas se utilizan para analizar la complejidad de ""peor caso""?
+
+Da una respuesta completa y explicativa.","Funciones recurrentes, notación asintótica (""O grande"") y pruebas por inducción.","La respuesta es: Funciones recurrentes, notación ""o grande"" e inducción.
+
+En el curso Análisis de Algoritmos de la Maestría en Computación, se enseñan técnicas formales de análisis y diseño de algoritmos que permiten la discriminación y programación eficiente (desde el punto de vista de tiempo de ejecución) de soluciones a problemas concretos. Entre estas técnicas se encuentran el uso de funciones recurrentes, notación ""o grande"" e inducción para analizar la complejidad de ""peor caso"" de algoritmos.
+
+Las funciones recurrentes son una herramienta matemática para analizar la complejidad de algoritmos, permitiendo a los estudiantes comprender cómo se comportan los algoritmos en los peores casos. La notación ""o grande"" es una forma de representar la complejidad de un algoritmo, mientras que la inducción es una técnica para demostrar la efectividad de un algoritmo.
+
+Al finalizar el curso, el estudiante podrá analizar la complejidad de ""peor caso"" de algoritmos utilizando estas herramientas y técnicas, lo que le permitirá tomar decisiones informadas sobre la eficiencia de los algoritmos y su capacidad para resolver problemas concretos.",12.8,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,open_ended,¿Qué tipos de algoritmos se estudian dentro de la categoría probabilista?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Qué tipos de algoritmos se estudian dentro de la categoría probabilista?
+
+Da una respuesta completa y explicativa.","Algoritmos numéricos, de Monte Carlo y de Las Vegas.","En el curso Análisis de Algoritmos de la Maestría en Computación, se estudian varios tipos de algoritmos dentro de la categoría probabilista, incluyendo:
+
+1. **Algoritmos numéricos**: Estos algoritmos utilizan números aleatorios para resolver problemas numéricos, como la aproximación de números pi o la resolución de ecuaciones lineales.
+2. **Algoritmos de Monte Carlo**: Estos algoritmos utilizan números aleatorios para resolver problemas de probabilidad y estadística, como la estimación de la población de una población dada.
+3. **Algoritmos de Las Vegas**: Estos algoritmos utilizan números aleatorios para resolver problemas de computación, como la búsqueda en grafos o la resolución de problemas de satisfacción de restricciones.
+
+Estos algoritmos probabilistas se estudian en el curso Análisis de Algoritmos para entender cómo pueden ser utilizados para resolver problemas complejos en computación.",10.95,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,open_ended,¿Cómo se clasifican los problemas según su complejidad en este programa?,"En el curso Análisis de Algoritmos de la Maestría en Computación, ¿Cómo se clasifican los problemas según su complejidad en este programa?
+
+Da una respuesta completa y explicativa.","En las clases P, NP, NP-completos y NP-difíciles.","En el curso Análisis de Algoritmos de la Maestría en Computación, los problemas se clasifican según su complejidad en las siguientes categorías:
+
+1. Problemas en P: Son problemas que pueden ser resueltos en un tiempo polinomial, es decir, en un tiempo que crece al cuadrado o al cubo del tamaño del input, pero no de manera exponencial.
+2. Problemas en NP: Son problemas que pueden ser resueltos en un tiempo polinomial, pero no necesariamente en un tiempo que crece al cuadrado o al cubo del tamaño del input. Estos problemas pueden ser resueltos en un tiempo que crece de manera exponencial, pero no necesariamente en un tiempo que crece de manera polinomial.
+3. Problemas NP-completos: Son problemas que son difíciles de resolver y que pueden ser resueltos en un tiempo que crece de manera exponencial. Estos problemas son considerados como los más difíciles de resolver y son utilizados como casos de prueba para evaluar la complejidad de otros problemas.
+
+Es importante destacar que la clasificación de los problemas según su complejidad es un tema complejo y que hay diferentes formas de clasificarlos. En este curso, se enfatiza en la clasificación de los problemas según su complejidad en términos de tiempo",13.25,Análisis de Algoritmos,MC6102,
+llama3.1-8b-4bit,open_ended,"¿Por qué la Ciencia de la Computación ha sido considerada históricamente ""débil"" en sus procedimientos?","En el curso Diseño de Experimentos de la Maestría en Computación, ¿Por qué la Ciencia de la Computación ha sido considerada históricamente ""débil"" en sus procedimientos?
+
+Da una respuesta completa y explicativa.",Debido a la falta de uso sistemático de técnicas experimentales clásicas para validar o refutar hipótesis.,"La Ciencia de la Computación ha sido considerada históricamente ""débil"" en sus procedimientos experimentales debido a su enfoque tradicional en la teoría y la modelización, en lugar de la experimentación y la investigación empírica. Esto se debe a que la Ciencia de la Computación ha sido históricamente más enfocada en la teoría y la modelización, en lugar de la experimentación y la investigación empírica. Sin embargo, en el curso Diseño de Experimentos, se busca entrenar a los estudiantes en el uso de las técnicas clásicas de Diseño de Experimentos para validar o refutar las afirmaciones, hipótesis o teorías de las disciplinas computacionales, así como para ejercer controles de calidad en la práctica del desarrollo de software.",9.85,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,open_ended,¿Qué utilidad tiene el Diseño de Experimentos (DoE) en la industria del software?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Qué utilidad tiene el Diseño de Experimentos (DoE) en la industria del software?
+
+Da una respuesta completa y explicativa.",Permite ejercer controles de calidad rigurosos durante el desarrollo de productos de software.,"El Diseño de Experimentos (DoE) es una herramienta fundamental en la industria del software, ya que permite a los desarrolladores y gerentes de proyectos tomar decisiones informadas sobre la mejora de los productos y servicios. A continuación, se presentan algunas utilidades del DoE en la industria del software:
+
+1. **Mejora de la calidad**: El DoE ayuda a identificar y eliminar defectos y errores en el software, lo que mejora la calidad general del producto.
+2. **Ahorro de tiempo y recursos**: Al identificar los factores que influyen en la calidad del software, los desarrolladores pueden enfocar sus esfuerzos en áreas específicas, lo que ahorra tiempo y recursos.
+3. **Mejora de la eficiencia**: El DoE ayuda a identificar áreas de mejora en el proceso de desarrollo, lo que permite a los desarrolladores trabajar de manera más eficiente y efectiva.
+4. **Reducir la variabilidad**: El DoE ayuda a identificar y reducir la variabilidad en el proceso de desarrollo, lo que garantiza que el producto se desarrolla de manera consistente y predecible.
+5. **Mejora de la comunicación**: El DoE facilita la comunicación entre los desarrolladores, gerentes de proyectos y clientes, lo que garantiza que todos estén alineados con los objetivos y expectativas",13.24,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,open_ended,¿Qué capacidades adquiere el estudiante para manejar datos experimentales?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Qué capacidades adquiere el estudiante para manejar datos experimentales?
+
+Da una respuesta completa y explicativa.",El uso de software estadístico para analizar resultados con niveles de confianza y certeza científica.,"El estudiante que completa el curso de Diseño de Experimentos en la Maestría en Computación adquiere las capacidades necesarias para manejar datos experimentales de manera efectiva. Al finalizar el curso, el estudiante estará en capacidad de:
+
+1. **Establecer hipótesis**: El estudiante aprenderá a formular hipótesis que puedan ser verificadas experimentalmente, lo que les permite desarrollar un enfoque científico para resolver problemas en la computación.
+2. **Diseñar experimentos**: El curso enseña a los estudiantes a diseñar experimentos científicos aplicados a la Ciencia de la Computación, lo que les permite recopilar datos precisos y confiables.
+3. **Analizar datos**: El estudiante aprenderá a utilizar software apropiado para analizar los resultados obtenidos de los experimentos, lo que les permite determinar la certeza de sus conclusiones.
+4. **Aplicar técnicas de Diseño de Experimentos**: El curso enseña a los estudiantes a utilizar técnicas de Diseño de Experimentos para controlar la calidad en el desarrollo de productos de software, lo que les permite identificar y corregir errores en el proceso de desarrollo.
+5. **Usar técnicas experimentales**: El estudiante aprenderá a utilizar las técnicas experimentales aprendidas en el curso en su propuesta de tesis,",13.25,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,open_ended,¿Cuál es la estructura metodológica que siguen los proyectos en este curso?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Cuál es la estructura metodológica que siguen los proyectos en este curso?
+
+Da una respuesta completa y explicativa.","Realización de experimentos, recolección de datos, análisis de resultados y redacción de reportes técnicos.","La estructura metodológica que siguen los proyectos en el curso Diseño de Experimentos de la Maestría en Computación es la siguiente:
+
+1. **Calendario**: El curso es de 3 horas lectivas por semana. Para propósitos oficiales, la asistencia se considerará obligatoria y valdrá una pequeña pero real parte de la nota del curso.
+2. **Exámenes Parciales**: Todo el material será evaluado en 2 exámenes parciales no acumulativos durante el semestre, en los que se permite un “forro” oficial de una página tamaño carta.
+3. **Apuntadores**: En cada clase habrá al menos 2 apuntadores oficiales, cuyo trabajo es tomar nota de todo lo sucedido en clase. Son inaceptables transcripciones o un montón de fotografías.
+4. **Material de Clase**: No hay un libro de texto para este curso. El profesor desarrollará la mayor parte de los temas del curso. También, se leerá material asignado por el profesor para las presentaciones de los estudiantes.
+5. **Presentaciones Orales**: Un componente muy importante de este curso es la práctica de presentaciones científicas tipo conferencia. Se buscar reforzar las habilidades y reducir las debilidades de cada estudiante como presentador.
+6. **Paper de Investig",13.3,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,open_ended,¿Qué formación técnica previa es requerida para el uso de herramientas en este curso?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Qué formación técnica previa es requerida para el uso de herramientas en este curso?
+
+Da una respuesta completa y explicativa.","Conocimiento de UNIX, programación en C y dominio del entorno estadístico R.","Para el curso Diseño de Experimentos de la Maestría en Computación, se requiere haber recibido por lo menos un curso de Probabilidad y Estadística en el bachillerato, así como un buen conocimiento de UNIX, del lenguaje de programación C y de R.",6.76,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,open_ended,¿Cómo influye este curso en el desarrollo de la tesis de maestría del estudiante?,"En el curso Diseño de Experimentos de la Maestría en Computación, ¿Cómo influye este curso en el desarrollo de la tesis de maestría del estudiante?
+
+Da una respuesta completa y explicativa.",Entrena al estudiante para establecer hipótesis verificables experimentalmente en su propuesta de tesis.,"El curso Diseño de Experimentos de la Maestría en Computación tiene un impacto significativo en el desarrollo de la tesis de maestría del estudiante. A continuación, se presentan algunos de los aspectos clave en los que este curso influye en el desarrollo de la tesis:
+
+1. **Desarrollo de habilidades en el diseño y análisis de experimentos**: El curso proporciona a los estudiantes las habilidades necesarias para diseñar y analizar experimentos científicos, lo que es fundamental para la investigación de tesis. Esto les permite desarrollar una investigación original y rigurosa.
+2. **Uso de técnicas estadísticas**: El curso enseña a los estudiantes a utilizar técnicas estadísticas para analizar los resultados de los experimentos, lo que les permite tomar decisiones informadas sobre su investigación.
+3. **Desarrollo de la capacidad de comunicar resultados**: El curso enfatiza la importancia de comunicar los resultados de la investigación de manera clara y concisa, lo que es esencial para la presentación de la tesis.
+4. **Preparación para la investigación de tesis**: El curso proporciona a los estudiantes una base sólida en la investigación científica, lo que les permite desarrollar una investigación original y rigurosa para su tesis.
+5. **Desarrollo de habilidades en la escritura y presentación de artículos científicos**: El curso ense",13.26,Diseño de Experimentos,MC6104,
+llama3.1-8b-4bit,open_ended,¿Qué criterios separan la ciencia de la pseudociencia según los contenidos del curso?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Qué criterios separan la ciencia de la pseudociencia según los contenidos del curso?
+
+Da una respuesta completa y explicativa.","Los conceptos de historia y filosofía de la ciencia, aplicados a través de un exigente escepticismo científico.","Según los contenidos del curso Introducción a la Investigación de la Maestría en Computación, los criterios que separan la ciencia de la pseudociencia son:
+
+1. Irracionalidad: La ciencia se basa en la razón y la lógica, mientras que la pseudociencia se basa en la irracionalidad y la falta de evidencia.
+2. Método Científico: La ciencia sigue un método científico riguroso, que incluye la formulación de hipótesis, la recolección de datos, la análisis de datos y la repetición de experimentos para confirmar los resultados.
+3. Observación: La ciencia se basa en la observación y la medición de fenómenos naturales, mientras que la pseudociencia se basa en la especulación y la suposición.
+4. Falacias lógicas: La ciencia evita las falacias lógicas y las trampas del razonamiento, mientras que la pseudociencia las utiliza para apoyar sus afirmaciones.
+5. Hipótesis científicas: La ciencia se basa en hipótesis científicas que pueden ser probadas o rechazadas mediante la evidencia, mientras que la pseudociencia se basa en hipótesis no científicas que no pueden ser probadas o rechaz",13.26,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,open_ended,¿Cuál es el deber esencial de un científico según este programa académico?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Cuál es el deber esencial de un científico según este programa académico?
+
+Da una respuesta completa y explicativa.",Generar y comunicar conocimiento nuevo a la comunidad.,"Según el curso Introducción a la Investigación de la Maestría en Computación, el deber esencial de un científico es generar y comunicar conocimiento nuevo, obtenido a través de un exigente escepticismo.",6.46,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,open_ended,"¿Qué habilidades de ""infraestructura"" se desarrollan para maximizar el éxito del investigador?","En el curso Introducción a la Investigación de la Maestría en Computación, ¿Qué habilidades de ""infraestructura"" se desarrollan para maximizar el éxito del investigador?
+
+Da una respuesta completa y explicativa.","Cómo dar presentaciones, leer y escribir papers, y administrar efectivamente el tiempo.","La respuesta a la pregunta es que en el curso Introducción a la Investigación de la Maestría en Computación, se desarrollan habilidades de ""infraestructura"" para maximizar el éxito del investigador, como:
+
+* Conocer la metodología de la investigación científica y de solución de problemas.
+* Conocer aspectos técnicos y formales para la publicación de resultados.
+* Conocer cómo dar presentaciones científicas.
+* Conocer cómo leer papers.
+* Conocer cómo escribir documentos científicos.
+* Conocer cómo escribir papers.
+* Conocer cómo escoger tema de Tesis.
+* Conocer cómo escoger asesor de Tesis.
+* Conocer cómo escribir y juzgar Propuestas de Investigación.
+* Conocer cómo escribir una Tesis.
+* Conocer cómo administrar el tiempo.
+
+Estas habilidades de infraestructura son fundamentales para que el investigador pueda desarrollar una investigación científica exitosa y publicar sus resultados de manera efectiva.",11.35,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,open_ended,¿Qué aspectos administrativos se revisan para orientar al estudiante en su posgrado?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Qué aspectos administrativos se revisan para orientar al estudiante en su posgrado?
+
+Da una respuesta completa y explicativa.",Los reglamentos y lineamientos del programa de maestría para la presentación de propuestas y tesis.,"En el curso Introducción a la Investigación de la Maestría en Computación, se revisan los siguientes aspectos administrativos para orientar al estudiante en su posgrado:
+
+1. **Presentación de propuestas de investigación**: Se revisa el proceso de presentación de propuestas de investigación y el desarrollo de tesis de investigación, relacionado a los reglamentos y lineamientos del Programa de Maestría en Computación del ITCR.
+2. **Elaboración y presentación de artículos científicos**: Se orienta al estudiante en la elaboración y presentación de artículos científicos, incluyendo la escritura de documentos científicos, la presentación de papers y la comunicación de conocimiento nuevo.
+3. **Administración del tiempo**: Se revisa la importancia de la administración del tiempo para completar el trabajo de investigación y la tesis de maestría en el plazo establecido.
+4. **Reglamentos y lineamientos del programa**: Se revisan los reglamentos y lineamientos del Programa de Maestría en Computación del ITCR, incluyendo los requisitos y procedimientos para la presentación de propuestas de investigación y el desarrollo de tesis de investigación.
+
+Estos aspectos administrativos son fundamentales para que los estudiantes de la Maestría en Computación puedan completar su trabajo de investigación y tesis de maestría de manera",13.28,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,open_ended,¿Qué elementos debe contener la propuesta de un artículo científico para ser aprobada?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Qué elementos debe contener la propuesta de un artículo científico para ser aprobada?
+
+Da una respuesta completa y explicativa.","Definición del problema, su importancia, soluciones previas, propuesta original y efectos esperados.","La propuesta de un artículo científico para ser aprobada en el curso Introducción a la Investigación de la Maestría en Computación debe contener los siguientes elementos:
+
+a) ¿Cuál es el problema en el que va a trabajar?
+
+b) ¿Por qué es un problema interesante o importante?
+
+c) ¿Qué otras soluciones se han intentado para resolver este problema?
+
+d) ¿Cuál es la solución que usted propone?
+
+e) ¿De ser exitosa su solución, qué efectos habría?
+
+Estos elementos deben estar escritos en inglés y deben ser presentados en un párrafo único, como se indica en el texto.",8.96,Introducción a la Investigación,MC7201,
+llama3.1-8b-4bit,open_ended,¿Cuál es la herramienta tecnológica obligatoria para la elaboración de presentaciones?,"En el curso Introducción a la Investigación de la Maestría en Computación, ¿Cuál es la herramienta tecnológica obligatoria para la elaboración de presentaciones?
+
+Da una respuesta completa y explicativa.",Beamer.,La herramienta tecnológica obligatoria para la elaboración de presentaciones en el curso Introducción a la Investigación de la Maestría en Computación es Beamer.,6.07,Introducción a la Investigación,MC7201,

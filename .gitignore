@@ -34,8 +34,8 @@ models/
 Thumbs.db
 
 # Results
-results/raw/
-results/raw_fullcontext/
+# results/raw/
+# results/raw_fullcontext/
 # results/metrics/
 
 # LaTeX
