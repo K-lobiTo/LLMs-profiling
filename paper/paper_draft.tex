@@ -120,21 +120,21 @@ sacalderon@itcr.ac.cr}
 
 \and
 
-\IEEEauthorblockN{Martín Solís}
+\IEEEauthorblockN{Martín Solís-Salazar}
 \IEEEauthorblockA{\textit{Instituto Tecnológico de Costa Rica }\\
 Cartago, Costa Rica\\
 marsolis@itcr.ac.cr}
 
 \linebreakand
 
-\IEEEauthorblockN{Mauricio Araya}
+\IEEEauthorblockN{Mauricio Arroyo-Herrera}
 \IEEEauthorblockA{\textit{Instituto Tecnológico de Costa Rica }\\
 Cartago, Costa Rica\\
 marroyo@itcr.ac.cr}
 
 \and
 
-\IEEEauthorblockN{Mónica Hernández}
+\IEEEauthorblockN{Mónica Hernández-Campos}
 \IEEEauthorblockA{\textit{Instituto Tecnológico de Costa Rica }\\
 Cartago, Costa Rica\\
 mohernandez@itcr.ac.cr}
@@ -160,10 +160,10 @@ aguilarjos@gmail.com}
 \maketitle
 
 \begin{abstract}
-Universities are adopting \gls{AI} tools as part of their digital transformation, but the most capable \glspl{LLM} are proprietary and cloud-hosted, raising cost, data-privacy, and infrastructure-dependency concerns for institutions with limited resources.
-This paper benchmarks six open-source \gls{LLM} configurations (Qwen2.5-3B, Llama-3.1-8B, and DeepSeek-R1-Distill-Qwen-14B, across full precision and 4-/8-bit quantization) on a 270-question Spanish \gls{QA} dataset grounded in university postgraduate course-program documents, comparing a \gls{RAG} pipeline against supplying the full 15-document corpus as context, and reporting accuracy, inference latency, and estimated cost per 1000 queries for each.
-Results show no single context-supply strategy or model tier dominates: DeepSeek-R1-Distill answers binary questions substantially better under RAG, Llama-3.1-8B shows the opposite pattern, and full-context is consistently 2.4--9.6$\times$ more expensive than RAG per 1000 queries regardless of model.
-The efficient tier (Qwen2.5-3B, Llama-3.1-8B-4bit) retains open-ended answer quality close to the larger upper-bound tier at 3.6--6.8$\times$ lower cost, demonstrating that self-hosted open-source \glspl{LLM}, run end to end on Costa Rica's national HPC infrastructure without any paid commercial API, are a technically viable alternative to proprietary \gls{LLM} APIs for this class of institutional deployment.
+Universities are adopting \gls{AI} tools as part of their digital transformation, but the most capable \glspl{LLM} are proprietary and cloud-hosted, raising cost, data-privacy, and infrastructure-dependency concerns for institutions with limited resources, such as many Latin American higher education institutions.
+This paper benchmarks six open-source \gls{LLM} configurations (Qwen2.5-3B, Llama-3.1-8B, and DeepSeek-R1-Distill-Qwen-14B, across full precision and 4-/8-bit quantization), evaluating each under a \gls{RAG} pipeline and under a full-context baseline on a 270-question Spanish \gls{QA} dataset grounded in postgraduate course-program documents from a Latin American higher education institution, and measuring accuracy, inference latency, and estimated cost per 1000 queries for every configuration.
+No single context-supply strategy or model tier dominates: DeepSeek-R1-Distill answers binary questions substantially better under RAG, Llama-3.1-8B shows the opposite pattern, full-context is consistently 2.4 to 9.6 times more expensive than RAG per 1000 queries regardless of model, and the efficient tier (Qwen2.5-3B, Llama-3.1-8B-4bit) retains open-ended answer quality close to the larger upper-bound tier at 3.6 to 6.8 times lower cost.
+These results indicate that self-hosted open-source \glspl{LLM}, run end to end on Costa Rica's national HPC infrastructure without any paid commercial API, are a technically viable alternative to proprietary \gls{LLM} APIs for this class of institutional deployment, provided the context-supply strategy is chosen per model and question type rather than fixed a priori.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -189,7 +189,7 @@ Section~VI discusses what those results imply for model and context-strategy sel
 
 \gls{RAG} has become a standard mitigation for \gls{LLM} hallucination and outdated parametric knowledge, but comparing RAG configurations rigorously requires dedicated benchmarks and standardized evaluation protocols rather than ad hoc pipelines.
 BERGEN provides an end-to-end library for reproducible RAG experimentation, standardizing the comparison of retrievers, rerankers, and generator \glspl{LLM} under shared metrics and datasets~\cite{rau2024bergen}.
-Chen et al. decompose RAG evaluation along four fundamental abilities --- noise robustness, negative rejection, information integration, and counterfactual robustness --- to diagnose where different LLMs' RAG pipelines specifically fail~\cite{chen2024rgb}.
+Chen et al. decompose RAG evaluation along four fundamental abilities --- noise robustness, negative rejection, information integration, and counterfactual robustness (to diagnose where different LLMs' RAG pipelines specifically fail~\cite{chen2024rgb}).
 Most directly relevant to this study's design, LaRA benchmarks RAG against long-context LLMs across 2{,}326 test cases spanning four \gls{QA} tasks, finding that the optimal choice between the two depends on a complex interplay of model capability, context length, task type, and retrieval characteristics, with no universally superior strategy~\cite{li2025lara} --- a finding this paper's own RAG-vs-full-context comparison (Section~VI-A) independently corroborates in a different language and domain.
 
 \subsection{Domain-Specific and Resource-Constrained RAG Evaluation}
