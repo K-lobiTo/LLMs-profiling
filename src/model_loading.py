@@ -148,6 +148,22 @@ def build_generate_fn(model, tokenizer, model_key, max_new_tokens=512, skip_reas
 
         if is_reasoning_model and not skip_reasoning:
             return strip_reasoning(raw_text)
+        if is_reasoning_model and "</think>" in raw_text:
+            # skip_reasoning=True primes the prompt with an already-closed
+            # <think></think> block so the model is expected to generate
+            # the answer directly with no further think-tags — but
+            # DeepSeek-R1-Distill-14B occasionally re-opens/re-closes
+            # reasoning anyway and re-states the answer after a second
+            # "</think>" (observed in ~5% of its short-answer/binary
+            # generations). raw_text here is only the newly generated
+            # tokens (the forced-closed tag itself was part of the
+            # prompt, not decoded), so any "</think>" found is one of
+            # these unexpected re-openings, not the normal case — keep
+            # only the text after the last one, same guard as
+            # strip_reasoning() uses for the full-reasoning path.
+            print(f"WARNING: unexpected </think> in skip_reasoning output "
+                  f"— using text after the last one. Raw output: {raw_text!r}")
+            return raw_text.rsplit("</think>", 1)[-1].strip()
         return raw_text.strip()
 
     return generate_fn
