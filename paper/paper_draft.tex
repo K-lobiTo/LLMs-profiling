@@ -74,6 +74,7 @@ and against the Input sentence}
 
 \newacronym{RAG}{RAG}{Retrieval-Augmented Generation}
 \newacronym{QA}{QA}{Question Answering}
+\newacronym{HPC}{HPC}{High-Performance Computing}
 
 
 \ifCLASSOPTIONcompsoc
@@ -163,7 +164,7 @@ aguilarjos@gmail.com}
 Universities are adopting \gls{AI} tools as part of their digital transformation, but the most capable \glspl{LLM} are proprietary and cloud-hosted, raising cost, data-privacy, and infrastructure-dependency concerns for institutions with limited resources, such as many Latin American higher education institutions.
 This paper benchmarks six open-source \gls{LLM} configurations (Qwen2.5-3B, Llama-3.1-8B, and DeepSeek-R1-Distill-Qwen-14B, across full precision and 4-/8-bit quantization), evaluating each under a \gls{RAG} pipeline and under a full-context baseline on a 270-question Spanish \gls{QA} dataset grounded in postgraduate course-program documents from a Latin American higher education institution, and measuring accuracy, inference latency, and estimated cost per 1000 queries for every configuration.
 No single context-supply strategy or model tier dominates: DeepSeek-R1-Distill answers binary questions substantially better under RAG, Llama-3.1-8B shows the opposite pattern, full-context is consistently 2.4 to 9.6 times more expensive than RAG per 1000 queries regardless of model, and the efficient tier (Qwen2.5-3B, Llama-3.1-8B-4bit) retains open-ended answer quality close to the larger upper-bound tier at 3.6 to 6.8 times lower cost.
-These results indicate that self-hosted open-source \glspl{LLM}, run end to end on Costa Rica's national HPC infrastructure without any paid commercial API, are a technically viable alternative to proprietary \gls{LLM} APIs for this class of institutional deployment, provided the context-supply strategy is chosen per model and question type rather than fixed a priori.
+These results indicate that self-hosted open-source \glspl{LLM}, run end to end on an institution's own infrastructure without any paid commercial API, are a technically viable alternative to proprietary \gls{LLM} APIs for this class of institutional deployment, provided the context-supply strategy is chosen per model and question type rather than fixed a priori.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -177,9 +178,9 @@ The most capable \glspl{LLM} that could power such tools, however, are typically
 This raises a practical question this paper investigates directly: can smaller, open-source \glspl{LLM}, self-hosted on infrastructure a resource-constrained university can realistically access, answer domain-specific questions about its own institutional documents accurately and cheaply enough to be useful in practice?
 
 The remainder of this paper is organized as follows.
-Section~II surveys related work on RAG benchmarking and non-English institutional QA, and positions this study's contribution relative to it.
+Section~II surveys related work on \gls{RAG} benchmarking and non-English institutional \gls{QA}, and positions this study's contribution relative to it.
 Section~III frames this question concretely as a \gls{RAG}-based \gls{QA} benchmark over university course-program documents.
-Section~IV describes the experimental design: the question dataset, the two context-supply strategies compared (RAG and full-context), the six benchmarked model configurations, and the HPC infrastructure used.
+Section~IV describes the experimental design: the question dataset, the two context-supply strategies compared (\gls{RAG} and full-context), the six benchmarked model configurations, and the \gls{HPC} infrastructure used.
 Section~V reports accuracy, latency, and cost results across all configurations.
 Section~VI discusses what those results imply for model and context-strategy selection, and Section~VII concludes with practical deployment recommendations and this study's limitations.
 
