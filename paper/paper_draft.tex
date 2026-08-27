@@ -19,6 +19,7 @@
 %\usepackage{url}
 \usepackage{tabularx}
 \usepackage{xcolor}
+\usepackage{colortbl}
 \usepackage{soul}
 \newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}
 \usepackage{todonotes}
@@ -143,16 +144,13 @@ mohernandez@itcr.ac.cr}
 \and
 
 \IEEEauthorblockN{José Aguilar}
-\IEEEauthorblockA{\textit{GIDITIC, Department of Informatics and Systems} \\
-\textit{Universidad Eafit}\\
-Medellín, Colombia}
 \IEEEauthorblockA{\textit{CEMISID} \\
 \textit{Universidad de Los Andes}\\
-Mérida, Venezuela}
-\IEEEauthorblockA{\textit{Dpto. de Automática} \\
-\textit{Universidad de Alcalá}\\
-Alcalá de Henares, Spain\\
-aguilarjos@gmail.com}
+Mérida, Venezuela\\
+aguilar@ula.ve}
+\IEEEauthorblockA{\textit{IMDEA Software Institute}\\
+Madrid, Spain\\
+jose.aguilar@imdea.org}
 
 }
 
@@ -233,7 +231,7 @@ This study is guided by three research questions, addressed in turn in Sections~
 
 \subsection{Dataset}
 
-The QA dataset consists of 270 questions in Spanish (90 per category: binary, short-answer, open-ended), each labeled with its source course and program (\textit{Maestr\'ia}) and a curated expected answer.
+The QA dataset consists of 270 questions in Spanish (90 per category: binary, short-answer, open-ended), each labeled with its source course and postgraduate program (\textit{Maestr\'ia}) and a curated expected answer.
 Each of the 90 questions per category is evaluated exactly once per model per context-supply condition (Section~\ref{ssec:context-conditions}), using greedy (deterministic, \texttt{do\_sample=False}) decoding throughout, rather than repeated sampled batches --- an earlier design considered drawing random 20-question batches per run to estimate variance across samples, but was dropped in favor of evaluating the full 90-question set once per condition, given the project timeline.
 
 The retrieval/context corpus consists of 15 university postgraduate course-program documents (PDF and DOCX, in Spanish), covering course descriptions, objectives, evaluation structure, and bibliography.
@@ -311,20 +309,46 @@ This setup is itself part of the paper's motivation: rather than benchmarking on
 \section{Results}
 
 Tables and figures in this section are typeset directly from the result CSV files in \texttt{data/} at compile time via \texttt{pgfplotstable} and \texttt{pgfplots}, rather than transcribed by hand, so they always reflect the current contents of those files.
-\texttt{comparison\_accuracy.csv} holds all three question categories in one file (long format); the \texttt{\textbackslash FilterByCategory} macro below filters it per category at compile time, so no separate per-category files are needed.
+\texttt{comparison\_accuracy.csv} holds all three question categories in one file (long format); the \texttt{\textbackslash FilterByCategoryBold} macro below filters it per category at compile time, so no separate per-category files are needed.
+In every table, \textbf{bold} marks the better-performing condition in each RAG-vs-full-context pair: the higher value for accuracy metrics (Tables~\ref{tab:binary-accuracy}--\ref{tab:open-ended-meteor}), and the lower value for time and cost (Table~\ref{tab:efficiency}, where less is better).
 
 \pgfplotstableread[col sep=comma]{data/comparison_accuracy.csv}\accuracytable
 \pgfplotstableread[col sep=comma]{data/comparison_efficiency.csv}\efficiencytable
 
 \makeatletter
-% Loops over \accuracytable, building one tabular row (formatted with
-% \pgfmathprintnumber) for every row whose 'category' column equals #1,
-% using only the columns listed in #2 (comma-separated, first output
-% column is always model_key). Output is accumulated into a macro and
-% printed only after the loop's own grouping has closed — emitting
-% "&"/"\\" directly from inside \foreach's body breaks tabular's
-% alignment parser, hence the two-step accumulate-then-print structure.
-\newcommand{\FilterByCategory}[2]{%
+% Prints a table-cell number formatted to #2 decimal places; when #3=1
+% (the better-performing condition) it also shades the cell background
+% and bolds the number, since bold alone is subtle for digits in a
+% serif font and was hard to spot at a glance. Declared \protected so
+% it survives every level of \xdef re-expansion inside the accumulation
+% macros below without actually executing until the accumulated text is
+% finally typeset as real tabular content. This matters because
+% \cellcolor/\textbf embedded directly inside a value that later gets
+% copied through a SECOND \xdef (e.g. from a per-row macro into a
+% per-table accumulator, as both macros below do) silently corrupts
+% array's row-scanning state and fails with "Use of \@@array doesn't
+% match its definition" — plain \noexpand only protects a token through
+% one round of re-expansion, not several.
+\protected\def\TableCellFmt#1#2#3{%
+  \ifnum#3=1
+    \cellcolor{gray!25}\textbf{\pgfmathprintnumber[fixed,fixed zerofill,precision=#2]{#1}}%
+  \else
+    \pgfmathprintnumber[fixed,fixed zerofill,precision=#2]{#1}%
+  \fi
+}
+
+% Loops over \accuracytable, building one tabular row for every row
+% whose 'category' column equals #1. #2 is a comma-separated list of
+% colA/colB/precision triples (pgffor tuple syntax): colA is the RAG
+% column, colB the full-context column, precision the decimal places to
+% print. Within each pair, the numerically higher value (the better-
+% performing condition, since these are all accuracy metrics) is
+% wrapped in \textbf; on an exact tie neither is bolded. Output is
+% accumulated into a macro and printed only after the loop's own
+% grouping has closed — emitting "&"/"\\" directly from inside
+% \foreach's body breaks tabular's alignment parser, hence the two-step
+% accumulate-then-print structure.
+\newcommand{\FilterByCategoryBold}[2]{%
   \gdef\FBC@accum{}%
   \pgfplotstablegetrowsof{\accuracytable}%
   \pgfmathtruncatemacro{\FBC@numrows}{\pgfplotsretval-1}%
@@ -335,15 +359,64 @@ Tables and figures in this section are typeset directly from the result CSV file
     \ifx\FBC@cat\FBC@target
       \pgfplotstablegetelem{\FBC@i}{model_key}\of\accuracytable%
       \edef\FBC@row{\pgfplotsretval}%
-      \foreach \FBC@col in {#2}{%
-        \pgfplotstablegetelem{\FBC@i}{\FBC@col}\of\accuracytable%
-        \edef\FBC@val{\pgfplotsretval}%
-        \xdef\FBC@row{\FBC@row\noexpand&\noexpand\pgfmathprintnumber[fixed,fixed zerofill,precision=3]{\FBC@val}}%
+      \foreach \FBC@colA/\FBC@colB/\FBC@prec in {#2}{%
+        \pgfplotstablegetelem{\FBC@i}{\FBC@colA}\of\accuracytable%
+        \edef\FBC@valA{\pgfplotsretval}%
+        \pgfplotstablegetelem{\FBC@i}{\FBC@colB}\of\accuracytable%
+        \edef\FBC@valB{\pgfplotsretval}%
+        \pgfmathparse{\FBC@valA>\FBC@valB}%
+        \edef\FBC@Agt{\pgfmathresult}%
+        \pgfmathparse{\FBC@valB>\FBC@valA}%
+        \edef\FBC@Bgt{\pgfmathresult}%
+        \ifdim\FBC@Agt pt>0.5pt
+          \xdef\FBC@row{\FBC@row\noexpand&\noexpand\TableCellFmt{\FBC@valA}{\FBC@prec}{1}\noexpand&\noexpand\TableCellFmt{\FBC@valB}{\FBC@prec}{0}}%
+        \else
+          \ifdim\FBC@Bgt pt>0.5pt
+            \xdef\FBC@row{\FBC@row\noexpand&\noexpand\TableCellFmt{\FBC@valA}{\FBC@prec}{0}\noexpand&\noexpand\TableCellFmt{\FBC@valB}{\FBC@prec}{1}}%
+          \else
+            \xdef\FBC@row{\FBC@row\noexpand&\noexpand\TableCellFmt{\FBC@valA}{\FBC@prec}{0}\noexpand&\noexpand\TableCellFmt{\FBC@valB}{\FBC@prec}{0}}%
+          \fi
+        \fi
       }%
       \xdef\FBC@accum{\FBC@accum\FBC@row\noexpand\\}%
     \fi
   }%
   \FBC@accum
+}
+
+% Same idea as \FilterByCategoryBold, but iterates every row of
+% \efficiencytable directly (no 'category' column to filter on there)
+% and bolds the LOWER of each pair instead of the higher one, since for
+% time and cost the smaller value is the better-performing condition.
+\newcommand{\EfficiencyRowsBold}[1]{%
+  \gdef\ERB@accum{}%
+  \pgfplotstablegetrowsof{\efficiencytable}%
+  \pgfmathtruncatemacro{\ERB@numrows}{\pgfplotsretval-1}%
+  \foreach \ERB@i in {0,...,\ERB@numrows}{%
+    \pgfplotstablegetelem{\ERB@i}{model_key}\of\efficiencytable%
+    \edef\ERB@row{\pgfplotsretval}%
+    \foreach \ERB@colA/\ERB@colB/\ERB@prec in {#1}{%
+      \pgfplotstablegetelem{\ERB@i}{\ERB@colA}\of\efficiencytable%
+      \edef\ERB@valA{\pgfplotsretval}%
+      \pgfplotstablegetelem{\ERB@i}{\ERB@colB}\of\efficiencytable%
+      \edef\ERB@valB{\pgfplotsretval}%
+      \pgfmathparse{\ERB@valA<\ERB@valB}%
+      \edef\ERB@Alt{\pgfmathresult}%
+      \pgfmathparse{\ERB@valB<\ERB@valA}%
+      \edef\ERB@Blt{\pgfmathresult}%
+      \ifdim\ERB@Alt pt>0.5pt
+        \xdef\ERB@row{\ERB@row\noexpand&\noexpand\TableCellFmt{\ERB@valA}{\ERB@prec}{1}\noexpand&\noexpand\TableCellFmt{\ERB@valB}{\ERB@prec}{0}}%
+      \else
+        \ifdim\ERB@Blt pt>0.5pt
+          \xdef\ERB@row{\ERB@row\noexpand&\noexpand\TableCellFmt{\ERB@valA}{\ERB@prec}{0}\noexpand&\noexpand\TableCellFmt{\ERB@valB}{\ERB@prec}{1}}%
+        \else
+          \xdef\ERB@row{\ERB@row\noexpand&\noexpand\TableCellFmt{\ERB@valA}{\ERB@prec}{0}\noexpand&\noexpand\TableCellFmt{\ERB@valB}{\ERB@prec}{0}}%
+        \fi
+      \fi
+    }%
+    \xdef\ERB@accum{\ERB@accum\ERB@row\noexpand\\}%
+  }%
+  \ERB@accum
 }
 \makeatother
 
@@ -357,7 +430,7 @@ Tables and figures in this section are typeset directly from the result CSV file
 \toprule
 Model & F1 (RAG) & F1 (Full-context) \\
 \midrule
-\FilterByCategory{binary}{f1_rag,f1_fullcontext}
+\FilterByCategoryBold{binary}{f1_rag/f1_fullcontext/3}
 \bottomrule
 \end{tabular}
 \end{table}
@@ -372,7 +445,7 @@ Model & F1 (RAG) & F1 (Full-context) \\
 \toprule
 Model & F1 (RAG) & F1 (Full-context) \\
 \midrule
-\FilterByCategory{short_answer}{f1_rag,f1_fullcontext}
+\FilterByCategoryBold{short_answer}{f1_rag/f1_fullcontext/3}
 \bottomrule
 \end{tabular}
 \end{table}
@@ -388,7 +461,7 @@ Model & F1 (RAG) & F1 (Full-context) \\
 \toprule
 Model & BERTScore (RAG) & BERTScore (Full-ctx) & ROUGE-L (RAG) & ROUGE-L (Full-ctx) \\
 \midrule
-\FilterByCategory{open_ended}{bertscore_f1_rag,bertscore_f1_fullcontext,rouge_l_rag,rouge_l_fullcontext}
+\FilterByCategoryBold{open_ended}{bertscore_f1_rag/bertscore_f1_fullcontext/3,rouge_l_rag/rouge_l_fullcontext/3}
 \bottomrule
 \end{tabular}
 }
@@ -402,7 +475,7 @@ Model & BERTScore (RAG) & BERTScore (Full-ctx) & ROUGE-L (RAG) & ROUGE-L (Full-c
 \toprule
 Model & METEOR (RAG) & METEOR (Full-ctx) \\
 \midrule
-\FilterByCategory{open_ended}{meteor_rag,meteor_fullcontext}
+\FilterByCategoryBold{open_ended}{meteor_rag/meteor_fullcontext/3}
 \bottomrule
 \end{tabular}
 \end{table}
@@ -414,16 +487,13 @@ Model & METEOR (RAG) & METEOR (Full-ctx) \\
 \caption{Mean generation time and estimated cost per 1000 queries, RAG vs. full-context, by model. Cost estimated at \$0.96/hr (NVIDIA L40S, on-demand)~\cite{spheron2026l40s}.}
 \label{tab:efficiency}
 \resizebox{\columnwidth}{!}{%
-\pgfplotstabletypeset[
-  columns={model_key,mean_generation_time_s_rag,mean_generation_time_s_fullcontext,est_cost_per_1000_queries_usd_rag,est_cost_per_1000_queries_usd_fullcontext},
-  columns/model_key/.style={string type, column name={Model}},
-  columns/mean_generation_time_s_rag/.style={column name={Time RAG (s)}, fixed, fixed zerofill, precision=3},
-  columns/mean_generation_time_s_fullcontext/.style={column name={Time Full-ctx (s)}, fixed, fixed zerofill, precision=3},
-  columns/est_cost_per_1000_queries_usd_rag/.style={column name={Cost RAG (\$/1k)}, fixed, fixed zerofill, precision=4},
-  columns/est_cost_per_1000_queries_usd_fullcontext/.style={column name={Cost Full-ctx (\$/1k)}, fixed, fixed zerofill, precision=4},
-  every head row/.style={before row=\toprule, after row=\midrule},
-  every last row/.style={after row=\bottomrule},
-]\efficiencytable
+\begin{tabular}{lcccc}
+\toprule
+Model & Time RAG (s) & Time Full-ctx (s) & Cost RAG (\$/1k) & Cost Full-ctx (\$/1k) \\
+\midrule
+\EfficiencyRowsBold{mean_generation_time_s_rag/mean_generation_time_s_fullcontext/3,est_cost_per_1000_queries_usd_rag/est_cost_per_1000_queries_usd_fullcontext/4}
+\bottomrule
+\end{tabular}
 }
 \end{table}
 
