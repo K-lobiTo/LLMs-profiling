@@ -62,18 +62,28 @@ def load_model(model_key):
 
 def strip_reasoning(raw_output):
     """
-    Returns only the text after </think>.
+    Returns only the text after the closing </think> tag.
 
     Reasoning models' chat templates often inject the opening <think> tag
     as part of the prompt itself (not generated text), so we can't rely
     on seeing <think> in the output — only check for the closing tag.
+
+    Splits on the LAST occurrence, not the first: DeepSeek-R1-Distill-14B
+    occasionally re-emits a second "</think>" followed by a near-duplicate
+    of the answer (observed in ~5% of its short-answer/binary generations
+    during evaluation). Splitting on the first occurrence left that
+    duplicated tail inside the scored answer, inflating token counts and
+    unfairly deflating token-overlap F1 for the affected rows.
 
     If no closing tag is found, generation was cut off mid-reasoning
     (max_new_tokens too low) — flagged explicitly rather than silently
     scoring a half-finished reasoning trace as if it were the answer.
     """
     if "</think>" in raw_output:
-        return raw_output.split("</think>", 1)[-1].strip()
+        if raw_output.count("</think>") > 1:
+            print(f"WARNING: {raw_output.count('</think>')} </think> tags found in raw output "
+                  f"(expected 1) — using text after the last one. Raw output: {raw_output!r}")
+        return raw_output.rsplit("</think>", 1)[-1].strip()
     return "[INCOMPLETE_REASONING: generation cut off before </think>; increase max_new_tokens]"
 
 
