@@ -631,7 +631,7 @@ Under RAG, the efficient tier (Qwen2.5-3B, Llama-3.1-8B-4bit) costs \$0.20--\$0.
 Accuracy retention across that cost drop is uneven by category.
 On open-ended BERTScore, the efficient tier is nearly indistinguishable from the upper-bound tier (0.679--0.682 vs.\ 0.693, a 1--2 point gap), suggesting semantic-similarity quality on free-form answers is not strongly size-dependent for this corpus.
 On binary questions, the gap is larger and asymmetric: Llama-3.1-8B-4bit (0.691) trails the upper-bound tier (0.763) by 7 points, while Qwen2.5-3B (0.543) trails by 22 points --- a much larger drop.
-On short-answer questions the ordering inverts entirely: Qwen2.5-3B (0.278) \textit{exceeds} the upper-bound tier (0.110), while Llama-3.1-8B-4bit (0.096) falls well below it.
+On short-answer questions the ordering inverts entirely: Qwen2.5-3B (0.278) \textit{exceeds} the upper-bound tier (0.136), while Llama-3.1-8B-4bit (0.096) falls well below it.
 
 This non-monotonic pattern --- no model is uniformly best or worst across all three question categories --- suggests that "which model to deploy" is itself category-dependent for this use case, not settled by a single aggregate accuracy figure.
 
