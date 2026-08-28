@@ -308,7 +308,7 @@ The rate used is \$0.96/hr, the on-demand dedicated price for an NVIDIA L40S (th
 
 \subsection{Infrastructure}
 
-Experiments are run on Kabr\'e, the national HPC cluster operated by Costa Rica's Centro Nacional de Alta Tecnolog\'ia (CeNAT), accessible to CONARE-affiliated universities including the Instituto Tecnol\'ogico de Costa Rica.
+Experiments are run on Kabr\'e~\cite{cenat2026kabre}, the national HPC cluster operated by Costa Rica's Centro Nacional de Alta Tecnolog\'ia (CeNAT), accessible to CONARE-affiliated universities including the Instituto Tecnol\'ogico de Costa Rica.
 Jobs are scheduled via Slurm on the \texttt{nukwa} partition family, which provides single-GPU compute nodes: 4 nodes with an NVIDIA Tesla V100 (32GB), and 7 nodes with an NVIDIA Ada L40S (46GB usable VRAM).
 All reported results use the L40S nodes exclusively: the V100 (Volta, compute capability 7.0) is unsupported by the PyTorch build required for this study's CUDA/driver stack, which targets compute capability $\geq$7.5 and lacks Volta kernels, so V100 nodes fail at runtime with a "no kernel image is available for execution on the device" error.
 
@@ -318,7 +318,7 @@ This setup is itself part of the paper's motivation: rather than benchmarking on
 
 Tables and figures in this section are typeset directly from the result CSV files in \texttt{data/} at compile time via \texttt{pgfplotstable} and \texttt{pgfplots}, rather than transcribed by hand, so they always reflect the current contents of those files.
 \texttt{comparison\_accuracy.csv} holds all three question categories in one file (long format); the \texttt{\textbackslash FilterByCategoryBold} macro below filters it per category at compile time, so no separate per-category files are needed.
-In every table, \textbf{bold} marks the better-performing condition in each RAG-vs-full-context pair: the higher value for accuracy metrics (Tables~\ref{tab:binary-accuracy}--\ref{tab:open-ended-meteor}), and the lower value for time and cost (Table~\ref{tab:efficiency}, where less is better).
+In every table, \textbf{bold} marks the better-performing condition in each RAG-vs-full-context pair: the higher value for accuracy metrics (Tables~\ref{tab:binary-accuracy}--\ref{tab:open-ended-accuracy}), and the lower value for time and cost (Table~\ref{tab:efficiency}, where less is better).
 
 \pgfplotstableread[col sep=comma]{data/comparison_accuracy.csv}\accuracytable
 \pgfplotstableread[col sep=comma]{data/comparison_efficiency.csv}\efficiencytable
@@ -464,28 +464,17 @@ Model & F1 (RAG) & F1 (Full-ctx) & BERTScore (RAG) & BERTScore (Full-ctx) \\
 
 \begin{table}[H]
 \centering
-\caption{Open-ended question BERTScore F1, RAG vs. full-context, by model. Gray highlight marks the higher (better) value in each RAG/full-context pair.}
-\label{tab:open-ended-bertscore}
-\begin{tabular}{lcc}
+\caption{Open-ended question BERTScore F1 and METEOR score, RAG vs. full-context, by model. Gray highlight marks the higher (better) value in each RAG/full-context pair, within each metric.}
+\label{tab:open-ended-accuracy}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccc}
 \toprule
-Model & BERTScore (RAG) & BERTScore (Full-ctx) \\
+Model & BERTScore (RAG) & BERTScore (Full-ctx) & METEOR (RAG) & METEOR (Full-ctx) \\
 \midrule
-\FilterByCategoryBold{open_ended}{bertscore_f1_rag/bertscore_f1_fullcontext/3}
+\FilterByCategoryBold{open_ended}{bertscore_f1_rag/bertscore_f1_fullcontext/3,meteor_rag/meteor_fullcontext/3}
 \bottomrule
 \end{tabular}
-\end{table}
-
-\begin{table}[H]
-\centering
-\caption{Open-ended question METEOR score, RAG vs. full-context, by model. Gray highlight marks the higher (better) value in each RAG/full-context pair.}
-\label{tab:open-ended-meteor}
-\begin{tabular}{lcc}
-\toprule
-Model & METEOR (RAG) & METEOR (Full-ctx) \\
-\midrule
-\FilterByCategoryBold{open_ended}{meteor_rag/meteor_fullcontext/3}
-\bottomrule
-\end{tabular}
+}
 \end{table}
 
 \subsection{Efficiency and Cost}
@@ -601,7 +590,7 @@ Model & Time RAG (s) & Time Full-ctx (s) & Cost RAG (\$/1k) & Cost Full-ctx (\$/
 
 \subsection{RAG vs. Full-Context: Accuracy Is Model-Dependent, Not Universal}
 
-Contrary to the intuition that more context should not hurt, full-context accuracy relative to RAG diverges sharply by model family rather than moving uniformly in one direction (Tables~\ref{tab:binary-accuracy}--\ref{tab:open-ended-meteor}).
+Contrary to the intuition that more context should not hurt, full-context accuracy relative to RAG diverges sharply by model family rather than moving uniformly in one direction (Tables~\ref{tab:binary-accuracy}--\ref{tab:open-ended-accuracy}).
 
 DeepSeek-R1-Distill-Qwen-14B is consistently \textit{worse} under full-context on binary questions: the 8-bit and full-precision variants drop from F1 $\approx$0.72--0.76 under RAG to $\approx$0.43 under full-context, a loss large enough that it cannot be attributed to noise.
 The same direction, though smaller in magnitude, holds for this model's open-ended BERTScore and METEOR scores (RAG ahead by roughly 1--3 points across both metrics, all three quantization levels).
