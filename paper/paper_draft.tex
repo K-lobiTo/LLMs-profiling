@@ -246,6 +246,7 @@ Because a raw question (e.g. \textit{``\textquestiondown Es la asistencia obliga
 A category-specific instruction is appended to the composed question, so that binary and short-answer questions are not padded with unneeded elaboration that would hurt exact-match-style scoring, while open-ended questions are explicitly invited to elaborate.
 Short-answer questions are scored with token-overlap F1 (SQuAD-style lexical overlap between predicted and expected answer), which measures surface-form agreement rather than semantic correctness: a model that states the correct fact inside a longer sentence is penalized for the extra words in the same way as one that states an incorrect fact, since precision is computed over all predicted tokens regardless of whether the additional ones are wrong or merely superfluous.
 Prompting for brevity narrows, but does not eliminate, this gap; short-answer F1 scores should accordingly be read as sensitive to verbosity, not purely as a measure of content accuracy.
+To compensate, short-answer questions are also scored with BERTScore (Table~\ref{tab:short-answer-accuracy}), reported alongside rather than in place of F1: BERTScore is tolerant of the extra wording that penalizes F1, but by the same token is comparatively insensitive to a single swapped fact (e.g. a wrong percentage or name) embedded in an otherwise similar sentence --- exactly the error short-answer questions are meant to catch. The two metrics are intended to be read together, each covering a failure mode the other misses.
 \textit{``Responde \'unicamente con `S\'i' o `No'.''} (binary);
 \textit{``Da una respuesta breve y directa, en una sola frase.''} (short-answer);
 \textit{``Da una respuesta completa y explicativa.''} (open-ended).
@@ -446,32 +447,32 @@ Model & F1 (RAG) & F1 (Full-context) \\
 
 \begin{table}[H]
 \centering
-\caption{Short-answer question token-overlap F1 score, RAG vs. full-context, by model.}
+\caption{Short-answer question token-overlap F1 and BERTScore F1, RAG vs. full-context, by model.}
 \label{tab:short-answer-accuracy}
-\begin{tabular}{lcc}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccc}
 \toprule
-Model & F1 (RAG) & F1 (Full-context) \\
+Model & F1 (RAG) & F1 (Full-ctx) & BERTScore (RAG) & BERTScore (Full-ctx) \\
 \midrule
-\FilterByCategoryBold{short_answer}{f1_rag/f1_fullcontext/3}
+\FilterByCategoryBold{short_answer}{f1_rag/f1_fullcontext/3,bertscore_f1_rag/bertscore_f1_fullcontext/3}
 \bottomrule
 \end{tabular}
+}
 \end{table}
 
 \subsection{Open-Ended Questions}
 
 \begin{table}[H]
 \centering
-\caption{Open-ended question BERTScore F1 and ROUGE-L, RAG vs. full-context, by model.}
-\label{tab:open-ended-bertscore-rouge}
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{lcccc}
+\caption{Open-ended question BERTScore F1, RAG vs. full-context, by model.}
+\label{tab:open-ended-bertscore}
+\begin{tabular}{lcc}
 \toprule
-Model & BERTScore (RAG) & BERTScore (Full-ctx) & ROUGE-L (RAG) & ROUGE-L (Full-ctx) \\
+Model & BERTScore (RAG) & BERTScore (Full-ctx) \\
 \midrule
-\FilterByCategoryBold{open_ended}{bertscore_f1_rag/bertscore_f1_fullcontext/3,rouge_l_rag/rouge_l_fullcontext/3}
+\FilterByCategoryBold{open_ended}{bertscore_f1_rag/bertscore_f1_fullcontext/3}
 \bottomrule
 \end{tabular}
-}
 \end{table}
 
 \begin{table}[H]
@@ -603,7 +604,7 @@ Model & Time RAG (s) & Time Full-ctx (s) & Cost RAG (\$/1k) & Cost Full-ctx (\$/
 Contrary to the intuition that more context should not hurt, full-context accuracy relative to RAG diverges sharply by model family rather than moving uniformly in one direction (Tables~\ref{tab:binary-accuracy}--\ref{tab:open-ended-meteor}).
 
 DeepSeek-R1-Distill-Qwen-14B is consistently \textit{worse} under full-context on binary questions --- the 8-bit and full-precision variants drop from F1 $\approx$0.72--0.76 under RAG to $\approx$0.43 under full-context, a loss large enough that it cannot be attributed to noise.
-The same direction, though smaller in magnitude, holds for this model's open-ended BERTScore, ROUGE-L, and METEOR scores (RAG ahead by 1--3 points across all three metrics, all three quantization levels).
+The same direction, though smaller in magnitude, holds for this model's open-ended BERTScore and METEOR scores (RAG ahead by roughly 1--3 points across both metrics, all three quantization levels).
 
 Llama-3.1-8B-Instruct shows the opposite pattern and more strongly: full-context improves binary F1 by 8--11 points over RAG, and short-answer F1 by 17--23 points (0.096$\to$0.322 at 4-bit; 0.101$\to$0.270 at full precision) --- the single largest effect observed anywhere in this study.
 METEOR shows the same direction for Llama at 4-bit (0.110 RAG vs.\ 0.234 full-context).
@@ -676,7 +677,9 @@ Two model configurations (Llama-3.3-70B and Qwen2.5-32B) were excluded for infra
 DeepSeek-R1's reasoning was disabled throughout based on limited validation-stage evidence rather than a full-scale ablation; whether reasoning would change accuracy on the harder open-ended questions remains untested.
 Retrieval quality was observed to occasionally favor a topically-adjacent but incorrect document over the correct one, placing a ceiling on RAG accuracy that is independent of generator quality.
 Short-answer accuracy is measured with token-overlap F1, which rewards lexical overlap with the expected answer rather than content correctness per se; a model that answers correctly but verbosely is penalized for the added words just as a genuinely wrong answer would be, so the low short-answer F1 scores reported here (Table~\ref{tab:short-answer-accuracy}) should be read as a mix of real errors and a verbosity penalty rather than as a direct proxy for how often the correct fact was actually stated.
-Finally, ROUGE and METEOR were designed primarily for English, and BERTScore's layer selection for the Spanish BETO model was not empirically calibrated the way the library's built-in models are --- all three open-ended metrics should be read as approximate indicators of answer quality in Spanish, not precisely validated scores.
+BERTScore is reported alongside F1 for this reason, though it trades one failure mode for another: it tolerates the extra wording that penalizes F1, but is correspondingly weaker at flagging a single swapped fact (e.g. a wrong percentage or date) embedded in an otherwise similar sentence, so neither metric alone is sufficient and both are reported together rather than one replacing the other.
+ROUGE-L was dropped from open-ended evaluation after inspection showed it was dominated by the same verbosity artifact rather than adding signal beyond METEOR and BERTScore: open-ended answers in this dataset run roughly 10$\times$ longer than the curated reference on average (a consequence of the ``Da una respuesta completa y explicativa'' instruction), which crushes the precision term of ROUGE-L's balanced F-measure far more than it does METEOR's default recall-weighted formula ($\alpha=0.9$) --- so ROUGE-L's low scores in this dataset reflect answer length, not the answer quality the metric is meant to capture.
+Finally, METEOR was designed primarily for English, and BERTScore's layer selection for the Spanish BETO model was not empirically calibrated the way the library's built-in models are --- both remaining open-ended metrics should be read as approximate indicators of answer quality in Spanish, not precisely validated scores.
 A further direction follows directly from this study's own finding that no single context-supply strategy dominates across models and question types (Section~VI-A): rather than fixing RAG or full-context per deployment, adaptive routing could select the strategy per query.
 Recent work proposes eliciting this decision from an \gls{LLM}'s own latent competence to judge task requirements before retrieving, using lightweight query metadata to route proactively between RAG and long-context processing~\cite{chen2026routebeforeretrieve}; a related hybrid pattern, using RAG to narrow a large corpus before reasoning over the reduced subset with full context, is a natural extension of this study's own RAG-vs-full-context comparison.
 Future work should also prioritize a reasoning-enabled DeepSeek comparison at full scale, a retrieval-quality improvement pass (larger or better-calibrated embedding models, tuned chunk sizes), and, infrastructure permitting, closing the model-scale gap with a second model family at the 30B+ parameter tier.
