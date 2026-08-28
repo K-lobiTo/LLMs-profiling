@@ -18,6 +18,5 @@ dependencies:
       - sentence-transformers      # embeddings for RAG retrieval
       - faiss-cpu                  # vector index for RAG retrieval
       - pandas
-      - bert_score                 # open-ended metric (BERTScore, uses BETO)
-      - rouge_score                # open-ended metric (ROUGE-L)
+      - bert_score                 # short-answer + open-ended metric (BERTScore, uses BETO)
       - nltk                       # open-ended metric (METEOR)

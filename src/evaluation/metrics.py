@@ -2,21 +2,43 @@
 Metric implementations for the QA benchmark, matching the Experimental
 Design section of the paper:
   - binary        -> classification F1 (Sí/No as a 2-class label problem)
-  - short_answer   -> token-overlap F1 (SQuAD-style)
-  - open_ended     -> BERTScore, ROUGE-L, METEOR
+  - short_answer   -> token-overlap F1 (SQuAD-style) + BERTScore
+  - open_ended     -> BERTScore, METEOR
 
 Design notes:
   - Binary and short-answer both get called "F1 score" in the paper, but
     they're conceptually different: binary questions have a fixed label
     space (Sí/No), so classification F1 makes sense; short answers don't,
     so token-overlap F1 (same family as SQuAD) is used instead.
+  - Short-answer questions also get BERTScore alongside token-overlap
+    F1, added as a complementary metric rather than a replacement: F1
+    measures exact lexical overlap and is unforgiving of a verbose-but-
+    correct answer (predicted tokens beyond the terse gold answer count
+    against precision regardless of whether they're wrong or merely
+    extra), while BERTScore tolerates paraphrase/elaboration. The
+    reverse tradeoff also matters here — BERTScore is comparatively
+    insensitive to a single swapped fact (e.g. a wrong percentage or
+    name) embedded in an otherwise similar sentence, which is exactly
+    the kind of error short-answer questions are meant to catch — so
+    it's reported alongside F1, not in place of it.
   - BERTScore uses BETO (dccuchile/bert-base-spanish-wwm-cased), a
     Spanish BERT model, rather than a multilingual or English model,
     since both the source documents and expected answers are in Spanish.
-  - ROUGE and METEOR were both designed primarily for English (METEOR in
-    particular leans on WordNet synonym matching, which is far weaker
-    for Spanish). Both are still computed since the paper's Experimental
-    Design specifies them, but scores should be read as approximate,
+  - ROUGE-L was dropped from open-ended evaluation: it's a token-overlap
+    F-measure like short-answer's, and open-ended answers in this
+    dataset run roughly 10x longer than the curated reference (the
+    "Da una respuesta completa y explicativa" instruction invites
+    elaboration), which crushes ROUGE-L's precision term far more than
+    METEOR's (whose default recall-weighted formula, alpha=0.9, is
+    comparatively tolerant of that same length mismatch). Keeping both
+    would have meant reporting two lexical-overlap metrics where one
+    (ROUGE-L) is dominated by a verbosity artifact rather than adding
+    independent signal beyond METEOR and BERTScore.
+  - METEOR was also designed primarily for English (it leans on
+    WordNet synonym matching and, in nltk's implementation, an English
+    Porter stemmer by default, both far weaker for Spanish). It is
+    still computed since the paper's Experimental Design specifies it
+    for open-ended questions, but scores should be read as approximate,
     not as precisely calibrated for Spanish — worth a caveat in the
     paper's methodology or limitations section.
 """
@@ -150,12 +172,13 @@ def token_f1(predicted, expected):
 
 
 # ---------------------------------------------------------------------
-# Open-ended: BERTScore, ROUGE-L, METEOR
+# BERTScore (short_answer + open_ended) and METEOR (open_ended only)
 # ---------------------------------------------------------------------
-# Loaded lazily (only when open-ended metrics are actually requested) —
-# these pull in heavier dependencies (bert_score, rouge_score, nltk) and
-# a Spanish BERT model download, no need to pay that cost for a run that
-# only touches binary/short_answer categories.
+# Loaded lazily (only when requested via evaluate_results.py's
+# skip_open_ended flag) — these pull in heavier dependencies
+# (bert_score, nltk) and a Spanish BERT model download, no need to pay
+# that cost for a run that only needs binary's classification F1 and
+# short_answer's token-overlap F1.
 
 _bertscore_model = None
 _nltk_ready = False
@@ -228,18 +251,6 @@ def compute_bertscore(predictions, references, lang_model="dccuchile/bert-base-s
         "recall": R.tolist(),
         "f1": F1.tolist(),
     }
-
-
-def compute_rouge_l(predictions, references):
-    """Returns a list of ROUGE-L F-measure scores, one per pair."""
-    from rouge_score import rouge_scorer
-
-    scorer = rouge_scorer.RougeScorer(["rougeL"], use_stemmer=False)
-    scores = []
-    for pred, ref in zip(predictions, references):
-        result = scorer.score(ref, pred)
-        scores.append(result["rougeL"].fmeasure)
-    return scores
 
 
 def compute_meteor(predictions, references):

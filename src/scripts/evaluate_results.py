@@ -11,7 +11,7 @@ a metric bug) never requires re-running expensive GPU inference.
 
 Usage:
     python evaluate_results.py
-    python evaluate_results.py --skip-open-ended   # faster: skip BERTScore/METEOR
+    python evaluate_results.py --skip-open-ended   # faster: skip BERTScore (short_answer + open_ended) and METEOR
 """
 
 import argparse
@@ -25,7 +25,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))  # src/scripts
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "evaluation"))
 from evaluation.metrics import (
     binary_classification_f1, extract_binary_label, token_f1,
-    compute_bertscore, compute_rouge_l, compute_meteor,
+    compute_bertscore, compute_meteor,
 )
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -84,7 +84,6 @@ def compute_per_question_scores(df, skip_open_ended=False):
     df["binary_correct"] = None
     df["token_f1"] = None
     df["bertscore_f1"] = None
-    df["rouge_l"] = None
     df["meteor"] = None
 
     valid_mask = df["predicted_answer"].notna() & df["error"].isna()
@@ -103,15 +102,26 @@ def compute_per_question_scores(df, skip_open_ended=False):
     ]
 
     if not skip_open_ended:
+        # BERTScore is computed for short_answer as well as open_ended:
+        # token_f1 alone is harsh on a verbose-but-correct short answer
+        # (see metrics.py's module docstring), so BERTScore is reported
+        # alongside it as a paraphrase-tolerant secondary view. METEOR
+        # stays open_ended-only — its default formula is specifically
+        # about rewarding recall on a longer reference/explanatory
+        # answer, which doesn't apply to short_answer's terse gold
+        # answers.
+        bertscore_mask = valid_mask & df["category"].isin(["short_answer", "open_ended"])
+        if bertscore_mask.any():
+            preds = df.loc[bertscore_mask, "predicted_answer"].tolist()
+            refs = df.loc[bertscore_mask, "expected_answer"].tolist()
+            bert = compute_bertscore(preds, refs)
+            df.loc[bertscore_mask, "bertscore_f1"] = bert["f1"]
+
         open_mask = valid_mask & (df["category"] == "open_ended")
         if open_mask.any():
             preds = df.loc[open_mask, "predicted_answer"].tolist()
             refs = df.loc[open_mask, "expected_answer"].tolist()
-            bert = compute_bertscore(preds, refs)
-            rouge = compute_rouge_l(preds, refs)
             meteor = compute_meteor(preds, refs)
-            df.loc[open_mask, "bertscore_f1"] = bert["f1"]
-            df.loc[open_mask, "rouge_l"] = rouge
             df.loc[open_mask, "meteor"] = meteor
 
     return df
@@ -151,19 +161,24 @@ def compute_accuracy_metrics(df, skip_open_ended=False):
             ]
             row["f1"] = sum(f1s) / len(f1s) if f1s else 0.0
 
+            if skip_open_ended or len(valid) == 0:
+                row["bertscore_f1"] = None
+            else:
+                preds = valid["predicted_answer"].tolist()
+                refs = valid["expected_answer"].tolist()
+                bert = compute_bertscore(preds, refs)
+                row["bertscore_f1"] = sum(bert["f1"]) / len(bert["f1"])
+
         elif category == "open_ended":
             if skip_open_ended or len(valid) == 0:
                 row["bertscore_f1"] = None
-                row["rouge_l"] = None
                 row["meteor"] = None
             else:
                 preds = valid["predicted_answer"].tolist()
                 refs = valid["expected_answer"].tolist()
                 bert = compute_bertscore(preds, refs)
-                rouge = compute_rouge_l(preds, refs)
                 meteor = compute_meteor(preds, refs)
                 row["bertscore_f1"] = sum(bert["f1"]) / len(bert["f1"])
-                row["rouge_l"] = sum(rouge) / len(rouge)
                 row["meteor"] = sum(meteor) / len(meteor)
 
         rows.append(row)
@@ -201,7 +216,7 @@ def build_rag_vs_fullcontext_comparison(accuracy_df, efficiency_df):
     cost" question) is readable in a single table rather than split
     across the two long-format DataFrames above.
     """
-    acc_metric_cols = [c for c in ["f1", "bertscore_f1", "rouge_l", "meteor"] if c in accuracy_df.columns]
+    acc_metric_cols = [c for c in ["f1", "bertscore_f1", "meteor"] if c in accuracy_df.columns]
     acc_wide = accuracy_df.pivot_table(
         index=["model_key", "category"], columns="context_strategy",
         values=acc_metric_cols,
@@ -266,6 +281,6 @@ def main(skip_open_ended=False):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--skip-open-ended", action="store_true",
-                         help="Skip BERTScore/ROUGE/METEOR (faster, useful for a quick check)")
+                         help="Skip BERTScore (short_answer + open_ended) and METEOR (faster, useful for a quick check)")
     args = parser.parse_args()
     main(skip_open_ended=args.skip_open_ended)
