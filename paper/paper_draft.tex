@@ -303,7 +303,7 @@ All three DeepSeek-R1-Distill-Qwen-14B configurations therefore run with reasoni
 This is a deliberate accuracy-for-latency tradeoff specific to this study's efficiency framing, not a claim that reasoning never helps; it is reported here as part of the experimental design rather than left implicit in the results.
 
 For each configuration, model size (parameters), GPU memory footprint, inference latency, and approximate GPU cost in the current market are reported and compared.
-Cost is estimated as mean generation time per query multiplied by an hourly GPU rental rate, projected to a cost-per-1000-queries figure; this is not what Kabr\'e itself charges (allocation-based, not billed per hour) but a stand-in for what the same workload would cost on commercial cloud infrastructure --- the actual comparison point for this paper's cost argument against paid, proprietary LLM APIs.
+Cost is estimated as mean generation time per query multiplied by an hourly GPU rental rate, projected to a cost-per-1000-queries figure; this is not what Kabr\'e itself charges (the \gls{HPC} cluster this study runs on, described in Section~IV-E; allocation-based, not billed per hour) but a stand-in for what the same workload would cost on commercial cloud infrastructure --- the actual comparison point for this paper's cost argument against paid, proprietary LLM APIs.
 The rate used is \$0.96/hr, the on-demand dedicated price for an NVIDIA L40S --- the same GPU model used throughout this study's own infrastructure --- as listed by Spheron Network~\cite{spheron2026l40s}.
 
 \subsection{Infrastructure}
