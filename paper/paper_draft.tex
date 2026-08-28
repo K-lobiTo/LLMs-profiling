@@ -432,7 +432,7 @@ In every table, \textbf{bold} marks the better-performing condition in each RAG-
 
 \begin{table}[H]
 \centering
-\caption{Binary question F1 score, RAG vs. full-context, by model.}
+\caption{Binary question F1 score, RAG vs. full-context, by model. Gray highlight marks the higher (better) value in each RAG/full-context pair.}
 \label{tab:binary-accuracy}
 \begin{tabular}{lcc}
 \toprule
@@ -447,7 +447,7 @@ Model & F1 (RAG) & F1 (Full-context) \\
 
 \begin{table}[H]
 \centering
-\caption{Short-answer question token-overlap F1 and BERTScore F1, RAG vs. full-context, by model.}
+\caption{Short-answer question token-overlap F1 and BERTScore F1, RAG vs. full-context, by model. Gray highlight marks the higher (better) value in each RAG/full-context pair, within each metric.}
 \label{tab:short-answer-accuracy}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{lcccc}
@@ -464,7 +464,7 @@ Model & F1 (RAG) & F1 (Full-ctx) & BERTScore (RAG) & BERTScore (Full-ctx) \\
 
 \begin{table}[H]
 \centering
-\caption{Open-ended question BERTScore F1, RAG vs. full-context, by model.}
+\caption{Open-ended question BERTScore F1, RAG vs. full-context, by model. Gray highlight marks the higher (better) value in each RAG/full-context pair.}
 \label{tab:open-ended-bertscore}
 \begin{tabular}{lcc}
 \toprule
@@ -477,7 +477,7 @@ Model & BERTScore (RAG) & BERTScore (Full-ctx) \\
 
 \begin{table}[H]
 \centering
-\caption{Open-ended question METEOR score, RAG vs. full-context, by model.}
+\caption{Open-ended question METEOR score, RAG vs. full-context, by model. Gray highlight marks the higher (better) value in each RAG/full-context pair.}
 \label{tab:open-ended-meteor}
 \begin{tabular}{lcc}
 \toprule
@@ -492,7 +492,7 @@ Model & METEOR (RAG) & METEOR (Full-ctx) \\
 
 \begin{table}[H]
 \centering
-\caption{Mean generation time and estimated cost per 1000 queries, RAG vs. full-context, by model. Cost estimated at \$0.96/hr (NVIDIA L40S, on-demand)~\cite{spheron2026l40s}.}
+\caption{Mean generation time and estimated cost per 1000 queries, RAG vs. full-context, by model. Cost estimated at \$0.96/hr (NVIDIA L40S, on-demand)~\cite{spheron2026l40s}. Gray highlight marks the lower (better) value in each RAG/full-context pair.}
 \label{tab:efficiency}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{lcccc}
