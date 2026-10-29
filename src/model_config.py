@@ -70,4 +70,23 @@ MODELS = {
         "is_reasoning_model": True,
         "skip_reasoning": True,
     },
+
+    # --- LLM-as-judge (not a benchmarked candidate) ---
+    # Used only by src/scripts/llm_judge.py to grade stored answers. Chosen
+    # from a different model family than every benchmarked configuration
+    # (Qwen / Llama / DeepSeek-R1-Distill-Qwen) to avoid self-preference
+    # bias. Public, Apache-2.0, ungated on Hugging Face. Text-only causal LM,
+    # so it goes through the same AutoModelForCausalLM loading path.
+    "mistral-small-24b-judge": {
+        "repo": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "quant": "8bit",
+        "is_reasoning_model": False,
+        "skip_reasoning": False,
+    },
+    "mistral-small-24b-judge-4bit": {
+        "repo": "mistralai/Mistral-Small-24B-Instruct-2501",
+        "quant": "4bit",  # faster than bitsandbytes 8-bit; use if 8-bit is too slow
+        "is_reasoning_model": False,
+        "skip_reasoning": False,
+    },
 }
