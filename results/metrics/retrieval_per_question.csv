@@ -1,0 +1,271 @@
+category,codigo,question,rank,n_src,n_unique,hit5,hit1,hit3,rr
+binary,MC1001,¿Es la asistencia obligatoria?,5.0,5,4,True,False,False,0.2
+binary,MC1001,¿Tiene el curso requisitos previos?,4.0,5,5,True,False,False,0.25
+binary,MC1001,¿Es un curso electivo?,3.0,5,5,True,False,True,0.3333333333333333
+binary,MC1001,¿Existe la posibilidad de ganar el curso por suficiencia?,5.0,5,5,True,False,False,0.2
+binary,MC1001,¿Es posible el reconocimiento del curso?,2.0,5,4,True,False,True,0.5
+binary,MC1001,¿Los laboratorios representan el 75% de la nota final?,5.0,5,5,True,False,False,0.2
+binary,MC1003,¿Es la asistencia obligatoria?,3.0,5,4,True,False,True,0.3333333333333333
+binary,MC1003,¿Es este un curso electivo?,3.0,5,4,True,False,True,0.3333333333333333
+binary,MC1003,¿Tiene correquisitos establecidos?,3.0,5,4,True,False,True,0.3333333333333333
+binary,MC1003,"¿Es este curso requisito para ""Blockchain y Ledger Distribuidos""?",3.0,5,4,True,False,True,0.3333333333333333
+binary,MC1003,¿Se permite el reconocimiento del curso?,1.0,5,4,True,True,True,1.0
+binary,MC1003,¿El examen final tiene un valor del 30%?,1.0,5,5,True,True,True,1.0
+binary,MC1006,¿Es el curso de tipo electivo?,1.0,5,4,True,True,True,1.0
+binary,MC1006,¿Es la asistencia obligatoria?,1.0,5,4,True,True,True,1.0
+binary,MC1006,¿Se permite el reconocimiento de este curso?,1.0,5,4,True,True,True,1.0
+binary,MC1006,¿Existe la posibilidad de suficiencia?,1.0,5,4,True,True,True,1.0
+binary,MC1006,¿Se ubica el curso en el primer trimestre del plan de estudios?,1.0,5,4,True,True,True,1.0
+binary,MC1006,¿El estudio de casos vale un 40% de la calificación?,1.0,5,4,True,True,True,1.0
+binary,MC3001,¿Es un curso electivo?,1.0,5,4,True,True,True,1.0
+binary,MC3001,¿Es obligatoria la asistencia?,3.0,5,4,True,False,True,0.3333333333333333
+binary,MC3001,¿Tiene requisitos previos?,1.0,5,3,True,True,True,1.0
+binary,MC3001,¿Es requisito para el curso de Seguridad en la Nube?,1.0,5,4,True,True,True,1.0
+binary,MC3001,¿Se permite la suficiencia?,2.0,5,3,True,False,True,0.5
+binary,MC3001,¿El examen final vale el 30% de la nota?,1.0,5,5,True,True,True,1.0
+binary,MC3010,¿Es el curso de tipo electivo?,2.0,5,4,True,False,True,0.5
+binary,MC3010,¿Es obligatoria la asistencia?,3.0,5,4,True,False,True,0.3333333333333333
+binary,MC3010,¿Tiene requisitos o correquisitos?,3.0,5,4,True,False,True,0.3333333333333333
+binary,MC3010,¿Se permite la suficiencia para este curso?,1.0,5,4,True,True,True,1.0
+binary,MC3010,¿Existe la posibilidad de reconocimiento?,5.0,5,4,True,False,False,0.2
+binary,MC3010,¿La investigación social aplicada tiene un peso del 40%?,3.0,5,3,True,False,True,0.3333333333333333
+binary,MC1101,¿Es un curso obligatorio?,2.0,5,3,True,False,True,0.5
+binary,MC1101,¿Tiene requisitos o correquisitos previos?,1.0,5,3,True,True,True,1.0
+binary,MC1101,¿Es la asistencia obligatoria?,1.0,5,4,True,True,True,1.0
+binary,MC1101,¿Existe la posibilidad de suficiencia?,1.0,5,4,True,True,True,1.0
+binary,MC1101,¿Es posible el reconocimiento del curso?,1.0,5,3,True,True,True,1.0
+binary,MC1101,¿La investigación en sistema empresarial vale un 40%?,1.0,5,3,True,True,True,1.0
+binary,MC1103,¿Es la asistencia obligatoria?,1.0,5,4,True,True,True,1.0
+binary,MC1103,¿Tiene el curso requisitos previos?,1.0,5,4,True,True,True,1.0
+binary,MC1103,¿Se permite la suficiencia?,1.0,5,4,True,True,True,1.0
+binary,MC1103,¿Es posible el reconocimiento del curso?,1.0,5,4,True,True,True,1.0
+binary,MC1103,¿El estudio de casos vale un 40% de la nota?,1.0,5,5,True,True,True,1.0
+binary,MC1103,¿Requiere el curso la elaboración de una investigación bibliográfica?,1.0,5,5,True,True,True,1.0
+binary,MC1201,¿Es este un curso obligatorio?,1.0,5,4,True,True,True,1.0
+binary,MC1201,¿Se permite el reconocimiento del curso?,1.0,5,5,True,True,True,1.0
+binary,MC1201,¿Existe la posibilidad de suficiencia?,1.0,5,3,True,True,True,1.0
+binary,MC1201,¿Es la asistencia obligatoria?,1.0,5,3,True,True,True,1.0
+binary,MC1201,¿Se ubica en el segundo semestre del programa?,1.0,5,4,True,True,True,1.0
+binary,MC1201,¿Los dos exámenes parciales valen un 50% en total?,,5,5,False,False,False,0.0
+binary,MC1203,¿Es un curso obligatorio?,2.0,5,4,True,False,True,0.5
+binary,MC1203,¿Es la asistencia obligatoria?,3.0,5,4,True,False,True,0.3333333333333333
+binary,MC1203,¿Es requisito para el curso de Administración y Estrategia de Proyectos II?,1.0,5,3,True,True,True,1.0
+binary,MC1203,¿Permite el curso la suficiencia?,3.0,5,4,True,False,True,0.3333333333333333
+binary,MC1203,¿Existe la posibilidad de reconocimiento?,5.0,5,4,True,False,False,0.2
+binary,MC1203,¿La resolución de casos prácticos vale un 25%?,5.0,5,4,True,False,False,0.2
+binary,MC2301,¿Es un curso obligatorio?,2.0,5,4,True,False,True,0.5
+binary,MC2301,¿Es la asistencia obligatoria?,2.0,5,4,True,False,True,0.5
+binary,MC2301,¿Se reprueba el curso con 4 faltas de asistencia injustificadas?,2.0,5,5,True,False,True,0.5
+binary,MC2301,¿Existe la posibilidad de suficiencia?,2.0,5,4,True,False,True,0.5
+binary,MC2301,¿Se permite el reconocimiento del curso?,2.0,5,4,True,False,True,0.5
+binary,MC2301,¿La resolución de casos vale un 40% de la nota?,1.0,5,3,True,True,True,1.0
+binary,MC6003,¿Es un curso electivo?,1.0,5,5,True,True,True,1.0
+binary,MC6003,¿Es la asistencia obligatoria?,1.0,5,4,True,True,True,1.0
+binary,MC6003,¿Se permite la suficiencia?,1.0,5,5,True,True,True,1.0
+binary,MC6003,¿Es posible el reconocimiento del curso?,1.0,5,4,True,True,True,1.0
+binary,MC6003,¿Tiene requisitos previos?,1.0,5,5,True,True,True,1.0
+binary,MC6003,¿El examen final vale el 30%?,3.0,5,5,True,False,True,0.3333333333333333
+binary,MC6004,¿Es un curso electivo?,1.0,5,5,True,True,True,1.0
+binary,MC6004,¿Es la asistencia obligatoria?,1.0,5,5,True,True,True,1.0
+binary,MC6004,"¿Es requisito para ""Redes de Computadores Avanzadas""?",1.0,5,5,True,True,True,1.0
+binary,MC6004,¿Permite el curso la suficiencia?,2.0,5,5,True,False,True,0.5
+binary,MC6004,¿Se permite el reconocimiento?,3.0,5,5,True,False,True,0.3333333333333333
+binary,MC6004,¿Los proyectos programados valen un 30%?,,5,4,False,False,False,0.0
+binary,MC6102,¿Es un curso electivo?,1.0,5,4,True,True,True,1.0
+binary,MC6102,¿Es la asistencia obligatoria?,1.0,5,4,True,True,True,1.0
+binary,MC6102,¿Existe la posibilidad de suficiencia?,1.0,5,4,True,True,True,1.0
+binary,MC6102,¿Se permite el reconocimiento del curso?,1.0,5,4,True,True,True,1.0
+binary,MC6102,¿Las tareas e investigaciones valen el 50% de la nota?,1.0,5,4,True,True,True,1.0
+binary,MC6102,¿Se imparte el curso los martes por la noche?,5.0,5,5,True,False,False,0.2
+binary,MC6104,¿Es este un curso electivo?,1.0,5,3,True,True,True,1.0
+binary,MC6104,¿Es la asistencia obligatoria?,1.0,5,4,True,True,True,1.0
+binary,MC6104,¿Se permite la suficiencia?,2.0,5,4,True,False,True,0.5
+binary,MC6104,¿Es posible el reconocimiento del curso?,2.0,5,3,True,False,True,0.5
+binary,MC6104,¿Requiere conocimientos previos de Probabilidades?,2.0,5,4,True,False,True,0.5
+binary,MC6104,¿La presentación oral tiene un valor del 5%?,,5,4,False,False,False,0.0
+binary,MC7201,¿Es un curso electivo?,1.0,5,4,True,True,True,1.0
+binary,MC7201,¿Es la asistencia obligatoria?,2.0,5,4,True,False,True,0.5
+binary,MC7201,¿Permite el curso la suficiencia?,2.0,5,4,True,False,True,0.5
+binary,MC7201,¿Es posible el reconocimiento?,2.0,5,3,True,False,True,0.5
+binary,MC7201,"¿Es ""Tema Selecto de Investigación"" un correquisito?",4.0,5,4,True,False,False,0.25
+binary,MC7201,¿La presentación tiene un valor del 25%?,1.0,5,4,True,True,True,1.0
+short_answer,MC1001,¿Cuántos créditos tiene el curso?,1.0,5,5,True,True,True,1.0
+short_answer,MC1001,¿En qué trimestre del plan de estudios se ubica?,2.0,5,5,True,False,True,0.5
+short_answer,MC1001,¿Qué porcentaje de la nota final representan los laboratorios?,3.0,5,4,True,False,True,0.3333333333333333
+short_answer,MC1001,¿Permite el curso la modalidad de suficiencia?,2.0,5,5,True,False,True,0.5
+short_answer,MC1001,¿Cuál es la vigencia del programa?,3.0,5,4,True,False,True,0.3333333333333333
+short_answer,MC1001,¿Qué porcentaje de la evaluación corresponde a la resolución de casos de estudio?,4.0,5,5,True,False,False,0.25
+short_answer,MC1003,¿En qué trimestre se imparte esta materia?,3.0,5,4,True,False,True,0.3333333333333333
+short_answer,MC1003,¿De qué curso de Blockchain es requisito esta materia?,4.0,5,4,True,False,False,0.25
+short_answer,MC1003,¿Qué porcentaje de la nota corresponde al examen final?,1.0,5,5,True,True,True,1.0
+short_answer,MC1003,¿Cuántas horas de clase por semana tiene el curso?,4.0,5,5,True,False,False,0.25
+short_answer,MC1003,"¿Quiénes son los autores del ""Handbook of applied cryptography"" incluido en la bibliografía?",5.0,5,4,True,False,False,0.2
+short_answer,MC1003,¿Qué porcentaje de la calificación representan las tareas?,1.0,5,5,True,True,True,1.0
+short_answer,MC1006,¿Permite este curso la posibilidad de reconocimiento?,1.0,5,4,True,True,True,1.0
+short_answer,MC1006,¿Qué porcentaje de la nota final representa el estudio de casos?,1.0,5,4,True,True,True,1.0
+short_answer,MC1006,¿En qué trimestre se ubica el curso?,1.0,5,4,True,True,True,1.0
+short_answer,MC1006,¿Qué porcentaje de la nota corresponde a la investigación bibliográfica?,1.0,5,4,True,True,True,1.0
+short_answer,MC1006,¿Cuál es la vigencia de este programa?,1.0,5,4,True,True,True,1.0
+short_answer,MC1006,¿Cuántas horas extraclase por semana se requieren?,1.0,5,5,True,True,True,1.0
+short_answer,MC3001,¿En qué área del plan de estudios se ubica este curso?,3.0,5,4,True,False,True,0.3333333333333333
+short_answer,MC3001,¿Permite el curso la modalidad de suficiencia?,1.0,5,4,True,True,True,1.0
+short_answer,MC3001,¿Qué porcentaje de la nota valen las tareas programadas?,1.0,5,5,True,True,True,1.0
+short_answer,MC3001,¿De qué curso de defensa y ataque es requisito esta materia?,3.0,5,4,True,False,True,0.3333333333333333
+short_answer,MC3001,¿Qué porcentaje de la nota final corresponde al examen final?,1.0,5,5,True,True,True,1.0
+short_answer,MC3001,¿Cuál es el valor porcentual del reporte de lecturas?,1.0,5,4,True,True,True,1.0
+short_answer,MC3010,¿Es este curso obligatorio o electivo?,2.0,5,4,True,False,True,0.5
+short_answer,MC3010,¿Permite la posibilidad de reconocimiento?,4.0,5,4,True,False,False,0.25
+short_answer,MC3010,¿Qué porcentaje de la nota final representa la investigación?,3.0,5,4,True,False,True,0.3333333333333333
+short_answer,MC3010,¿Qué porcentaje de la evaluación corresponde al estudio de casos?,2.0,5,4,True,False,True,0.5
+short_answer,MC3010,¿Qué software específico se menciona en los contenidos para el análisis de datos?,,5,3,False,False,False,0.0
+short_answer,MC3010,¿Qué porcentaje de la nota representan las pruebas cortas o comprobaciones?,2.0,5,5,True,False,True,0.5
+short_answer,MC1101,¿En qué año se aprobó y actualizó este programa?,1.0,5,4,True,True,True,1.0
+short_answer,MC1101,¿Qué porcentaje de la nota final es la investigación en sistema empresarial?,1.0,5,3,True,True,True,1.0
+short_answer,MC1101,¿En qué semestre del programa se ubica este curso?,1.0,5,4,True,True,True,1.0
+short_answer,MC1101,¿Qué porcentaje total suman los dos exámenes parciales?,1.0,5,5,True,True,True,1.0
+short_answer,MC1101,¿Cuántas horas de clase por semana tiene la materia?,1.0,5,5,True,True,True,1.0
+short_answer,MC1101,¿Quién es el autor de los artículos sobre las cinco fuerzas competitivas citados?,1.0,5,3,True,True,True,1.0
+short_answer,MC1103,¿Permite este curso la suficiencia?,2.0,5,4,True,False,True,0.5
+short_answer,MC1103,¿En qué semestre del programa se ubica (indicado como código)?,1.0,5,5,True,True,True,1.0
+short_answer,MC1103,¿Qué porcentaje de la evaluación corresponde al estudio de casos?,1.0,5,5,True,True,True,1.0
+short_answer,MC1103,¿Qué porcentaje de la nota es la investigación bibliográfica y exposición?,5.0,5,5,True,False,False,0.2
+short_answer,MC1103,¿Cuántas horas extraclase se requieren semanalmente?,1.0,5,5,True,True,True,1.0
+short_answer,MC1103,¿Es posible el reconocimiento del curso?,2.0,5,4,True,False,True,0.5
+short_answer,MC1201,¿Permite este curso la posibilidad de reconocimiento?,2.0,5,4,True,False,True,0.5
+short_answer,MC1201,¿En qué semestre se ubica la materia?,1.0,5,3,True,True,True,1.0
+short_answer,MC1201,¿Qué porcentaje total de la nota suman los dos exámenes parciales?,5.0,5,5,True,False,False,0.2
+short_answer,MC1201,¿Qué porcentaje de la evaluación corresponde a la investigación bibliográfica?,,5,5,False,False,False,0.0
+short_answer,MC1201,¿Qué porcentaje de la nota representan las comprobaciones de lectura?,,5,5,False,False,False,0.0
+short_answer,MC1201,¿Permite el curso la suficiencia?,2.0,5,4,True,False,True,0.5
+short_answer,MC1203,¿De qué curso de nivel II es requisito esta materia?,3.0,5,4,True,False,True,0.3333333333333333
+short_answer,MC1203,¿Cuál es el tipo de curso según los datos generales?,4.0,5,4,True,False,False,0.25
+short_answer,MC1203,¿En qué semestre del programa se ubica?,1.0,5,4,True,True,True,1.0
+short_answer,MC1203,¿Qué porcentaje de la nota final corresponde a la escritura de dos ensayos individuales?,,5,5,False,False,False,0.0
+short_answer,MC1203,¿Qué porcentaje de la evaluación es la resolución de casos prácticos?,5.0,5,5,True,False,False,0.2
+short_answer,MC1203,¿Qué porcentaje de la nota vale la investigación sobre un tema seleccionado?,,5,5,False,False,False,0.0
+short_answer,MC2301,¿Con cuántas faltas de asistencia injustificadas se reprueba el curso?,1.0,5,5,True,True,True,1.0
+short_answer,MC2301,¿Qué porcentaje de la nota final representa la resolución de casos?,1.0,5,4,True,True,True,1.0
+short_answer,MC2301,¿Cuántos minutos después de la hora oficial de entrada se consideran para marcar ausencia?,3.0,5,5,True,False,True,0.3333333333333333
+short_answer,MC2301,¿Qué porcentaje de la evaluación corresponde a la investigación bibliográfica?,1.0,5,4,True,True,True,1.0
+short_answer,MC2301,¿Permite el curso la suficiencia?,2.0,5,4,True,False,True,0.5
+short_answer,MC2301,"¿Qué porcentaje de la nota representan las pruebas cortas, comprobaciones y ensayos?",1.0,5,5,True,True,True,1.0
+short_answer,MC6003,¿En qué periodo del plan de estudios se ubica?,1.0,5,5,True,True,True,1.0
+short_answer,MC6003,¿Quién es el profesor titular del curso?,2.0,5,4,True,False,True,0.5
+short_answer,MC6003,¿Qué porcentaje de la nota final representa el examen final?,4.0,5,5,True,False,False,0.25
+short_answer,MC6003,¿Cuál es el porcentaje asignado al examen parcial?,2.0,5,5,True,False,True,0.5
+short_answer,MC6003,¿Permite el curso la modalidad de suficiencia?,1.0,5,4,True,True,True,1.0
+short_answer,MC6003,¿Quiénes son los autores principales del libro de texto base?,5.0,5,4,True,False,False,0.2
+short_answer,MC6004,¿De qué curso de redes es requisito esta materia?,1.0,5,5,True,True,True,1.0
+short_answer,MC6004,¿Cuál es la duración mínima exigida para la presentación oral?,1.0,5,4,True,True,True,1.0
+short_answer,MC6004,¿En qué formato deben confeccionarse los reportes de proyectos y el paper?,1.0,5,3,True,True,True,1.0
+short_answer,MC6004,¿En qué idioma debe estar escrito el paper de investigación?,,5,4,False,False,False,0.0
+short_answer,MC6004,¿Qué porcentaje total de la nota suman los tres proyectos programados?,1.0,5,4,True,True,True,1.0
+short_answer,MC6004,¿Quién es el profesor titular del curso?,2.0,5,4,True,False,True,0.5
+short_answer,MC6102,¿En qué periodo del plan de estudios se imparte?,1.0,5,4,True,True,True,1.0
+short_answer,MC6102,¿En qué horario se dictan las clases los martes?,5.0,5,5,True,False,False,0.2
+short_answer,MC6102,¿Quién es el profesor del curso?,1.0,5,4,True,True,True,1.0
+short_answer,MC6102,¿Qué porcentaje de la nota final representan las tareas e investigaciones?,2.0,5,4,True,False,True,0.5
+short_answer,MC6102,¿Qué porcentaje de la evaluación corresponde a los exámenes parciales?,3.0,5,4,True,False,True,0.3333333333333333
+short_answer,MC6102,¿Cuál es el libro de texto de carácter obligatorio?,1.0,5,3,True,True,True,1.0
+short_answer,MC6104,¿Es este curso obligatorio o electivo?,1.0,5,4,True,True,True,1.0
+short_answer,MC6104,¿De qué curso de Seminario de Investigación es requisito?,2.0,5,4,True,False,True,0.5
+short_answer,MC6104,¿Qué porcentaje de la nota final representan los proyectos?,4.0,5,4,True,False,False,0.25
+short_answer,MC6104,¿En qué idioma deben escribirse los reportes de los proyectos?,2.0,5,5,True,False,True,0.5
+short_answer,MC6104,¿Permite el curso la suficiencia?,2.0,5,3,True,False,True,0.5
+short_answer,MC6104,¿Qué porcentaje de la nota corresponde al segundo examen parcial?,5.0,5,5,True,False,False,0.2
+short_answer,MC7201,¿Cuál es el correquisito obligatorio de este curso?,1.0,5,4,True,True,True,1.0
+short_answer,MC7201,¿Qué porcentaje de la nota final representa la presentación?,2.0,5,4,True,False,True,0.5
+short_answer,MC7201,¿Qué herramienta es obligatoria para preparar las presentaciones?,1.0,5,4,True,True,True,1.0
+short_answer,MC7201,¿En qué idioma debe escribirse el paper de investigación?,1.0,5,4,True,True,True,1.0
+short_answer,MC7201,¿Quién es el profesor titular del curso?,1.0,5,3,True,True,True,1.0
+short_answer,MC7201,¿Permite el curso la posibilidad de reconocimiento?,2.0,5,4,True,False,True,0.5
+open_ended,MC1001,¿Cuál es el propósito principal de integrar inteligencia artificial en un Centro de Operaciones en Seguridad (SOC)?,3.0,5,4,True,False,True,0.3333333333333333
+open_ended,MC1001,¿Qué temas matemáticos específicos debe dominar el estudiante para tener un buen desempeño?,3.0,5,4,True,False,True,0.3333333333333333
+open_ended,MC1001,¿Cómo contribuye este curso a la perfilación del comportamiento humano y de software?,1.0,5,4,True,True,True,1.0
+open_ended,MC1001,¿Qué capacidades desarrolla el estudiante respecto al diagnóstico de software?,1.0,5,4,True,True,True,1.0
+open_ended,MC1001,¿En qué consiste la metodología de evaluación práctica del curso?,2.0,5,4,True,False,True,0.5
+open_ended,MC1001,¿Qué técnicas de minería de datos se aplican específicamente para el procesamiento en tiempo real?,1.0,5,3,True,True,True,1.0
+open_ended,MC1003,¿Qué rol desempeña la criptografía en la infraestructura de Internet actual?,4.0,5,4,True,False,False,0.25
+open_ended,MC1003,¿Qué aspectos avanzados de la matemática se exploran para entender los cifrados modernos?,,5,4,False,False,False,0.0
+open_ended,MC1003,¿Qué diferencias conceptuales se analizan entre las primitivas de criptografía simétrica y asimétrica?,5.0,5,4,True,False,False,0.2
+open_ended,MC1003,¿Sobre qué tendencias futuras en el campo de la seguridad se discute en clase?,3.0,5,4,True,False,True,0.3333333333333333
+open_ended,MC1003,¿Qué elementos históricos sirven de base para comprender la evolución del cifrado?,4.0,5,4,True,False,False,0.25
+open_ended,MC1003,¿Cómo se estructura el sistema de evaluación del aprendizaje en esta materia?,3.0,5,4,True,False,True,0.3333333333333333
+open_ended,MC1006,¿Por qué es fundamental la gestión de procesos ante la vulnerabilidad tecnológica de los negocios?,1.0,5,4,True,True,True,1.0
+open_ended,MC1006,¿Qué áreas de especialización se utilizan como marco de referencia para el conocimiento en este curso?,1.0,5,4,True,True,True,1.0
+open_ended,MC1006,¿Cómo se aborda el diagnóstico del riesgo organizacional en este programa?,1.0,5,4,True,True,True,1.0
+open_ended,MC1006,"¿Qué importancia tiene el principio de ""Seguridad por diseño"" en el ciclo de vida del software?",1.0,5,4,True,True,True,1.0
+open_ended,MC1006,¿Qué elementos legales se analizan respecto a la protección de datos en Costa Rica?,1.0,5,4,True,True,True,1.0
+open_ended,MC1006,¿Cuál es el objetivo de integrar los KPI de ciberseguridad con la visión de la empresa?,1.0,5,4,True,True,True,1.0
+open_ended,MC3001,¿Desde qué perspectiva se analizan vulnerabilidades como el Buffer Overflow?,3.0,5,3,True,False,True,0.3333333333333333
+open_ended,MC3001,¿Qué estrategias de defensa se consideran para prevenir ataques a las aplicaciones?,3.0,5,4,True,False,True,0.3333333333333333
+open_ended,MC3001,"¿Cómo influye el concepto de ""Seguridad por Diseño"" en el estudiante?",1.0,5,4,True,True,True,1.0
+open_ended,MC3001,¿Qué temas abarca la administración de riesgo aplicada específicamente al software?,3.0,5,4,True,False,True,0.3333333333333333
+open_ended,MC3001,¿Qué se entiende por seguridad basada en el lenguaje de programación en este contexto?,3.0,5,3,True,False,True,0.3333333333333333
+open_ended,MC3001,¿Cómo se aplican las técnicas de análisis estático para mejorar la calidad del código?,2.0,5,4,True,False,True,0.5
+open_ended,MC3010,¿Por qué el cibercrimen se estudia también desde la perspectiva de las ciencias sociales?,1.0,5,3,True,True,True,1.0
+open_ended,MC3010,¿Qué objetivos persiguen los criminales al manipular a usuarios legítimos?,4.0,5,3,True,False,False,0.25
+open_ended,MC3010,¿Cómo ayudan los motivadores sociales a identificar la naturaleza de las amenazas?,4.0,5,4,True,False,False,0.25
+open_ended,MC3010,¿Qué métodos de investigación social se aplican para entender el fenómeno criminal?,1.0,5,4,True,True,True,1.0
+open_ended,MC3010,"¿Qué aspectos analiza la ""Ciencia del Crimen"" respecto a los actos delictivos?",1.0,5,3,True,True,True,1.0
+open_ended,MC3010,¿En qué consiste la teoría de prevención del crimen en situación según el curso?,1.0,5,3,True,True,True,1.0
+open_ended,MC1101,¿Cómo se articulan las TI con la propuesta de valor de un negocio?,1.0,5,5,True,True,True,1.0
+open_ended,MC1101,¿Qué tipos de sistemas de información se estudian como referentes de manejo interno y externo?,5.0,5,4,True,False,False,0.2
+open_ended,MC1101,¿Qué fuerzas competitivas influyen en la dinámica de una industria según Michael Porter?,1.0,5,3,True,True,True,1.0
+open_ended,MC1101,¿Qué papel desempeña la investigación en la metodología de enseñanza de este curso?,4.0,5,3,True,False,False,0.25
+open_ended,MC1101,¿Cómo se vincula el conocimiento teórico con la práctica real en este programa?,4.0,5,3,True,False,False,0.25
+open_ended,MC1101,¿Qué modelos complementarios a las fuerzas de Porter se analizan para el uso estratégico de TI?,3.0,5,3,True,False,True,0.3333333333333333
+open_ended,MC1103,¿Qué elementos componen el enfoque integrado del proceso de gestión de TI?,1.0,5,4,True,True,True,1.0
+open_ended,MC1103,¿Cuáles son los equilibrios críticos que un líder de TI debe buscar permanentemente?,1.0,5,4,True,True,True,1.0
+open_ended,MC1103,¿Qué diferencia establece el curso entre administración y gobernanza de TI?,1.0,5,4,True,True,True,1.0
+open_ended,MC1103,¿Qué modelos de tercerización de servicios se introducen en el contenido?,1.0,5,4,True,True,True,1.0
+open_ended,MC1103,¿Cómo se utiliza la metodología de casos para fomentar el aprendizaje socio-constructivista?,1.0,5,4,True,True,True,1.0
+open_ended,MC1103,¿Qué herramientas pedagógicas deben elaborar los estudiantes para demostrar la asimilación semanal de la teoría?,1.0,5,4,True,True,True,1.0
+open_ended,MC1201,¿Qué abarca la gestión de recursos financieros invertidos en TI?,1.0,5,3,True,True,True,1.0
+open_ended,MC1201,¿Cuál es el objetivo final de aplicar finanzas a los proyectos y servicios de TI?,1.0,5,5,True,True,True,1.0
+open_ended,MC1201,¿Qué áreas de la contabilidad se estudian para respaldar la operación técnica?,1.0,5,4,True,True,True,1.0
+open_ended,MC1201,¿Cómo se integra el presupuesto en la administración de la función de información?,1.0,5,4,True,True,True,1.0
+open_ended,MC1201,¿Qué estándares internacionales se referencian para la gestión de costos?,1.0,5,3,True,True,True,1.0
+open_ended,MC1201,¿En qué tipo de actividades se concentra la evaluación del curso?,4.0,5,5,True,False,False,0.25
+open_ended,MC1203,¿Por qué la gestión de proyectos es una competencia indispensable para un gerente de TI?,1.0,5,3,True,True,True,1.0
+open_ended,MC1203,¿Qué componentes estratégicos se analizan en las fases iniciales de un proyecto?,1.0,5,3,True,True,True,1.0
+open_ended,MC1203,¿Cómo ha evolucionado la orientación de la gestión de proyectos según el curso?,1.0,5,3,True,True,True,1.0
+open_ended,MC1203,¿Qué papel desempeña la Oficina de Proyectos (PMO) en las organizaciones modernas?,1.0,5,3,True,True,True,1.0
+open_ended,MC1203,¿En qué consiste el proceso de formulación de un caso de negocio efectivo?,1.0,5,4,True,True,True,1.0
+open_ended,MC1203,¿Qué dilemas se presentan comúnmente en la gestión de la calidad de proyectos de TI?,1.0,5,3,True,True,True,1.0
+open_ended,MC2301,¿Qué elementos integran el marco filosófico de un negocio necesario para la planificación?,1.0,5,4,True,True,True,1.0
+open_ended,MC2301,¿Qué factores se consideran para derivar el plan de información desde el modelo de negocio?,1.0,5,4,True,True,True,1.0
+open_ended,MC2301,¿Qué capacidad específica adquiere el estudiante al finalizar este programa?,1.0,5,3,True,True,True,1.0
+open_ended,MC2301,¿Cómo se define el liderazgo y la administración desde la perspectiva del CIO?,1.0,5,3,True,True,True,1.0
+open_ended,MC2301,¿Cómo se aborda el diagnóstico de la situación actual de TI?,1.0,5,3,True,True,True,1.0
+open_ended,MC2301,¿Bajo qué condiciones específicas un estudiante puede reprobar el curso por asistencia?,2.0,5,3,True,False,True,0.5
+open_ended,MC6003,¿Cuál es el concepto fundamental que modela este curso por encima de la tecnología física?,4.0,5,4,True,False,False,0.25
+open_ended,MC6003,¿Cómo se relaciona la computación teórica con la construcción práctica de compiladores?,2.0,5,3,True,False,True,0.5
+open_ended,MC6003,¿Qué jerarquía se utiliza para clasificar gramáticas según su estructura de frase?,1.0,5,3,True,True,True,1.0
+open_ended,MC6003,¿Qué herramienta matemática se estudia para demostrar que un lenguaje no es regular?,1.0,5,3,True,True,True,1.0
+open_ended,MC6003,¿Qué modelos matemáticos se analizan para el reconocimiento de lenguajes formales?,1.0,5,3,True,True,True,1.0
+open_ended,MC6003,¿Qué formación matemática previa se asume en los estudiantes de este curso de postgrado?,2.0,5,4,True,False,True,0.5
+open_ended,MC6004,¿Qué tipo de material se revisa para estudiar las tendencias actuales de investigación?,4.0,5,5,True,False,False,0.25
+open_ended,MC6004,¿Qué requisitos de calidad deben cumplir los apuntes oficiales realizados por los estudiantes?,1.0,5,5,True,True,True,1.0
+open_ended,MC6004,¿Qué cinco preguntas clave deben responderse al entregar los resúmenes de los artículos científicos?,4.0,5,4,True,False,False,0.25
+open_ended,MC6004,¿Cómo se evalúa la capacidad de comunicación científica de los estudiantes?,5.0,5,4,True,False,False,0.2
+open_ended,MC6004,¿Qué experiencia técnica previa es indispensable para el éxito en los proyectos programados?,2.0,5,5,True,False,True,0.5
+open_ended,MC6004,¿Qué temas de computación moderna se incluyen en los contenidos técnicos?,1.0,5,4,True,True,True,1.0
+open_ended,MC6102,¿Por qué el diseño de algoritmos se considera la actividad fundamental de la computación?,1.0,5,3,True,True,True,1.0
+open_ended,MC6102,¿Cuál es la diferencia crítica entre la efectividad y la eficiencia de un algoritmo?,1.0,5,4,True,True,True,1.0
+open_ended,MC6102,¿Qué tres componentes son necesarios para lograr algoritmos eficientes?,1.0,5,4,True,True,True,1.0
+open_ended,MC6102,"¿Qué herramientas se utilizan para analizar la complejidad de ""peor caso""?",1.0,5,4,True,True,True,1.0
+open_ended,MC6102,¿Qué tipos de algoritmos se estudian dentro de la categoría probabilista?,1.0,5,4,True,True,True,1.0
+open_ended,MC6102,¿Cómo se clasifican los problemas según su complejidad en este programa?,1.0,5,4,True,True,True,1.0
+open_ended,MC6104,"¿Por qué la Ciencia de la Computación ha sido considerada históricamente ""débil"" en sus procedimientos?",4.0,5,4,True,False,False,0.25
+open_ended,MC6104,¿Qué utilidad tiene el Diseño de Experimentos (DoE) en la industria del software?,,5,3,False,False,False,0.0
+open_ended,MC6104,¿Qué capacidades adquiere el estudiante para manejar datos experimentales?,,5,4,False,False,False,0.0
+open_ended,MC6104,¿Cuál es la estructura metodológica que siguen los proyectos en este curso?,4.0,5,4,True,False,False,0.25
+open_ended,MC6104,¿Qué formación técnica previa es requerida para el uso de herramientas en este curso?,3.0,5,3,True,False,True,0.3333333333333333
+open_ended,MC6104,¿Cómo influye este curso en el desarrollo de la tesis de maestría del estudiante?,4.0,5,3,True,False,False,0.25
+open_ended,MC7201,¿Qué criterios separan la ciencia de la pseudociencia según los contenidos del curso?,1.0,5,4,True,True,True,1.0
+open_ended,MC7201,¿Cuál es el deber esencial de un científico según este programa académico?,1.0,5,4,True,True,True,1.0
+open_ended,MC7201,"¿Qué habilidades de ""infraestructura"" se desarrollan para maximizar el éxito del investigador?",3.0,5,4,True,False,True,0.3333333333333333
+open_ended,MC7201,¿Qué aspectos administrativos se revisan para orientar al estudiante en su posgrado?,2.0,5,4,True,False,True,0.5
+open_ended,MC7201,¿Qué elementos debe contener la propuesta de un artículo científico para ser aprobada?,1.0,5,4,True,True,True,1.0
+open_ended,MC7201,¿Cuál es la herramienta tecnológica obligatoria para la elaboración de presentaciones?,1.0,5,3,True,True,True,1.0
