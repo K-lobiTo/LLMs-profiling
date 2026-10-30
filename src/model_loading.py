@@ -33,7 +33,9 @@ def load_model(model_key):
     repo = config["repo"]
     quant = config["quant"]
 
-    tokenizer = AutoTokenizer.from_pretrained(repo)
+    # Optional per-model tokenizer flags (e.g. the Mistral regex fix); empty
+    # for every benchmarked model, so their loading is unchanged.
+    tokenizer = AutoTokenizer.from_pretrained(repo, **config.get("tokenizer_kwargs", {}))
 
     quant_config = None
     if quant == "4bit":

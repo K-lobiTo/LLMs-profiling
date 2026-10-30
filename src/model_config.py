@@ -82,11 +82,15 @@ MODELS = {
         "quant": "8bit",
         "is_reasoning_model": False,
         "skip_reasoning": False,
+        # Without this, transformers warns the Mistral tokenizer regex is
+        # incorrect and "will lead to incorrect tokenization".
+        "tokenizer_kwargs": {"fix_mistral_regex": True},
     },
     "mistral-small-24b-judge-4bit": {
         "repo": "mistralai/Mistral-Small-24B-Instruct-2501",
         "quant": "4bit",  # faster than bitsandbytes 8-bit; use if 8-bit is too slow
         "is_reasoning_model": False,
         "skip_reasoning": False,
+        "tokenizer_kwargs": {"fix_mistral_regex": True},
     },
 }
