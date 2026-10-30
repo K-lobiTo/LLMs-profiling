@@ -1,0 +1,5 @@
+category,metric,n,spearman_vs_correctitud
+short_answer,token_f1,1080,0.6477131085538518
+short_answer,bertscore_f1,1080,0.22057570058879808
+open_ended,bertscore_f1,1080,0.3508169569790744
+open_ended,meteor,1080,0.5533785394037767
